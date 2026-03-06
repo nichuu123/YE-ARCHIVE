@@ -99,19 +99,7 @@
   .view-meta { color: var(--muted); font-size: 13px; font-weight: 600; text-transform: uppercase; }
   .view-notes { margin-top: 16px; font-size: 13px; line-height: 1.6; color: #555; }
   
-  .download-album-btn {
-    display: block; width: 100%; text-align: center; margin-top: 24px; background: #111; color: #fff;
-    text-decoration: none; padding: 12px; border-radius: 4px; font-weight: 700; font-size: 12px;
-    text-transform: uppercase; transition: opacity 0.2s;
-  }
-  .download-album-btn:hover { opacity: 0.8; }
-
-  .view-right { flex: 1; }
-  .track-list { list-style: none; padding: 0; margin: 0; }
-  .track-item {
-    display: flex; align-items: center; gap: 16px; padding: 12px 10px; border-bottom: 1px solid #f0f0f0;
-    font-size: 13px; transition: background 0.1s; border-radius: 4px;
-  }
+  
   .track-item:hover { background: #f9f9f9; }
   .track-index { color: #999; width: 24px; text-align: right; font-weight: 600; }
   .track-title { flex: 1; font-weight: 500; color: #333; text-transform: uppercase; cursor: pointer; }
@@ -256,7 +244,6 @@
       <h2 id="viewTitle" class="view-title"></h2>
       <p id="viewMeta" class="view-meta"></p>
       <p id="viewNotes" class="view-notes"></p>
-      <a id="albumDownload" class="download-album-btn" href="#" download>DOWNLOAD ALBUM (.ZIP)</a>
     </div>
     <div class="view-right">
       <ul id="trackList" class="track-list"></ul>
@@ -692,7 +679,6 @@ function openAlbum(i) {
   document.getElementById('viewTitle').textContent = albums[i].title;
   document.getElementById('viewMeta').textContent = albums[i].year;
   document.getElementById('viewNotes').textContent = albums[i].notes;
-  document.getElementById('albumDownload').href = `music/${albums[i].title}/${albums[i].title}.zip`;
   renderTrackList();
   document.getElementById('albumView').classList.add('show');
   document.body.style.overflow = 'hidden';
@@ -840,5 +826,6 @@ function openBlog(t, c) {
 </script>
 </body>
 </html>
+
 
 
