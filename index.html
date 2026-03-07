@@ -698,27 +698,25 @@ function playSurpriseTrack() {
 function openAlbum(i) {
   const alb = albums[i];
   
-  // Safety check: makes sure the playlist exists so the site doesn't freeze
+  
   const pl = playlists[alb.playlistIndex];
   if (!pl) {
     console.error("Playlist not found! Check your playlistIndex for:", alb.title);
     return;
   }
 
-  // Update text and images in the popup
+  
   document.getElementById('viewCover').src = alb.cover;
   document.getElementById('viewTitle').textContent = alb.title;
   document.getElementById('viewMeta').textContent = `${alb.year} • ${pl.songs.length} TRACKS`;
   document.getElementById('viewNotes').textContent = alb.notes;
   
-  // THE ZIP FIX: 
-  // If you have a 'downloadUrl' in your metadata, it uses that (GitHub Release).
-  // Otherwise, it looks for the folder name with underscores.
+  
   const folderName = alb.folder || alb.title;
   const finalZipLink = alb.downloadUrl ? alb.downloadUrl : `music/${folderName}/${folderName}.zip`;
   document.getElementById('albumDownload').href = finalZipLink;
 
-  // Render the tracklist
+  
   const tl = document.getElementById('trackList');
   tl.innerHTML = "";
   pl.songs.forEach((song, sIdx) => {
@@ -735,7 +733,7 @@ function openAlbum(i) {
     tl.appendChild(div);
   });
 
-  // Show the modal
+  
   document.getElementById('albumView').classList.add('show');
 }
 
