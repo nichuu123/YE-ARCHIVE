@@ -692,7 +692,8 @@ function openAlbum(i) {
   document.getElementById('viewTitle').textContent = albums[i].title;
   document.getElementById('viewMeta').textContent = albums[i].year;
   document.getElementById('viewNotes').textContent = albums[i].notes;
-  document.getElementById('albumDownload').href = `music/${albums[i].title}/${albums[i].title}.zip`;
+ const albumTitle = albums[i].title;
+document.getElementById('albumDownload').href = `music/${encodeURIComponent(albumTitle)}/${encodeURIComponent(albumTitle)}.zip`;
   renderTrackList();
   document.getElementById('albumView').classList.add('show');
   document.body.style.overflow = 'hidden';
@@ -841,4 +842,5 @@ function openBlog(t, c) {
 </body>
 
 </html>
+
 
