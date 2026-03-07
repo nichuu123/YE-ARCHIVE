@@ -698,19 +698,21 @@ function playSurpriseTrack() {
 function openAlbum(i) {
   const alb = albums[i];
   const pl = playlists[alb.playlistIndex];
-  const folderName = alb.folder || alb.title;
+
+  // Safety Check: If the playlist index doesn't exist, log it and stop instead of crashing
+  if (!pl) {
+    console.error(`Missing playlist data for album: ${alb.title} (Index: ${alb.playlistIndex})`);
+    return; 
+  }
 
   document.getElementById('viewCover').src = alb.cover;
   document.getElementById('viewTitle').textContent = alb.title;
   document.getElementById('viewMeta').textContent = `${alb.year} • ${pl.songs.length} TRACKS`;
   document.getElementById('viewNotes').textContent = alb.notes;
-  
-  // LOGIC: Use the Release link if you added one, otherwise use the local path
-  const finalLink = alb.downloadUrl ? alb.downloadUrl : `music/${folderName}/${folderName}.zip`;
-  document.getElementById('albumDownload').href = finalLink;
 
   const tl = document.getElementById('tracklist');
   tl.innerHTML = "";
+  
   pl.songs.forEach((song, sIdx) => {
     const div = document.createElement('div');
     div.className = 'track-item';
@@ -721,7 +723,6 @@ function openAlbum(i) {
 
   document.getElementById('albumView').classList.add('show');
 }
-
 function closeAlbum() { 
   document.getElementById('albumView').classList.remove('show');
   document.body.style.overflow = '';
@@ -865,6 +866,7 @@ function openBlog(t, c) {
 </body>
 
 </html>
+
 
 
 
