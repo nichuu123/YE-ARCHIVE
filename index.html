@@ -758,8 +758,53 @@ function toggleFullPlayer() {
 }
 
 // ---SEARCH & TIME UPDATES ---
-const searchInput = document.getElementById('searchInput');
-searchInput.oninput = (e) => { currentTerm = e.target.value.toLowerCase().trim(); execSearch(); };
+// Using addEventListener is much more stable on mobile browsers
+document.getElementById('searchInput').addEventListener('input', (e) => {
+  // .trim() instantly kills any auto-spaces added by the mobile keyboard
+  const q = e.target.value.toUpperCase().trim();
+  
+  const searchUI = document.getElementById('searchUI');
+  const defaultUI = document.getElementById('defaultUI');
+  const searchGrid = document.getElementById('searchGrid');
+  
+  if (!q) {
+    searchUI.style.display = 'none';
+    defaultUI.style.display = 'block';
+    return;
+  }
+
+  searchUI.style.display = 'block';
+  defaultUI.style.display = 'none';
+  searchGrid.innerHTML = "";
+
+  // Searching exclusively for tracks to keep the results clean and focused
+  playlists.forEach((pl, plIdx) => {
+    pl.songs.forEach((song, sIdx) => {
+      if (song.title.toUpperCase().includes(q)) {
+        const alb = albums.find(a => a.playlistIndex === plIdx);
+        
+        // Safety check to ensure we don't crash if an album index is missing
+        if (!alb) return; 
+
+        const div = document.createElement('div');
+        div.className = 'album-card';
+        div.onclick = () => { 
+          // Reset search and play
+          document.getElementById('searchInput').value = "";
+          searchUI.style.display = 'none'; 
+          defaultUI.style.display = 'block';
+          playSong(plIdx, sIdx); 
+        };
+        div.innerHTML = `
+          <img src="${alb.cover}">
+          <div class="album-name">${song.title}</div>
+          <div class="album-year">TRACK • ${pl.title}</div>
+        `;
+        searchGrid.appendChild(div);
+      }
+    });
+  });
+});
 
 function closeSearch() {
   searchInput.value = "";
