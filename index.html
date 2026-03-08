@@ -697,42 +697,32 @@ function playSurpriseTrack() {
 // --- UI VIEWS ---
 function openAlbum(i) {
   const alb = albums[i];
-  
-   const pl = playlists[alb.playlistIndex];
+  const pl = playlists[alb.playlistIndex];
+
+  // Safety Check: If the playlist index doesn't exist, log it and stop instead of crashing
   if (!pl) {
-    console.error("Playlist not found! Check your playlistIndex for:", alb.title);
-    return;
+    console.error(`Missing playlist data for album: ${alb.title} (Index: ${alb.playlistIndex})`);
+    return; 
   }
 
-   document.getElementById('viewCover').src = alb.cover;
+  document.getElementById('viewCover').src = alb.cover;
   document.getElementById('viewTitle').textContent = alb.title;
   document.getElementById('viewMeta').textContent = `${alb.year} • ${pl.songs.length} TRACKS`;
   document.getElementById('viewNotes').textContent = alb.notes;
-  
-    const folderName = alb.folder || alb.title;
-  const finalZipLink = alb.downloadUrl ? alb.downloadUrl : `music/${folderName}/${folderName}.zip`;
-  document.getElementById('albumDownload').href = finalZipLink;
 
-   const tl = document.getElementById('trackList');
+  const tl = document.getElementById('tracklist');
   tl.innerHTML = "";
+  
   pl.songs.forEach((song, sIdx) => {
     const div = document.createElement('div');
     div.className = 'track-item';
-        div.onclick = () => playSong(alb.playlistIndex, sIdx);
-    div.innerHTML = `
-      <div class="track-left">
-        <span class="track-number">${(sIdx + 1).toString().padStart(2, '0')}</span>
-        <span class="track-name">${song.title}</span>
-      </div>
-    `;
+    div.onclick = () => playSong(alb.playlistIndex, sIdx);
+    div.innerHTML = `<span>${sIdx + 1}. ${song.title}</span>`;
     tl.appendChild(div);
   });
 
-
   document.getElementById('albumView').classList.add('show');
 }
-
-
 function closeAlbum() { 
   document.getElementById('albumView').classList.remove('show');
   document.body.style.overflow = '';
@@ -876,6 +866,7 @@ function openBlog(t, c) {
 </body>
 
 </html>
+
 
 
 
