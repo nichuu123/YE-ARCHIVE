@@ -2,1147 +2,2468 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-
-<title>YE ARCHIVE</title>
-<meta property="og:title" content="YE ARCHIVE">
-<meta property="og:description" content="An archive of every Ye unreleased album, updated regularly">
-<meta property="og:image" content="https://wallpapers.com/images/hd/white-square-background-56v690fpm25a3o6s.jpg"> <meta property="og:type" content="website">
-<link rel="icon" href="https://wallpapers.com/images/hd/white-square-background-56v690fpm25a3o6s.jpg" type="image/png">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="theme-color" content="#111111">
-<link rel="manifest" href="manifest.json"> <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+<title>YE ARCHIVE - Web Player</title>
+<meta name="theme-color" content="#000000">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
+  /* ==========================================================================
+     1. CSS VARIABLES & THEMING
+     ========================================================================== */
   :root {
-    --bg: #ffffff;
-    --page-bg: #f4f4f5;
-    --text: #111111;
-    --muted: #666666;
-    --border: #e4e4e7;
-    --shadow: 0 4px 12px rgba(0,0,0,0.06);
-    --radius: 4px; 
-    --album-accent: #ffffff;
+    --bg-dark: #000000;
+    --bg-panel: #121212;
+    --bg-hover: #1a1a1a;
+    --bg-card-hover: #181818;
+    --bg-track-hover: rgba(255, 255, 255, 0.1);
+    --text-main: #ffffff;
+    --text-muted: #b3b3b3;
+    --spotify-green: #1ed760;
+    --spotify-green-hover: #1fdf64;
+    --player-height: 90px;
+    --dominant-color: #333333;
+    --border-color: rgba(255, 255, 255, 0.1);
+    --top-bar-height: 64px;
+    --mobile-nav-height: 64px;
   }
 
-  * { box-sizing: border-box; }
+  body.light-mode {
+    --bg-dark: #e6e6e6;
+    --bg-panel: #ffffff;
+    --bg-hover: #f0f0f0;
+    --bg-card-hover: #f9f9f9;
+    --bg-track-hover: rgba(0, 0, 0, 0.05);
+    --text-main: #000000;
+    --text-muted: #555555;
+    --border-color: rgba(0, 0, 0, 0.1);
+  }
+
+  /* ==========================================================================
+     2. RESET & BASE STYLES
+     ========================================================================== */
+  * { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    -webkit-tap-highlight-color: transparent; 
+  }
 
   body {
-    margin: 0;
-    font-family: 'IBM Plex Mono', monospace;
-    background: var(--page-bg);
-    color: var(--text);
-    padding-bottom: 120px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg-dark);
+    color: var(--text-main);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    transition: background 0.3s ease, color 0.3s ease;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
-  /* --- HEADER & CAPSULE SEARCH --- */
-  header {
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 16px 24px; background: rgba(255,255,255,0.9);
-    backdrop-filter: blur(10px); border-bottom: 1px solid var(--border);
-    position: sticky; top: 0; z-index: 50; gap: 20px;
-  }
-  .header-left { display: flex; align-items: center; gap: 12px; flex: 1; }
-  .logo {
-    width: 40px; height: 40px; border-radius: 4px; background: #111; color: #fff;
-    display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px;
-  }
-  header h1 { font-size: 14px; margin: 0; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+  button { font-family: inherit; }
+  input { font-family: inherit; }
+  a { text-decoration: none; color: inherit; }
 
-  .search-container { flex: 2; display: flex; justify-content: center; }
-  .search-capsule {
-    width: 100%; max-width: 500px; background: #eeeeee; border: 1px solid transparent;
-    border-radius: 25px; padding: 10px 24px; font-size: 12px; font-family: 'IBM Plex Mono', monospace;
-    outline: none; transition: all 0.2s; text-transform: uppercase;
+  /* ==========================================================================
+     3. IMAGE ASPECT RATIO ENFORCEMENT (1:1 STRICT)
+     ========================================================================== */
+  .album-card img, 
+  .fp-cover,
+  .recent-card img, 
+  .recent-card .liked-icon-container,
+  .lib-cover-img, 
+  .library-item img,
+  .liked-icon-container,
+  .album-cover-large,
+  .pb-cover {
+    aspect-ratio: 1 / 1 !important;
+    object-fit: cover !important;
+    flex-shrink: 0;
   }
-  .search-capsule:focus { background: #fff; border-color: #111; box-shadow: 0 0 0 4px rgba(0,0,0,0.05); }
 
-  .header-actions { display: flex; gap: 8px; flex: 1; justify-content: flex-end; align-items: center; }
-  .nav-btn {
-    background: #fff; border: 1px solid var(--border); padding: 8px 14px; border-radius: 4px;
-    font-size: 11px; font-weight: 700; cursor: pointer; font-family: 'IBM Plex Mono', monospace;
-    transition: all 0.2s; color: var(--text); text-transform: uppercase; display: flex; align-items: center; gap: 6px;
+  /* ==========================================================================
+     4. INDESTRUCTIBLE CORE LAYOUT ENGINE
+     ========================================================================== */
+  .app-shell { 
+    display: flex; 
+    flex: 1; 
+    min-height: 0; /* CRITICAL: Prevents flexbox vertical explosion */
+    min-width: 0;  /* CRITICAL: Prevents flexbox horizontal explosion */
+    overflow: hidden; 
+    padding: 8px; 
+    gap: 8px; 
+    height: calc(100vh - var(--player-height));
   }
-  .nav-btn:hover { background: #f0f0f0; border-color: #111; }
+
+  /* ==========================================================================
+     5. SIDEBAR NAVIGATION
+     ========================================================================== */
+  .sidebar { 
+    width: 350px; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 8px; 
+    flex-shrink: 0; 
+    transition: background 0.3s; 
+  }
   
-  .surprise-btn { color: #555; }
-  .surprise-btn svg { width: 14px; height: 14px; fill: #555; }
-
-  /* --- MAIN CONTENT & GRIDS --- */
-  main { max-width: 1100px; margin: 0 auto; padding: 28px 18px; }
-  .section-label { margin: 30px 0 20px; font-size: 16px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
-
-  .album-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 24px; }
-  .album-card { cursor: pointer; transition: transform 0.2s ease; }
-  .album-card:hover { transform: translateY(-4px); }
-  .album-card img { width: 100%; aspect-ratio: 1/1; border-radius: var(--radius); box-shadow: var(--shadow); object-fit: cover; margin-bottom: 12px; background: #eee; }
-  .album-name { font-size: 13px; font-weight: 700; text-transform: uppercase; line-height: 1.2; }
-  .album-year { font-size: 11px; color: var(--muted); margin-top: 4px; text-transform: uppercase; }
-
-  /* --- ALBUM VIEW OVERLAY --- */
-  .album-view {
-    position: fixed; inset: 0; background: #ffffff; color: var(--text); z-index: 80;
-    transform: translateY(100%); transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
-    overflow-y: auto; padding-bottom: 140px;
+  .sidebar-panel { 
+    background: var(--bg-panel); 
+    border-radius: 8px; 
+    padding: 16px; 
+    display: flex; 
+    flex-direction: column; 
   }
-  .album-view.show { transform: translateY(0); }
-  .album-view-header {
-    position: sticky; top: 0; background: rgba(255,255,255,0.95); padding: 16px 24px;
-    border-bottom: 1px solid var(--border); display: flex; align-items: center; backdrop-filter: blur(5px); z-index: 10;
-  }
-  .album-content { max-width: 1000px; margin: 0 auto; padding: 40px 24px; display: flex; gap: 50px; }
-  .view-left { flex: 0 0 300px; }
-  .view-cover { width: 100%; aspect-ratio: 1/1; border-radius: var(--radius); box-shadow: 0 12px 40px rgba(0,0,0,0.1); object-fit: cover; }
-  .view-title { font-size: 24px; margin: 20px 0 6px; text-transform: uppercase; font-weight: 700; }
-  .view-meta { color: var(--muted); font-size: 13px; font-weight: 600; text-transform: uppercase; }
-  .view-notes { margin-top: 16px; font-size: 13px; line-height: 1.6; color: #555; }
   
-  .download-album-btn {
-    display: block; width: 100%; text-align: center; margin-top: 24px; background: #111; color: #fff;
-    text-decoration: none; padding: 12px; border-radius: 4px; font-weight: 700; font-size: 12px;
-    text-transform: uppercase; transition: opacity 0.2s;
+  .library-panel { 
+    flex: 1; 
+    min-height: 0; /* Ensures inner scroll works */
   }
-  .download-album-btn:hover { opacity: 0.8; }
 
-  .view-right { flex: 1; }
-  .track-list { list-style: none; padding: 0; margin: 0; }
-  .track-item {
-    display: flex; align-items: center; gap: 16px; padding: 12px 10px; border-bottom: 1px solid #f0f0f0;
-    font-size: 13px; transition: background 0.1s; border-radius: 4px;
-  }
-  .track-item:hover { background: #f9f9f9; }
-  .track-index { color: #999; width: 24px; text-align: right; font-weight: 600; }
-  .track-title { flex: 1; font-weight: 500; color: #333; text-transform: uppercase; cursor: pointer; }
-  .track-item.is-playing .track-title { color: #000; font-weight: 700; }
+  .nav-menu { list-style: none; display: flex; flex-direction: column; gap: 8px; }
   
-  .track-actions { display: flex; gap: 6px; }
-  .action-icon-btn {
-    background: transparent; border: 1px solid var(--border); border-radius: 4px; width: 28px; height: 28px;
-    display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--muted);
-    text-decoration: none; transition: all 0.2s; font-family: 'IBM Plex Mono', monospace; font-size: 14px;
+  .nav-item { 
+    display: flex; 
+    align-items: center; 
+    gap: 16px; 
+    font-size: 16px; 
+    font-weight: 700; 
+    color: var(--text-muted); 
+    cursor: pointer; 
+    transition: color 0.2s ease; 
+    padding: 8px 12px; 
+    border-radius: 4px;
   }
-  .action-icon-btn:hover { border-color: #111; color: #111; }
+  .nav-item:hover, .nav-item.active { color: var(--text-main); }
+  .nav-item svg { width: 24px; height: 24px; fill: currentColor; }
 
-  /* --- MINI PLAYER --- */
-  .mini-player {
-    position: fixed; bottom: 0; left: 0; right: 0; height: 90px; background: #ffffff;
-    border-top: 1px solid #e5e5e5; box-shadow: 0 -4px 24px rgba(0,0,0,0.06);
-    display: grid; grid-template-columns: 300px 1fr 300px; align-items: center; padding: 0 30px; z-index: 200;
-    transform: translateY(100%); transition: transform 0.3s ease-out;
+  .library-header { 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+    color: var(--text-muted); 
+    font-size: 16px; 
+    font-weight: 700; 
+    margin-bottom: 16px; 
+    padding: 0 12px; 
+    pointer-events: none; 
   }
-  .mini-player.active { transform: translateY(0); }
-  .mp-info { display: flex; align-items: center; gap: 16px; overflow: hidden; cursor: pointer; }
-  .mp-cover { width: 56px; height: 56px; min-width: 56px; aspect-ratio: 1/1; border-radius: 4px; background: #eee; object-fit: cover; flex-shrink: 0; }
-  .mp-text-container { overflow: hidden; white-space: nowrap; position: relative; width: 100%; mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%); }
-  .mp-title-wrap { display: inline-block; }
-  .mp-title { font-size: 13px; font-weight: 700; color: #111; text-transform: uppercase; }
-  .mp-album-label { font-size: 10px; color: var(--muted); font-weight: 600; text-transform: uppercase; margin-top: 2px; }
+  .library-header svg { width: 24px; height: 24px; fill: currentColor; }
 
-  .mp-center { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; }
-  .mp-controls { display: flex; align-items: center; gap: 24px; }
-  .mp-btn { background: none; border: none; cursor: pointer; padding: 0; transition: transform 0.1s; opacity: 0.8; }
-  .mp-btn:hover { opacity: 1; }
-  .mp-btn svg { width: 22px; height: 22px; fill: #111; }
-  .mp-btn-main { width: 40px; height: 40px; background: #111; border-radius: 50%; opacity: 1; box-shadow: 0 4px 10px rgba(0,0,0,0.2); display: flex; align-items: center; justify-content: center; }
-  .mp-btn-main svg { fill: #fff; width: 16px; height: 16px; margin-left: 1px; }
+  .lib-chips { display: flex; gap: 8px; margin-bottom: 16px; padding: 0 12px;}
+  .lib-chip { 
+    background: rgba(128,128,128,0.1); 
+    padding: 6px 12px; 
+    border-radius: 32px; 
+    font-size: 13px; 
+    font-weight: 600; 
+    cursor: pointer; 
+    transition: background 0.2s ease; 
+  }
+  .lib-chip:hover { background: rgba(128,128,128,0.2); }
 
-  .mp-progress-container { width: 100%; max-width: 400px; display: flex; align-items: center; gap: 10px; }
-  .mp-time { font-size: 11px; color: #888; font-weight: 500; min-width: 35px; text-align: center; }
-  input[type=range] { -webkit-appearance: none; width: 100%; background: transparent; cursor: pointer; }
-  input[type=range]::-webkit-slider-runnable-track { width: 100%; height: 4px; background: #e0e0e0; border-radius: 2px; }
-  input[type=range]::-webkit-slider-thumb { height: 12px; width: 12px; border-radius: 50%; background: #111; -webkit-appearance: none; margin-top: -4px; }
+  .lib-list { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 4px; 
+    overflow-y: auto; 
+    margin: 0 -8px; 
+    padding: 0 8px; 
+    flex: 1;
+  }
   
-  .mp-right { display: flex; justify-content: flex-end; font-size: 11px; color: #999; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; }
+  /* Scrollbar hiding for sidebar to look clean like Spotify */
+  .lib-list::-webkit-scrollbar { width: 8px; background: transparent; }
+  .lib-list::-webkit-scrollbar-thumb { background: transparent; border-radius: 4px; }
+  .sidebar-panel:hover .lib-list::-webkit-scrollbar-thumb { background: rgba(128,128,128,0.3); }
 
-  /* --- FULL SCREEN PLAYER --- */
+  .lib-list-item { 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+    padding: 8px; 
+    border-radius: 6px; 
+    cursor: pointer; 
+    transition: background 0.2s ease; 
+  }
+  .lib-list-item:hover { background: var(--bg-hover); }
+  
+  .liked-icon-container { 
+    width: 48px; 
+    height: 48px; 
+    border-radius: 4px; 
+    background: linear-gradient(135deg, #450af5, #c4efd9); 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+  }
+  .liked-icon-container svg { width: 24px; height: 24px; fill: white; }
+  
+  .lib-cover-img { width: 48px; height: 48px; border-radius: 4px; }
+  
+  .lib-info { display: flex; flex-direction: column; overflow: hidden; justify-content: center;}
+  .lib-info .title { font-size: 15px; font-weight: 600; color: var(--text-main); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 2px;}
+  .lib-info .type { font-size: 13px; font-weight: 500; color: var(--text-muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+
+  /* ==========================================================================
+     6. MAIN PANEL & SCROLL AREA
+     ========================================================================== */
+  .main-panel { 
+    flex: 1; 
+    min-width: 0; /* Prevents overflow issues */
+    background: var(--bg-panel); 
+    border-radius: 8px; 
+    display: flex; 
+    flex-direction: column; 
+    position: relative; 
+    overflow: hidden; 
+  }
+
+  .main-scroll-area {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: relative;
+    scroll-behavior: smooth;
+  }
+
+  /* Custom Scrollbar for Main Area */
+  .main-scroll-area::-webkit-scrollbar { width: 14px; }
+  .main-scroll-area::-webkit-scrollbar-track { background: transparent; }
+  .main-scroll-area::-webkit-scrollbar-thumb { 
+    background: rgba(128,128,128,0.3); 
+    border-radius: 10px; 
+    border: 4px solid var(--bg-panel); 
+  }
+  body.light-mode .main-scroll-area::-webkit-scrollbar-thumb { border-color: var(--bg-panel); }
+  .main-scroll-area::-webkit-scrollbar-thumb:hover { background: rgba(128,128,128,0.5); }
+
+  .top-gradient { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    height: 332px; 
+    background: linear-gradient(to bottom, var(--dominant-color) 0%, transparent 100%); 
+    opacity: 0.4; 
+    pointer-events: none; 
+    z-index: 0; 
+    transition: background 0.5s ease; 
+  }
+
+  /* ==========================================================================
+     7. TOP HEADER (Inside Main Panel)
+     ========================================================================== */
+  .top-bar { 
+    position: sticky; 
+    top: 0; 
+    z-index: 100; 
+    padding: 16px 24px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    background: transparent; 
+    height: var(--top-bar-height); 
+    flex-shrink: 0;
+    transition: background-color 0.2s ease;
+  }
+  
+  .top-bar.scrolled { 
+    background: rgba(18, 18, 18, 0.95); 
+    backdrop-filter: blur(10px); 
+    border-bottom: 1px solid var(--border-color); 
+  }
+  body.light-mode .top-bar.scrolled { 
+    background: rgba(255, 255, 255, 0.95); 
+  }
+  
+  .header-left { display: flex; align-items: center; gap: 8px; flex: 1; justify-content: center;}
+  
+  .nav-btn-circle { 
+    width: 32px; 
+    height: 32px; 
+    border-radius: 50%; 
+    background: rgba(0,0,0,0.7); 
+    border: none; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    cursor: pointer; 
+    transition: 0.2s ease; 
+    color: white; 
+    flex-shrink: 0;
+  }
+  .nav-btn-circle:hover { transform: scale(1.05); }
+  body.light-mode .nav-btn-circle { background: rgba(0,0,0,0.1); color: black;}
+  .nav-btn-circle svg { width: 16px; height: 16px; fill: currentColor; }
+
+  .search-bar { 
+    background: var(--bg-card-hover); 
+    border-radius: 500px; 
+    padding: 10px 16px; 
+    display: flex; 
+    align-items: center; 
+    gap: 12px; 
+    flex: 1;
+    max-width: 400px;
+    border: 1px solid transparent; 
+    transition: 0.2s ease; 
+    z-index: 10; 
+    margin: 0 auto;
+  }
+  .search-bar.hide-on-scroll { display: none !important; }
+  .search-bar:focus-within { border-color: var(--text-muted); background: var(--bg-hover); }
+  .search-bar svg { width: 20px; height: 20px; fill: var(--text-muted); flex-shrink: 0;}
+  .search-bar input { 
+    background: transparent; 
+    border: none; 
+    outline: none; 
+    color: var(--text-main); 
+    font-size: 14px; 
+    font-weight: 500; 
+    width: 100%; 
+  }
+
+  /* STICKY ALBUM TITLE IN HEADER */
+  .header-sticky-album { 
+    display: none; 
+    align-items: center; 
+    gap: 12px; 
+    opacity: 0; 
+    transition: opacity 0.2s ease; 
+    margin-left: 12px;
+  }
+  .header-sticky-album.visible { display: flex; opacity: 1; }
+  
+  .sticky-play-btn { 
+    width: 40px; 
+    height: 40px; 
+    border-radius: 50%; 
+    background: var(--spotify-green); 
+    border: none; 
+    cursor: pointer; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    transition: transform 0.1s; 
+    flex-shrink: 0;
+  }
+  .sticky-play-btn:hover { transform: scale(1.05); background: var(--spotify-green-hover); }
+  .sticky-play-btn svg { width: 20px; height: 20px; fill: black; margin-left: 2px;}
+  
+  .sticky-title { 
+    font-size: 20px; 
+    font-weight: 800; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    max-width: 300px; 
+    letter-spacing: -0.02em; 
+    color: var(--text-main); 
+  }
+
+  /* HEADER RIGHT & PROFILE */
+  .header-right { 
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-end; 
+    gap: 16px; 
+    position: relative; 
+  }
+  
+  .btn-surprise { 
+    background: var(--text-main); 
+    color: var(--bg-dark); 
+    border-radius: 500px; 
+    padding: 8px 16px; 
+    font-weight: 700; 
+    font-size: 14px; 
+    border: none; 
+    cursor: pointer; 
+    transition: 0.2s ease; 
+    white-space: nowrap;
+  }
+  .btn-surprise:hover { transform: scale(1.04); opacity: 0.9; }
+  
+  .profile-circle { 
+    width: 32px; 
+    height: 32px; 
+    border-radius: 50%; 
+    background: var(--bg-card-hover); 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    cursor: pointer; 
+    border: 2px solid transparent; 
+    transition: 0.2s ease; 
+    flex-shrink: 0;
+  }
+  .profile-circle:hover { border-color: var(--text-main); transform: scale(1.05); }
+  .profile-circle svg { width: 18px; height: 18px; fill: var(--text-main); }
+
+  /* DROPDOWN MENU */
+  .profile-dropdown { 
+    position: absolute; 
+    top: 48px; 
+    right: 0; 
+    background: var(--bg-card-hover); 
+    border-radius: 4px; 
+    padding: 4px; 
+    box-shadow: 0 16px 24px rgba(0,0,0,0.5); 
+    display: none; 
+    min-width: 200px; 
+    z-index: 300; 
+    border: 1px solid var(--border-color); 
+  }
+  .profile-dropdown.show { display: block; }
+  .profile-dropdown button { 
+    width: 100%; 
+    text-align: left; 
+    background: transparent; 
+    border: none; 
+    color: var(--text-main); 
+    font-family: inherit; 
+    font-weight: 600; 
+    font-size: 14px; 
+    padding: 12px 16px; 
+    border-radius: 2px; 
+    cursor: pointer; 
+    transition: 0.2s ease; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+  }
+  .profile-dropdown button:hover { background: var(--bg-track-hover); }
+  .profile-dropdown button svg { width: 16px; height: 16px; fill: var(--text-muted); }
+  .profile-dropdown .divider { height: 1px; background: var(--border-color); margin: 4px 0; }
+
+  /* ==========================================================================
+     8. VIEW CONTAINERS
+     ========================================================================== */
+  .view-section { 
+    display: none; 
+    position: relative; 
+    z-index: 10; 
+    padding-bottom: 60px;
+    flex: 1;
+    min-height: 100%;
+  }
+  .view-section.active { display: block; }
+  
+  .content-padding { padding: 0 24px; }
+
+  /* ==========================================================================
+     9. HOME VIEW (GRIDS & CARDS)
+     ========================================================================== */
+  .greeting { font-size: 32px; font-weight: 800; margin-top: 16px; margin-bottom: 24px; letter-spacing: -0.04em; }
+  
+  /* Top 6 Grid (Recents) */
+  .recent-grid { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 12px; 
+    margin-bottom: 40px; 
+  }
+  
+  .recent-card { 
+    display: flex; 
+    align-items: center; 
+    background: rgba(128,128,128,0.1); 
+    border-radius: 4px; 
+    overflow: hidden; 
+    cursor: pointer; 
+    transition: background 0.3s ease; 
+    position: relative; 
+    border: none; 
+  }
+  .recent-card:hover { background: rgba(128,128,128,0.2); }
+  
+  .recent-card img, .recent-card .liked-icon-container { 
+    width: 64px !important; 
+    height: 64px !important; 
+  }
+  
+  .recent-card span { 
+    padding: 0 16px; 
+    font-weight: 700; 
+    font-size: 15px; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    flex: 1;
+  }
+  
+  .play-btn-mini { 
+    position: absolute; 
+    right: 16px; 
+    width: 44px; 
+    height: 44px; 
+    border-radius: 50%; 
+    background: var(--spotify-green); 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    opacity: 0; 
+    transform: translateY(4px); 
+    transition: all 0.2s ease; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3); 
+    border: none; 
+    cursor: pointer; 
+  }
+  .recent-card:hover .play-btn-mini { opacity: 1; transform: translateY(0); }
+  .play-btn-mini:hover { transform: scale(1.05); background: var(--spotify-green-hover); }
+  .play-btn-mini svg { width: 22px; height: 22px; fill: black; margin-left: 2px;}
+
+  /* Main Album Grid */
+  .section-title { font-size: 24px; font-weight: 800; margin-bottom: 20px; letter-spacing: -0.02em; }
+  
+  .album-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); 
+    gap: 24px; 
+    margin-bottom: 40px;
+  }
+  
+  .album-card { 
+    background: var(--bg-card-hover); 
+    padding: 16px; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    border: 1px solid transparent; 
+    transition: background 0.3s, border-color 0.3s, box-shadow 0.3s; 
+    position: relative; 
+  }
+  .album-card:hover { 
+    background: var(--bg-hover); 
+    border-color: rgba(128, 128, 128, 0.2); 
+    box-shadow: 0 8px 24px rgba(0,0,0,0.5); 
+  }
+  .album-card:hover .play-btn-mini { opacity: 1; transform: translateY(0); top: auto; bottom: 80px; right: 24px;}
+  
+  .album-card img { 
+    width: 100%; 
+    border-radius: 6px; 
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4); 
+    margin-bottom: 16px; 
+  }
+  body.light-mode .album-card img { box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+  
+  .album-card-title { font-size: 16px; font-weight: 700; margin-bottom: 6px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; color: var(--text-main); }
+  .album-card-subtitle { font-size: 14px; color: var(--text-muted); font-weight: 500; }
+
+  /* ==========================================================================
+     10. ALBUM DETAIL VIEW
+     ========================================================================== */
+  .album-gradient-bg { 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    height: 400px; 
+    background: linear-gradient(to bottom, var(--dominant-color), transparent); 
+    z-index: 0; 
+    pointer-events: none; 
+    transition: background 0.5s ease;
+  }
+  
+  .album-content-relative { 
+    position: relative; 
+    z-index: 1; 
+    background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, var(--bg-panel) 300px); 
+    min-height: 100%; 
+    padding-bottom: 60px; 
+  }
+  body.light-mode .album-content-relative { background: linear-gradient(to bottom, rgba(255,255,255,0.3) 0%, var(--bg-panel) 300px); }
+
+  .album-header { 
+    display: flex; 
+    align-items: flex-end; 
+    gap: 24px; 
+    padding: 40px 24px 24px; 
+    margin-top: 0; 
+  }
+  .album-header img { width: 232px !important; height: 232px !important; }
+  
+  .album-info p { font-size: 14px; font-weight: 700; margin-bottom: 8px; text-transform: uppercase; color: var(--text-main); }
+  .album-info h1 { font-size: clamp(32px, 5vw, 72px); font-weight: 900; margin-bottom: 16px; line-height: 1.1; letter-spacing: -0.04em; color: var(--text-main); }
+  .album-meta { font-size: 14px; font-weight: 500; color: rgba(255,255,255,0.8); display: flex; align-items: center; gap: 4px; }
+  body.light-mode .album-meta { color: rgba(0,0,0,0.7); }
+  
+  /* Album Actions Row */
+  .action-row { padding: 24px; display: flex; align-items: center; gap: 24px; }
+  
+  .btn-large-play { 
+    width: 56px; 
+    height: 56px; 
+    border-radius: 50%; 
+    background: var(--spotify-green); 
+    border: none; 
+    cursor: pointer; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    transition: transform 0.1s; 
+  }
+  .btn-large-play:hover { transform: scale(1.05); background: var(--spotify-green-hover); }
+  .btn-large-play svg { fill: black; width: 28px; height: 28px; margin-left: 4px; }
+  
+  .btn-download-album { 
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+    font-family: 'Inter'; 
+    font-weight: 700; 
+    font-size: 12px; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    color: var(--text-main); 
+    background: transparent; 
+    border: 1px solid var(--border-color); 
+    border-radius: 500px; 
+    padding: 8px 16px; 
+    cursor: pointer; 
+    transition: 0.2s ease; 
+  }
+  .btn-download-album:hover { border-color: var(--text-main); transform: scale(1.02); }
+
+  /* Tracklist */
+  .tracklist-header { 
+    display: grid; 
+    grid-template-columns: 48px 1fr auto; 
+    gap: 16px; 
+    padding: 8px 16px; 
+    border-bottom: 1px solid var(--border-color); 
+    color: var(--text-muted); 
+    font-size: 14px; 
+    margin-bottom: 16px; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    margin-left: 24px; 
+    margin-right: 24px;
+  }
+  
+  .tracklist-container { padding: 0 24px; }
+  
+  .track-row { 
+    display: grid; 
+    grid-template-columns: 48px 1fr auto; 
+    gap: 16px; 
+    padding: 8px 16px; 
+    align-items: center; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    transition: 0.2s ease; 
+    color: var(--text-muted); 
+  }
+  .track-row:hover { background: var(--bg-track-hover); color: var(--text-main); }
+  .track-row.playing { color: var(--spotify-green); }
+  
+  .t-num { width: 40px; font-variant-numeric: tabular-nums; }
+  .t-title { flex: 1; font-weight: 500; color: var(--text-main); font-size: 16px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .track-row.playing .t-title { color: var(--spotify-green); }
+  
+  /* Hover Actions inside Track Row */
+  .t-actions { display: flex; align-items: center; gap: 12px; opacity: 0; transition: opacity 0.2s ease; }
+  .track-row:hover .t-actions { opacity: 1; }
+  .t-actions.visible { opacity: 1; } 
+  
+  .action-icon { 
+    width: 36px; 
+    height: 36px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    border-radius: 50%; 
+    transition: 0.2s ease; 
+    color: var(--text-muted); 
+    background: transparent; 
+    border: none; 
+    cursor: pointer;
+  }
+  .action-icon svg { width: 18px; height: 18px; fill: currentColor; }
+  .action-icon:hover { color: var(--text-main); background: var(--bg-track-hover); transform: scale(1.1); }
+  
+  .action-like svg { fill: transparent; stroke: currentColor; stroke-width: 2; transition: 0.2s; }
+  .action-like.liked { color: var(--spotify-green); opacity: 1; }
+  .action-like.liked svg { fill: var(--spotify-green); stroke: var(--spotify-green); }
+  
+  /* ==========================================================================
+     11. BOTTOM PLAYER (DESKTOP)
+     ========================================================================== */
+  .player-bar { 
+    height: var(--player-height); 
+    background: var(--bg-dark); 
+    border-top: 1px solid var(--border-color); 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 16px; 
+    z-index: 1000; 
+    flex-shrink: 0; 
+    position: relative; 
+    transition: background 0.3s; 
+  }
+  
+  .mini-progress { 
+    position: absolute; 
+    top: -2px; 
+    left: 0; 
+    width: 100%; 
+    height: 3px; 
+    background: rgba(128,128,128,0.2); 
+    cursor: pointer; 
+    z-index: 101; 
+  }
+  .mini-progress-fill { height: 100%; background: var(--text-main); width: 0%; pointer-events: none; transition: width 0.1s linear; }
+  .mini-progress:hover .mini-progress-fill { background: var(--spotify-green); }
+  .mini-progress-circle { position: absolute; width: 8px; height: 8px; background: var(--text-main); border-radius: 50%; top: 50%; transform: translate(-50%, -50%); left: 0%; transition: left 0.1s linear; pointer-events: none; display: none; }
+  .mini-progress:hover .mini-progress-circle { display: block; background: var(--spotify-green); }
+
+  .pb-left { display: flex; align-items: center; gap: 14px; width: 30%; cursor: pointer; transition: transform 0.2s;}
+  .pb-left:active { transform: scale(0.98); }
+  .pb-cover { width: 56px !important; height: 56px !important; background: var(--bg-card-hover); }
+  .pb-info { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: flex; flex-direction: column; justify-content: center; }
+  .pb-info h4 { font-size: 14px; font-weight: 500; margin-bottom: 4px; color: var(--text-main); }
+  .pb-info p { font-size: 11px; color: var(--text-muted); font-weight: 500; }
+  
+  .player-like-btn { margin-left: 16px; background: none; border: none; cursor: pointer; display: flex; align-items: center; color: var(--text-muted); }
+  .player-like-btn svg { width: 16px; height: 16px; fill: transparent; stroke: currentColor; stroke-width: 2; transition: 0.2s; }
+  .player-like-btn:hover { color: var(--text-main); transform: scale(1.1); }
+  .player-like-btn.liked { color: var(--spotify-green); }
+  .player-like-btn.liked svg { fill: var(--spotify-green); stroke: var(--spotify-green); }
+
+  .pb-center { display: flex; flex-direction: column; align-items: center; justify-content: center; max-width: 722px; width: 40%; }
+  .pb-controls { display: flex; align-items: center; justify-content: center; gap: 24px; }
+  .ctrl-btn { background: none; border: none; color: var(--text-muted); cursor: pointer; transition: 0.2s ease; display: flex; justify-content: center; align-items: center;}
+  .ctrl-btn:hover { color: var(--text-main); }
+  .ctrl-btn svg { width: 16px; height: 16px; fill: currentColor; }
+  
+  .play-btn { 
+    background: var(--text-main); 
+    border-radius: 50%; 
+    width: 32px; 
+    height: 32px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    transition: transform 0.1s; 
+    border: none; 
+    cursor: pointer; 
+    color: var(--bg-dark); 
+  }
+  .play-btn:hover { transform: scale(1.05); }
+  .play-btn svg { fill: currentColor; width: 16px; height: 16px; }
+
+  .pb-progress { display: flex; align-items: center; gap: 8px; width: 100%; font-size: 11px; color: var(--text-muted); font-weight: 500; font-variant-numeric: tabular-nums; }
+  
+  .progress-container { position: relative; flex: 1; display: flex; align-items: center; height: 20px; }
+  
+  .progress-circle { position: absolute; width: 14px; height: 14px; background: var(--spotify-green); border-radius: 50%; top: 50%; transform: translate(-50%, -50%); left: 0%; transition: left 0.1s linear; pointer-events: none; box-shadow: 0 2px 8px rgba(30, 215, 96, 0.4); }
+  
+  input[type=range] { -webkit-appearance: none; width: 100%; height: 4px; border-radius: 2px; background: rgba(128,128,128,0.3); outline: none; cursor: pointer; transition: background 0.1s; position: relative; z-index: 2; }
+  input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 12px; height: 12px; border-radius: 50%; background: var(--text-main); display: none; }
+  .pb-progress:hover input[type=range]::-webkit-slider-thumb, .volume-controls:hover input[type=range]::-webkit-slider-thumb { display: block; }
+  .pb-progress:hover input[type=range]::-webkit-slider-runnable-track, .volume-controls:hover input[type=range]::-webkit-slider-runnable-track { background: var(--spotify-green); }
+  input[type=range]::-webkit-slider-runnable-track { background: var(--text-main); height: 4px; border-radius: 2px; }
+
+  .pb-right { width: 30%; display: flex; justify-content: flex-end; align-items: center; gap: 12px; }
+  .pb-right svg { width: 16px; height: 16px; fill: var(--text-muted); }
+  .volume-controls { display: flex; align-items: center; gap: 8px; }
+  .volume-slider { width: 90px !important; }
+
+  /* ==========================================================================
+     12. MOBILE BOTTOM NAVIGATION
+     ========================================================================== */
+  .mobile-nav { 
+    display: none; 
+    position: fixed; 
+    bottom: 0; 
+    left: 0; 
+    right: 0; 
+    height: var(--mobile-nav-height); 
+    background: rgba(0,0,0,0.95); 
+    z-index: 1000; 
+    justify-content: space-around; 
+    align-items: center; 
+    border-top: 1px solid var(--border-color); 
+    backdrop-filter: blur(10px);
+  }
+  body.light-mode .mobile-nav { background: rgba(255,255,255,0.95); }
+  
+  .m-nav-item { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    gap: 4px; 
+    color: var(--text-muted); 
+    font-size: 10px; 
+    cursor: pointer; 
+    transition: color 0.2s ease;
+  }
+  .m-nav-item.active, .m-nav-item:hover { color: var(--text-main); }
+  .m-nav-item svg { width: 24px; height: 24px; fill: currentColor; }
+
+  /* ==========================================================================
+     13. ADAPTIVE FULL SCREEN PLAYER (MOBILE & CLICK EXPAND)
+     ========================================================================== */
   .full-player {
-    position: fixed; inset: 0; z-index: 300; display: flex; flex-direction: column;
-    padding: 20px 40px 40px; transform: translateY(100%); touch-action: none;
-    background: linear-gradient(180deg, var(--album-accent) 0%, #ffffff 100%);
-    transition: transform 0.4s cubic-bezier(0.32, 1, 0.23, 1), background 1.2s ease;
+    position: fixed; 
+    inset: 0; 
+    z-index: 9999; 
+    display: flex; 
+    flex-direction: column;
+    padding: 30px 40px; 
+    transform: translateY(100%); 
+    touch-action: none;
+    background: linear-gradient(180deg, var(--dominant-color) 0%, var(--bg-dark) 100%);
+    transition: transform 0.4s cubic-bezier(0.32, 1, 0.23, 1);
+    overflow: hidden;
   }
   .full-player.active { transform: translateY(0); }
-  .swipe-handle { width: 40px; height: 5px; background: rgba(0,0,0,0.08); border-radius: 10px; margin: 0 auto 20px; flex-shrink: 0; }
-  .close-full { position: absolute; top: 20px; left: 20px; background: rgba(0,0,0,0.05); border: none; width: 32px; height: 32px; border-radius: 4px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-family: 'IBM Plex Mono'; font-weight: bold; }
+  
+  .swipe-handle { width: 40px; height: 5px; background: rgba(255,255,255,0.3); border-radius: 10px; margin: 0 auto 20px; cursor: grab; display: none; }
+  @media(max-width: 800px) { .swipe-handle { display: block; } }
+  
+  .fp-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+  .fp-header button { background: transparent; border: none; color: white; cursor: pointer; }
+  body.light-mode .fp-header button { color: black; }
+  .fp-header button svg { fill: white; width: 24px; height: 24px; transform: rotate(-90deg); }
+  body.light-mode .fp-header button svg { fill: black; }
+  
+  .fp-header-text { text-align: center; }
+  .fp-header-text span { font-size: 11px; font-weight: 600; letter-spacing: 1px; color: rgba(255,255,255,0.7); text-transform: uppercase;}
+  body.light-mode .fp-header-text span { color: rgba(0,0,0,0.7); }
+  .fp-header-text strong { display: block; font-size: 14px; font-weight: 700; color: #fff; margin-top: 2px; text-transform: uppercase; max-width: 250px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+  body.light-mode .fp-header-text strong { color: #000; }
+  
+  .fp-content { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 100%; max-width: 600px; margin: 0 auto; gap: 20px; overflow: hidden; padding-bottom: 0; }
+  @media(max-width: 800px) { .fp-content { justify-content: center; gap: 15px; } }
+  .fp-cover { box-shadow: 0 20px 60px rgba(0,0,0,0.4); border-radius: 8px; width: 100% !important; max-width: 350px; max-height: 350px; object-fit: cover; }
+  
+  .fp-info { width: 100%; text-align: left; margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center;}
+  .fp-text-group { overflow: hidden; }
+  .fp-info h2 { font-size: 28px; font-weight: 800; margin-bottom: 4px; color: white; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; }
+  body.light-mode .fp-info h2 { color: black; }
+  .fp-info p { font-size: 16px; color: rgba(255,255,255,0.7); font-weight: 500; }
+  body.light-mode .fp-info p { color: rgba(0,0,0,0.7); }
+  
+  .fp-controls { width: 100%; display: flex; flex-direction: column; gap: 20px; }
+  .fp-main-ctrls { display: flex; align-items: center; justify-content: space-between; margin-top: 10px; }
+  .fp-main-ctrls .ctrl-btn svg { width: 32px; height: 32px; fill: white; }
+  body.light-mode .fp-main-ctrls .ctrl-btn svg { fill: black; }
+  .fp-main-ctrls .play-btn { width: 64px; height: 64px; background: white; color: black; display: flex; justify-content: center; align-items: center; border-radius: 50%; border: none; cursor: pointer;}
+  body.light-mode .fp-main-ctrls .play-btn { background: black; color: white; }
+  .fp-main-ctrls .play-btn svg { width: 24px; height: 24px; margin-left: 2px;}
 
-  .full-cover { width: min(400px, 85%); aspect-ratio: 1/1; border-radius: 8px; margin: 0 auto 40px; box-shadow: 0 20px 50px rgba(0,0,0,0.15); object-fit: cover; }
+  /* ==========================================================================
+     14. MODALS & TOASTS
+     ========================================================================== */
+  .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.7); backdrop-filter: blur(5px); z-index: 99999; display: flex; justify-content: center; align-items: center; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
+  .modal-overlay.active { opacity: 1; pointer-events: all; }
+  .modal-content { background: var(--bg-card-hover); width: 90%; max-width: 450px; border-radius: 8px; padding: 32px; position: relative; box-shadow: 0 24px 60px rgba(0,0,0,0.5); transform: translateY(20px); transition: transform 0.3s; border: 1px solid var(--border-color); }
+  .modal-overlay.active .modal-content { transform: translateY(0); }
+  .modal-close { position: absolute; top: 16px; right: 16px; background: transparent; border: none; color: var(--text-muted); font-size: 28px; cursor: pointer; transition: color 0.2s; }
+  .modal-close:hover { color: var(--text-main); }
+  .modal-content h2 { font-size: 24px; font-weight: 900; margin-bottom: 16px; color: var(--text-main); }
+  .modal-content p { font-size: 15px; color: var(--text-muted); line-height: 1.6; }
+  
+  .updates-list { display: flex; flex-direction: column; gap: 12px; margin-top: 16px; }
+  .update-item { display: flex; gap: 16px; background: rgba(128,128,128,0.1); padding: 12px; border-radius: 6px; }
+  .update-date { font-size: 12px; font-weight: 700; color: var(--spotify-green); min-width: 60px; text-transform: uppercase; }
+  .update-text { font-size: 14px; color: var(--text-main); }
+  
+  #toast { position: fixed; bottom: 100px; left: 50%; transform: translateX(-50%) translateY(20px); background: var(--text-main); color: var(--bg-dark); padding: 12px 24px; border-radius: 500px; font-size: 14px; font-weight: 600; opacity: 0; pointer-events: none; transition: all 0.3s; z-index: 99999; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+  #toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
-  @media (orientation: landscape) {
-    .full-content { display: flex; align-items: center; justify-content: center; max-width: 1000px; margin: 60px auto 0; gap: 60px; width: 100%; }
-    .full-cover { width: 350px; height: 350px; margin: 0; }
-    .full-info { text-align: left; flex: 1; }
-    .full-info h2 { font-size: 56px; margin: 0; font-weight: 800; text-transform: uppercase; line-height: 1; }
-    .full-info p { font-size: 18px; color: #666; margin: 12px 0 40px; font-weight: 600; text-transform: uppercase; }
-    .full-controls { justify-content: flex-start; gap: 40px; }
+  /* ==========================================================================
+     15. RESPONSIVE LOGIC (MOBILE OPTIMIZATION)
+     ========================================================================== */
+  @media (min-width: 700px) and (max-height: 750px), (orientation: landscape) and (max-height: 800px) {
+    .fp-content { flex-direction: row; max-width: 900px; gap: 60px; }
+    .fp-cover { max-width: 350px; }
+    .swipe-handle { display: none; }
   }
-
-  @media (orientation: portrait) {
-    .full-player { padding: 20px 30px 80px; align-items: center; justify-content: space-between; }
-    .full-content { width: 100%; text-align: center; flex: 1; display: flex; flex-direction: column; justify-content: center; }
-    .full-info h2 { font-size: 28px; text-transform: uppercase; font-weight: 700; margin: 0; }
-    .full-info p { font-size: 16px; color: #666; margin: 8px 0 40px; text-transform: uppercase; font-weight: 600; }
-    .full-controls { justify-content: center; gap: 40px; }
-  }
-
-  .full-controls { display: flex; align-items: center; gap: 45px; }
-  .full-btn-main { background: #111; width: 75px; height: 75px; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: none; cursor: pointer; }
-  .full-btn-main svg { fill: #fff; width: 32px; }
-  .full-btn { background: none; border: none; cursor: pointer; }
-  .full-btn svg { width: 34px; height: 34px; fill: #111; }
-
-  /* Modals */
-  .backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.4); backdrop-filter: blur(2px); display: none; align-items: center; justify-content: center; z-index: 300; }
-  .backdrop.show { display: flex; }
-  .modal { width: min(500px, 90%); background: #fff; border-radius: 8px; padding: 24px; position: relative; border: 1px solid #111; }
 
   @media(max-width: 800px) {
-    .header-actions span { display: none; }
-    .album-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
-    .album-content { flex-direction: column; padding-top: 10px; gap: 20px; }
-    .view-left { width: 100%; text-align: center; }
-    .view-cover { width: 220px; margin: 0 auto; }
-    .mini-player { grid-template-columns: 1fr auto; height: auto; padding: 12px 16px; gap: 12px; }
-    .mp-info { max-width: 180px; }
-    .mp-right { display: none; }
-    .mp-center { grid-column: 1 / -1; width: 100%; }
+    .sidebar { display: none; }
+    .app-shell { padding: 0; height: 100vh; gap: 0; }
+    
+    #topHomeBtn { display: none !important; }
+    .main-content { padding-bottom: 150px; } /* Ensures bottom content isn't covered */
+    .album-content-relative { padding-bottom: 150px; }
+    
+    .desktop-surprise { display: none; } /* Move to bottom nav */
+    .search-bar { display: none !important; } /* Move search to dedicated view */
+    
+    /* Mobile Grids */
+    .recent-grid { grid-template-columns: repeat(2, 1fr); margin-top: 10px; }
+    .album-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 16px; }
+    
+    /* Mobile Album Header */
+    .album-header { flex-direction: column; align-items: flex-start; text-align: left; padding: 60px 16px 16px; }
+    .album-cover-large { width: 200px !important; height: 200px !important; margin: 0 auto 16px; display: block; }
+    .album-title-large { font-size: 36px; }
+    .album-details { width: 100%; text-align: left; }
+    .tracklist-header { display: none; }
+    .t-actions { opacity: 1; } /* Always show actions on mobile */
+    
+    /* Floating Mini Player for Mobile */
+    .player-bar {
+      position: fixed; 
+      bottom: calc(var(--mobile-nav-height) + 8px); 
+      left: 8px; 
+      right: 8px; 
+      height: 56px; 
+      border-radius: 8px;
+      background: var(--bg-card-hover); 
+      padding: 0 8px; 
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      border: none; 
+      width: auto; 
+      z-index: 1000;
+    }
+    body.light-mode .player-bar { background: #f0f0f0; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
+    .mini-progress { border-radius: 8px 8px 0 0; }
+    
+    .pb-center, .pb-right { display: none; }
+    .pb-left { width: 100%; justify-content: space-between; gap: 10px; }
+    .pb-cover { width: 40px !important; height: 40px !important; }
+    .pb-info { flex: 1; }
+    .pb-info h4 { font-size: 13px; }
+    
+    .mobile-play-btn { 
+      display: flex !important; 
+      width: 32px; 
+      height: 32px; 
+      align-items: center; 
+      justify-content: center; 
+      background: transparent; 
+      border: none; 
+      color: var(--text-main); 
+      margin-left: auto; 
+      cursor: pointer;
+    }
+    .mobile-play-btn svg { width: 24px; height: 24px; fill: currentColor; }
+    
+    /* Enable Mobile Nav */
+    .mobile-nav { display: flex; }
+    
+    /* Mobile Full Player Adjustments */
+    .swipe-handle { display: block; }
+    .full-player { padding: 20px 24px; }
+    #toast { bottom: 140px; }
   }
+  .mobile-play-btn { display: none; }
 </style>
 </head>
 <body>
 
-<header>
-  <div class="header-left">
-    <div class="logo">:)</div>
-    <h1>YE ARCHIVE</h1>
-  </div>
-  
-  <div class="search-container">
-    <input type="text" id="searchInput" class="search-capsule" placeholder="SEARCH TRACKS OR ALBUMS...">
-  </div>
-
-  <div class="header-actions">
-    <button class="nav-btn surprise-btn" onclick="playSurpriseTrack()">
-      <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-      <span>SURPRISE ME</span>
-    </button>
-    <button class="nav-btn" onclick="openBlog('THE MAIN GOAL', 'Making the vault accessible. Built so the unreleased vision is organized and available for everyone. Less time searching, more time listening.')">THE VISION</button> 
-  </div>
-</header>
-
-<main>
-  <div id="searchUI" style="display: none;">
-    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-      <h2 class="section-label" style="margin:0;">SEARCH RESULTS</h2>
-      <button class="nav-btn" onclick="closeSearch()">CLOSE [X]</button>
-    </div>
-    <div class="album-grid" id="searchGrid"></div>
-  </div>
-
-  <div id="defaultUI">
-    <h2 class="section-label">THE COLLECTION</h2>
-    <div class="album-grid" id="albumGrid"></div>
-  </div>
-</main>
-
-<div id="albumView" class="album-view">
-  <div class="album-view-header">
-    <button class="nav-btn" onclick="closeAlbum()">← BACK TO COLLECTION</button>
-  </div>
-  <div class="album-content">
-    <div class="view-left">
-      <img id="viewCover" class="view-cover" src="">
-      <h2 id="viewTitle" class="view-title"></h2>
-      <p id="viewMeta" class="view-meta"></p>
-      <p id="viewNotes" class="view-notes"></p>
-      <a id="albumDownload" class="download-album-btn" href="#" download>DOWNLOAD ALBUM (.ZIP)</a>
-    </div>
-    <div class="view-right">
-      <ul id="trackList" class="track-list"></ul>
-    </div>
-  </div>
-</div>
-
-<div id="miniPlayer" class="mini-player">
-  <div class="mp-info" onclick="toggleFullPlayer()">
-    <img id="mpCover" class="mp-cover" src="">
-    <div class="mp-text-container" id="mpTextContainer">
-      <div class="mp-title-wrap" id="mpTitleWrap">
-        <span id="mpTitle" class="mp-title">Select a song</span>
-      </div>
-      <div id="mpAlbum" class="mp-album-label"></div>
-    </div>
-  </div>
-  <div class="mp-center">
-    <div class="mp-controls">
-      <button class="mp-btn" onclick="playNextCmd(true)"><svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg></button>
-      <button class="mp-btn mp-btn-main" onclick="togglePlay()">
-        <svg id="iconPlay" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-        <svg id="iconPause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
-      </button>
-      <button class="mp-btn" onclick="playNextCmd(false)"><svg viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg></button>
-    </div>
-    <div class="mp-progress-container">
-      <span class="mp-time" id="currentTime">0:00</span>
-      <input type="range" id="progressBar" value="0" min="0" max="100">
-      <span class="mp-time" id="duration">0:00</span>
-    </div>
-  </div>
-  <div class="mp-right">KanYeWest</div> 
-</div>
-
-<div id="fullPlayer" class="full-player">
-  <div class="swipe-handle"></div>
-  <button class="close-full" onclick="toggleFullPlayer()">✕</button>
-  <div class="full-content">
-    <img id="fullCover" class="full-cover" src="">
-    <div class="full-info">
-      <h2 id="fullTitle">...</h2>
-      <p id="fullAlbum">ALBUM</p>
-      <div style="margin-bottom: 30px; width: 100%;">
-        <input type="range" id="fullProgressBar" value="0" style="width: 100%;">
-        <div style="display: flex; justify-content: space-between; font-size: 13px; color: #aaa; margin-top: 10px; font-weight: 600;">
-          <span id="fullCurrentTime">0:00</span>
-          <span id="fullDuration">0:00</span>
+<div class="app-shell">
+  <aside class="sidebar">
+    <div class="sidebar-panel">
+      <div class="nav-menu">
+        <div class="nav-item" id="navSearchDesktop" onclick="showSearchView()">
+          <svg viewBox="0 0 24 24"><path d="M10.533 1.279c-5.18 0-9.407 4.14-9.407 9.279s4.226 9.279 9.407 9.279c2.234 0 4.29-.77 5.907-2.058l4.353 4.353a1 1 0 1 0 1.414-1.414l-4.344-4.344a9.157 9.157 0 0 0 2.077-5.816c0-5.14-4.226-9.28-9.407-9.28zm-7.407 9.279c0-4.006 3.302-7.28 7.407-7.28s7.407 3.274 7.407 7.28-3.302 7.279-7.407 7.279-7.407-3.273-7.407-7.279z"/></svg>
+          Search
         </div>
       </div>
-      <div class="full-controls">
-        <button class="full-btn" onclick="playNextCmd(true)"><svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg></button>
-        <button class="full-btn full-btn-main" onclick="togglePlay()">
-          <svg id="fullIconPlay" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-          <svg id="fullIconPause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+    </div>
+
+    <div class="sidebar-panel library-panel">
+      <div class="library-header">
+        <svg viewBox="0 0 24 24"><path d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z"/></svg>
+        Your Library
+      </div>
+      <div class="lib-chips">
+        <div class="lib-chip">Playlists</div>
+        <div class="lib-chip">Albums</div>
+      </div>
+      <div class="lib-list" id="sidebarLibraryList">
+        </div>
+    </div>
+  </aside>
+
+  <main class="main-panel">
+    <div class="top-gradient" id="topGradient"></div>
+    
+    <div class="main-scroll-area" id="mainScrollArea" onscroll="handleScroll()">
+      
+      <header class="top-bar" id="mainHeader">
+        <div class="header-left">
+          <button class="nav-btn-circle" id="topHomeBtn" onclick="goHome()" title="Home" style="display: none;">
+            <svg viewBox="0 0 24 24"><path d="M12.5 3.247a1 1 0 0 0-1 0L4 7.577V16a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V7.577l-7.5-4.33zM5.5 8.442l6.5-3.753 6.5 3.753v6.558h-13V8.442z"/></svg>
+          </button>
+
+          <div class="search-bar" id="searchBarContainer">
+            <svg viewBox="0 0 24 24"><path d="M15.356 10.558c0 2.623-2.16 4.75-4.823 4.75-2.664 0-4.824-2.127-4.824-4.75s2.16-4.75 4.824-4.75c2.664 0 4.823 2.127 4.823 4.75z"/><path d="M1.526 10.558c0-4.998 4.092-9.05 9.006-9.05 4.915 0 9.007 4.052 9.007 9.05 0 2.102-.733 4.033-1.954 5.56l5.12 5.093c.48.477.484 1.25.006 1.724-.477.473-1.25.47-1.73-.007l-5.117-5.09c-1.554 1.09-3.46 1.73-5.332 1.73-4.914 0-9.006-4.05-9.006-9.05z"/></svg>
+            <input type="text" id="searchInput" placeholder="What do you want to play?">
+          </div>
+          
+          <div class="header-sticky-album" id="headerStickyAlbum">
+            <button class="sticky-play-btn" onclick="playCurrentAlbum()">
+              <svg id="stickyPlayIcon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+            <span class="sticky-title" id="stickyTitle">Album Name</span>
+          </div>
+        </div>
+        
+        <div class="header-right">
+          <button class="btn-surprise desktop-surprise" onclick="surpriseMe()">Surprise Me</button>
+          
+          <button class="profile-circle" onclick="toggleProfileMenu(event)">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+          </button>
+          
+          <div class="profile-dropdown" id="profileDropdown">
+            <button onclick="openUpdates()">What's new <svg viewBox="0 0 24 24"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg></button>
+            <button onclick="openVision()">THE VISION <svg viewBox="0 0 24 24"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg></button>
+            <div class="divider"></div>
+            <button onclick="toggleTheme()">Toggle Theme <svg viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg></button>
+          </div>
+        </div>
+      </header>
+
+      <div class="view-section active" id="homeView">
+        <div class="content-padding main-content">
+          <h2 class="greeting" id="greetingText">Good Evening</h2>
+          <div class="recent-grid" id="recentGrid"></div>
+
+          <h2 class="section-title">The Archive</h2>
+          <div class="album-grid" id="albumGrid"></div>
+        </div>
+      </div>
+      
+      <div class="view-section" id="searchView">
+        <div class="content-padding main-content">
+          <div id="mobileSearchInput" style="display:none; margin-bottom: 24px;">
+            <input type="text" id="mobileSearchBox" placeholder="What do you want to play?" style="width: 100%; padding: 12px 16px; border-radius: 24px; border: none; background: var(--bg-card-hover); color: var(--text-main); font-size: 14px; outline: none;">
+          </div>
+          <div id="searchHistoryContainer" style="display: none; margin-bottom: 32px;">
+            <h2 class="section-title">Recent Searches</h2>
+            <div id="searchHistoryGrid" style="display: flex; flex-wrap: wrap; gap: 12px;"></div>
+          </div>
+          <div id="searchResultsContainer">
+            <h2 class="section-title" id="searchResultsTitle">Search Results</h2>
+            <div class="album-grid" id="searchGrid"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="view-section" id="albumViewContainer">
+        <div class="album-gradient-bg"></div>
+        <div class="album-content-relative">
+          <div class="album-header" id="albumHeader">
+            <img src="" id="albumCoverLg" class="album-cover-large" alt="Cover">
+            <div class="album-details">
+              <span class="album-type" id="albumType">Album</span>
+              <h1 class="album-title-large" id="albumTitleLg">Album Title</h1>
+              <div class="album-meta">
+                <span style="font-weight:700;">Kanye West</span> • <span id="albumYear">2024</span> • <span id="albumTrackCount">10 songs</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="action-row">
+            <button class="btn-large-play" onclick="playCurrentAlbum()">
+              <svg viewBox="0 0 24 24" id="mainPlayIcon"><path d="M8 5v14l11-7z"/></svg>
+            </button>
+            <a id="downloadAlbumBtn" href="#" class="btn-download-album" style="display:none;" download>
+              <svg viewBox="0 0 24 24" style="width:16px; fill:currentColor;"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+              Download
+            </a>
+          </div>
+          
+          <div class="tracklist-container">
+            <div class="tracklist-header">
+              <div style="text-align:center;">#</div>
+              <div>Title</div>
+              <div style="text-align:right;">
+                <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor"><path d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/><path d="M8 3.25a.75.75 0 0 1 .75.75v3.25H11a.75.75 0 0 1 0 1.5H8a.75.75 0 0 1-.75-.75V4A.75.75 0 0 1 8 3.25z"/></svg>
+              </div>
+            </div>
+            <div id="tracklistContainer">
+              </div>
+          </div>
+        </div>
+      </div>
+
+    </div> </main>
+</div>
+
+<footer class="player-bar" onclick="openFullPlayer(event)">
+  <div class="mini-progress" onclick="seekMini(event)">
+    <div class="mini-progress-fill" id="miniProgressFill"></div>
+    <div class="mini-progress-circle" id="miniProgressCircle"></div>
+  </div>
+
+  <div class="pb-left">
+    <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" id="playerCover" class="pb-cover" alt="Cover">
+    <div class="pb-info">
+      <h4 id="playerTitle">No Track Selected</h4>
+      <p id="playerArtist">-</p>
+    </div>
+    <button class="player-like-btn" id="playerLikeBtn" onclick="togglePlayerLike(event)">
+      <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+    </button>
+    <button class="mobile-play-btn" onclick="event.stopPropagation(); togglePlay()">
+      <svg id="mobilePlayIcon" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+    </button>
+  </div>
+
+  <div class="pb-center">
+    <div class="pb-controls">
+      <button class="ctrl-btn" onclick="prevTrack(); event.stopPropagation();">
+        <svg viewBox="0 0 16 16"><path d="M13 2.5L5 7.119V3H3v10h2V8.881l8 4.619z"/></svg>
+      </button>
+      <button class="play-btn" id="playPauseBtn" onclick="togglePlay(); event.stopPropagation();">
+        <svg viewBox="0 0 24 24" id="playIcon"><path d="M8 5v14l11-7z"/></svg>
+      </button>
+      <button class="ctrl-btn" onclick="nextTrack(); event.stopPropagation();">
+        <svg viewBox="0 0 16 16"><path d="M12.7 1a.7.7 0 0 0-.7.7v5.15L2.05 1.107A.7.7 0 0 0 1 1.712v12.575a.7.7 0 0 0 1.05.607L12 9.149V14.3a.7.7 0 0 0 1.4 0V1.7a.7.7 0 0 0-.7-.7z"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="pb-right">
+    <div class="volume-controls">
+      <svg viewBox="0 0 16 16" style="width:16px;height:16px;fill:var(--text-muted)">
+        <path d="M9.741.85a.75.75 0 0 1 .375.65v13a.75.75 0 0 1-1.125.65l-6.925-4a3.642 3.642 0 0 1-1.33-4.967 3.639 3.639 0 0 1 1.33-1.332l6.925-4a.75.75 0 0 1 .75 0zm-6.924 5.3a2.139 2.139 0 0 0 0 3.7l5.8 3.35V2.8l-5.8 3.35zm8.683 4.29V5.56a2.75 2.75 0 0 1 0 4.88z"/>
+      </svg>
+      <input type="range" class="volume-slider" id="volumeBar" value="100" max="100" onclick="event.stopPropagation();">
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-nav">
+  <div class="m-nav-item active" id="navHomeMob" onclick="goHome()">
+    <svg viewBox="0 0 24 24"><path d="M12.5 3.247a1 1 0 0 0-1 0L4 7.577V16a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V7.577l-7.5-4.33zM5.5 8.442l6.5-3.753 6.5 3.753v6.558h-13V8.442z"/></svg>
+    <span>Home</span>
+  </div>
+  <div class="m-nav-item" id="navSearchMob" onclick="showSearchView()">
+    <svg viewBox="0 0 24 24"><path d="M10.5 3.5a7 7 0 1 0 0 14 7 7 0 0 0 0-14zm-9 7a9 9 0 1 1 15.63 6.216l4.077 4.078a1 1 0 0 1-1.414 1.414l-4.078-4.077A9 9 0 0 1 1.5 10.5z"/></svg>
+    <span>Search</span>
+  </div>
+  <div class="m-nav-item" onclick="surpriseMe()">
+    <svg viewBox="0 0 24 24"><path d="M10.533 1.27893C10.958 1.13725 11.4111 1.06641 11.8741 1.06641C16.8453 1.06641 20.8741 5.09521 20.8741 10.0664C20.8741 15.0376 16.8453 19.0664 11.8741 19.0664C6.9029 19.0664 2.87415 15.0376 2.87415 10.0664C2.87415 9.17646 3.00318 8.31846 3.24354 7.50551C3.4116 6.93661 4.01503 6.60565 4.58392 6.77371C5.15282 6.94178 5.48378 7.5452 5.31572 8.1141C5.12781 8.74955 5.028 9.39803 5.028 10.0664C5.028 13.8475 8.093 16.9126 11.8741 16.9126C15.6553 16.9126 18.7203 13.8475 18.7203 10.0664C18.7203 6.28527 15.6553 3.22026 11.8741 3.22026C11.5369 3.22026 11.2057 3.2443 10.8814 3.29055L12.5181 5.14545C12.8943 5.57199 12.8533 6.22271 12.4268 6.5989C12.0003 6.97509 11.3495 6.93409 10.9734 6.50755L7.74246 2.84556C7.54637 2.6234 7.46467 2.32412 7.52554 2.03513C7.58642 1.74614 7.78183 1.50654 8.05492 1.38722L12.0549 0.0872166C12.5794 -0.141334 13.1818 0.106518 13.4103 0.631024C13.6389 1.15553 13.391 1.75798 12.8665 1.98653L10.533 1.27893Z"/></svg>
+    <span>Surprise</span>
+  </div>
+</div>
+
+<div class="full-player" id="fullPlayer">
+  <div class="swipe-handle"></div>
+  <div class="fp-header">
+    <button class="control-btn" onclick="closeFullPlayer()">
+      <svg viewBox="0 0 24 24"><path d="M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"/></svg>
+    </button>
+    <div class="fp-header-text">
+      <span>PLAYING FROM ALBUM</span>
+      <strong id="fpAlbumName">Album Name</strong>
+    </div>
+    <div style="width:24px"></div> 
+  </div>
+  
+  <div class="fp-content">
+    <img src="https://wallpapers.com/images/hd/white-square-background-56v690fpm25a3o6s.jpg" class="fp-cover" id="fpArt" alt="Cover">
+    
+    <div style="width:100%; max-width:600px;">
+      <div class="fp-info">
+        <div class="fp-text-group">
+          <h2 id="fpTitle">No Track Selected</h2>
+          <p id="fpArtist">Kanye West</p>
+        </div>
+        <button class="player-like-btn" id="fpLikeBtn" onclick="togglePlayerLike(event)" style="transform:scale(1.5); background:none; border:none; cursor:pointer;">
+          <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
         </button>
-        <button class="full-btn" onclick="playNextCmd(false)"><svg viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg></button>
+      </div>
+      
+      <div class="fp-controls">
+        <div class="pb-progress" style="margin-bottom:20px;">
+          <span class="currentTime" id="fpCurrentTime">0:00</span>
+          <div class="progress-container">
+            <input type="range" class="progressBar" id="fpProgressBar" value="0" max="100">
+            <div class="progress-circle" id="fpProgressCircle"></div>
+          </div>
+          <span class="duration" id="fpTotalTime">0:00</span>
+        </div>
+        <div class="fp-main-ctrls">
+          <button class="control-btn" onclick="prevTrack()">
+            <svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+          </button>
+          <button class="play-btn" onclick="togglePlay()">
+            <svg viewBox="0 0 24 24" id="fpPlayIcon"><path d="M8 5v14l11-7z"/></svg>
+          </button>
+          <button class="control-btn" onclick="nextTrack()">
+            <svg viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div style="width: 100%; margin-top: 30px;">
+        <div class="tracklist-header" style="display: none;">
+          <div style="text-align:center;">#</div>
+          <div>Title</div>
+          <div style="text-align:right;">
+            <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor"><path d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"/><path d="M8 3.25a.75.75 0 0 1 .75.75v3.25H11a.75.75 0 0 1 0 1.5H8a.75.75 0 0 1-.75-.75V4A.75.75 0 0 1 8 3.25z"/></svg>
+          </div>
+        </div>
+        <div id="fpTracklistContainer" style="display: flex; flex-direction: column; gap: 8px;">
+          <!-- Tracklist will be populated here -->
+        </div>
       </div>
     </div>
   </div>
 </div>
 
-<audio id="globalAudio"></audio>
-
-<div class="backdrop" id="blogBackdrop">
-  <div class="modal">
-    <button class="close-modal" onclick="document.getElementById('blogBackdrop').classList.remove('show')">✕</button>
-    <h2 id="blogTitle" style="margin-top:0; text-transform:uppercase;"></h2>
-    <p id="blogContent" style="line-height:1.6; color:#444;"></p>
+<div class="modal-overlay" id="visionModal" onclick="closeModals(event)">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModals(event)">×</button>
+    <h2>THE MAIN GOAL</h2>
+    <p><strong>Making the vault accessible.</strong> Built to ensure the unreleased vision is organized and available to everyone.<br><br>Spend less time searching and more time listening to the music that never dropped.</p>
   </div>
 </div>
 
+<div class="modal-overlay" id="updatesModal" onclick="closeModals(event)">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModals(event)">×</button>
+    <h2>What's New</h2>
+    <div class="updates-list">
+      <div class="update-item">
+        <span class="update-date">14 April 2025</span>
+        <span class="update-text">ion know bro, you check it yourself</span>
+      </div>
+      <div class="update-item">
+        <span class="update-date">v2.1</span>
+        <span class="update-text">Queue System Returns. Fully working Liked Songs engine. Dynamic gradients synced.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="toast">Added to Queue</div>
+
 <script>
-// --- DATA ---
-const playlists = [
-{
-  title: 'Yandhi',
-  desc: '2018',
-  songs: [
-    { title: "Chakras", file: "music/Yandhi/01 Chakras.mp3" },
-    { title: "Calm (Interlude)", file: "music/Yandhi/02 Calm (Interlude).mp3" },
-    { title: "The Storm", file: "music/Yandhi/03 The Storm.mp3" },
-    { title: "Spread Your Wings", file: "music/Yandhi/04 Spread Your Wings.mp3" },
-    { title: "New Body", file: "music/Yandhi/05 New Body.mp3" },
-    { title: "Hurricane", file: "music/Yandhi/06 Hurricane.mp3" },
-    { title: "Alien (Interlude)", file: "music/Yandhi/07 Alien (Interlude).mp3" },
-    { title: "Alien", file: "music/Yandhi/08 Alien.mp3" },
-    { title: "Home", file: "music/Yandhi/09 Home.mp3" },
-    { title: "City In The Sky", file: "music/Yandhi/10 City In The Sky.mp3" },
-    { title: "Brothers", file: "music/Yandhi/11 Brothers.mp3" },
-    { title: "Cash To Burn", file: "music/Yandhi/12 Cash To Burn.mp3" },
-    { title: "We Got Love", file: "music/Yandhi/13 We Got Love.mp3" },
-    { title: "All Dreams Real", file: "music/Yandhi/14 All Dreams Real.mp3" },
-    { title: "The Garden", file: "music/Yandhi/15 The Garden.mp3" },
-    { title: "Last Name", file: "music/Yandhi/16 Last Name.mp3" },
-    { title: "Law Of Attraction", file: "music/Yandhi/17 Law Of Attraction.mp3" },
-    { title: "End Of It", file: "music/Yandhi/18 End Of It.mp3" }
-  ]
-},
- {
-  title: 'BULLY',
-  desc: '2026',
-  songs: [
-    { title: "PREACHER MAN", file: "music/BULLY/PREACHER MAN.mp3" },
-    { title: "BEAUTY AND THE BEAST", file: "music/BULLY/BEAUTY AND THE BEAST.mp3" },
-    { title: "LAST BREATH", file: "music/BULLY/LAST BREATH.mp3" },
-    { title: "WHITE LINES", file: "music/BULLY/WHITE LINES.mp3" },
-    { title: "I CAN'T WAIT", file: "music/BULLY/I CAN'T WAIT.mp3" },
-    { title: "BULLY", file: "music/BULLY/BULLY.mp3" },
-    { title: "ALL THE LOVE", file: "music/BULLY/ALL THE LOVE.mp3" },
-    { title: "THIS ONE HERE", file: "music/BULLY/THIS ONE HERE.mp3" },
-    { title: "HIGHS AND LOWS", file: "music/BULLY/HIGHS AND LOWS.mp3" },
-    { title: "MISSION CONTROL", file: "music/BULLY/MISSION CONTROL.mp3" },
-    { title: "CIRCLES", file: "music/BULLY/CIRCLES.mp3" },
-    { title: "DAMN", file: "music/BULLY/DAMN.mp3" },
-    { title: "LOSING YOUR MIND", file: "music/BULLY/LOSING YOUR MIND.mp3" },
-    { title: "MELROSE", file: "music/BULLY/MELROSE.mp3" }
-  ]
-}, 
- { 
-    title: "SWISH", 
-    songs: [
-      { title: "Freestyle 4", file: "music/SWISH/Freestyle 4 (feat. Tyler, The Creator, A$AP Ferg, A$AP Rocky _ Big Sean).mp3" },
-      { title: "Highlights", file: "music/SWISH/Highlights (feat. Young Thug).mp3" },
-      { title: "I Miss The Old Kanye", file: "music/SWISH/I Miss The Old Kanye.mp3" },
-      { title: "New Angels", file: "music/SWISH/New Angels.mp3" },
-      { title: "Nina Chop", file: "music/SWISH/Nina Chop (feat. Young Thug).m4a" },
-      { title: "Real Friends", file: "music/SWISH/Real Friends (feat. Ty Dolla $ign _ DMX).mp3" },
-      { title: "Ultralight Prayer Interlude", file: "music/SWISH/Ultralight Prayer Interlude (feat. Kirk Franklin).m4a" },
-      { title: "Wolves", file: "music/SWISH/Wolves (feat. Frank Ocean, Sia, _ Vic Mensa).mp3" },
-      { title: "Can U Be", file: "music/SWISH/Can U Be.mp3" },
-      { title: "Fade", file: "music/SWISH/Fade (feat. Ty Dolla $ign _ Post Malone).mp3" },
-      { title: "Father Stretch My Hands", file: "music/SWISH/Father Stretch My Hands (feat. Kendrick Lamar).mp3" },
-      { title: "No More Parties In LA", file: "music/SWISH/No More Parties In LA (feat. Kendrick Lamar _ Freddie Gibbs).mp3" },
-      { title: "The Mind is Powerful", file: "music/SWISH/The Mind is Powerful (feat. Swizz Beats) 1.mp3" },
-      { title: "Waves", file: "music/SWISH/Waves (feat. Chris Brown).mp3" },
-      { title: "Deja Vu", file: "music/SWISH/Deja Vu.mp3" },
-      { title: "Facts", file: "music/SWISH/Facts.mp3" },
-      { title: "Fall Out of Heaven", file: "music/SWISH/Fall Out of Heaven (feat. Bon Iver _ The Dream).mp3" },
-      { title: "FML", file: "music/SWISH/FML (feat. Travi$ Scott _ The Weeknd).mp3" }
-    ] 
-  },
-  { 
-    title: "SO HELP ME GOD", 
-    songs: [
-      { title: "FALL OUT OF HEAVEN", file: "music/SO_HELP_ME_GOD/FALL OUT OF HEAVEN.mp3" },
-      { title: "FOREVER", file: "music/SO_HELP_ME_GOD/FOREVER.mp3" },
-      { title: "FOURFIVESECONDS", file: "music/SO_HELP_ME_GOD/FOURFIVESECONDS.mp3" },
-      { title: "GOD LEVEL", file: "music/SO_HELP_ME_GOD/GOD LEVEL.mp3" },
-      { title: "GRAVE", file: "music/SO_HELP_ME_GOD/GRAVE.mp3" },
-      { title: "I FEEL LIKE THAT", file: "music/SO_HELP_ME_GOD/I FEEL LIKE THAT.mp3" },
-      { title: "MAN UP", file: "music/SO_HELP_ME_GOD/MAN UP.mp3" },
-      { title: "NEW ANGELS", file: "music/SO_HELP_ME_GOD/NEW ANGELS.mp3" },
-      { title: "NINJA CHOP", file: "music/SO_HELP_ME_GOD/NINJA CHOP.mp3" },
-      { title: "ONE I LOVE", file: "music/SO_HELP_ME_GOD/ONE I LOVE.mp3" },
-      { title: "ONLY ONE", file: "music/SO_HELP_ME_GOD/ONLY ONE.mp3" },
-      { title: "RIHANNA", file: "music/SO_HELP_ME_GOD/RIHANNA.mp3" },
-      { title: "SOUTHSIDE SERENADE", file: "music/SO_HELP_ME_GOD/SOUTHSIDE SERENADE.mp3" },
-      { title: "SPECIAL", file: "music/SO_HELP_ME_GOD/SPECIAL.mp3" },
-      { title: "THE MIND IS POWERFUL", file: "music/SO_HELP_ME_GOD/THE MIND IS POWERFUL.mp3" },
-      { title: "WOLVES", file: "music/SO_HELP_ME_GOD/WOLVES.mp3" },
-      { title: "ALL DAY", file: "music/SO_HELP_ME_GOD/ALL DAY.mp3" },
-      { title: "CAN U BE", file: "music/SO_HELP_ME_GOD/CAN U BE.mp3" },
-      { title: "CAN'T GET OVER ME", file: "music/SO_HELP_ME_GOD/CAN'T GET OVER ME.mp3" },
-      { title: "CAN'T LOOK IN MY EYES", file: "music/SO_HELP_ME_GOD/CAN'T LOOK IN MY EYES.mp3" },
-      { title: "CEREBERUS", file: "music/SO_HELP_ME_GOD/CEREBERUS.mp3" }
-    ] 
-  },
-  { 
-    title: "JESUS IS KING II", 
-    songs: [
-      { title: "God Is", file: "music/JESUS_IS_KING_II/God Is.mp3" },
-      { title: "Hands On", file: "music/JESUS_IS_KING_II/Hands On.mp3" },
-      { title: "LA Monster", file: "music/JESUS_IS_KING_II/LA Monster.mp3" },
-      { title: "On God", file: "music/JESUS_IS_KING_II/On God.mp3" },
-      { title: "Selah", file: "music/JESUS_IS_KING_II/Selah.mp3" },
-      { title: "Use This Gospel", file: "music/JESUS_IS_KING_II/Use This Gospel.mp3" },
-      { title: "Water", file: "music/JESUS_IS_KING_II/Water.mp3" },
-      { title: "Ashes", file: "music/JESUS_IS_KING_II/Ashes.mp3" },
-      { title: "Closed On Sunday", file: "music/JESUS_IS_KING_II/Closed On Sunday.mp3" },
-      { title: "Everything We Need", file: "music/JESUS_IS_KING_II/Everything We Need.mp3" },
-      { title: "Follow God", file: "music/JESUS_IS_KING_II/Follow God.mp3" }
-    ] 
-  },
-  { 
-    title: "In God's Country", 
-    songs: [
-      { title: "Hold The Line", file: "music/In_God's_Country/Hold The Line.mp3" },
-      { title: "Hurricane", file: "music/In_God's_Country/Hurricane.mp3" },
-      { title: "Life Of The Party", file: "music/In_God's_Country/Life Of The Party.mp3" },
-      { title: "New Body", file: "music/In_God's_Country/New Body.mp3" },
-      { title: "Off The Grid", file: "music/In_God's_Country/Off The Grid.mp3" },
-      { title: "Praise God", file: "music/In_God's_Country/Praise God.mp3" },
-      { title: "Skuuurrr", file: "music/In_God's_Country/Skuuurrr.mp3" },
-      { title: "Up From The Ashes", file: "music/In_God's_Country/Up From The Ashes.mp3" },
-      { title: "Wash Us In The Blood", file: "music/In_God's_Country/Wash Us In The Blood.mp3" },
-      { title: "Welcome To My Life", file: "music/In_God's_Country/Welcome To My Life.mp3" },
-      { title: "You Was Right", file: "music/In_God's_Country/You Was Right.mp3" },
-      { title: "24", file: "music/In_God's_Country/24.mp3" },
-      { title: "God's Test", file: "music/In_God's_Country/God's Test.mp3" },
-      { title: "I Feel Terrific", file: "music/In_God's_Country/I Feel Terrific.mp3" },
-      { title: "In God's Country", file: "music/In_God's_Country/In God's Country.mp3" },
-      { title: "Keep My Spirit Alive", file: "music/In_God's_Country/Keep My Spirit Alive.mp3" },
-      { title: "Lord I Need You", file: "music/In_God's_Country/Lord I Need You.mp3" },
-      { title: "Tell The Vision", file: "music/In_God's_Country/Tell The Vision.mp3" },
-      { title: "Donda", file: "music/In_God's_Country/Donda.mp3" },
-      { title: "Everything", file: "music/In_God's_Country/Everything.mp3" },
-      { title: "Future_Sounds", file: "music/In_God's_Country/Future_Sounds.mp3" },
-      { title: "God's Country", file: "music/In_God's_Country/God's Country.mp3" }
-    ] 
-  },
-  { 
-    title: "IN A PERFECT WORLD", 
-    songs: [
-      { title: "Fake Friends (Interlude)", file: "music/IN_A_PERFECT_WORLD/Fake Friends (Interlude).mp3" },
-      { title: "Alive", file: "music/IN_A_PERFECT_WORLD/Alive.mp3" },
-      { title: "All The Love", file: "music/IN_A_PERFECT_WORLD/All The Love.mp3" },
-      { title: "Bésame Mama", file: "music/IN_A_PERFECT_WORLD/Bésame Mama.mp3" },
-      { title: "Bianca", file: "music/IN_A_PERFECT_WORLD/Bianca.mp3" },
-      { title: "World Peace", file: "music/IN_A_PERFECT_WORLD/World Peace.mp3" },
-      { title: "Nitrous", file: "music/IN_A_PERFECT_WORLD/Nitrous.mp3" },
-      { title: "Oh No My Hoodie My Hoodie", file: "music/IN_A_PERFECT_WORLD/Oh No My Hoodie My Hoodie.mp3" },
-      { title: "Press", file: "music/IN_A_PERFECT_WORLD/Press.mp3" },
-      { title: "Same Shit", file: "music/IN_A_PERFECT_WORLD/Same Shit.mp3" },
-      { title: "The Dream Is Over (Interlude)", file: "music/IN_A_PERFECT_WORLD/The Dream Is Over (Interlude).mp3" },
-      { title: "Highschool ID", file: "music/IN_A_PERFECT_WORLD/Highschool ID.mp3" },
-      { title: "King Of Soul", file: "music/IN_A_PERFECT_WORLD/King Of Soul.mp3" },
-      { title: "Love Love Love", file: "music/IN_A_PERFECT_WORLD/Love Love Love.mp3" },
-      { title: "Mama Said", file: "music/IN_A_PERFECT_WORLD/Mama Said.mp3" },
-      { title: "Morning Light (Interlude)", file: "music/IN_A_PERFECT_WORLD/Morning Light (Interlude).mp3" },
-      { title: "Cash Cow", file: "music/IN_A_PERFECT_WORLD/Cash Cow.mp3" },
-      { title: "Cousins", file: "music/IN_A_PERFECT_WORLD/Cousins.mp3" },
-      { title: "Dark Matter", file: "music/IN_A_PERFECT_WORLD/Dark Matter.mp3" },
-      { title: "Drown", file: "music/IN_A_PERFECT_WORLD/Drown.mp3" }
-    ] 
-  },
-  { 
-    title: "Good Ass Job", 
-    songs: [
-      { title: "Devil in a New Dress", file: "music/Good_Ass_Job/1-13. Devil in a New Dress.mp3" },
-      { title: "POWER", file: "music/Good_Ass_Job/1-06. POWER.mp3" },
-      { title: "Ghetto University", file: "music/Good_Ass_Job/1-07. Ghetto University.mp3" },
-      { title: "Christian Dior Denim Flow", file: "music/Good_Ass_Job/1-08. Christian Dior Denim Flow.mp3" },
-      { title: "So Appalled", file: "music/Good_Ass_Job/1-09. So Appalled.mp3" },
-      { title: "Dark Fantasy", file: "music/Good_Ass_Job/1-02. Dark Fantasy.mp3" },
-      { title: "The Joy", file: "music/Good_Ass_Job/1-03. The Joy.mp3" },
-      { title: "Hard Horn Nightmare", file: "music/Good_Ass_Job/1-04. Hard Horn Nightmare.mp3" },
-      { title: "Lord Lord Lord", file: "music/Good_Ass_Job/1-05. Lord Lord Lord.mp3" },
-      { title: "Hell of a Life", file: "music/Good_Ass_Job/1-01. Hell of a Life.mp3" },
-      { title: "Hard Horn Nightmare (Alternate Version)", file: "music/Good_Ass_Job/2-03. Hard Horn Nightmare (Alternate Version).mp3" },
-      { title: "Money Everywhere", file: "music/Good_Ass_Job/2-04. Money Everywhere.mp3" },
-      { title: "Monster", file: "music/Good_Ass_Job/1-18. Monster.mp3" },
-      { title: "All of the Lights", file: "music/Good_Ass_Job/2-01. All of the Lights.mp3" },
-      { title: "Blame Game", file: "music/Good_Ass_Job/2-02. Blame Game.mp3" },
-      { title: "Runaway", file: "music/Good_Ass_Job/1-14. Runaway.mp3" },
-      { title: "Good Friday", file: "music/Good_Ass_Job/1-15. Good Friday.mp3" },
-      { title: "Never See Me Again", file: "music/Good_Ass_Job/1-16. Never See Me Again.mp3" },
-      { title: "Mama's Boyfriend", file: "music/Good_Ass_Job/1-17. Mama's Boyfriend.mp3" },
-      { title: "Eyes Closed", file: "music/Good_Ass_Job/1-10. Eyes Closed.mp3" },
-      { title: "Whole Lifetime", file: "music/Good_Ass_Job/1-11. Whole Lifetime.mp3" },
-      { title: "Chain Heavy", file: "music/Good_Ass_Job/1-12. Chain Heavy.mp3" }
-    ] 
-  },
-  { 
-    title: "THANK GOD FOR DRUGS", 
-    songs: [
-      { title: "CAN'T GET OVER ME", file: "music/THANK_GOD_FOR_DRUGS/CAN'T GET OVER ME.mp3" },
-      { title: "EMOTIONLESS", file: "music/THANK_GOD_FOR_DRUGS/EMOTIONLESS.mp3" },
-      { title: "GOD!", file: "music/THANK_GOD_FOR_DRUGS/GOD!.mp3" },
-      { title: "GOOD THINGS DON'T LAST", file: "music/THANK_GOD_FOR_DRUGS/GOOD THINGS DON'T LAST.mp3" },
-      { title: "GUILT TRIP", file: "music/THANK_GOD_FOR_DRUGS/GUILT TRIP.mp3" },
-      { title: "HOLLYWOOD", file: "music/THANK_GOD_FOR_DRUGS/HOLLYWOOD.mp3" },
-      { title: "I AM NOT HOME", file: "music/THANK_GOD_FOR_DRUGS/I AM NOT HOME.mp3" },
-      { title: "LOUDER", file: "music/THANK_GOD_FOR_DRUGS/LOUDER.mp3" },
-      { title: "NEW SLAVES", file: "music/THANK_GOD_FOR_DRUGS/NEW SLAVES.mp3" },
-      { title: "NO", file: "music/THANK_GOD_FOR_DRUGS/NO.mp3" },
-      { title: "ON SIGHT", file: "music/THANK_GOD_FOR_DRUGS/ON SIGHT.mp3" },
-      { title: "ONE I LOVE", file: "music/THANK_GOD_FOR_DRUGS/ONE I LOVE.mp3" },
-      { title: "PERFECT", file: "music/THANK_GOD_FOR_DRUGS/PERFECT.mp3" },
-      { title: "SEND IT UP", file: "music/THANK_GOD_FOR_DRUGS/SEND IT UP.mp3" },
-      { title: "TALK TO ME", file: "music/THANK_GOD_FOR_DRUGS/TALK TO ME.mp3" },
-      { title: "YEEZUS", file: "music/THANK_GOD_FOR_DRUGS/YEEZUS.mp3" },
-      { title: "BOUND", file: "music/THANK_GOD_FOR_DRUGS/BOUND.mp3" },
-      { title: "AWESOME", file: "music/THANK_GOD_FOR_DRUGS/AWESOME.mp3" },
-      { title: "BLACK SKINHEAD", file: "music/THANK_GOD_FOR_DRUGS/BLACK SKINHEAD.mp3" },
-      { title: "BLOOD ON THE LEAVES", file: "music/THANK_GOD_FOR_DRUGS/BLOOD ON THE LEAVES.mp3" }
-    ] 
-  },
-  { 
-    title: "Yeezus II", 
-    songs: [
-      { title: "The World (Intro)", file: "music/Yeezus_II/1. The World (Intro).mp3" },
-      { title: "However You Want It", file: "music/Yeezus_II/2. However You Want It (feat. Paul McCartney).mp3" },
-      { title: "God Level", file: "music/Yeezus_II/3. God Level.mp3" },
-      { title: "Can U Be..", file: "music/Yeezus_II/4. Can U Be..mp3" },
-      { title: "Forever", file: "music/Yeezus_II/5. Forever.mp3" },
-      { title: "FML", file: "music/Yeezus_II/6. FML (feat. Travis Scott & The Weeknd).mp3" },
-      { title: "Can't Get Over Me", file: "music/Yeezus_II/7. Can't Get Over Me (feat. Tony Williams, Bon Iver & The-Dream).mp3" },
-      { title: "FourFiveSeconds", file: "music/Yeezus_II/8. FourFiveSeconds (feat. Rihanna & Paul McCartney).mp3" },
-      { title: "Only One", file: "music/Yeezus_II/9. Only One (feat. Caroline Shaw & Paul McCartney).mp3" }
-    ] 
-  },
-{ 
-    title: "BAD BITCH PLAYBOOK", 
-    songs: [
-      { title: "GUN TO MY HEAD", file: "music/BAD_BITCH_PLAYBOOK/GUN TO MY HEAD.mp3" },
-      { title: "TAKE OFF YOUR DRESS", file: "music/BAD_BITCH_PLAYBOOK/TAKE OFF YOUR DRESS.mp3" },
-      { title: "WELCOME TO MY LIFE", file: "music/BAD_BITCH_PLAYBOOK/WELCOME TO MY LIFE.mp3" },
-      { title: "PRESSURE", file: "music/BAD_BITCH_PLAYBOOK/PRESSURE.mp3" },
-      { title: "RIVER", file: "music/BAD_BITCH_PLAYBOOK/RIVER.mp3" },
-      { title: "MY SOUL", file: "music/BAD_BITCH_PLAYBOOK/MY SOUL.mp3" },
-      { title: "EVERYBODY", file: "music/BAD_BITCH_PLAYBOOK/EVERYBODY.mp3" },
-      { title: "BACK TO ME", file: "music/BAD_BITCH_PLAYBOOK/BACK TO ME.mp3" },
-      { title: "FUK SUMN", file: "music/BAD_BITCH_PLAYBOOK/FUK SUMN.mp3" },
-      { title: "FIELD TRIP", file: "music/BAD_BITCH_PLAYBOOK/FIELD TRIP.mp3" },
-      { title: "DRUNK", file: "music/BAD_BITCH_PLAYBOOK/DRUNK.mp3" },
-      { title: "MELROSE", file: "music/BAD_BITCH_PLAYBOOK/MELROSE.mp3" },
-      { title: "IN THE STARS", file: "music/BAD_BITCH_PLAYBOOK/IN THE STARS.mp3" },
-      { title: "SO SOON", file: "music/BAD_BITCH_PLAYBOOK/SO SOON.mp3" },
-      { title: "LOVE LOVE LOVE", file: "music/BAD_BITCH_PLAYBOOK/LOVE LOVE LOVE.mp3" },
-      { title: "SO CALLED FRIENDS", file: "music/BAD_BITCH_PLAYBOOK/SO CALLED FRIENDS.mp3" },
-      { title: "SLIDE", file: "music/BAD_BITCH_PLAYBOOK/SLIDE.mp3" },
-      { title: "FLOWERS", file: "music/BAD_BITCH_PLAYBOOK/FLOWERS.mp3" },
-      { title: "PROMOTION", file: "music/BAD_BITCH_PLAYBOOK/PROMOTION.mp3" },
-      { title: "BURN", file: "music/BAD_BITCH_PLAYBOOK/BURN.mp3" },
-      { title: "LIFESTYLE", file: "music/BAD_BITCH_PLAYBOOK/LIFESTYLE.mp3" },
-      { title: "NEW BODY", file: "music/BAD_BITCH_PLAYBOOK/NEW BODY.mp3" },
-      { title: "THE GARDEN", file: "music/BAD_BITCH_PLAYBOOK/THE GARDEN.mp3" },
-      { title: "SKY CITY", file: "music/BAD_BITCH_PLAYBOOK/SKY CITY.mp3" }
-    ] 
-  },
-  { 
-    title: "DONDA 2", 
-    songs: [
-      { title: "TRUE LOVE", file: "music/DONDA_2/01 TRUE LOVE.mp3" },
-      { title: "BROKEN ROAD", file: "music/DONDA_2/02 BROKEN ROAD.mp3" },
-      { title: "GET LOST", file: "music/DONDA_2/03 GET LOST.mp3" },
-      { title: "KEEP THE FLOWERS", file: "music/DONDA_2/04 KEEP THE FLOWERS.mp3" },
-      { title: "TOO EASY", file: "music/DONDA_2/05 TOO EASY.mp3" },
-      { title: "PABLO", file: "music/DONDA_2/06 PABLO.mp3" },
-      { title: "MR MIAGI", file: "music/DONDA_2/07 MR MIAGI.mp3" },
-      { title: "HAPPY", file: "music/DONDA_2/08 HAPPY.mp3" },
-      { title: "SECURITY", file: "music/DONDA_2/09 SECURITY.mp3" },
-      { title: "CITY OF GOD", file: "music/DONDA_2/10 CITY OF GOD.mp3" },
-      { title: "530", file: "music/DONDA_2/11 530.mp3" },
-      { title: "SCIFI", file: "music/DONDA_2/12 SCIFI.mp3" },
-      { title: "BURN EVERYTHING", file: "music/DONDA_2/13 BURN EVERYTHING.mp3" },
-      { title: "LOUIE BAG", file: "music/DONDA_2/14 LOUIE BAG.mp3" },
-      { title: "WE DID IT", file: "music/DONDA_2/15 WE DID IT.mp3" },
-      { title: "MAINTENANCE", file: "music/DONDA_2/16 MAINTENANCE.mp3" },
-      { title: "LORD LIFT", file: "music/DONDA_2/17 LORD LIFT.mp3" },
-      { title: "FIRST TIME", file: "music/DONDA_2/18 FIRST TIME.mp3" }
-    ] 
-  },
-  { 
-    title: "WAR", 
-    songs: [
-      { title: "MY WAY", file: "music/WAR/My Way.mp3" },
-      { title: "MELT BEAT", file: "music/WAR/melt beat.mp3" },
-      { title: "WHAT I WOULD HAVE SAID", file: "music/WAR/What I Would Have Said At Virgils Funeral.mp3" },
-      { title: "BOBBY DIGITAL", file: "music/WAR/Bobby Digital .mp3" },
-      { title: "SPIKY", file: "music/WAR/Spiky.mp3" },
-      { title: "ALL IS LOVE", file: "music/WAR/All is love .mp3" },
-      { title: "QUIET", file: "music/WAR/Quiet.mp3" },
-      { title: "NEVER COMING BACK", file: "music/WAR/Never Coming Back.mp3" },
-      { title: "LOVE LOVE LOVE", file: "music/WAR/Love Love Love.mp3" },
-      { title: "SHOWTIME", file: "music/WAR/Showtime.mp3" },
-      { title: "TALKING", file: "music/WAR/Talking.mp3" },
-      { title: "LET IT IN", file: "music/WAR/Let It In.mp3" }
-    ] 
-  },
-  { 
-    title: "GOOD ASS JOB PASTELLE", 
-    songs: [
-      { title: "NEVER SEE ME AGAIN", file: "music/GOOD_ASS_JOB_PASTELLE/15._Never_See_Me_Again.mp3" },
-      { title: "HARD HORN NIGHTMARE", file: "music/GOOD_ASS_JOB_PASTELLE/01._Hard_Horn_Nightmare.mp3" },
-      { title: "SWEAT ON MY FACE", file: "music/GOOD_ASS_JOB_PASTELLE/02._Sweat_On_My_Face_feat._Mos_Def__Talib_Kweli.mp3" },
-      { title: "THATS MY BITCH", file: "music/GOOD_ASS_JOB_PASTELLE/03._Thats_My_Bitch_feat._Jay-Z_Electrik_Red_Charlie_Wilson__Bon_Iver.mp3" },
-      { title: "DOWNTOWN", file: "music/GOOD_ASS_JOB_PASTELLE/04._Downtown_feat._Jeezy.mp3" },
-      { title: "THROW MY MONEY EVERYWHERE", file: "music/GOOD_ASS_JOB_PASTELLE/05._Throw_My_Money_Everywhere.mp3" },
-      { title: "FLASHING LIGHTS 2", file: "music/GOOD_ASS_JOB_PASTELLE/06._Flashing_Lights_2_feat._Charlie_Wilson.mp3" },
-      { title: "NOT THE SAME", file: "music/GOOD_ASS_JOB_PASTELLE/07._Not_The_Same_feat._Shire__Rick_Ross.mp3" },
-      { title: "MAMAS BOYFRIEND", file: "music/GOOD_ASS_JOB_PASTELLE/08._Mamas_Boyfriend.mp3" },
-      { title: "NO MORE PARTIES IN LA", file: "music/GOOD_ASS_JOB_PASTELLE/09._No_More_Parties_In_LA_feat._Lupe_Fiasco__Pharrell_Williams.mp3" },
-      { title: "SHOOT UP", file: "music/GOOD_ASS_JOB_PASTELLE/10._Shoot_Up_feat._Bon_Iver.mp3" },
-      { title: "EYES CLOSED", file: "music/GOOD_ASS_JOB_PASTELLE/11._Eyes_Closed_feat._John_Legend.mp3" },
-      { title: "ARMINA", file: "music/GOOD_ASS_JOB_PASTELLE/12._Armina_feat._Kid_Cudi.mp3" },
-      { title: "YOU KNOW YOU KNOW", file: "music/GOOD_ASS_JOB_PASTELLE/13._You_Know_You_Know_feat._Lil_Wayne__Drake.mp3" },
-      { title: "WHOOPTY DOO", file: "music/GOOD_ASS_JOB_PASTELLE/14._Whoopty_Doo_feat._Cyhi_The_Prynce__Big_Sean.mp3" }
-    ] 
-  },
-  { 
-    title: "GOD UNWILLING", 
-    songs: [
-      { title: "INTRO", file: "music/GOD_UNWILLING/1. Intro.mp3" },
-      { title: "SKY HIGH GRADUATES", file: "music/GOD_UNWILLING/2. Sky High Graduates.mp3" },
-      { title: "US PLACERS", file: "music/GOD_UNWILLING/3. Us Placers.mp3" },
-      { title: "YE'S INTERLUDE", file: "music/GOD_UNWILLING/4. Ye's Interlude.mp3" },
-      { title: "DON'T STOP!", file: "music/GOD_UNWILLING/5. Don't Stop!.mp3" },
-      { title: "DON'T LOOK DOWN", file: "music/GOD_UNWILLING/6. Don't Look Down.mp3" },
-      { title: "MONEY EVERYWHERE", file: "music/GOD_UNWILLING/7. Money Everywhere.mp3" },
-      { title: "P'S INTERLUDE", file: "music/GOD_UNWILLING/8. P's Interlude.mp3" },
-      { title: "EVERYONE NOSE (REMIX)", file: "music/GOD_UNWILLING/9. Everyone Nose (Remix).mp3" },
-      { title: "NUMBER ONE", file: "music/GOD_UNWILLING/10. Number One.mp3" },
-      { title: "FRONTIN'", file: "music/GOD_UNWILLING/11. Frontin'.mp3" },
-      { title: "LU'S INTERLUDE", file: "music/GOD_UNWILLING/12. Lu's Interlude.mp3" },
-      { title: "CHANGE", file: "music/GOD_UNWILLING/13. Change.mp3" },
-      { title: "PARIS, TOKYO (REMIX)", file: "music/GOD_UNWILLING/14. Paris, Tokyo (Remix).mp3" },
-      { title: "OUTRO", file: "music/GOD_UNWILLING/15. Outro.mp3" }
-    ] 
-  },
-  { 
-    title: "CALABASAS IS THE NEW ABU DHABI", 
-    songs: [
-      { title: "EVOLVE WHEN I SEE IT", file: "music/CALABASAS_IS_THE_NEW_ABU_DHABI/Evolve When I See It.mp3" },
-      { title: "SUMMER SIXTEEN", file: "music/CALABASAS_IS_THE_NEW_ABU_DHABI/Summer Sixteen.mp3" },
-      { title: "BLESSINGS", file: "music/CALABASAS_IS_THE_NEW_ABU_DHABI/Blessings.mp3" },
-      { title: "POP STYLE", file: "music/CALABASAS_IS_THE_NEW_ABU_DHABI/Pop Style.mp3" },
-      { title: "GLOW", file: "music/CALABASAS_IS_THE_NEW_ABU_DHABI/Glow.mp3" },
-      { title: "FINAL FANTASY", file: "music/CALABASAS_IS_THE_NEW_ABU_DHABI/Final Fantasy.mp3" },
-      { title: "WESTON ROAD FLOWS", file: "music/CALABASAS_IS_THE_NEW_ABU_DHABI/Weston Road Flows.mp3" }
-    ] 
-  },
-  { 
-    title: "CRUEL WINTER", 
-    songs: [
-      { title: "FACE DOWN", file: "music/CRUEL_WINTER/Face_Down_V5.mp3" },
-      { title: "PANDA REMIX", file: "music/CRUEL_WINTER/Panda_Remix_V1.mp3" },
-      { title: "ALL I KNOW", file: "music/CRUEL_WINTER/All_I_Know_V3.mp3" },
-      { title: "CIRCLE", file: "music/CRUEL_WINTER/Circle.mp3" },
-      { title: "CHAMPIONS", file: "music/CRUEL_WINTER/Champions_V7.mp3" }
-    ] 
-  },
-{
-    title: "LOVE EVERYONE",
-    songs: [
-      { title: "Ye vs. The People", file: "music/LOVE_EVERYONE/1. Ye vs. The People.mp3" },
-      { title: "Wouldn't Leave", file: "music/LOVE_EVERYONE/2. Wouldn_t Leave.mp3" },
-      { title: "Simulation Baptize", file: "music/LOVE_EVERYONE/3. Simulation Baptize.mp3" },
-      { title: "Queen Bitch", file: "music/LOVE_EVERYONE/4. Queen Bitch.mp3" },
-      { title: "Bad People", file: "music/LOVE_EVERYONE/5. Bad People.mp3" },
-      { title: "Yikes", file: "music/LOVE_EVERYONE/6. Yikes.mp3" },
-      { title: "Ass Shot", file: "music/LOVE_EVERYONE/7. Ass Shot.mp3" },
-      { title: "You Ain't No Model", file: "music/LOVE_EVERYONE/8. You Ain_t No Model.mp3" },
-      { title: "Ecstasy", file: "music/LOVE_EVERYONE/9. Ecstasy.mp3" },
-      { title: "I Feel Free", file: "music/LOVE_EVERYONE/10. I Feel Free.mp3" },
-      { title: "Moonlight", file: "music/LOVE_EVERYONE/11. Moonlight.mp3" },
-      { title: "Skeletons", file: "music/LOVE_EVERYONE/12. Skeletons.mp3" },
-      { title: "Take Me to the Light", file: "music/LOVE_EVERYONE/13. Take Me to the Light.mp3" },
-      { title: "Everything", file: "music/LOVE_EVERYONE/14. Everything.mp3" },
-      { title: "Brothers", file: "music/LOVE_EVERYONE/15. Brothers.mp3" },
-      { title: "Violent Crimes", file: "music/LOVE_EVERYONE/16. Violent Crimes.mp3" }
+// --- 1. MASSIVE ROBUST DATABASE ---
+const database = [
+  {
+    id: "yandhi", // [cite: 1]
+    title: "YANDHI", // [cite: 1]
+    year: "2018", // [cite: 1]
+    cover: "https://i.redd.it/3two3fms4nf41.jpg", // [cite: 1]
+    accent: "#a679b8", // [cite: 106]
+    notes: "for what reason did he not release ts 💔", // [cite: 106]
+    downloadUrl: "https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/Yandhi.zip", // [cite: 1]
+    tracks: [
+      { title: "Chakras", file: "music/Yandhi/01 Chakras.mp3" }, // [cite: 1]
+      { title: "Calm (Interlude)", file: "music/Yandhi/02 Calm (Interlude).mp3" }, // [cite: 1]
+      { title: "The Storm", file: "music/Yandhi/03 The Storm.mp3" }, // [cite: 1]
+      { title: "Spread Your Wings", file: "music/Yandhi/04 Spread Your Wings.mp3" }, // [cite: 1]
+      { title: "New Body", file: "music/Yandhi/05 New Body.mp3" }, // [cite: 1]
+      { title: "Hurricane", file: "music/Yandhi/06 Hurricane.mp3" }, // [cite: 2]
+      { title: "Alien (Interlude)", file: "music/Yandhi/07 Alien (Interlude).mp3" }, // [cite: 2]
+      { title: "Alien", file: "music/Yandhi/08 Alien.mp3" }, // [cite: 2]
+      { title: "Home", file: "music/Yandhi/09 Home.mp3" }, // [cite: 2]
+      { title: "City In The Sky", file: "music/Yandhi/10 City In The Sky.mp3" }, // [cite: 2]
+      { title: "Brothers", file: "music/Yandhi/11 Brothers.mp3" }, // [cite: 2]
+      { title: "Cash To Burn", file: "music/Yandhi/12 Cash To Burn.mp3" }, // [cite: 2]
+      { title: "We Got Love", file: "music/Yandhi/13 We Got Love.mp3" }, // [cite: 3]
+      { title: "All Dreams Real", file: "music/Yandhi/14 All Dreams Real.mp3" }, // [cite: 3]
+      { title: "The Garden", file: "music/Yandhi/15 The Garden.mp3" }, // [cite: 3]
+      { title: "Last Name", file: "music/Yandhi/16 Last Name.mp3" }, // [cite: 3]
+      { title: "Law Of Attraction", file: "music/Yandhi/17 Law Of Attraction.mp3" }, // [cite: 3]
+      { title: "End Of It", file: "music/Yandhi/18 End Of It.mp3" } // [cite: 3]
     ]
   },
   {
-    title: "TurboGrafx16",
-    songs: [
-      { title: "All Eyes on Ye", file: "music/TurboGrafx16/01 All Eyes on Ye.mp3" },
-      { title: "Rich Nigga Drunk", file: "music/TurboGrafx16/02 Rich Nigga Drunk.mp3" },
-      { title: "Caprisun", file: "music/TurboGrafx16/03 Caprisun (feat. Young Thug _ Tyga).mp3" },
-      { title: "No Reason", file: "music/TurboGrafx16/04 No Reason.mp3" },
-      { title: "Euro / Switch Hands", file: "music/TurboGrafx16/05 Euro _ Switch Hands (feat. A$AP Rocky).mp3" },
-      { title: "XTCY", file: "music/TurboGrafx16/06 XTCY.mp3" },
-      { title: "Face Down", file: "music/TurboGrafx16/07 Face Down (feat. Quavo _ Lil Yachty).mp3" },
-      { title: "Jealous", file: "music/TurboGrafx16/08 Jealous (feat. Justin Bieber _ Post Malone).mp3" },
-      { title: "Hold Tight", file: "music/TurboGrafx16/09 Hold Tight (feat. Migos _ Young Thug).mp3" },
-      { title: "New Angels", file: "music/TurboGrafx16/10 New Angels.mp3" },
-      { title: "All I Know (Remix)", file: "music/TurboGrafx16/11 All I Know [G.O.O.D. Music Remix] (Demo).mp3" },
-      { title: "Only Ye", file: "music/TurboGrafx16/12 Only Ye.mp3" },
-      { title: "Don't Jump", file: "music/TurboGrafx16/13 Don_t Jump.mp3" }
+    id: "bully", // [cite: 4]
+    title: "BULLY", // [cite: 4]
+    year: "2026", // [cite: 4]
+    cover: "https://upload.wikimedia.org/wikipedia/en/f/f1/Ye_%28Kanye_West%29_-_Bully_-_Album_Cover.png", // [cite: 4]
+    accent: "#9babab", // [cite: 106]
+    notes: "Cinematic dark energy.", // [cite: 106]
+    downloadUrl: "https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/BULLY.zip", // [cite: 4]
+    tracks: [
+      { title: "PREACHER MAN", file: "music/BULLY/PREACHER MAN.mp3" }, // [cite: 4]
+      { title: "BEAUTY AND THE BEAST", file: "music/BULLY/BEAUTY AND THE BEAST.mp3" }, // [cite: 4]
+      { title: "LAST BREATH", file: "music/BULLY/LAST BREATH.mp3" }, // [cite: 4]
+      { title: "WHITE LINES", file: "music/BULLY/WHITE LINES.mp3" }, // [cite: 4]
+      { title: "I CAN'T WAIT", file: "music/BULLY/I CAN'T WAIT.mp3" }, // [cite: 4]
+      { title: "BULLY", file: "music/BULLY/BULLY.mp3" }, // [cite: 4, 5]
+      { title: "ALL THE LOVE", file: "music/BULLY/ALL THE LOVE.mp3" }, // [cite: 5]
+      { title: "THIS ONE HERE", file: "music/BULLY/THIS ONE HERE.mp3" }, // [cite: 5]
+      { title: "HIGHS AND LOWS", file: "music/BULLY/HIGHS AND LOWS.mp3" }, // [cite: 5]
+      { title: "MISSION CONTROL", file: "music/BULLY/MISSION CONTROL.mp3" }, // [cite: 5]
+      { title: "CIRCLES", file: "music/BULLY/CIRCLES.mp3" }, // [cite: 5]
+      { title: "DAMN", file: "music/BULLY/DAMN.mp3" }, // [cite: 5]
+      { title: "LOSING YOUR MIND", file: "music/BULLY/LOSING YOUR MIND.mp3" }, // [cite: 5]
+      { title: "MELROSE", file: "music/BULLY/MELROSE.mp3" } // [cite: 6]
     ]
   },
+  {
+    id: "swish", // [cite: 6]
+    title: "SWISH", // [cite: 6]
+    year: "2016", // [cite: 6]
+    cover: "https://lastfm.freetls.fastly.net/i/u/500x500/0ed29c6907a535d3a71baec2820c047b.jpg", // [cite: 6]
+    accent: "#ffedcc", // [cite: 106]
+    notes: "Pre-Pablo vibes.", // [cite: 106]
+    downloadUrl: "https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/SWISH.zip", // [cite: 6]
+    tracks: [
+      { title: "Freestyle 4", file: "music/SWISH/Freestyle 4 (feat. Tyler, The Creator, A$AP Ferg, A$AP Rocky _ Big Sean).mp3" }, // [cite: 12, 13]
+      { title: "Highlights", file: "music/SWISH/Highlights (feat. Young Thug).mp3" }, // [cite: 13]
+      { title: "I Miss The Old Kanye", file: "music/SWISH/I Miss The Old Kanye.mp3" }, // [cite: 13]
+      { title: "New Angels", file: "music/SWISH/New Angels.mp3" }, // [cite: 13]
+      { title: "Nina Chop", file: "music/SWISH/Nina Chop (feat. Young Thug).m4a" }, // [cite: 13]
+      { title: "Real Friends", file: "music/SWISH/Real Friends (feat. Ty Dolla $ign _ DMX).mp3" }, // [cite: 13]
+      { title: "Ultralight Prayer Interlude", file: "music/SWISH/Ultralight Prayer Interlude (feat. Kirk Franklin).m4a" }, // [cite: 13, 14]
+      { title: "Wolves", file: "music/SWISH/Wolves (feat. Frank Ocean, Sia, _ Vic Mensa).mp3" }, // [cite: 14]
+      { title: "Can U Be", file: "music/SWISH/Can U Be.mp3" }, // [cite: 14]
+      { title: "Fade", file: "music/SWISH/Fade (feat. Ty Dolla $ign _ Post Malone).mp3" }, // [cite: 14]
+      { title: "Father Stretch My Hands", file: "music/SWISH/Father Stretch My Hands (feat. Kendrick Lamar).mp3" }, // [cite: 14]
+      { title: "No More Parties In LA", file: "music/SWISH/No More Parties In LA (feat. Kendrick Lamar _ Freddie Gibbs).mp3" }, // [cite: 14, 15]
+      { title: "The Mind is Powerful", file: "music/SWISH/The Mind is Powerful (feat. Swizz Beats) 1.mp3" }, // [cite: 15]
+      { title: "Waves", file: "music/SWISH/Waves (feat. Chris Brown).mp3" }, // [cite: 15]
+      { title: "Deja Vu", file: "music/SWISH/Deja Vu.mp3" }, // [cite: 15]
+      { title: "Facts", file: "music/SWISH/Facts.mp3" }, // [cite: 15]
+      { title: "Fall Out of Heaven", file: "music/SWISH/Fall Out of Heaven (feat. Bon Iver _ The Dream).mp3" }, // [cite: 15]
+      { title: "FML", file: "music/SWISH/FML (feat. Travi$ Scott _ The Weeknd).mp3" } // [cite: 15, 16]
+    ]
+  },
+  {
+    id: "so_help_me_god", // [cite: 7]
+    title: "SO HELP ME GOD", // [cite: 7]
+    year: "2015", // [cite: 7]
+    cover: "https://preview.redd.it/li7lzs7f5gv81.png?width=1000&format=png&auto=webp&s=1a56acfeeca7b9309b53396bed5cc9133839e1f7", // [cite: 7]
+    accent: "#9babab", // [cite: 107]
+    notes: "if yeezus and life of pablo had a child", // [cite: 107]
+    downloadUrl: "https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/SO_HELP_ME_GOD.zip", // [cite: 7]
+    tracks: [
+      { title: "FALL OUT OF HEAVEN", file: "music/SO_HELP_ME_GOD/FALL OUT OF HEAVEN.mp3" }, // [cite: 16]
+      { title: "FOREVER", file: "music/SO_HELP_ME_GOD/FOREVER.mp3" }, // [cite: 16]
+      { title: "FOURFIVESECONDS", file: "music/SO_HELP_ME_GOD/FOURFIVESECONDS.mp3" }, // [cite: 16]
+      { title: "GOD LEVEL", file: "music/SO_HELP_ME_GOD/GOD LEVEL.mp3" }, // [cite: 16]
+      { title: "GRAVE", file: "music/SO_HELP_ME_GOD/GRAVE.mp3" }, // [cite: 16]
+      { title: "I FEEL LIKE THAT", file: "music/SO_HELP_ME_GOD/I FEEL LIKE THAT.mp3" }, // [cite: 16, 17]
+      { title: "MAN UP", file: "music/SO_HELP_ME_GOD/MAN UP.mp3" }, // [cite: 17]
+      { title: "NEW ANGELS", file: "music/SO_HELP_ME_GOD/NEW ANGELS.mp3" }, // [cite: 17]
+      { title: "NINJA CHOP", file: "music/SO_HELP_ME_GOD/NINJA CHOP.mp3" }, // [cite: 17]
+      { title: "ONE I LOVE", file: "music/SO_HELP_ME_GOD/ONE I LOVE.mp3" }, // [cite: 17]
+      { title: "ONLY ONE", file: "music/SO_HELP_ME_GOD/ONLY ONE.mp3" }, // [cite: 17]
+      { title: "RIHANNA", file: "music/SO_HELP_ME_GOD/RIHANNA.mp3" }, // [cite: 17]
+      { title: "SOUTHSIDE SERENADE", file: "music/SO_HELP_ME_GOD/SOUTHSIDE SERENADE.mp3" }, // [cite: 17]
+      { title: "SPECIAL", file: "music/SO_HELP_ME_GOD/SPECIAL.mp3" }, // [cite: 18]
+      { title: "THE MIND IS POWERFUL", file: "music/SO_HELP_ME_GOD/THE MIND IS POWERFUL.mp3" }, // [cite: 18]
+      { title: "WOLVES", file: "music/SO_HELP_ME_GOD/WOLVES.mp3" }, // [cite: 18]
+      { title: "ALL DAY", file: "music/SO_HELP_ME_GOD/ALL DAY.mp3" }, // [cite: 18]
+      { title: "CAN U BE", file: "music/SO_HELP_ME_GOD/CAN U BE.mp3" }, // [cite: 18]
+      { title: "CAN'T GET OVER ME", file: "music/SO_HELP_ME_GOD/CAN'T GET OVER ME.mp3" }, // [cite: 18]
+      { title: "CAN'T LOOK IN MY EYES", file: "music/SO_HELP_ME_GOD/CAN'T LOOK IN MY EYES.mp3" }, // [cite: 18]
+      { title: "CEREBERUS", file: "music/SO_HELP_ME_GOD/CEREBERUS.mp3" } // [cite: 19]
+    ]
+  },
+  {
+    id: "jesus_is_king_ii", 
+    title: "JESUS IS KING II", // [cite: 19]
+    year: "2019", // [cite: 107]
+    cover: "https://i1.sndcdn.com/artworks-ylvpZVfTMUQGF7D6-LWwOSA-t1080x1080.jpg", // [cite: 107]
+    accent: "#d6e0ff", // [cite: 108]
+    notes: "Dr. Dre remix.", // [cite: 107, 108]
+    downloadUrl: "https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/JESUS_IS_KING_II.zip", // [cite: 107]
+    tracks: [
+      { title: "God Is", file: "music/JESUS_IS_KING_II/God Is.mp3" }, // [cite: 19]
+      { title: "Hands On", file: "music/JESUS_IS_KING_II/Hands On.mp3" }, // [cite: 19]
+      { title: "LA Monster", file: "music/JESUS_IS_KING_II/LA Monster.mp3" }, // [cite: 19]
+      { title: "On God", file: "music/JESUS_IS_KING_II/On God.mp3" }, // [cite: 19]
+      { title: "Selah", file: "music/JESUS_IS_KING_II/Selah.mp3" }, // [cite: 19]
+      { title: "Use This Gospel", file: "music/JESUS_IS_KING_II/Use This Gospel.mp3" }, // [cite: 20]
+      { title: "Water", file: "music/JESUS_IS_KING_II/Water.mp3" }, // [cite: 20]
+      { title: "Ashes", file: "music/JESUS_IS_KING_II/Ashes.mp3" }, // [cite: 20]
+      { title: "Closed On Sunday", file: "music/JESUS_IS_KING_II/Closed On Sunday.mp3" }, // [cite: 20]
+      { title: "Everything We Need", file: "music/JESUS_IS_KING_II/Everything We Need.mp3" }, // [cite: 20]
+      { title: "Follow God", file: "music/JESUS_IS_KING_II/Follow God.mp3" } // [cite: 20]
+    ]
+  },
+  {
+    id: "in_gods_country", 
+    title: "In God's Country", // [cite: 20]
+    year: "2020", // [cite: 108]
+    cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjshGbXgjo0umSQJACQcIsTv-B4NrFeLOQUw&s", // [cite: 108]
+    accent: "#e8ffd6", // [cite: 108]
+    notes: "this w", // [cite: 108]
+    downloadUrl: "https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/In_God.s_Country.zip", // [cite: 108]
+    tracks: [
+      { title: "Hold The Line", file: "music/In_God's_Country/Hold The Line.mp3" }, // [cite: 21]
+      { title: "Hurricane", file: "music/In_God's_Country/Hurricane.mp3" }, // [cite: 21]
+      { title: "Life Of The Party", file: "music/In_God's_Country/Life Of The Party.mp3" }, // [cite: 21]
+      { title: "New Body", file: "music/In_God's_Country/New Body.mp3" }, // [cite: 21]
+      { title: "Off The Grid", file: "music/In_God's_Country/Off The Grid.mp3" }, // [cite: 21]
+      { title: "Praise God", file: "music/In_God's_Country/Praise God.mp3" }, // [cite: 21]
+      { title: "Skuuurrr", file: "music/In_God's_Country/Skuuurrr.mp3" }, // [cite: 21]
+      { title: "Up From The Ashes", file: "music/In_God's_Country/Up From The Ashes.mp3" }, // [cite: 21, 22]
+      { title: "Wash Us In The Blood", file: "music/In_God's_Country/Wash Us In The Blood.mp3" }, // [cite: 22]
+      { title: "Welcome To My Life", file: "music/In_God's_Country/Welcome To My Life.mp3" }, // [cite: 22]
+      { title: "You Was Right", file: "music/In_God's_Country/You Was Right.mp3" }, // [cite: 22]
+      { title: "24", file: "music/In_God's_Country/24.mp3" }, // [cite: 22]
+      { title: "God's Test", file: "music/In_God's_Country/God's Test.mp3" }, // [cite: 22]
+      { title: "I Feel Terrific", file: "music/In_God's_Country/I Feel Terrific.mp3" }, // [cite: 22]
+      { title: "In God's Country", file: "music/In_God's_Country/In God's Country.mp3" }, // [cite: 23]
+      { title: "Keep My Spirit Alive", file: "music/In_God's_Country/Keep My Spirit Alive.mp3" }, // [cite: 23]
+      { title: "Lord I Need You", file: "music/In_God's_Country/Lord I Need You.mp3" }, // [cite: 23]
+      { title: "Tell The Vision", file: "music/In_God's_Country/Tell The Vision.mp3" }, // [cite: 23]
+      { title: "Donda", file: "music/In_God's_Country/Donda.mp3" }, // [cite: 23]
+      { title: "Everything", file: "music/In_God's_Country/Everything.mp3" }, // [cite: 23]
+      { title: "Future_Sounds", file: "music/In_God's_Country/Future_Sounds.mp3" }, // [cite: 23]
+      { title: "God's Country", file: "music/In_God's_Country/God's Country.mp3" } // [cite: 23, 24]
+    ]
+  },
+  {
+    id: "in_a_perfect_world",
+    title: "IN A PERFECT WORLD", // [cite: 24]
+    year: "Concept", // [cite: 108]
+    cover: "https://i.redd.it/donda-with-child-comps-v0-7g88f66h92za1.jpg?width=1170&format=pjpg&auto=webp&s=fc82675c76943922cbef3dfc0a759d3dc93f373d", // [cite: 108]
+    accent: "#2cc9c7", // [cite: 108]
+    notes: "Melodic unreleased.", // [cite: 108]
+    downloadUrl: "https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/IN_A_PERFECT_WORLD.zip", // [cite: 108]
+    tracks: [
+      { title: "Fake Friends (Interlude)", file: "music/IN_A_PERFECT_WORLD/Fake Friends (Interlude).mp3" }, // [cite: 24]
+      { title: "Alive", file: "music/IN_A_PERFECT_WORLD/Alive.mp3" }, // [cite: 24]
+      { title: "All The Love", file: "music/IN_A_PERFECT_WORLD/All The Love.mp3" }, // [cite: 24]
+      { title: "Bésame Mama", file: "music/IN_A_PERFECT_WORLD/Bésame Mama.mp3" }, // [cite: 24]
+      { title: "Bianca", file: "music/IN_A_PERFECT_WORLD/Bianca.mp3" }, // [cite: 24]
+      { title: "World Peace", file: "music/IN_A_PERFECT_WORLD/World Peace.mp3" }, // [cite: 24, 25]
+      { title: "Nitrous", file: "music/IN_A_PERFECT_WORLD/Nitrous.mp3" }, // [cite: 25]
+      { title: "Oh No My Hoodie My Hoodie", file: "music/IN_A_PERFECT_WORLD/Oh No My Hoodie My Hoodie.mp3" }, // [cite: 25]
+      { title: "Press", file: "music/IN_A_PERFECT_WORLD/Press.mp3" }, // [cite: 25]
+      { title: "Same Shit", file: "music/IN_A_PERFECT_WORLD/Same Shit.mp3" }, // [cite: 25]
+      { title: "The Dream Is Over (Interlude)", file: "music/IN_A_PERFECT_WORLD/The Dream Is Over (Interlude).mp3" }, // [cite: 25]
+      { title: "Highschool ID", file: "music/IN_A_PERFECT_WORLD/Highschool ID.mp3" }, // [cite: 25]
+      { title: "King Of Soul", file: "music/IN_A_PERFECT_WORLD/King Of Soul.mp3" }, // [cite: 25, 26]
+      { title: "Love Love Love", file: "music/IN_A_PERFECT_WORLD/Love Love Love.mp3" }, // [cite: 26]
+      { title: "Mama Said", file: "music/IN_A_PERFECT_WORLD/Mama Said.mp3" }, // [cite: 26]
+      { title: "Morning Light (Interlude)", file: "music/IN_A_PERFECT_WORLD/Morning Light (Interlude).mp3" }, // [cite: 26]
+      { title: "Cash Cow", file: "music/IN_A_PERFECT_WORLD/Cash Cow.mp3" }, // [cite: 26]
+      { title: "Cousins", file: "music/IN_A_PERFECT_WORLD/Cousins.mp3" }, // [cite: 26]
+      { title: "Dark Matter", file: "music/IN_A_PERFECT_WORLD/Dark Matter.mp3" }, // [cite: 26]
+      { title: "Drown", file: "music/IN_A_PERFECT_WORLD/Drown.mp3" } // [cite: 26]
+    ]
+  },
+  {
+    id: "good_ass_job",
+    title: "Good Ass Job", // [cite: 27]
+    year: "2009", // [cite: 108]
+    cover: "https://i1.sndcdn.com/artworks-3gNVl4tvXUtYA3Uy-nywH4A-t500x500.jpg", // [cite: 108]
+    accent: "#ffccd5", // [cite: 108]
+    notes: "MBDTF Prequel.", // [cite: 108]
+    downloadUrl: "https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/Good_Ass_Job.zip", // [cite: 108]
+    tracks: [
+      { title: "Devil in a New Dress", file: "music/Good_Ass_Job/1-13. Devil in a New Dress.mp3" }, // [cite: 27, 28]
+      { title: "POWER", file: "music/Good_Ass_Job/1-06. POWER.mp3" }, // [cite: 28, 29]
+      { title: "Ghetto University", file: "music/Good_Ass_Job/1-07. Ghetto University.mp3" }, // [cite: 29, 30]
+      { title: "Christian Dior Denim Flow", file: "music/Good_Ass_Job/1-08. Christian Dior Denim Flow.mp3" }, // [cite: 30, 31]
+      { title: "So Appalled", file: "music/Good_Ass_Job/1-09. So Appalled.mp3" }, // [cite: 31, 32]
+      { title: "Dark Fantasy", file: "music/Good_Ass_Job/1-02. Dark Fantasy.mp3" }, // [cite: 32, 33]
+      { title: "The Joy", file: "music/Good_Ass_Job/1-03. The Joy.mp3" }, // [cite: 33, 34]
+      { title: "Hard Horn Nightmare", file: "music/Good_Ass_Job/1-04. Hard Horn Nightmare.mp3" }, // [cite: 34, 35]
+      { title: "Lord Lord Lord", file: "music/Good_Ass_Job/1-05. Lord Lord Lord.mp3" }, // [cite: 35, 36]
+      { title: "Hell of a Life", file: "music/Good_Ass_Job/1-01. Hell of a Life.mp3" }, // [cite: 36, 37]
+      { title: "Hard Horn Nightmare (Alternate Version)", file: "music/Good_Ass_Job/2-03. Hard Horn Nightmare (Alternate Version).mp3" }, // [cite: 37, 38]
+      { title: "Money Everywhere", file: "music/Good_Ass_Job/2-04. Money Everywhere.mp3" }, // [cite: 38, 39]
+      { title: "Monster", file: "music/Good_Ass_Job/1-18. Monster.mp3" }, // [cite: 39, 40]
+      { title: "All of the Lights", file: "music/Good_Ass_Job/2-01. All of the Lights.mp3" }, // [cite: 40, 41]
+      { title: "Blame Game", file: "music/Good_Ass_Job/2-02. Blame Game.mp3" }, // [cite: 41, 42]
+      { title: "Runaway", file: "music/Good_Ass_Job/1-14. Runaway.mp3" }, // [cite: 42, 43]
+      { title: "Good Friday", file: "music/Good_Ass_Job/1-15. Good Friday.mp3" }, // [cite: 43, 44]
+      { title: "Never See Me Again", file: "music/Good_Ass_Job/1-16. Never See Me Again.mp3" }, // [cite: 44, 45]
+      { title: "Mama's Boyfriend", file: "music/Good_Ass_Job/1-17. Mama's Boyfriend.mp3" }, // [cite: 45, 46]
+      { title: "Eyes Closed", file: "music/Good_Ass_Job/1-10. Eyes Closed.mp3" }, // [cite: 46, 47]
+      { title: "Whole Lifetime", file: "music/Good_Ass_Job/1-11. Whole Lifetime.mp3" }, // [cite: 47, 48]
+      { title: "Chain Heavy", file: "music/Good_Ass_Job/1-12. Chain Heavy.mp3" } // [cite: 48, 49]
+    ]
+  },
+  {
+    id: "thank_god_for_drugs",
+    title: "THANK GOD FOR DRUGS", // [cite: 49]
+    year: "2013", // [cite: 108]
+    cover: "https://i1.sndcdn.com/artworks-cUMvFdyz1fJfgbaA-Urphzg-t500x500.jpg", // [cite: 108]
+    accent: "#e2e2e2", // [cite: 108]
+    notes: "Pre-Yeezus.", // [cite: 108]
+    downloadUrl: "https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/THANK_GOD_FOR_DRUGS.zip", // [cite: 108]
+    tracks: [
+      { title: "CAN'T GET OVER ME", file: "music/THANK_GOD_FOR_DRUGS/CAN'T GET OVER ME.mp3" }, // [cite: 49]
+      { title: "EMOTIONLESS", file: "music/THANK_GOD_FOR_DRUGS/EMOTIONLESS.mp3" }, // [cite: 49]
+      { title: "GOD!", file: "music/THANK_GOD_FOR_DRUGS/GOD!.mp3" }, // [cite: 49]
+      { title: "GOOD THINGS DON'T LAST", file: "music/THANK_GOD_FOR_DRUGS/GOOD THINGS DON'T LAST.mp3" }, // [cite: 49]
+      { title: "GUILT TRIP", file: "music/THANK_GOD_FOR_DRUGS/GUILT TRIP.mp3" }, // [cite: 49]
+      { title: "HOLLYWOOD", file: "music/THANK_GOD_FOR_DRUGS/HOLLYWOOD.mp3" }, // [cite: 49, 50]
+      { title: "I AM NOT HOME", file: "music/THANK_GOD_FOR_DRUGS/I AM NOT HOME.mp3" }, // [cite: 50]
+      { title: "LOUDER", file: "music/THANK_GOD_FOR_DRUGS/LOUDER.mp3" }, // [cite: 50]
+      { title: "NEW SLAVES", file: "music/THANK_GOD_FOR_DRUGS/NEW SLAVES.mp3" }, // [cite: 50]
+      { title: "NO", file: "music/THANK_GOD_FOR_DRUGS/NO.mp3" }, // [cite: 50]
+      { title: "ON SIGHT", file: "music/THANK_GOD_FOR_DRUGS/ON SIGHT.mp3" }, // [cite: 50]
+      { title: "ONE I LOVE", file: "music/THANK_GOD_FOR_DRUGS/ONE I LOVE.mp3" }, // [cite: 50]
+      { title: "PERFECT", file: "music/THANK_GOD_FOR_DRUGS/PERFECT.mp3" }, // [cite: 50]
+      { title: "SEND IT UP", file: "music/THANK_GOD_FOR_DRUGS/SEND IT UP.mp3" }, // [cite: 50, 51]
+      { title: "TALK TO ME", file: "music/THANK_GOD_FOR_DRUGS/TALK TO ME.mp3" }, // [cite: 51]
+      { title: "YEEZUS", file: "music/THANK_GOD_FOR_DRUGS/YEEZUS.mp3" }, // [cite: 51]
+      { title: "BOUND", file: "music/THANK_GOD_FOR_DRUGS/BOUND.mp3" }, // [cite: 51]
+      { title: "AWESOME", file: "music/THANK_GOD_FOR_DRUGS/AWESOME.mp3" }, // [cite: 51]
+      { title: "BLACK SKINHEAD", file: "music/THANK_GOD_FOR_DRUGS/BLACK SKINHEAD.mp3" }, // [cite: 51]
+      { title: "BLOOD ON THE LEAVES", file: "music/THANK_GOD_FOR_DRUGS/BLOOD ON THE LEAVES.mp3" } // [cite: 51]
+    ]
+  },
+  {
+    id: "yeezus_ii",
+    title: "Yeezus II", // [cite: 51, 52]
+    year: "2014", // [cite: 108]
+    cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9cS414A_UlfnBHoImrJP3oywnQ8BqUtZNYA&s", // [cite: 108]
+    accent: "#ffffff", // [cite: 108]
+    notes: "Sequel to the madness.", // [cite: 108]
+    downloadUrl: "https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/Yeezus_II.zip", // [cite: 108]
+    tracks: [
+      { title: "The World (Intro)", file: "music/Yeezus_II/1. The World (Intro).mp3" }, // [cite: 52, 53]
+      { title: "However You Want It", file: "music/Yeezus_II/2. However You Want It (feat. Paul McCartney).mp3" }, // [cite: 53, 54]
+      { title: "God Level", file: "music/Yeezus_II/3. God Level.mp3" }, // [cite: 54, 55]
+      { title: "Can U Be..", file: "music/Yeezus_II/4. Can U Be..mp3" }, // [cite: 55, 56]
+      { title: "Forever", file: "music/Yeezus_II/5. Forever.mp3" }, // [cite: 56, 57]
+      { title: "FML", file: "music/Yeezus_II/6. FML (feat. Travis Scott & The Weeknd).mp3" }, // [cite: 57, 58]
+      { title: "Can't Get Over Me", file: "music/Yeezus_II/7. Can't Get Over Me (feat. Tony Williams, Bon Iver & The-Dream).mp3" }, // [cite: 58, 59]
+      { title: "FourFiveSeconds", file: "music/Yeezus_II/8. FourFiveSeconds (feat. Rihanna & Paul McCartney).mp3" }, // [cite: 59, 60]
+      { title: "Only One", file: "music/Yeezus_II/9. Only One (feat. Caroline Shaw & Paul McCartney).mp3" } // [cite: 60, 61]
+    ]
+  },
+  {
+    id: "bad_bitch_playbook",
+    title: "BAD BITCH PLAYBOOK", // [cite: 61]
+    year: "2023", // [cite: 108]
+    rating: "9.0", // [cite: 108]
+    accent: "#89C79B", // [cite: 108, 109]
+    cover: "https://preview.redd.it/does-anybody-know-any-darker-sounding-more-2023-atmosphere-v0-2qju242ln03g1.jpeg?auto=webp&s=5e9c56fa94bd3d0547f596ec737d480094a860dc", // [cite: 109]
+    notes: "Vultures if it was less villain-ish", // [cite: 109]
+    downloadUrl: "https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/BAD_BITCH_PLAYBOOK.zip", // [cite: 109]
+    tracks: [
+      { title: "GUN TO MY HEAD", file: "music/BAD_BITCH_PLAYBOOK/GUN TO MY HEAD.mp3" }, // [cite: 61]
+      { title: "TAKE OFF YOUR DRESS", file: "music/BAD_BITCH_PLAYBOOK/TAKE OFF YOUR DRESS.mp3" }, // [cite: 61]
+      { title: "WELCOME TO MY LIFE", file: "music/BAD_BITCH_PLAYBOOK/WELCOME TO MY LIFE.mp3" }, // [cite: 61]
+      { title: "PRESSURE", file: "music/BAD_BITCH_PLAYBOOK/PRESSURE.mp3" }, // [cite: 61]
+      { title: "RIVER", file: "music/BAD_BITCH_PLAYBOOK/RIVER.mp3" }, // [cite: 61]
+      { title: "MY SOUL", file: "music/BAD_BITCH_PLAYBOOK/MY SOUL.mp3" }, // [cite: 61, 62]
+      { title: "EVERYBODY", file: "music/BAD_BITCH_PLAYBOOK/EVERYBODY.mp3" }, // [cite: 62]
+      { title: "BACK TO ME", file: "music/BAD_BITCH_PLAYBOOK/BACK TO ME.mp3" }, // [cite: 62]
+      { title: "FUK SUMN", file: "music/BAD_BITCH_PLAYBOOK/FUK SUMN.mp3" }, // [cite: 62]
+      { title: "FIELD TRIP", file: "music/BAD_BITCH_PLAYBOOK/FIELD TRIP.mp3" }, // [cite: 62]
+      { title: "DRUNK", file: "music/BAD_BITCH_PLAYBOOK/DRUNK.mp3" }, // [cite: 62]
+      { title: "MELROSE", file: "music/BAD_BITCH_PLAYBOOK/MELROSE.mp3" }, // [cite: 62]
+      { title: "IN THE STARS", file: "music/BAD_BITCH_PLAYBOOK/IN THE STARS.mp3" }, // [cite: 62, 63]
+      { title: "SO SOON", file: "music/BAD_BITCH_PLAYBOOK/SO SOON.mp3" }, // [cite: 63]
+      { title: "LOVE LOVE LOVE", file: "music/BAD_BITCH_PLAYBOOK/LOVE LOVE LOVE.mp3" }, // [cite: 63]
+      { title: "SO CALLED FRIENDS", file: "music/BAD_BITCH_PLAYBOOK/SO CALLED FRIENDS.mp3" }, // [cite: 63]
+      { title: "SLIDE", file: "music/BAD_BITCH_PLAYBOOK/SLIDE.mp3" }, // [cite: 63]
+      { title: "FLOWERS", file: "music/BAD_BITCH_PLAYBOOK/FLOWERS.mp3" }, // [cite: 63]
+      { title: "PROMOTION", file: "music/BAD_BITCH_PLAYBOOK/PROMOTION.mp3" }, // [cite: 63]
+      { title: "BURN", file: "music/BAD_BITCH_PLAYBOOK/BURN.mp3" }, // [cite: 63]
+      { title: "LIFESTYLE", file: "music/BAD_BITCH_PLAYBOOK/LIFESTYLE.mp3" }, // [cite: 63]
+      { title: "NEW BODY", file: "music/BAD_BITCH_PLAYBOOK/NEW BODY.mp3" }, // [cite: 63, 64]
+      { title: "THE GARDEN", file: "music/BAD_BITCH_PLAYBOOK/THE GARDEN.mp3" }, // [cite: 64]
+      { title: "SKY CITY", file: "music/BAD_BITCH_PLAYBOOK/SKY CITY.mp3" } // [cite: 64]
+    ]
+  },
+  {
+    id: "donda_2",
+    title: "DONDA 2", // [cite: 64]
+    year: "2022", // [cite: 109]
+    rating: "6", // [cite: 109]
+    accent: "#c9832c", // [cite: 109]
+    cover: "https://upload.wikimedia.org/wikipedia/en/a/a6/Donda_2_streaming_album_cover.jpg", // [cite: 109]
+    notes: "The start of the new era..", // [cite: 109]
+    downloadUrl: "https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/DONDA_2.zip", // [cite: 109]
+    tracks: [
+      { title: "TRUE LOVE", file: "music/DONDA_2/01 TRUE LOVE.mp3" }, // [cite: 64]
+      { title: "BROKEN ROAD", file: "music/DONDA_2/02 BROKEN ROAD.mp3" }, // [cite: 64]
+      { title: "GET LOST", file: "music/DONDA_2/03 GET LOST.mp3" }, // [cite: 64]
+      { title: "KEEP THE FLOWERS", file: "music/DONDA_2/04 KEEP THE FLOWERS.mp3" }, // [cite: 64, 65]
+      { title: "TOO EASY", file: "music/DONDA_2/05 TOO EASY.mp3" }, // [cite: 65]
+      { title: "PABLO", file: "music/DONDA_2/06 PABLO.mp3" }, // [cite: 65]
+      { title: "MR MIAGI", file: "music/DONDA_2/07 MR MIAGI.mp3" }, // [cite: 65]
+      { title: "HAPPY", file: "music/DONDA_2/08 HAPPY.mp3" }, // [cite: 65]
+      { title: "SECURITY", file: "music/DONDA_2/09 SECURITY.mp3" }, // [cite: 65]
+      { title: "CITY OF GOD", file: "music/DONDA_2/10 CITY OF GOD.mp3" }, // [cite: 65]
+      { title: "530", file: "music/DONDA_2/11 530.mp3" }, // [cite: 65, 66]
+      { title: "SCIFI", file: "music/DONDA_2/12 SCIFI.mp3" }, // [cite: 66]
+      { title: "BURN EVERYTHING", file: "music/DONDA_2/13 BURN EVERYTHING.mp3" }, // [cite: 66]
+      { title: "LOUIE BAG", file: "music/DONDA_2/14 LOUIE BAG.mp3" }, // [cite: 66]
+      { title: "WE DID IT", file: "music/DONDA_2/15 WE DID IT.mp3" }, // [cite: 66]
+      { title: "MAINTENANCE", file: "music/DONDA_2/16 MAINTENANCE.mp3" }, // [cite: 66]
+      { title: "LORD LIFT", file: "music/DONDA_2/17 LORD LIFT.mp3" }, // [cite: 66]
+      { title: "FIRST TIME", file: "music/DONDA_2/18 FIRST TIME.mp3" } // [cite: 66, 67]
+    ]
+  },
+  {
+    id: "war",
+    title: "WAR", // [cite: 67]
+    year: "2022", // [cite: 109]
+    rating: "9.2", // [cite: 109]
+    accent: "#e0e0e0", // [cite: 109, 110]
+    cover: "https://i.ytimg.com/vi/_dw7JafNGdY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB1SMs38jeXk2EGsqIQzHOF9PCi9Q", // [cite: 110]
+    notes: "Collaboration Album with James Blake", // [cite: 110]
+    downloadUrl: "https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/WAR.zip", // [cite: 110]
+    tracks: [
+      { title: "MY WAY", file: "music/WAR/My Way.mp3" }, // [cite: 67]
+      { title: "MELT BEAT", file: "music/WAR/melt beat.mp3" }, // [cite: 67]
+      { title: "WHAT I WOULD HAVE SAID", file: "music/WAR/What I Would Have Said At Virgils Funeral.mp3" }, // [cite: 67]
+      { title: "BOBBY DIGITAL", file: "music/WAR/Bobby Digital .mp3" }, // [cite: 67]
+      { title: "SPIKY", file: "music/WAR/Spiky.mp3" }, // [cite: 67]
+      { title: "ALL IS LOVE", file: "music/WAR/All is love .mp3" }, // [cite: 67, 68]
+      { title: "QUIET", file: "music/WAR/Quiet.mp3" }, // [cite: 68]
+      { title: "NEVER COMING BACK", file: "music/WAR/Never Coming Back.mp3" }, // [cite: 68]
+      { title: "LOVE LOVE LOVE", file: "music/WAR/Love Love Love.mp3" }, // [cite: 68]
+      { title: "SHOWTIME", file: "music/WAR/Showtime.mp3" }, // [cite: 68]
+      { title: "TALKING", file: "music/WAR/Talking.mp3" }, // [cite: 68]
+      { title: "LET IT IN", file: "music/WAR/Let It In.mp3" } // [cite: 68]
+    ]
+  },
+  {
+    id: "good_ass_job_pastelle",
+    title: "GOOD ASS JOB PASTELLE", // [cite: 68, 69]
+    year: "2010", // [cite: 110]
+    rating: "9.8", // [cite: 110]
+    accent: "#ffccd5", // [cite: 110]
+    cover: "https://t2.genius.com/unsafe/535x0/https%3A%2F%2Fimages.genius.com%2F1ee84d5a78bb5d2b2f6318bff0b90f64.1000x1000x1.png", // [cite: 110]
+    notes: "no words for this", // [cite: 110]
+    downloadUrl: "https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/GOOD_ASS_JOB_PASTELLE.zip", // [cite: 110]
+    tracks: [
+      { title: "NEVER SEE ME AGAIN", file: "music/GOOD_ASS_JOB_PASTELLE/15._Never_See_Me_Again.mp3" }, // [cite: 69]
+      { title: "HARD HORN NIGHTMARE", file: "music/GOOD_ASS_JOB_PASTELLE/01._Hard_Horn_Nightmare.mp3" }, // [cite: 69]
+      { title: "SWEAT ON MY FACE", file: "music/GOOD_ASS_JOB_PASTELLE/02._Sweat_On_My_Face_feat._Mos_Def__Talib_Kweli.mp3" }, // [cite: 69]
+      { title: "THATS MY BITCH", file: "music/GOOD_ASS_JOB_PASTELLE/03._Thats_My_Bitch_feat._Jay-Z_Electrik_Red_Charlie_Wilson__Bon_Iver.mp3" }, // [cite: 69]
+      { title: "DOWNTOWN", file: "music/GOOD_ASS_JOB_PASTELLE/04._Downtown_feat._Jeezy.mp3" }, // [cite: 69]
+      { title: "THROW MY MONEY EVERYWHERE", file: "music/GOOD_ASS_JOB_PASTELLE/05._Throw_My_Money_Everywhere.mp3" }, // [cite: 69]
+      { title: "FLASHING LIGHTS 2", file: "music/GOOD_ASS_JOB_PASTELLE/06._Flashing_Lights_2_feat._Charlie_Wilson.mp3" }, // [cite: 69, 70]
+      { title: "NOT THE SAME", file: "music/GOOD_ASS_JOB_PASTELLE/07._Not_The_Same_feat._Shire__Rick_Ross.mp3" }, // [cite: 70]
+      { title: "MAMAS BOYFRIEND", file: "music/GOOD_ASS_JOB_PASTELLE/08._Mamas_Boyfriend.mp3" }, // [cite: 70]
+      { title: "NO MORE PARTIES IN LA", file: "music/GOOD_ASS_JOB_PASTELLE/09._No_More_Parties_In_LA_feat._Lupe_Fiasco__Pharrell_Williams.mp3" }, // [cite: 70]
+      { title: "SHOOT UP", file: "music/GOOD_ASS_JOB_PASTELLE/10._Shoot_Up_feat._Bon_Iver.mp3" }, // [cite: 70]
+      { title: "EYES CLOSED", file: "music/GOOD_ASS_JOB_PASTELLE/11._Eyes_Closed_feat._John_Legend.mp3" }, // [cite: 70]
+      { title: "ARMINA", file: "music/GOOD_ASS_JOB_PASTELLE/12._Armina_feat._Kid_Cudi.mp3" }, // [cite: 70]
+      { title: "YOU KNOW YOU KNOW", file: "music/GOOD_ASS_JOB_PASTELLE/13._You_Know_You_Know_feat._Lil_Wayne__Drake.mp3" }, // [cite: 70]
+      { title: "WHOOPTY DOO", file: "music/GOOD_ASS_JOB_PASTELLE/14._Whoopty_Doo_feat._Cyhi_The_Prynce__Big_Sean.mp3" } // [cite: 70, 71]
+    ]
+  },
+  {
+    id: "god_unwilling",
+    title: "GOD UNWILLING", // [cite: 71]
+    year: "2008", // [cite: 110]
+    rating: "8.0", // [cite: 110]
+    accent: "#B08D7D", // [cite: 110, 111]
+    cover: "https://static.wikitide.net/timelinetweakwiki/1/18/GodUnwilling.jpg", // [cite: 111]
+    notes: "Three legends in one album", // [cite: 111]
+    downloadUrl: "https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/GOD_UNWILLING.zip", // [cite: 111]
+    tracks: [
+      { title: "INTRO", file: "music/GOD_UNWILLING/1. Intro.mp3" }, // [cite: 71, 72]
+      { title: "SKY HIGH GRADUATES", file: "music/GOD_UNWILLING/2. Sky High Graduates.mp3" }, // [cite: 72, 73]
+      { title: "US PLACERS", file: "music/GOD_UNWILLING/3. Us Placers.mp3" }, // [cite: 73, 74]
+      { title: "YE'S INTERLUDE", file: "music/GOD_UNWILLING/4. Ye's Interlude.mp3" }, // [cite: 74, 75]
+      { title: "DON'T STOP!", file: "music/GOD_UNWILLING/5. Don't Stop!.mp3" }, // [cite: 75, 76]
+      { title: "DON'T LOOK DOWN", file: "music/GOD_UNWILLING/6. Don't Look Down.mp3" }, // [cite: 76, 77]
+      { title: "MONEY EVERYWHERE", file: "music/GOD_UNWILLING/7. Money Everywhere.mp3" }, // [cite: 77, 78]
+      { title: "P'S INTERLUDE", file: "music/GOD_UNWILLING/8. P's Interlude.mp3" }, // [cite: 78, 79]
+      { title: "EVERYONE NOSE (REMIX)", file: "music/GOD_UNWILLING/9. Everyone Nose (Remix).mp3" }, // [cite: 79, 80]
+      { title: "NUMBER ONE", file: "music/GOD_UNWILLING/10. Number One.mp3" }, // [cite: 80, 81]
+      { title: "FRONTIN'", file: "music/GOD_UNWILLING/11. Frontin'.mp3" }, // [cite: 81, 82]
+      { title: "LU'S INTERLUDE", file: "music/GOD_UNWILLING/12. Lu's Interlude.mp3" }, // [cite: 82, 83]
+      { title: "CHANGE", file: "music/GOD_UNWILLING/13. Change.mp3" }, // [cite: 83, 84]
+      { title: "PARIS, TOKYO (REMIX)", file: "music/GOD_UNWILLING/14. Paris, Tokyo (Remix).mp3" }, // [cite: 84, 85]
+      { title: "OUTRO", file: "music/GOD_UNWILLING/15. Outro.mp3" } // [cite: 85, 86]
+    ]
+  },
+  {
+    id: "calabasas_is_the_new_abu_dhabi",
+    title: "CALABASAS IS THE NEW ABU DHABI", // [cite: 86]
+    year: "2016", // [cite: 111]
+    rating: "8.7", // [cite: 111]
+    accent: "#24bf58", // [cite: 111]
+    cover: "https://preview.redd.it/calabasas-is-the-new-abu-dhabi-v0-m89z8qlqiyxf1.jpg?width=640&crop=smart&auto=webp&s=690a6730cdcd6744543e642935f33f8eb0b3d7ec", // [cite: 111]
+    notes: "no words for this either....", // [cite: 111]
+    downloadUrl: "https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/CALABASAS_IS_THE_NEW_ABU_DHABI.zip", // [cite: 111]
+    tracks: [
+      { title: "EVOLVE WHEN I SEE IT", file: "music/CALABASAS_IS_THE_NEW_ABU_DHABI/Evolve When I See It.mp3" }, // [cite: 86]
+      { title: "SUMMER SIXTEEN", file: "music/CALABASAS_IS_THE_NEW_ABU_DHABI/Summer Sixteen.mp3" }, // [cite: 86]
+      { title: "BLESSINGS", file: "music/CALABASAS_IS_THE_NEW_ABU_DHABI/Blessings.mp3" }, // [cite: 86]
+      { title: "POP STYLE", file: "music/CALABASAS_IS_THE_NEW_ABU_DHABI/Pop Style.mp3" }, // [cite: 86]
+      { title: "GLOW", file: "music/CALABASAS_IS_THE_NEW_ABU_DHABI/Glow.mp3" }, // [cite: 86]
+      { title: "FINAL FANTASY", file: "music/CALABASAS_IS_THE_NEW_ABU_DHABI/Final Fantasy.mp3" }, // [cite: 86, 87]
+      { title: "WESTON ROAD FLOWS", file: "music/CALABASAS_IS_THE_NEW_ABU_DHABI/Weston Road Flows.mp3" } // [cite: 87]
+    ]
+  },
+  {
+    id: "cruel_winter",
+    title: "CRUEL WINTER", // [cite: 87]
+    year: "2017", // [cite: 111]
+    rating: "8.2", // [cite: 111]
+    accent: "#DEC79B", // [cite: 111, 112]
+    cover: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Kanye_West_-_Champions_Cover.jpg/960px-Kanye_West_-_Champions_Cover.jpg", // [cite: 112]
+    notes: "The G.O.O.D. Music guys lined up for a sequel", // [cite: 112, 113]
+    downloadUrl: "https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/CRUEL_WINTER.zip", // [cite: 113]
+    tracks: [
+      { title: "FACE DOWN", file: "music/CRUEL_WINTER/Face_Down_V5.mp3" }, // [cite: 87]
+      { title: "PANDA REMIX", file: "music/CRUEL_WINTER/Panda_Remix_V1.mp3" }, // [cite: 87]
+      { title: "ALL I KNOW", file: "music/CRUEL_WINTER/All_I_Know_V3.mp3" }, // [cite: 87]
+      { title: "CIRCLE", file: "music/CRUEL_WINTER/Circle.mp3" }, // [cite: 87]
+      { title: "CHAMPIONS", file: "music/CRUEL_WINTER/Champions_V7.mp3" } // [cite: 87]
+    ]
+  },
+  {
+    id: "love_everyone",
+    title: "LOVE EVERYONE", // [cite: 88]
+    year: "2018", // [cite: 113]
+    cover: "https://i.redd.it/htvu0c2jcxu01.jpg", // [cite: 113]
+    accent: "#f2f2f2", // [cite: 113]
+    notes: "Forgiving era", // [cite: 113]
+    downloadUrl: "https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/LOVE_EVERYONE.zip", // [cite: 113]
+    tracks: [
+      { title: "Ye vs. The People", file: "music/LOVE_EVERYONE/1. Ye vs. The People.mp3" }, // [cite: 88, 89]
+      { title: "Wouldn't Leave", file: "music/LOVE_EVERYONE/2. Wouldn_t Leave.mp3" }, // [cite: 89, 90]
+      { title: "Simulation Baptize", file: "music/LOVE_EVERYONE/3. Simulation Baptize.mp3" }, // [cite: 90, 91]
+      { title: "Queen Bitch", file: "music/LOVE_EVERYONE/4. Queen Bitch.mp3" }, // [cite: 91, 92]
+      { title: "Bad People", file: "music/LOVE_EVERYONE/5. Bad People.mp3" }, // [cite: 92, 93]
+      { title: "Yikes", file: "music/LOVE_EVERYONE/6. Yikes.mp3" }, // [cite: 93, 94]
+      { title: "Ass Shot", file: "music/LOVE_EVERYONE/7. Ass Shot.mp3" }, // [cite: 94, 95]
+      { title: "You Ain't No Model", file: "music/LOVE_EVERYONE/8. You Ain_t No Model.mp3" }, // [cite: 95, 96]
+      { title: "Ecstasy", file: "music/LOVE_EVERYONE/9. Ecstasy.mp3" }, // [cite: 96, 97]
+      { title: "I Feel Free", file: "music/LOVE_EVERYONE/10. I Feel Free.mp3" }, // [cite: 97, 98]
+      { title: "Moonlight", file: "music/LOVE_EVERYONE/11. Moonlight.mp3" }, // [cite: 98, 99]
+      { title: "Skeletons", file: "music/LOVE_EVERYONE/12. Skeletons.mp3" }, // [cite: 99, 100]
+      { title: "Take Me to the Light", file: "music/LOVE_EVERYONE/13. Take Me to the Light.mp3" }, // [cite: 100, 101]
+      { title: "Everything", file: "music/LOVE_EVERYONE/14. Everything.mp3" }, // [cite: 101, 102]
+      { title: "Brothers", file: "music/LOVE_EVERYONE/15. Brothers.mp3" }, // [cite: 102, 103]
+      { title: "Violent Crimes", file: "music/LOVE_EVERYONE/16. Violent Crimes.mp3" } // [cite: 103, 104]
+    ]
+  },
+  {
+    id: "turbografx16",
+    title: "TurboGrafx16", // [cite: 104]
+    year: "2016", // [cite: 113]
+    cover: "https://lastfm.freetls.fastly.net/i/u/770x0/68bd0237ddfa94159b35a684e5ee8be7.jpg#68bd0237ddfa94159b35a684e5ee8be7", // [cite: 113]
+    accent: "#d1d1d1", // [cite: 113]
+    notes: "almost swish but choppier", // [cite: 113]
+    downloadUrl: "https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/TurboGrafx16.zip", // [cite: 113]
+    tracks: [
+      { title: "All Eyes on Ye", file: "music/TurboGrafx16/01 All Eyes on Ye.mp3" }, // [cite: 104]
+      { title: "Rich Nigga Drunk", file: "music/TurboGrafx16/02 Rich Nigga Drunk.mp3" }, // [cite: 104]
+      { title: "Caprisun", file: "music/TurboGrafx16/03 Caprisun (feat. Young Thug _ Tyga).mp3" }, // [cite: 104]
+      { title: "No Reason", file: "music/TurboGrafx16/04 No Reason.mp3" }, // [cite: 104]
+      { title: "Euro / Switch Hands", file: "music/TurboGrafx16/05 Euro _ Switch Hands (feat. A$AP Rocky).mp3" }, // [cite: 104, 105]
+      { title: "XTCY", file: "music/TurboGrafx16/06 XTCY.mp3" }, // [cite: 105]
+      { title: "Face Down", file: "music/TurboGrafx16/07 Face Down (feat. Quavo _ Lil Yachty).mp3" }, // [cite: 105]
+      { title: "Jealous", file: "music/TurboGrafx16/08 Jealous (feat. Justin Bieber _ Post Malone).mp3" }, // [cite: 105]
+      { title: "Hold Tight", file: "music/TurboGrafx16/09 Hold Tight (feat. Migos _ Young Thug).mp3" }, // [cite: 105]
+      { title: "New Angels", file: "music/TurboGrafx16/10 New Angels.mp3" }, // [cite: 105]
+      { title: "All I Know (Remix)", file: "music/TurboGrafx16/11 All I Know [G.O.O.D. Music Remix] (Demo).mp3" }, // [cite: 105, 106]
+      { title: "Only Ye", file: "music/TurboGrafx16/12 Only Ye.mp3" }, // [cite: 106]
+      { title: "Don't Jump", file: "music/TurboGrafx16/13 Don_t Jump.mp3" } // [cite: 106]
+    ]
+  }
 ];
 
-const albums = [
- { title:'Yandhi', year:'2018', cover:'https://i.redd.it/3two3fms4nf41.jpg', notes:'for what reason did he not release ts 💔', downloadUrl: 'https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/Yandhi.zip', playlistIndex:0, accent: '#cce4ff' },
-  { title:'BULLY', year:'????', cover:'https://upload.wikimedia.org/wikipedia/en/f/f1/Ye_%28Kanye_West%29_-_Bully_-_Album_Cover.png', notes:'Cinematic dark energy.', downloadUrl: 'https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/BULLY.zip', playlistIndex:1, accent: '#e2e2e2' },
-  { title:'SWISH', year:'2016', cover:'https://lastfm.freetls.fastly.net/i/u/500x500/0ed29c6907a535d3a71baec2820c047b.jpg', notes:'Pre-Pablo vibes.', downloadUrl: 'https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/SWISH.zip', playlistIndex:2, accent: '#ffedcc' },
-  { title:'SO HELP ME GOD', year:'2015', cover:'https://preview.redd.it/li7lzs7f5gv81.png?width=1000&format=png&auto=webp&s=1a56acfeeca7b9309b53396bed5cc9133839e1f7', notes:'if yeezus and life of pablo had a child', downloadUrl: 'https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/SO_HELP_ME_GOD.zip', playlistIndex:3, accent: '#ffd6d6' },
-  { title:'JESUS IS KING II', year:'2019', cover:'https://i1.sndcdn.com/artworks-ylvpZVfTMUQGF7D6-LWwOSA-t1080x1080.jpg', downloadUrl: 'https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/JESUS_IS_KING_II.zip', notes:'Dr. Dre remix.', playlistIndex:4, accent: '#d6e0ff' },
-  { title:`In God's Country`, year:'2020', cover:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjshGbXgjo0umSQJACQcIsTv-B4NrFeLOQUw&s', downloadUrl: 'https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/In_God.s_Country.zip', notes:'this w', playlistIndex:5, accent: '#e8ffd6' },
-  { title:'IN A PERFECT WORLD', year:'Concept', cover:'https://i.redd.it/donda-with-child-comps-v0-7g88f66h92za1.jpg?width=1170&format=pjpg&auto=webp&s=fc82675c76943922cbef3dfc0a759d3dc93f373d', notes:'Melodic unreleased.', downloadUrl: 'https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/IN_A_PERFECT_WORLD.zip', playlistIndex:6, accent: '#fcf6bd' },
-  { title:'Good Ass Job', year:'2009', cover:'https://i1.sndcdn.com/artworks-3gNVl4tvXUtYA3Uy-nywH4A-t500x500.jpg', notes:'MBDTF Prequel.', downloadUrl: 'https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/Good_Ass_Job.zip', playlistIndex:7, accent: '#ffccd5' },
-  { title:'THANK GOD FOR DRUGS', year:'2013', cover:'https://i1.sndcdn.com/artworks-cUMvFdyz1fJfgbaA-Urphzg-t500x500.jpg', notes:'Pre-Yeezus.', downloadUrl: 'https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/THANK_GOD_FOR_DRUGS.zip', playlistIndex:8, accent: '#e2e2e2' },
-  { title:'Yeezus II', year:'2014', cover:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9cS414A_UlfnBHoImrJP3oywnQ8BqUtZNYA&s', notes:'Sequel to the madness.', downloadUrl: 'https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/Yeezus_II.zip', playlistIndex:9, accent: '#ffffff' },
-{ 
-    title: 'BAD BITCH PLAYBOOK', 
-    year: '2023', 
-    rating: '9.0',
-    accent: '#89C79B', 
-    cover: 'https://preview.redd.it/does-anybody-know-any-darker-sounding-more-2023-atmosphere-v0-2qju242ln03g1.jpeg?auto=webp&s=5e9c56fa94bd3d0547f596ec737d480094a860dc',
-    notes: 'Vultures if it was less villain-ish',
-    downloadUrl: 'https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/BAD_BITCH_PLAYBOOK.zip',
-    playlistIndex: 10
-  },
-  { 
-    title: 'DONDA 2', 
-    year: '2022',   
-    rating: '6',
-    accent: '#1a1a1a', 
-    cover: 'https://upload.wikimedia.org/wikipedia/en/a/a6/Donda_2_streaming_album_cover.jpg',
-    notes: 'The start of the new era..',
-    downloadUrl: 'https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/DONDA_2.zip',
-    playlistIndex: 11
-  },
-  { 
-    title: 'WAR', 
-    year: '2022',
-    rating: '9.2', 
-    accent: '#e0e0e0', 
-    cover: 'https://i.ytimg.com/vi/_dw7JafNGdY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB1SMs38jeXk2EGsqIQzHOF9PCi9Q',
-    notes: 'Collaboration Album with James Blake',
-    downloadUrl: 'https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/WAR.zip',
-    playlistIndex: 12
-  },
-  { 
-    title: 'Good Ass Job PASTELLE', 
-    year: '2010', 
-    rating: '9.8', 
-    accent: '#A689E8', 
-    cover: 'https://t2.genius.com/unsafe/535x0/https%3A%2F%2Fimages.genius.com%2F1ee84d5a78bb5d2b2f6318bff0b90f64.1000x1000x1.png',
-    notes: 'no words for this', 
-    downloadUrl: 'https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/GOOD_ASS_JOB_PASTELLE.zip',
-    playlistIndex: 13
-  },
-  { 
-    title: 'GOD UNWILLING', 
-    year: '2008', 
-    rating: '8.0', 
-    accent: '#B08D7D', 
-    cover: 'https://static.wikitide.net/timelinetweakwiki/1/18/GodUnwilling.jpg',
-    notes: 'Three legends in one album',
-    downloadUrl: 'https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/GOD_UNWILLING.zip',
-    playlistIndex: 14
-  },
-  { 
-    title: 'CALABASAS IS THE NEW ABU DHABI', 
-    year: '2016', 
-    rating: '8.7', 
-    accent: '#338A36', 
-    cover: 'https://preview.redd.it/calabasas-is-the-new-abu-dhabi-v0-m89z8qlqiyxf1.jpg?width=640&crop=smart&auto=webp&s=690a6730cdcd6744543e642935f33f8eb0b3d7ec',
-    notes: 'no words for this either....',
-    downloadUrl: 'https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/CALABASAS_IS_THE_NEW_ABU_DHABI.zip',
-    playlistIndex: 15
-  },
-  { 
-    title: 'CRUEL WINTER', 
-    year: '2017', 
-    rating: '8.2', 
-    accent: '#DEC79B', 
-    cover: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Kanye_West_-_Champions_Cover.jpg/960px-Kanye_West_-_Champions_Cover.jpg', 
-    notes: 'The G.O.O.D. Music guys lined up for a sequel',
-    downloadUrl: 'https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/CRUEL_WINTER.zip',
-    playlistIndex: 16
-  },
-{ 
-    title: 'LOVE EVERYONE', 
-    year: '2018', 
-    cover: 'https://i.redd.it/htvu0c2jcxu01.jpg', 
-    notes: 'Forgiving era',
-    downloadUrl: 'https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/LOVE_EVERYONE.zip',
-    playlistIndex: 17,
-    accent: '#f2f2f2' 
-  },
-  { 
-    title: 'TurboGrafx16', 
-    year: '2016', 
-    cover: 'https://lastfm.freetls.fastly.net/i/u/770x0/68bd0237ddfa94159b35a684e5ee8be7.jpg#68bd0237ddfa94159b35a684e5ee8be7', 
-    notes: 'almost swish but choppier',
-    downloadUrl: 'https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/TurboGrafx16.zip',
-    playlistIndex: 18,
-    accent: '#d1d1d1' 
-  },
-];
+const LIKED_COVER = "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='232' height='232'><rect width='232' height='232' fill='url(%23grad)'/><defs><linearGradient id='grad' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%23450af5;stop-opacity:1' /><stop offset='100%' style='stop-color:%23c4efd9;stop-opacity:1' /></linearGradient></defs><path d='M116 172.5l-20.3-18.48C45.6 112.04 14 83.2 14 47c0-29.12 22.68-51.8 51.8-51.8 16.38 0 31.92 7.56 42.2 19.46C118.28 2.76 133.82-4.8 150.2-4.8 179.32-4.8 202 17.88 202 47c0 36.2-31.6 65.04-81.7 107.02L116 172.5z' transform='translate(16, 32)' fill='white'/></svg>";
 
-// --- STATE ---
-let activePlaylistIndex = -1, activeTrackIndex = -1, viewingPlaylistIndex = -1;
-let currentTerm = "";
-let queue = [];
+// --- 2. STATE MANAGEMENT ---
+let likedSongs = [];
+try { likedSongs = JSON.parse(localStorage.getItem('ye_liked_songs')) || []; } catch(e) { likedSongs = []; }
+let playQueue = []; 
+let activeAlbumId = null;
+let activePlaylist = [];
+let activeTrackIndex = -1;
+let isPlaying = false;
+let viewingAlbumId = null;
+let viewingPlaylist = [];
+let audio = new Audio();
 
-const audio = document.getElementById('globalAudio');
-const albumGrid = document.getElementById('albumGrid');
-
-// Init Grid
-albums.forEach((alb, i) => {
-  const div = document.createElement('div');
-  div.className = 'album-card';
-  div.innerHTML = `<img src="${alb.cover}"><div class="album-name">${alb.title}</div><div class="album-year">${alb.year}</div>`;
-  div.onclick = () => openAlbum(i);
-  albumGrid.appendChild(div);
-});
-
-// --- QUEUE LOGIC ---
-function addToQueue(pIdx, tIdx, btnElement) {
-  queue.push({ pIdx, tIdx });
-  btnElement.textContent = '✓';
-  btnElement.style.borderColor = '#111';
-  btnElement.style.color = '#111';
-  setTimeout(() => {
-    btnElement.textContent = '+';
-    btnElement.style.borderColor = '';
-    btnElement.style.color = '';
-  }, 1000);
+// --- 3. THEME ENGINE ---
+function toggleTheme() {
+  document.body.classList.toggle('light-mode');
+  const isLight = document.body.classList.contains('light-mode');
+  localStorage.setItem('ye_theme', isLight ? 'light' : 'dark');
+  document.getElementById('profileDropdown').classList.remove('show');
 }
+if (localStorage.getItem('ye_theme') === 'light') { document.body.classList.add('light-mode'); }
 
-function playNextCmd(isPrev) {
-  if (activePlaylistIndex === -1) return;
-  if (!isPrev && queue.length > 0) {
-    const nextItem = queue.shift();
-    playSong(nextItem.pIdx, nextItem.tIdx);
-  } else {
-    const pl = playlists[activePlaylistIndex];
-    let nextIdx = isPrev ? activeTrackIndex - 1 : activeTrackIndex + 1;
-    if (nextIdx >= pl.songs.length) nextIdx = 0;
-    if (nextIdx < 0) nextIdx = pl.songs.length - 1;
-    playSong(activePlaylistIndex, nextIdx);
-  }
-}
-audio.onended = () => playNextCmd(false);
-
-// --- PLAYBACK ---
-function playSong(pIdx, tIdx) {
-  activePlaylistIndex = pIdx; activeTrackIndex = tIdx;
-  const song = playlists[pIdx].songs[tIdx];
-  const alb = albums.find(a => a.playlistIndex === pIdx);
-  document.documentElement.style.setProperty('--album-accent', alb.accent || '#ffffff');
-  audio.src = song.file;
-  audio.play();
-  document.getElementById('miniPlayer').classList.add('active');
-  document.getElementById('mpCover').src = alb.cover;
-  document.getElementById('mpTitle').textContent = song.title;
-  document.getElementById('mpAlbum').textContent = alb.title;
-  updatePlayPauseUI(true);
-  if(viewingPlaylistIndex === pIdx) renderTrackList();
-}
-
-function togglePlay() { 
-  if(audio.paused) { audio.play(); updatePlayPauseUI(true); } 
-  else { audio.pause(); updatePlayPauseUI(false); }
-}
-
-function updatePlayPauseUI(playing) {
-  document.getElementById('iconPlay').style.display = playing ? 'none' : 'block';
-  document.getElementById('iconPause').style.display = playing ? 'block' : 'none';
-  document.getElementById('fullIconPlay').style.display = playing ? 'none' : 'block';
-  document.getElementById('fullIconPause').style.display = playing ? 'block' : 'none';
-}
-
-function playSurpriseTrack() {
-  const rP = Math.floor(Math.random() * playlists.length);
-  const rT = Math.floor(Math.random() * playlists[rP].songs.length);
-  playSong(rP, rT);
-}
-
-// --- UI VIEWS ---
-function openAlbum(i) {
-  const alb = albums[i];
-  
-  
-  const pl = playlists[alb.playlistIndex];
-  if (!pl) {
-    console.error("Playlist not found! Check your playlistIndex for:", alb.title);
-    return;
-  }
-
-  
-  document.getElementById('viewCover').src = alb.cover;
-  document.getElementById('viewTitle').textContent = alb.title;
-  document.getElementById('viewMeta').textContent = `${alb.year} • ${pl.songs.length} TRACKS`;
-  document.getElementById('viewNotes').textContent = alb.notes;
-  
-  
-  const folderName = alb.folder || alb.title;
-  const finalZipLink = alb.downloadUrl ? alb.downloadUrl : `music/${folderName}/${folderName}.zip`;
-  document.getElementById('albumDownload').href = finalZipLink;
-
-  viewingPlaylistIndex = alb.playlistIndex;
-  const tl = document.getElementById('trackList');
-  tl.innerHTML = "";
-  pl.songs.forEach((song, sIdx) => {
-    const div = document.createElement('div');
-    div.className = 'track-item';
-    // This connects to your existing playSong function
-    div.onclick = () => playSong(alb.playlistIndex, sIdx);
-    div.innerHTML = `
-      <div class="track-left">
-        <span class="track-number">${(sIdx + 1).toString().padStart(2, '0')}</span>
-        <span class="track-name">${song.title}</span>
-      </div>
-    `;
-    tl.appendChild(div);
-    renderTrackList();
-  });
-
-  
-  document.getElementById('albumView').classList.add('show');
-}
-
-function closeAlbum() { 
-  document.getElementById('albumView').classList.remove('show');
-  document.body.style.overflow = '';
-}
-
-function renderTrackList() {
-  const list = document.getElementById('trackList');
-  list.innerHTML = '';
-  playlists[viewingPlaylistIndex].songs.forEach((s, i) => {
-    const li = document.createElement('li');
-    li.className = 'track-item' + (activePlaylistIndex===viewingPlaylistIndex && activeTrackIndex===i ? ' is-playing' : '');
-    li.innerHTML = `
-      <span class="track-index">${i + 1}</span>
-      <span class="track-title" onclick="playSong(${viewingPlaylistIndex}, ${i})">${s.title}</span>
-      <div class="track-actions">
-        <button class="action-icon-btn" title="Add to Queue" onclick="addToQueue(${viewingPlaylistIndex}, ${i}, this)">+</button>
-        <a class="action-icon-btn" href="${s.file}" download title="Download Track">↓</a>
-      </div>
-    `;
-    list.appendChild(li);
-  });
-}
-
-function toggleFullPlayer() {
-  const fp = document.getElementById('fullPlayer');
-  if (fp.classList.toggle('active') && activePlaylistIndex !== -1) {
-    const song = playlists[activePlaylistIndex].songs[activeTrackIndex];
-    const alb = albums.find(a => a.playlistIndex === activePlaylistIndex);
-    document.getElementById('fullCover').src = alb.cover;
-    document.getElementById('fullTitle').textContent = song.title;
-    document.getElementById('fullAlbum').textContent = alb.title;
-  }
-}
-
-// ---SEARCH & TIME UPDATES ---
-// Using addEventListener is much more stable on mobile browsers
-document.getElementById('searchInput').addEventListener('input', (e) => {
-  // .trim() instantly kills any auto-spaces added by the mobile keyboard
-  const q = e.target.value.toUpperCase().trim();
-  
-  const searchUI = document.getElementById('searchUI');
-  const defaultUI = document.getElementById('defaultUI');
-  const searchGrid = document.getElementById('searchGrid');
-  
-  if (!q) {
-    searchUI.style.display = 'none';
-    defaultUI.style.display = 'block';
-    return;
-  }
-
-  searchUI.style.display = 'block';
-  defaultUI.style.display = 'none';
-  searchGrid.innerHTML = "";
-
-  // Searching exclusively for tracks to keep the results clean and focused
-  playlists.forEach((pl, plIdx) => {
-    pl.songs.forEach((song, sIdx) => {
-      if (song.title.toUpperCase().includes(q)) {
-        const alb = albums.find(a => a.playlistIndex === plIdx);
-        
-        // Safety check to ensure we don't crash if an album index is missing
-        if (!alb) return; 
-
-        const div = document.createElement('div');
-        div.className = 'album-card';
-        div.onclick = () => { 
-          // Reset search and play
-          document.getElementById('searchInput').value = "";
-          searchUI.style.display = 'none'; 
-          defaultUI.style.display = 'block';
-          playSong(plIdx, sIdx); 
-        };
-        div.innerHTML = `
-          <img src="${alb.cover}">
-          <div class="album-name">${song.title}</div>
-          <div class="album-year">TRACK • ${pl.title}</div>
-        `;
-        searchGrid.appendChild(div);
-      }
-    });
-  });
-});
-
-function closeSearch() {
-  searchInput.value = "";
-  currentTerm = "";
-  execSearch();
-}
-
-function execSearch() {
-  const searchUI = document.getElementById('searchUI');
-  const defaultUI = document.getElementById('defaultUI');
-  const searchGrid = document.getElementById('searchGrid');
-
-  if (!currentTerm) { 
-    searchUI.style.display = "none"; 
-    defaultUI.style.display = "block"; 
-    return; 
-  }
-  
-  searchUI.style.display = "block"; 
-  defaultUI.style.display = "none"; 
-  searchGrid.innerHTML = "";
-
-  // Albums Search
-  albums.forEach((alb, index) => {
-    if (alb.title.toLowerCase().includes(currentTerm)) {
-      const div = document.createElement('div');
-      div.className = 'album-card';
-      div.innerHTML = `<img src="${alb.cover}"><div class="album-name">${alb.title}</div><div class="album-year">ALBUM • ${alb.year}</div>`;
-      div.onclick = () => { closeSearch(); openAlbum(index); };
-      searchGrid.appendChild(div);
-    }
-  });
-
-  // Tracks Search
-  playlists.forEach((pl, plIdx) => {
-    pl.songs.forEach((song, sIdx) => {
-      if (song.title.toLowerCase().includes(currentTerm)) {
-        const alb = albums.find(a => a.playlistIndex === plIdx);
-        const div = document.createElement('div');
-        div.className = 'album-card';
-        div.innerHTML = `<img src="${alb ? alb.cover : ''}"><div class="album-name">${song.title}</div><div class="album-year">TRACK • ${pl.title}</div>`;
-        div.onclick = () => playSong(plIdx, sIdx);
-        searchGrid.appendChild(div);
-      }
-    });
-  });
-
-  if (searchGrid.innerHTML === "") {
-    searchGrid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: #999; font-weight: 600;">NO RESULTS FOUND</div>`;
-  }
-}
-
-audio.ontimeupdate = () => {
-  if(!isNaN(audio.duration)) {
-    const prog = (audio.currentTime / audio.duration) * 100;
-    document.getElementById('progressBar').value = prog;
-    document.getElementById('fullProgressBar').value = prog;
-    const fmt = s => `${Math.floor(s/60)}:${Math.floor(s%60).toString().padStart(2,'0')}`;
-    document.getElementById('currentTime').textContent = fmt(audio.currentTime);
-    document.getElementById('duration').textContent = fmt(audio.duration);
-    document.getElementById('fullCurrentTime').textContent = fmt(audio.currentTime);
-    document.getElementById('fullDuration').textContent = fmt(audio.duration);
-  }
+// --- 4. INITIALIZATION ---
+window.onload = () => {
+  setGreeting();
+  generateShufflePlaylist();
+  renderHomeLayouts();
+  updateLikedSidebar();
+  renderSearchHistory();
 };
 
-document.getElementById('progressBar').oninput = e => audio.currentTime = (e.target.value/100) * audio.duration;
-document.getElementById('fullProgressBar').oninput = e => audio.currentTime = (e.target.value/100) * audio.duration;
+function setGreeting() {
+  const hr = new Date().getHours();
+  let greet = 'Good evening';
+  if (hr < 12) greet = 'Good morning';
+  else if (hr < 18) greet = 'Good afternoon';
+  const gt = document.getElementById('greetingText');
+  if(gt) gt.innerText = greet;
+}
 
-// --- KEYBOARD & GESTURES ---
+// SCROLL LOGIC FOR STICKY HEADERS (Works internally in mainScrollArea)
+function handleScroll() {
+  const scrollArea = document.getElementById('mainScrollArea');
+  const mainHeader = document.getElementById('mainHeader');
+  const stickyHeader = document.getElementById('headerStickyAlbum');
+  const searchBar = document.getElementById('searchBarContainer');
+  const scrollTop = scrollArea.scrollTop;
+  
+  if (scrollTop > 50) {
+    mainHeader.classList.add('scrolled');
+  } else {
+    mainHeader.classList.remove('scrolled');
+  }
+  
+  // Only show sticky header if we are actually viewing an album
+  if (scrollTop > 280 && document.getElementById('albumViewContainer').classList.contains('active')) {
+      stickyHeader.classList.add('visible');
+      if (searchBar) searchBar.classList.add('hide-on-scroll');
+  } else {
+      stickyHeader.classList.remove('visible');
+      if (searchBar) searchBar.classList.remove('hide-on-scroll');
+  }
+}
+
+// --- 5. QUEUE SYSTEM ---
+function addToQueue(trackData, event) {
+  if(event) event.stopPropagation();
+  playQueue.push(trackData);
+  showToast('Added to Queue');
+}
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  if(!t) return;
+  t.innerText = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2000);
+}
+
+// --- 6. KEYBOARD SHORTCUTS ---
 window.addEventListener('keydown', (e) => {
-  if (document.activeElement.tagName === 'INPUT') return;
+  if (e.target.tagName === 'INPUT') return;
   switch(e.code) {
-    case 'Space': e.preventDefault(); if(activePlaylistIndex !== -1) togglePlay(); break;
+    case 'Space': e.preventDefault(); togglePlay(); break;
     case 'ArrowRight': audio.currentTime = Math.min(audio.duration, audio.currentTime + 5); break;
     case 'ArrowLeft': audio.currentTime = Math.max(0, audio.currentTime - 5); break;
     case 'KeyM': audio.muted = !audio.muted; break;
     case 'Escape': 
-      if (document.getElementById('fullPlayer').classList.contains('active')) toggleFullPlayer();
-      else if (document.getElementById('albumView').classList.contains('show')) closeAlbum();
+      const fp = document.getElementById('fullPlayer');
+      if (fp && fp.classList.contains('active')) closeFullPlayer();
+      else closeModals();
       break;
   }
 });
 
-let touchStartY = 0;
-const fp = document.getElementById('fullPlayer');
-fp.addEventListener('touchstart', e => { touchStartY = e.changedTouches[0].screenY; }, { passive: true });
-fp.addEventListener('touchmove', e => {
-  let deltaY = e.changedTouches[0].screenY - touchStartY;
-  if (deltaY > 0) { fp.style.transform = `translateY(${deltaY}px)`; fp.style.transition = 'none'; }
-}, { passive: true });
-fp.addEventListener('touchend', e => {
-  let deltaY = e.changedTouches[0].screenY - touchStartY;
-  fp.style.transition = 'transform 0.4s cubic-bezier(0.32, 1, 0.23, 1)';
-  if (deltaY > 100) { toggleFullPlayer(); fp.style.transform = ''; } 
-  else { fp.style.transform = 'translateY(0)'; }
-}, { passive: true });
+// --- 7. LIKES ENGINE ---
+function updateLikedSidebar() {
+  const t = document.getElementById('likedCountText');
+  if(t) t.innerText = `Playlist • ${likedSongs.length} songs`;
+}
 
-function openBlog(t, c) {
-  document.getElementById('blogTitle').textContent = t;
-  document.getElementById('blogContent').textContent = c;
-  document.getElementById('blogBackdrop').classList.add('show');
+function isLiked(fileUrl) { return likedSongs.some(t => t.file === fileUrl); }
+
+function toggleLike(trackData, event) {
+  if(event) event.stopPropagation(); 
+  const index = likedSongs.findIndex(t => t.file === trackData.file);
+  if (index > -1) likedSongs.splice(index, 1);
+  else likedSongs.push(trackData);
+  
+  localStorage.setItem('ye_liked_songs', JSON.stringify(likedSongs));
+  updateLikedSidebar();
+  updatePlayerLikeBtn();
+  
+  if (viewingAlbumId === 'liked') openLikedSongs();
+  else if (viewingAlbumId) {
+    const alb = database.find(a => a.id === viewingAlbumId);
+    if(alb) renderAlbumView(alb);
+  }
+}
+
+function togglePlayerLike(event) {
+  if (event) event.stopPropagation();
+  if (activeTrackIndex === -1) return;
+  const t = activePlaylist[activeTrackIndex];
+  const album = database.find(a => a.id === activeAlbumId);
+  const cover = t.cover || (album ? album.cover : LIKED_COVER);
+  const albumTitle = t.albumTitle || (album ? album.title : 'Album');
+  toggleLike({ title: t.title, file: t.file, cover: cover, albumTitle: albumTitle, artist: 'Kanye West' }, null);
+}
+
+function updatePlayerLikeBtn() {
+  if (activeTrackIndex === -1) return;
+  const file = activePlaylist[activeTrackIndex].file;
+  const liked = isLiked(file);
+  document.querySelectorAll('.player-like-btn').forEach(btn => {
+    liked ? btn.classList.add('liked') : btn.classList.remove('liked');
+  });
+}
+
+// --- 8. UI NAVIGATION & RENDERING ---
+function updateNavHighlights(activeId) {
+  document.querySelectorAll('.nav-item, .m-nav-item').forEach(el => el.classList.remove('active'));
+  const dNav = document.getElementById('nav' + activeId + 'Desktop');
+  const mNav = document.getElementById('nav' + activeId + 'Mob');
+  if (dNav) dNav.classList.add('active');
+  if (mNav) mNav.classList.add('active');
+}
+
+function goHome() {
+  document.querySelectorAll('.view-section').forEach(v => v.classList.remove('active'));
+  document.getElementById('homeView').classList.add('active');
+  document.documentElement.style.setProperty('--dominant-color', '#333333');
+  document.getElementById('mainScrollArea').scrollTop = 0;
+  updateNavHighlights('Home');
+  handleScroll();
+}
+
+function showSearchView() {
+  document.querySelectorAll('.view-section').forEach(v => v.classList.remove('active'));
+  document.getElementById('searchView').classList.add('active');
+  document.documentElement.style.setProperty('--dominant-color', '#333333');
+  document.getElementById('mainScrollArea').scrollTop = 0;
+  updateNavHighlights('Search');
+  renderSearchHistory();
+  
+  // Show mobile search input on mobile, desktop search input on desktop
+  const isMobile = window.innerWidth <= 800;
+  const mobileSearchInput = document.getElementById('mobileSearchInput');
+  if(mobileSearchInput) mobileSearchInput.style.display = isMobile ? 'block' : 'none';
+  
+  if(isMobile) {
+    const msb = document.getElementById('mobileSearchBox');
+    if(msb) msb.focus();
+  } else {
+    const sb = document.getElementById('searchInput');
+    if(sb) sb.focus();
+  }
+  handleScroll();
+}
+
+function renderHomeLayouts() {
+  const albumGrid = document.getElementById('albumGrid');
+  const recentGrid = document.getElementById('recentGrid');
+  const sidebarLib = document.getElementById('sidebarLibraryList');
+
+  if(albumGrid) albumGrid.innerHTML = '';
+  if(recentGrid) recentGrid.innerHTML = '';
+  if(sidebarLib) sidebarLib.innerHTML = '';
+
+  // Liked Songs Static Card
+  if(recentGrid) {
+    recentGrid.innerHTML += `
+      <div class="recent-card" onclick="openLikedSongs()">
+        <div class="liked-icon-container"><svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+        <span>Liked Songs</span>
+        <button class="play-btn-mini" onclick="event.stopPropagation(); openLikedSongs(); playCurrentAlbum();"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+      </div>
+      <div class="recent-card" onclick="openShufflePlaylist()">
+        <img src="music/shufflelogo.jpg" alt="Shuffle" style="width: 100%; height: 100%; object-fit: cover; border-radius: 4px;">
+        <span>shu-ffle</span>
+        <button class="play-btn-mini" onclick="event.stopPropagation(); openShufflePlaylist(); playCurrentAlbum();"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+      </div>
+    `;
+  }
+  
+  if(sidebarLib) {
+    sidebarLib.innerHTML += `
+      <div class="lib-list-item" onclick="openLikedSongs()">
+        <div class="liked-icon-container">
+          <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        </div>
+        <div class="lib-info">
+          <span class="title">Liked Songs</span>
+          <span class="type" id="likedCountText">Playlist • 0 songs</span>
+        </div>
+      </div>
+      <div class="lib-list-item" onclick="openShufflePlaylist()">
+        <img src="music/shufflelogo.jpg" alt="Shuffle" class="lib-cover-img">
+        <div class="lib-info">
+          <span class="title">shu-ffle</span>
+          <span class="type">Playlist • 20 songs</span>
+        </div>
+      </div>
+    `;
+  }
+
+  database.forEach((album, idx) => {
+    if(albumGrid) {
+      albumGrid.innerHTML += `
+        <div class="album-card" onclick="openAlbum('${album.id}')">
+          <img src="${album.cover}" alt="Cover">
+          <div class="album-card-title">${album.title}</div>
+          <div class="album-card-subtitle">${album.year} • Album</div>
+        </div>
+      `;
+    }
+
+    if (idx < 5 && recentGrid) {
+      recentGrid.innerHTML += `
+        <div class="recent-card" onclick="openAlbum('${album.id}')">
+          <img src="${album.cover}" alt="Cover">
+          <span>${album.title}</span>
+          <button class="play-btn-mini" onclick="event.stopPropagation(); playDirectTrack('${album.id}', 0)"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+        </div>
+      `;
+    }
+
+    if(sidebarLib) {
+      sidebarLib.innerHTML += `
+        <div class="lib-list-item" onclick="openAlbum('${album.id}')">
+          <img src="${album.cover}" class="lib-cover-img" alt="Cover">
+          <div class="lib-info">
+            <span class="title">${album.title}</span>
+            <span class="type">Album • Kanye West</span>
+          </div>
+        </div>
+      `;
+    }
+  });
+  updateLikedSidebar();
+}
+
+function openAlbum(albumId) {
+  const album = database.find(a => a.id === albumId);
+  if(!album) return;
+  
+  viewingAlbumId = albumId;
+  viewingPlaylist = album.tracks;
+  
+  document.querySelectorAll('.view-section').forEach(v => v.classList.remove('active'));
+  const albumView = document.getElementById('albumViewContainer');
+  if(albumView) albumView.classList.add('active');
+  document.getElementById('mainScrollArea').scrollTop = 0;
+  updateNavHighlights(''); 
+  handleScroll();
+  
+  document.getElementById('albumCoverLg').src = album.cover;
+  document.getElementById('albumTitleLg').innerText = album.title;
+  document.getElementById('stickyTitle').innerText = album.title;
+  document.getElementById('albumType').innerText = "Album";
+  document.getElementById('albumYear').innerText = album.year;
+  document.getElementById('albumTrackCount').innerText = `${album.tracks.length} songs`;
+  
+  const dlBtn = document.getElementById('downloadAlbumBtn');
+  if(album.downloadUrl) { dlBtn.style.display = 'flex'; dlBtn.href = album.downloadUrl; } 
+  else { dlBtn.style.display = 'none'; }
+
+  extractDominantColor(album.cover);
+  renderAlbumView(album);
+}
+
+function openLikedSongs() {
+  viewingAlbumId = 'liked';
+  viewingPlaylist = [...likedSongs];
+  
+  document.querySelectorAll('.view-section').forEach(v => v.classList.remove('active'));
+  const albumView = document.getElementById('albumViewContainer');
+  if(albumView) albumView.classList.add('active');
+  document.getElementById('mainScrollArea').scrollTop = 0;
+  updateNavHighlights('');
+  handleScroll();
+  
+  document.getElementById('albumCoverLg').src = LIKED_COVER;
+  document.getElementById('albumTitleLg').innerText = "Liked Songs";
+  document.getElementById('stickyTitle').innerText = "Liked Songs";
+  document.getElementById('albumType').innerText = "Playlist";
+  document.getElementById('albumYear').innerText = "You";
+  document.getElementById('albumTrackCount').innerText = `${likedSongs.length} songs`;
+  document.getElementById('downloadAlbumBtn').style.display = 'none';
+  
+  document.documentElement.style.setProperty('--dominant-color', '#450af5');
+  renderAlbumView(null);
+}
+
+function openShufflePlaylist() {
+  const shufflePlaylist = getShufflePlaylist();
+  viewingAlbumId = 'shuffle';
+  viewingPlaylist = [...shufflePlaylist];
+  
+  document.querySelectorAll('.view-section').forEach(v => v.classList.remove('active'));
+  const albumView = document.getElementById('albumViewContainer');
+  if(albumView) albumView.classList.add('active');
+  document.getElementById('mainScrollArea').scrollTop = 0;
+  updateNavHighlights('');
+  handleScroll();
+  
+  document.getElementById('albumCoverLg').src = "music/shufflelogo.jpg";
+  document.getElementById('albumTitleLg').innerText = "shu-ffle";
+  document.getElementById('stickyTitle').innerText = "shu-ffle";
+  document.getElementById('albumType').innerText = "Playlist";
+  document.getElementById('albumYear').innerText = "Auto-generated";
+  document.getElementById('albumTrackCount').innerText = `${shufflePlaylist.length} songs`;
+  document.getElementById('downloadAlbumBtn').style.display = 'none';
+  
+  document.documentElement.style.setProperty('--dominant-color', '#1DB954');
+  renderAlbumView(null);
+}
+
+function renderAlbumView(albumObj) {
+  const list = document.getElementById('tracklistContainer');
+  const fpList = document.getElementById('fpTracklistContainer');
+  if(!list && !fpList) return;
+  
+  if(viewingPlaylist.length === 0) {
+    const emptyMsg = '<p style="color:var(--text-muted); padding:20px; text-align:center;">Find songs you love and hit the heart to add them here.</p>';
+    if(list) list.innerHTML = emptyMsg;
+    if(fpList) fpList.innerHTML = emptyMsg;
+    return;
+  }
+  
+  const tracklist = viewingPlaylist.map((song, index) => {
+    const isPlayingThis = (activeAlbumId === viewingAlbumId && activeTrackIndex === index);
+    const cover = song.cover || (albumObj ? albumObj.cover : LIKED_COVER);
+    const albumTitle = song.albumTitle || (albumObj ? albumObj.title : 'Album');
+    const trackDataStr = JSON.stringify({ title: song.title, file: song.file, cover: cover, albumTitle: albumTitle, artist: 'Kanye West' }).replace(/"/g, '&quot;');
+    const likedClass = isLiked(song.file) ? 'liked visible' : '';
+    
+    return `
+      <div class="track-row ${isPlayingThis ? 'playing' : ''}" onclick="playTrack(${index}, true)">
+        <div class="t-num">${index + 1}</div>
+        <div class="track-info">
+          <div class="track-name">${song.title}</div>
+          <div class="track-artist">Kanye West</div>
+        </div>
+        <div class="t-actions ${likedClass}">
+          <button class="action-icon" title="Add to Queue" onclick="addToQueue(${trackDataStr}, event)"><svg viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></button>
+          <a class="action-icon" title="Download" href="${song.file}" download onclick="event.stopPropagation()"><svg viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg></a>
+          <button class="action-icon action-like ${likedClass}" title="Like" onclick="toggleLike(${trackDataStr}, event)">
+            <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </button>
+        </div>
+      </div>
+    `;
+  }).join('');
+  
+  if(list) list.innerHTML = tracklist;
+}
+
+// --- 8.5 SEARCH HISTORY & SHUFFLE PLAYLIST ---
+let searchHistory = [];
+try { searchHistory = JSON.parse(localStorage.getItem('ye_search_history')) || []; } catch(e) { searchHistory = []; }
+
+function addToSearchHistory(query) {
+  if(!query.trim()) return;
+  searchHistory = searchHistory.filter(s => s.toLowerCase() !== query.toLowerCase());
+  searchHistory.unshift(query);
+  if(searchHistory.length > 5) searchHistory.pop();
+  localStorage.setItem('ye_search_history', JSON.stringify(searchHistory));
+}
+
+function renderSearchHistory() {
+  const historyGrid = document.getElementById('searchHistoryGrid');
+  const historyContainer = document.getElementById('searchHistoryContainer');
+  const searchResultsContainer = document.getElementById('searchResultsContainer');
+  if(!historyGrid || !historyContainer) return;
+  
+  if(searchHistory.length === 0) {
+    historyContainer.style.display = 'none';
+    if(searchResultsContainer) searchResultsContainer.innerHTML = '<h2 class="section-title">Start searching to get recommendations</h2>';
+    return;
+  }
+  
+  historyContainer.style.display = 'block';
+  historyGrid.innerHTML = searchHistory.map(query => `
+    <button onclick="performSearch('${query}')" style="background: rgba(128,128,128,0.1); padding: 8px 16px; border-radius: 32px; border: none; color: var(--text-main); cursor: pointer; font-size: 14px; font-weight: 600; transition: 0.2s ease;">
+      ${query}
+    </button>
+  `).join('');
+}
+
+function performSearch(query) {
+  const searchInput = document.getElementById('searchInput');
+  const mobileSearchBox = document.getElementById('mobileSearchBox');
+  if(searchInput) searchInput.value = query;
+  if(mobileSearchBox) mobileSearchBox.value = query;
+  triggerSearch(query);
+}
+
+// Shuffle Playlist
+function generateShufflePlaylist() {
+  let allTracks = [];
+  database.forEach(album => {
+    album.tracks.forEach(track => {
+      allTracks.push({ ...track, cover: album.cover, albumTitle: album.title });
+    });
+  });
+  
+  const shuffled = allTracks.sort(() => Math.random() - 0.5).slice(0, 20);
+  localStorage.setItem('ye_shuffle_playlist', JSON.stringify(shuffled));
+  return shuffled;
+}
+
+function getShufflePlaylist() {
+  try {
+    return JSON.parse(localStorage.getItem('ye_shuffle_playlist')) || generateShufflePlaylist();
+  } catch(e) {
+    return generateShufflePlaylist();
+  }
+}
+
+function shuffleAllAlbums() {
+  const shufflePlaylist = getShufflePlaylist();
+  openShufflePlaylist();
+  if (shufflePlaylist.length > 0) playTrack(0, true);
+}
+
+// --- 9. SEARCH ENGINE ---
+const searchInput = document.getElementById('searchInput');
+if(searchInput) {
+  searchInput.addEventListener('input', (e) => {
+    const q = e.target.value.toLowerCase().trim();
+    if(!q) return showSearchView();
+    triggerSearch(q);
+  });
+}
+
+function triggerSearch(query) {
+  addToSearchHistory(query);
+  
+  const historyContainer = document.getElementById('searchHistoryContainer');
+  if(historyContainer) historyContainer.style.display = 'none';
+  
+  const q = query.toLowerCase();
+  let res = [];
+  database.forEach(alb => {
+    if(alb.title.toLowerCase().includes(q)) res.push({...alb, type:'album'});
+    alb.tracks.forEach((t, idx) => {
+      if(t.title.toLowerCase().includes(q)) res.push({...t, type:'track', albumTitle:alb.title, cover:alb.cover, albumId:alb.id, idx:idx});
+    });
+  });
+  
+  document.getElementById('searchResultsTitle').innerText = res.length > 0 ? 'Search Results' : 'No results found';
+  document.getElementById('searchGrid').innerHTML = res.map(item => `
+    <div class="album-card" onclick="${item.type==='track' ? `playDirectTrack('${item.albumId}', ${item.idx})` : `openAlbum('${item.id}')`}">
+      <img src="${item.cover}" alt="Cover">
+      <div class="album-card-title">${item.title}</div>
+      <div class="album-card-subtitle">${item.type==='track' ? 'Song • ' + item.albumTitle : 'Album • ' + item.year}</div>
+    </div>
+  `).join('');
+}
+
+// Mobile Search Input Handler
+const mobileSearchBox = document.getElementById('mobileSearchBox');
+if(mobileSearchBox) {
+  mobileSearchBox.addEventListener('input', (e) => {
+    const q = e.target.value.toLowerCase().trim();
+    if(!q) return showSearchView();
+    triggerSearch(q);
+  });
+}
+
+function playDirectTrack(albumId, idx) {
+  openAlbum(albumId); 
+  playTrack(idx, true);
+}
+
+function surpriseMe() {
+  if(!database.length) return;
+  const rAlb = database[Math.floor(Math.random() * database.length)];
+  const rIdx = Math.floor(Math.random() * rAlb.tracks.length);
+  openAlbum(rAlb.id);
+  playTrack(rIdx, true);
+}
+
+// --- 10. MODALS & DROPDOWNS ---
+function toggleProfileMenu(e) { if(e) e.stopPropagation(); document.getElementById('profileDropdown').classList.toggle('show'); }
+window.onclick = function(e) { if (!e.target.closest('.header-right')) { const p = document.getElementById('profileDropdown'); if(p) p.classList.remove('show'); } }
+function openUpdates() { document.getElementById('profileDropdown').classList.remove('show'); document.getElementById('updatesModal').classList.add('active'); }
+function openVision() { document.getElementById('profileDropdown').classList.remove('show'); document.getElementById('visionModal').classList.add('active'); }
+function closeModals(e) { 
+  if (e && e.target.classList.contains('modal-content') || e.target.closest('.modal-content') && !e.target.classList.contains('modal-close')) return; 
+  document.querySelectorAll('.modal-overlay').forEach(m => m.classList.remove('active')); 
+}
+
+// --- 11. AUDIO PLAYBACK ENGINE (WITH GUARANTEED FALLBACK) ---
+function playCurrentAlbum() { if (viewingPlaylist.length > 0) playTrack(0, true); }
+
+function playTrack(index, playFromView = false) {
+  if (playFromView) {
+    activePlaylist = [...viewingPlaylist];
+    activeAlbumId = viewingAlbumId;
+  }
+  
+  activeTrackIndex = index;
+  const song = activePlaylist[index];
+  
+  let trackCover = song.cover;
+  if (!trackCover) {
+    if (activeAlbumId === 'liked') { trackCover = LIKED_COVER; }
+    else if (activeAlbumId === 'queue') { trackCover = song.cover || LIKED_COVER; }
+    else {
+      const alb = database.find(a => a.id === activeAlbumId);
+      trackCover = alb ? alb.cover : LIKED_COVER;
+    }
+  }
+  
+  document.getElementById('playerTitle').innerText = song.title;
+  document.getElementById('fpTitle').innerText = song.title;
+  document.getElementById('playerCover').src = trackCover;
+  document.getElementById('fpArt').src = trackCover;
+  
+  let artistName = 'Album';
+  if (song.albumTitle) {
+    artistName = song.albumTitle;
+  } else {
+    const alb = database.find(a => a.id === activeAlbumId);
+    artistName = alb ? alb.title : 'Album';
+  }
+  
+  document.getElementById('playerArtist').innerText = artistName;
+  document.getElementById('fpArtist').innerText = artistName;
+  
+  // Show the album the track belongs to (from albumTitle if available, otherwise find from activeAlbumId)
+  let trackAlbumName = 'Album';
+  if (song.albumTitle) {
+    trackAlbumName = song.albumTitle;
+  } else if (activeAlbumId && activeAlbumId !== 'queue') {
+    const alb = database.find(a => a.id === activeAlbumId);
+    trackAlbumName = alb ? alb.title : 'Album';
+  }
+  document.getElementById('fpAlbumName').innerText = trackAlbumName;
+  
+  if (viewingAlbumId) {
+     const vAlb = viewingAlbumId === 'liked' ? null : database.find(a => a.id === viewingAlbumId);
+     renderAlbumView(vAlb);
+  }
+  
+  updatePlayerLikeBtn();
+  
+  audio.src = song.file; 
+  
+  // Guarantee playback even if local file doesn't exist
+  audio.play().catch(e => {
+    console.log('Local file not found. Falling back to placeholder audio stream.');
+    audio.src = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3";
+    audio.play();
+  });
+  
+  isPlaying = true;
+  updatePlayIcons();
+
+  if ('mediaSession' in navigator) {
+    navigator.mediaSession.metadata = new MediaMetadata({
+      title: song.title, artist: 'Kanye West', album: albTitle,
+      artwork: [{ src: trackCover, sizes: '512x512', type: 'image/jpeg' }]
+    });
+    navigator.mediaSession.setActionHandler('play', togglePlay);
+    navigator.mediaSession.setActionHandler('pause', togglePlay);
+    navigator.mediaSession.setActionHandler('previoustrack', prevTrack);
+    navigator.mediaSession.setActionHandler('nexttrack', nextTrack);
+  }
+}
+
+function togglePlay() {
+  if (activeTrackIndex === -1) {
+    if (viewingPlaylist.length > 0) return playCurrentAlbum();
+    return;
+  }
+  isPlaying = !isPlaying;
+  isPlaying ? audio.play() : audio.pause();
+  updatePlayIcons();
+}
+
+function updatePlayIcons() {
+  const path = isPlaying ? "M5 3h4v10H5zm6 0h4v10h-4z" : "M3 2l10 6-10 6z";
+  
+  const playIcons = document.querySelectorAll('#playIcon, #fpPlayIcon, #stickyPlayIcon, #mainPlayIcon');
+  playIcons.forEach(icon => {
+      if(icon) icon.innerHTML = `<path d="${path}"/>`;
+  });
+  
+  const mobilePlayPath = isPlaying ? "M6 19h4V5H6v14zm8-14v14h4V5h-4z" : "M8 5v14l11-7z";
+  const mobileIcon = document.getElementById('mobilePlayIcon');
+  if(mobileIcon) mobileIcon.innerHTML = `<path d="${mobilePlayPath}"/>`;
+}
+
+function nextTrack() {
+  if (playQueue.length > 0) {
+    const nextQ = playQueue.shift();
+    activePlaylist = [nextQ]; 
+    activeAlbumId = 'queue';
+    playTrack(0, false);
+    return;
+  }
+  if (activePlaylist.length === 0) return;
+  playTrack((activeTrackIndex + 1) % activePlaylist.length, false);
+}
+
+function prevTrack() {
+  if (activePlaylist.length === 0) return;
+  playTrack((activeTrackIndex - 1 + activePlaylist.length) % activePlaylist.length, false);
+}
+
+audio.onended = () => nextTrack();
+
+// Sync Progress Bars
+const fmtTime = s => isNaN(s) ? "0:00" : `${Math.floor(s/60)}:${Math.floor(s%60).toString().padStart(2,'0')}`;
+audio.ontimeupdate = () => {
+  if(isNaN(audio.duration)) return;
+  const p = (audio.currentTime / audio.duration) * 100;
+  
+  document.querySelectorAll('.progressBar').forEach(el => el.value = p);
+  
+  const miniFill = document.getElementById('miniProgressFill');
+  if(miniFill) miniFill.style.width = p + '%';
+  
+  const miniCircle = document.getElementById('miniProgressCircle');
+  if(miniCircle) miniCircle.style.left = p + '%';
+  
+  const fpCircle = document.getElementById('fpProgressCircle');
+  if(fpCircle) fpCircle.style.left = p + '%';
+  
+  const cur = fmtTime(audio.currentTime), dur = fmtTime(audio.duration);
+  document.querySelectorAll('.currentTime').forEach(el => el.innerText = cur);
+  document.querySelectorAll('.duration').forEach(el => el.innerText = dur);
+};
+
+document.querySelectorAll('.progressBar').forEach(el => { el.oninput = e => audio.currentTime = (e.target.value/100) * audio.duration; });
+const volBar = document.getElementById('volumeBar');
+if(volBar) volBar.oninput = e => audio.volume = e.target.value / 100;
+
+function seekMini(e) {
+  e.stopPropagation();
+  if(isNaN(audio.duration)) return;
+  const bg = e.currentTarget;
+  const percent = e.offsetX / bg.offsetWidth;
+  audio.currentTime = percent * audio.duration;
+}
+
+// --- 12. FULL PLAYER MOBILE GESTURES ---
+function openFullPlayer(e) {
+  document.getElementById('fullPlayer').classList.add('active');
+}
+function closeFullPlayer() {
+  document.getElementById('fullPlayer').classList.remove('active');
+}
+
+let tsY = 0; const fpNode = document.getElementById('fullPlayer');
+if(fpNode) {
+  fpNode.addEventListener('touchstart', e => tsY = e.changedTouches[0].screenY, {passive: true});
+  fpNode.addEventListener('touchmove', e => { if(window.innerWidth > 800) return; const d = e.changedTouches[0].screenY - tsY; if(d > 0) fpNode.style.transform = `translateY(${d}px)`; }, {passive: true});
+  fpNode.addEventListener('touchend', e => { if(window.innerWidth > 800) return; fpNode.style.transform = ''; if(e.changedTouches[0].screenY - tsY > 150) closeFullPlayer(); });
+}
+
+// --- 13. DYNAMIC BACKGROUND COLOR ENGINE ---
+function extractDominantColor(src) {
+  if (!src || src.startsWith('data:')) { document.documentElement.style.setProperty('--dominant-color', '#450af5'); return; }
+  const img = new Image(); img.crossOrigin = "Anonymous"; img.src = src;
+  img.onload = () => {
+    const canvas = document.createElement('canvas'); canvas.width = img.width; canvas.height = img.height;
+    const ctx = canvas.getContext('2d'); ctx.drawImage(img, 0, 0);
+    try {
+      const data = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+      let r=0, g=0, b=0, c=0;
+      for (let i = 0; i < data.length; i += 40) { r += data[i]; g += data[i+1]; b += data[i+2]; c++; }
+      document.documentElement.style.setProperty('--dominant-color', `rgb(${~~(r/c)},${~~(g/c)},${~~(b/c)})`);
+    } catch(e) { document.documentElement.style.setProperty('--dominant-color', '#333333'); }
+  };
 }
 </script>
 </body>
-
 </html>
-
-
-
