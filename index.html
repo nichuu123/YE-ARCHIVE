@@ -2194,29 +2194,7 @@ window.onload = () => {
   renderHomeLayouts();
   updateLikedSidebar();
   renderSearchHistory();
-  initMediaSession();
 };
-
-// Initialize Media Session API on startup
-function initMediaSession() {
-  if ('mediaSession' in navigator) {
-    try {
-      // Set default metadata for when nothing is playing
-      navigator.mediaSession.metadata = new MediaMetadata({
-        title: 'YE ARCHIVE',
-        artist: 'Kanye West',
-        album: 'Nothing Playing',
-        artwork: [
-          { src: 'https://i.redd.it/3two3fms4nf41.jpg', sizes: '512x512', type: 'image/jpeg' }
-        ]
-      });
-      
-      navigator.mediaSession.playbackState = 'paused';
-    } catch (e) {
-      console.log('Media Session initialization note:', e);
-    }
-  }
-}
 
 function setGreeting() {
   const hr = new Date().getHours();
@@ -2776,7 +2754,7 @@ function updateMediaSession(song, albumArt, albumTitle) {
     try {
       navigator.mediaSession.metadata = new MediaMetadata({
         title: song.title || 'Unknown Track',
-        artist: 'Kanye West',
+        artist: `${albumTitle || 'Album'}: Kanye West`,
         album: albumTitle || 'Album',
         artwork: [
           { src: albumArt, sizes: '96x96', type: 'image/jpeg' },
