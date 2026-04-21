@@ -481,7 +481,7 @@
         <div class="playlist-card shuffle">
           <svg viewBox="0 0 24 24"><path d="M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z"/></svg>
         </div>
-        <div class="album-name">SHUFFLE PLAYLIST</div>
+        <div class="album-name">SHUF-FLE</div>
         <div class="album-year">AUTO-GENERATED</div>
       </div>
       <div class="album-card" onclick="openLikedSongs()">
@@ -583,15 +583,7 @@
         </div>
       </div>
       
-      <div class="full-controls">
-        <button class="full-btn repeat-btn" id="repeatBtn" onclick="toggleRepeat()" title="Repeat">
-          <svg viewBox="0 0 24 24"><path d="M17 1l4 4-4 4"></path><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><path d="M7 23l-4-4 4-4"></path><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg>
-        </button>
-        <button class="full-btn" onclick="playNextCmd(true)"><svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg></button>
-        <button class="full-btn full-btn-main" onclick="togglePlay()">
-          <svg id="fullIconPlay" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-          <svg id="fullIconPause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
-        </button>
+
         <button class="full-btn" onclick="playNextCmd(false)"><svg viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg></button>
         
         <div class="volume-container">
@@ -1017,7 +1009,7 @@ function openShuffle() {
 
   document.documentElement.style.setProperty('--album-accent', '#aaaaaa');
   document.getElementById('viewCover').src = 'https://images.unsplash.com/photo-1619983081563-430f63602796?auto=format&fit=crop&w=500&q=80';
-  document.getElementById('viewTitle').textContent = 'SHUFFLE';
+  document.getElementById('viewTitle').textContent = 'SHUF-FLE';
   document.getElementById('viewMeta').textContent = `AUTO-GENERATED • 20 TRACKS`;
   document.getElementById('viewNotes').textContent = 'A fresh mix every time.';
   document.getElementById('albumDownload').style.display = 'none';
