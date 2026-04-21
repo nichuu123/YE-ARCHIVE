@@ -34,6 +34,7 @@
     --radius: 6px; 
     --album-accent: #ffffff;
     --like-color: #ff3b3b;
+    --accent-color: #4a00e0;
   }
 
   * { box-sizing: border-box; }
@@ -103,6 +104,8 @@
   body.dark-mode .full-btn-main { background: #fff; }
   body.dark-mode .full-btn-main svg { fill: #111; }
   body.dark-mode .full-like-btn svg { stroke: #fff; }
+  body.dark-mode .repeat-btn.active svg { stroke: var(--accent-color); fill: none; }
+  body.dark-mode .volume-icon svg { stroke: #fff; fill: none; }
   
   body.dark-mode .modal { background: #111; border-color: var(--border-dark); color: #fff; }
   body.dark-mode #blogContent { color: #ccc !important; }
@@ -155,7 +158,7 @@
   .user-dropdown-container { position: relative; }
   .user-dropdown {
     position: absolute; top: 100%; right: 0; background: #fff; border: 1px solid var(--border);
-    border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); min-width: 200px; z-index: 100;
+    border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); min-width: 220px; z-index: 100;
     display: none; margin-top: 8px; overflow: hidden;
   }
   .user-dropdown.show { display: block; }
@@ -172,7 +175,7 @@
     width: 36px; height: 18px; background: #e0e0e0; border-radius: 9px; position: relative; cursor: pointer;
     transition: background 0.3s;
   }
-  .dark-mode-toggle.active { background: #4a00e0; }
+  .dark-mode-toggle.active { background: var(--accent-color); }
   .dark-mode-toggle::after {
     content: ''; position: absolute; top: 2px; left: 2px; width: 14px; height: 14px;
     background: #fff; border-radius: 50%; transition: transform 0.3s;
@@ -312,13 +315,16 @@
     background: linear-gradient(180deg, var(--album-accent) 0%, var(--page-bg) 60%, var(--page-bg) 100%);
     transition: transform 0.4s cubic-bezier(0.32, 1, 0.23, 1), background 0.8s ease;
     align-items: center; justify-content: center;
+    overflow: hidden;
   }
   .full-player.active { transform: translateY(0); }
-  .swipe-handle { width: 48px; height: 5px; background: rgba(0,0,0,0.15); border-radius: 3px; position: absolute; top: 12px; left: 50%; transform: translateX(-50%); }
-  .close-full { position: absolute; top: 24px; left: 24px; background: rgba(255,255,255,0.5); border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: bold; transition: background 0.2s; backdrop-filter: blur(4px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+  .swipe-handle { width: 48px; height: 5px; background: rgba(0,0,0,0.15); border-radius: 3px; position: absolute; top: 12px; left: 50%; transform: translateX(-50%); z-index: 10; }
+  .close-full { position: absolute; top: 24px; left: 24px; background: rgba(255,255,255,0.5); border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: bold; transition: background 0.2s; backdrop-filter: blur(4px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); z-index: 10; }
   .close-full:hover { background: rgba(255,255,255,0.8); }
 
-  .full-content { display: flex; flex-direction: column; align-items: center; width: 100%; max-width: 500px; margin: auto; }
+  #visualizerCanvas { position: absolute; bottom: 0; left: 0; width: 100%; height: 60%; z-index: 0; opacity: 0.25; pointer-events: none; }
+
+  .full-content { display: flex; flex-direction: column; align-items: center; width: 100%; max-width: 500px; margin: auto; position: relative; z-index: 5; }
   .full-cover { width: min(400px, 85vw); aspect-ratio: 1/1; border-radius: 12px; margin-bottom: 40px; box-shadow: 0 20px 50px rgba(0,0,0,0.2); object-fit: cover; }
   .full-info { width: 100%; text-align: left; margin-bottom: 30px; display: flex; justify-content: space-between; align-items: center; }
   .full-info-text { flex: 1; overflow: hidden; }
@@ -332,13 +338,20 @@
   .full-progress { width: 100%; margin-bottom: 40px; }
   .full-progress-times { display: flex; justify-content: space-between; font-size: 13px; color: #666; margin-top: 12px; font-weight: 600; font-variant-numeric: tabular-nums; }
   
-  .full-controls { display: flex; align-items: center; justify-content: center; gap: 40px; width: 100%; }
+  .full-controls { display: flex; align-items: center; justify-content: center; gap: 30px; width: 100%; }
   .full-btn-main { background: #111; width: 72px; height: 72px; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: none; cursor: pointer; transition: transform 0.1s, box-shadow 0.2s; box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
   .full-btn-main:active { transform: scale(0.92); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
   .full-btn-main svg { fill: #fff; width: 30px; margin-left: 3px; }
   .full-btn { background: none; border: none; cursor: pointer; transition: transform 0.1s; display: flex; align-items: center; justify-content: center; }
   .full-btn:active { transform: scale(0.9); }
-  .full-btn svg { width: 32px; height: 32px; fill: #111; }
+  .full-btn svg { width: 24px; height: 24px; fill: #111; }
+  
+  .repeat-btn svg { fill: none; stroke: #111; stroke-width: 2; }
+  .repeat-btn.active svg { stroke: var(--accent-color); }
+
+  .volume-container { display: flex; align-items: center; gap: 10px; margin-left: 20px; }
+  .volume-icon svg { width: 20px; height: 20px; stroke: #111; fill: none; stroke-width: 2; }
+  .volume-container input[type=range] { width: 80px; }
 
   /* Modals */
   .backdrop { position: fixed; inset: 0; background: rgba(255,255,255,0.8); backdrop-filter: blur(8px); display: none; align-items: center; justify-content: center; z-index: 300; }
@@ -348,7 +361,6 @@
   .blog-bullet { margin-bottom: 8px; }
 
   /* ===== RESPONSIVE OPTIMIZATIONS ===== */
-  
   @media(min-width: 1024px) {
     .full-player { flex-direction: row; padding: 40px; }
     .full-content { flex-direction: row; max-width: 1000px; gap: 80px; align-items: center; }
@@ -400,8 +412,9 @@
     .full-cover { width: min(320px, 100%); margin-bottom: 30px; }
     .full-info h2 { font-size: 24px; }
     .full-info p { font-size: 14px; }
-    .full-controls { gap: 30px; }
+    .full-controls { gap: 20px; flex-wrap: wrap; }
     .full-btn-main { width: 64px; height: 64px; }
+    .volume-container { display: none; } /* Hide volume on mobile to save space */
   }
   @media(max-width: 400px) {
     .album-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
@@ -431,10 +444,18 @@
       </button>
       <div class="user-dropdown" id="userDropdown">
         <div class="dropdown-item" onclick="openBlog('THE VISION', 'Making the vault accessible. Less time searching, more time listening.')">THE VISION</div>
-        <div class="dropdown-item" onclick="openBlog('WHAT\'S NEW', '<div class=\'blog-bullet\'>• Added User Account Menu</div><div class=\'blog-bullet\'>• Added Dark Mode Toggle</div><div class=\'blog-bullet\'>• Minor UI polishing</div>')">WHAT'S NEW</div>
-        <div class="dropdown-item dark-mode-item" onclick="toggleDarkMode(event)">
+        <div class="dropdown-item" onclick="openBlog('WHAT\'S NEW', '<div class=\'blog-bullet\'>• W Upgrades: Autoplay & Visualizer</div><div class=\'blog-bullet\'>• Audio Looping & Volume Sliders</div><div class=\'blog-bullet\'>• Keyboard Controls Included</div>')">WHAT'S NEW</div>
+        <div class="dropdown-item dark-mode-item" onclick="toggleSetting('theme', event)">
           <span>DARK MODE</span>
           <div class="dark-mode-toggle" id="darkModeToggle"></div>
+        </div>
+        <div class="dropdown-item dark-mode-item" onclick="toggleSetting('autoplay', event)">
+          <span>AUTOPLAY</span>
+          <div class="dark-mode-toggle" id="autoplayToggle"></div>
+        </div>
+        <div class="dropdown-item dark-mode-item" onclick="toggleSetting('visualizer', event)">
+          <span>VISUALIZER</span>
+          <div class="dark-mode-toggle" id="visualizerToggle"></div>
         </div>
       </div>
     </div>
@@ -536,6 +557,7 @@
 </div>
 
 <div id="fullPlayer" class="full-player">
+  <canvas id="visualizerCanvas"></canvas>
   <div class="swipe-handle"></div>
   <button class="close-full" onclick="toggleFullPlayer()">✕</button>
   
@@ -562,12 +584,22 @@
       </div>
       
       <div class="full-controls">
+        <button class="full-btn repeat-btn" id="repeatBtn" onclick="toggleRepeat()" title="Repeat">
+          <svg viewBox="0 0 24 24"><path d="M17 1l4 4-4 4"></path><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><path d="M7 23l-4-4 4-4"></path><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg>
+        </button>
         <button class="full-btn" onclick="playNextCmd(true)"><svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg></button>
         <button class="full-btn full-btn-main" onclick="togglePlay()">
           <svg id="fullIconPlay" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
           <svg id="fullIconPause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
         </button>
         <button class="full-btn" onclick="playNextCmd(false)"><svg viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg></button>
+        
+        <div class="volume-container">
+          <div class="volume-icon">
+             <svg viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
+          </div>
+          <input type="range" id="volumeSlider" min="0" max="1" step="0.05" value="1">
+        </div>
       </div>
     </div>
   </div>
@@ -584,14 +616,19 @@
 </div>
 
 <script>
-// --- UI TOGGLES (DROPDOWN & DARK MODE) ---
+// --- SETTINGS & DROPDOWN ---
+let settings = {
+  theme: localStorage.getItem('ye_archive_theme') || 'light',
+  autoplay: localStorage.getItem('ye_archive_autoplay') !== 'false',
+  visualizer: localStorage.getItem('ye_archive_visualizer') === 'true'
+};
+
 function toggleUserMenu(e) {
   e.stopPropagation();
   const menu = document.getElementById('userDropdown');
   menu.classList.toggle('show');
 }
 
-// Close dropdown if clicked outside
 document.addEventListener('click', (e) => {
   const menu = document.getElementById('userDropdown');
   if (menu.classList.contains('show') && !e.target.closest('.user-dropdown-container')) {
@@ -599,25 +636,43 @@ document.addEventListener('click', (e) => {
   }
 });
 
-function toggleDarkMode(e) {
-  e.stopPropagation(); // Keep dropdown open while toggling
-  const isDark = document.body.classList.toggle('dark-mode');
-  document.getElementById('darkModeToggle').classList.toggle('active', isDark);
-  localStorage.setItem('ye_archive_theme', isDark ? 'dark' : 'light');
+function applySettings() {
+  // Theme
+  document.body.classList.toggle('dark-mode', settings.theme === 'dark');
+  document.getElementById('darkModeToggle').classList.toggle('active', settings.theme === 'dark');
+  // Autoplay
+  document.getElementById('autoplayToggle').classList.toggle('active', settings.autoplay);
+  // Visualizer
+  document.getElementById('visualizerToggle').classList.toggle('active', settings.visualizer);
+  if(settings.visualizer) initVisualizer();
 }
 
-// Initialize theme on load
-if (localStorage.getItem('ye_archive_theme') === 'dark') {
-  document.body.classList.add('dark-mode');
-  document.getElementById('darkModeToggle').classList.add('active');
+function toggleSetting(key, e) {
+  if (e) e.stopPropagation();
+  if (key === 'theme') {
+    settings.theme = settings.theme === 'dark' ? 'light' : 'dark';
+    localStorage.setItem('ye_archive_theme', settings.theme);
+  } else {
+    settings[key] = !settings[key];
+    localStorage.setItem('ye_archive_' + key, settings[key]);
+  }
+  applySettings();
 }
+applySettings();
 
-// Modified to accept HTML content for bullet points etc.
+// --- KEYBOARD CONTROLS ---
+document.addEventListener('keydown', (e) => {
+  if(e.target.tagName === 'INPUT') return; // Don't trigger when typing in search
+  if(e.code === 'Space') { e.preventDefault(); togglePlay(); }
+  if(e.code === 'ArrowRight') { playNextCmd(false); }
+  if(e.code === 'ArrowLeft') { playNextCmd(true); }
+});
+
 function openBlog(t, htmlContent) {
   document.getElementById('blogTitle').textContent = t;
   document.getElementById('blogContent').innerHTML = htmlContent;
   document.getElementById('blogBackdrop').classList.add('show');
-  document.getElementById('userDropdown').classList.remove('show'); // Close menu on click
+  document.getElementById('userDropdown').classList.remove('show'); 
 }
 
 // --- DATABASE ---
@@ -744,6 +799,7 @@ let activePlaylistIndex = -1, activeTrackIndex = -1, viewingPlaylistIndex = -1;
 let queue = [];
 let playbackList = []; 
 let generatedShufflePlaylist = [];
+let isRepeat = false;
 
 const audio = document.getElementById('globalAudio');
 const albumGrid = document.getElementById('albumGrid');
@@ -776,7 +832,6 @@ function toggleLikeData(pIdx, tIdx, btnElement = null) {
   if (viewingPlaylistIndex === 'liked' && document.getElementById('albumView').classList.contains('show')) {
     renderTrackList();
   }
-  
   updateLikeButtonsForCurrent();
 }
 
@@ -838,6 +893,12 @@ function addToQueue(pIdx, tIdx, btnElement) {
   }, 1000);
 }
 
+function toggleRepeat() {
+  isRepeat = !isRepeat;
+  audio.loop = isRepeat;
+  document.getElementById('repeatBtn').classList.toggle('active', isRepeat);
+}
+
 function playNextCmd(isPrev) {
   if (playbackList.length === 0) return;
   
@@ -858,7 +919,15 @@ function playNextCmd(isPrev) {
   playSongDirect(nextSong.p, nextSong.t);
 }
 
-audio.onended = () => playNextCmd(false);
+audio.onended = () => {
+  if (isRepeat) return; // Browser handles loop natively via audio.loop
+  if (settings.autoplay || queue.length > 0) playNextCmd(false);
+};
+
+// --- VOLUME CONTROL ---
+document.getElementById('volumeSlider').addEventListener('input', (e) => {
+  audio.volume = e.target.value;
+});
 
 function playSongDirect(pIdx, tIdx) {
   activePlaylistIndex = pIdx; 
@@ -884,7 +953,10 @@ function playSongDirect(pIdx, tIdx) {
   
   const playPromise = audio.play();
   if (playPromise !== undefined) {
-    playPromise.then(() => updatePlayPauseUI(true)).catch(e => { console.log("Playback blocked:", e); updatePlayPauseUI(false); });
+    playPromise.then(() => {
+      updatePlayPauseUI(true);
+      if(settings.visualizer) initVisualizer();
+    }).catch(e => { console.log("Playback blocked:", e); updatePlayPauseUI(false); });
   } else {
     updatePlayPauseUI(true);
   }
@@ -977,7 +1049,10 @@ function openLikedSongs() {
 
 function togglePlay() { 
   if(audio.paused) { 
-    audio.play().then(() => updatePlayPauseUI(true)).catch(e => updatePlayPauseUI(false));
+    audio.play().then(() => {
+      updatePlayPauseUI(true);
+      if(settings.visualizer) initVisualizer();
+    }).catch(e => updatePlayPauseUI(false));
   } else { 
     audio.pause(); 
     updatePlayPauseUI(false); 
@@ -1046,6 +1121,13 @@ function renderTrackList() {
         <button class="action-icon-btn like-btn ${hasLike ? 'liked' : ''}" onclick="toggleLikeData(${item.p}, ${item.t}, this); event.stopPropagation();">
           <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
         </button>
+        <a class="action-icon-btn" href="${s.file}" download="${s.title}.mp3" title="Download Track" onclick="event.stopPropagation();">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+        </a>
         <button class="action-icon-btn" title="Add to Queue" onclick="addToQueue(${item.p}, ${item.t}, this); event.stopPropagation();">+</button>
       </div>
     `;
@@ -1064,6 +1146,63 @@ function toggleFullPlayer() {
     document.getElementById('fullTitle').textContent = song.title;
     document.getElementById('fullAlbum').textContent = alb.title;
     updateLikeButtonsForCurrent();
+    
+    if(settings.visualizer) resizeVisualizer();
+  }
+}
+
+// --- AUDIO VISUALIZER (WEB AUDIO API) ---
+let audioCtx, analyser, source, visDataArray;
+const canvas = document.getElementById('visualizerCanvas');
+const ctx = canvas.getContext('2d');
+
+function initVisualizer() {
+  if (!settings.visualizer) return;
+  try {
+    if (!audioCtx) {
+      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      analyser = audioCtx.createAnalyser();
+      source = audioCtx.createMediaElementSource(audio);
+      source.connect(analyser);
+      analyser.connect(audioCtx.destination);
+      analyser.fftSize = 256;
+      const bufferLength = analyser.frequencyBinCount;
+      visDataArray = new Uint8Array(bufferLength);
+      drawVisualizer();
+    }
+    if(audioCtx.state === 'suspended') audioCtx.resume();
+  } catch(e) {
+    console.log("Visualizer init failed (possibly CORS issues with external files):", e);
+  }
+}
+
+function resizeVisualizer() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight * 0.6;
+}
+window.addEventListener('resize', resizeVisualizer);
+
+function drawVisualizer() {
+  requestAnimationFrame(drawVisualizer);
+  if (!settings.visualizer || !audioCtx) {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    return;
+  }
+  
+  analyser.getByteFrequencyData(visDataArray);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  
+  const barWidth = (canvas.width / visDataArray.length) * 2.5;
+  let barHeight;
+  let x = 0;
+  
+  for(let i = 0; i < visDataArray.length; i++) {
+    barHeight = visDataArray[i] * 1.5;
+    
+    // Draw waves in accent color or white based on theme
+    ctx.fillStyle = document.body.classList.contains('dark-mode') ? `rgba(255, 255, 255, ${barHeight/400})` : `rgba(17, 17, 17, ${barHeight/400})`;
+    ctx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
+    x += barWidth + 2;
   }
 }
 
