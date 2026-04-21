@@ -78,7 +78,7 @@
   /* --- NAVIGATION HEADER --- */
   .nav-header {
     display: flex; align-items: center; gap: 12px; margin: 30px 0 20px;
-    font-size: 16px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; flex-wrap: wrap;
+    font-size: 16px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
   }
   .nav-link { color: var(--muted); cursor: pointer; transition: color 0.2s; }
   .nav-link.active { color: var(--text); }
@@ -300,11 +300,12 @@
     .full-controls { gap: 30px; }
     .full-btn-main { width: 64px; height: 64px; }
   }
-
   @media(max-width: 400px) {
     .album-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
     .nav-btn span { display: none; } 
     .nav-btn { padding: 8px; justify-content: center; }
+    .nav-header { gap: 8px; font-size: 12px; }
+  }
   }
 
 </style>
