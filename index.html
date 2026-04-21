@@ -17,12 +17,20 @@
 
 <style>
   :root {
+    --bg-dark: #111111;
+    --page-bg-dark: #0a0a0a;
+    --text-dark: #ffffff;
+    --muted-dark: #999999;
+    --border-dark: #333333;
+    --shadow-dark: 0 4px 12px rgba(0,0,0,0.3);
+    
     --bg: #ffffff;
     --page-bg: #f4f4f5;
     --text: #111111;
     --muted: #666666;
     --border: #e4e4e7;
     --shadow: 0 4px 12px rgba(0,0,0,0.06);
+    
     --radius: 6px; 
     --album-accent: #ffffff;
     --like-color: #ff3b3b;
@@ -40,7 +48,65 @@
     -webkit-tap-highlight-color: transparent;
     overflow-y: auto;
     overflow-x: hidden;
+    transition: background 0.3s, color 0.3s;
   }
+
+  /* --- DARK MODE OVERRIDES --- */
+  body.dark-mode {
+    background: var(--page-bg-dark);
+    color: var(--text-dark);
+  }
+  body.dark-mode header { background: rgba(17,17,17,0.95); border-color: var(--border-dark); }
+  body.dark-mode .search-capsule { background: #1a1a1a; border-color: var(--border-dark); color: var(--text-dark); }
+  body.dark-mode .search-capsule::placeholder { color: var(--muted-dark); }
+  body.dark-mode .search-capsule:focus { background: #111; border-color: #fff; }
+  body.dark-mode .nav-btn { background: #111; border-color: var(--border-dark); color: var(--text-dark); }
+  body.dark-mode .nav-btn:hover { background: #1a1a1a; border-color: #fff; }
+  
+  body.dark-mode .user-btn { background: #111; border-color: var(--border-dark); }
+  body.dark-mode .user-btn:hover { background: #1a1a1a; border-color: #fff; }
+  body.dark-mode .user-icon { fill: var(--text-dark); }
+  body.dark-mode .user-dropdown { background: #111; border-color: var(--border-dark); }
+  body.dark-mode .dropdown-item { color: var(--text-dark); border-color: var(--border-dark); }
+  body.dark-mode .dropdown-item:hover { background: #1a1a1a; }
+  
+  body.dark-mode .nav-link { color: var(--muted-dark); }
+  body.dark-mode .nav-link.active, body.dark-mode .nav-link:hover { color: var(--text-dark); }
+  body.dark-mode .album-card img { background: #222; box-shadow: var(--shadow-dark); }
+  body.dark-mode .mobile-search-box { background: #111; border-color: var(--border-dark); color: var(--text-dark); }
+  
+  body.dark-mode .album-view { background: linear-gradient(180deg, var(--album-accent) 0%, var(--page-bg-dark) 500px, var(--page-bg-dark) 100%); color: var(--text-dark); }
+  body.dark-mode .album-view-header { background: rgba(10,10,10,0.7); border-bottom-color: rgba(255,255,255,0.05); }
+  body.dark-mode .view-meta { color: #ccc; }
+  body.dark-mode .view-notes { color: #aaa; }
+  body.dark-mode .download-album-btn { background: #fff; color: #111; }
+  body.dark-mode .view-right { background: rgba(0,0,0,0.5); }
+  body.dark-mode .track-item { border-bottom-color: rgba(255,255,255,0.05); }
+  body.dark-mode .track-item:hover { background: rgba(0,0,0,0.8); }
+  body.dark-mode .track-title { color: #eee; }
+  body.dark-mode .track-item.is-playing .track-title { color: #fff; }
+  body.dark-mode .action-icon-btn { background: #111; border-color: var(--border-dark); color: var(--text-dark); }
+  body.dark-mode .action-icon-btn:hover { background: #222; border-color: #fff; color: #fff; }
+  
+  body.dark-mode .mini-player { background: rgba(17,17,17,0.98); border-top-color: #333; }
+  body.dark-mode .mp-info:hover { background: #1a1a1a; }
+  body.dark-mode .mp-title { color: #fff; }
+  body.dark-mode .mp-btn svg { fill: #fff; }
+  body.dark-mode .mp-btn-main { background: #fff; }
+  body.dark-mode .mp-btn-main svg { fill: #111; }
+  
+  body.dark-mode .full-player { background: linear-gradient(180deg, var(--album-accent) 0%, var(--page-bg-dark) 60%, var(--page-bg-dark) 100%); }
+  body.dark-mode .close-full { background: rgba(0,0,0,0.5); color: #fff; }
+  body.dark-mode .close-full:hover { background: rgba(0,0,0,0.8); }
+  body.dark-mode .full-info p { color: #ccc; }
+  body.dark-mode .full-btn svg { fill: #fff; }
+  body.dark-mode .full-btn-main { background: #fff; }
+  body.dark-mode .full-btn-main svg { fill: #111; }
+  body.dark-mode .full-like-btn svg { stroke: #fff; }
+  
+  body.dark-mode .modal { background: #111; border-color: var(--border-dark); color: #fff; }
+  body.dark-mode #blogContent { color: #ccc !important; }
+  body.dark-mode .close-modal { background: #222; color: #fff; }
 
   /* --- HEADER --- */
   header {
@@ -48,6 +114,7 @@
     padding: 16px 20px; background: rgba(255,255,255,0.95);
     backdrop-filter: blur(10px); border-bottom: 1px solid var(--border);
     position: sticky; top: 0; z-index: 50; gap: 16px; flex-wrap: wrap;
+    transition: background 0.3s, border-color 0.3s;
   }
   .header-left { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
   .logo {
@@ -75,6 +142,43 @@
   }
   .nav-btn:hover { background: #f5f5f5; border-color: #000; }
   
+  /* --- USER DROPDOWN --- */
+  .user-btn {
+    background: #fff; border: 1px solid var(--border); padding: 8px; border-radius: 4px;
+    font-size: 14px; cursor: pointer; font-family: 'IBM Plex Mono', monospace;
+    transition: all 0.2s; color: var(--text); display: flex; align-items: center; justify-content: center;
+    width: 36px; height: 36px; position: relative;
+  }
+  .user-btn:hover { background: #f5f5f5; border-color: #000; }
+  .user-icon { width: 16px; height: 16px; fill: var(--text); transition: fill 0.3s; }
+  
+  .user-dropdown-container { position: relative; }
+  .user-dropdown {
+    position: absolute; top: 100%; right: 0; background: #fff; border: 1px solid var(--border);
+    border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); min-width: 200px; z-index: 100;
+    display: none; margin-top: 8px; overflow: hidden;
+  }
+  .user-dropdown.show { display: block; }
+  .dropdown-item {
+    padding: 14px 16px; cursor: pointer; transition: background 0.2s; border-bottom: 1px solid var(--border);
+    font-size: 12px; font-weight: 600; text-transform: uppercase; font-family: 'IBM Plex Mono', monospace;
+    color: var(--text);
+  }
+  .dropdown-item:last-child { border-bottom: none; }
+  .dropdown-item:hover { background: #f5f5f5; }
+  
+  .dropdown-item.dark-mode-item { display: flex; align-items: center; justify-content: space-between; }
+  .dark-mode-toggle {
+    width: 36px; height: 18px; background: #e0e0e0; border-radius: 9px; position: relative; cursor: pointer;
+    transition: background 0.3s;
+  }
+  .dark-mode-toggle.active { background: #4a00e0; }
+  .dark-mode-toggle::after {
+    content: ''; position: absolute; top: 2px; left: 2px; width: 14px; height: 14px;
+    background: #fff; border-radius: 50%; transition: transform 0.3s;
+  }
+  .dark-mode-toggle.active::after { transform: translateX(18px); }
+  
   /* --- NAVIGATION HEADER --- */
   .nav-header {
     display: flex; align-items: center; gap: 12px; margin: 30px 0 20px;
@@ -87,9 +191,7 @@
 
   /* Mobile Specific Elements */
   .mobile-nav-item { display: none; }
-  .mobile-search-screen { 
-    display: none; padding: 20px 0;
-  }
+  .mobile-search-screen { display: none; padding: 20px 0; }
   .mobile-search-box {
     width: 100%; padding: 16px; font-size: 15px; border-radius: 8px; border: 1px solid #ccc;
     outline: none; font-family: 'IBM Plex Mono', monospace; text-transform: uppercase;
@@ -243,6 +345,7 @@
   .backdrop.show { display: flex; }
   .modal { width: min(500px, 90%); background: #fff; border-radius: 12px; padding: 30px; position: relative; border: 1px solid var(--border); box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
   .close-modal { position: absolute; top: 20px; right: 20px; background: #f0f0f0; border: none; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; font-weight: bold; }
+  .blog-bullet { margin-bottom: 8px; }
 
   /* ===== RESPONSIVE OPTIMIZATIONS ===== */
   
@@ -265,8 +368,8 @@
 
   @media(max-width: 768px) {
     header { padding: 12px 16px; gap: 12px; }
-    .search-container { display: none; } /* Hide capsule on mobile */
-    .mobile-nav-item { display: inline; } /* Show search nav text */
+    .search-container { display: none; } 
+    .mobile-nav-item { display: inline; } 
     
     .nav-btn { font-size: 11px; padding: 8px 12px; }
     .nav-header { font-size: 14px; margin: 20px 0 16px; }
@@ -306,7 +409,6 @@
     .nav-btn { padding: 8px; justify-content: center; }
     .nav-header { gap: 8px; font-size: 12px; }
   }
-  }
 
 </style>
 </head>
@@ -323,7 +425,19 @@
   </div>
 
   <div class="header-actions">
-    <button class="nav-btn" onclick="openBlog('THE VISION', 'Making the vault accessible. Less time searching, more time listening.')">THE VISION</button> 
+    <div class="user-dropdown-container">
+      <button class="user-btn" onclick="toggleUserMenu(event)">
+        <svg class="user-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+      </button>
+      <div class="user-dropdown" id="userDropdown">
+        <div class="dropdown-item" onclick="openBlog('THE VISION', 'Making the vault accessible. Less time searching, more time listening.')">THE VISION</div>
+        <div class="dropdown-item" onclick="openBlog('WHAT\'S NEW', '<div class=\'blog-bullet\'>• Added User Account Menu</div><div class=\'blog-bullet\'>• Added Dark Mode Toggle</div><div class=\'blog-bullet\'>• Minor UI polishing</div>')">WHAT'S NEW</div>
+        <div class="dropdown-item dark-mode-item" onclick="toggleDarkMode(event)">
+          <span>DARK MODE</span>
+          <div class="dark-mode-toggle" id="darkModeToggle"></div>
+        </div>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -465,11 +579,47 @@
   <div class="modal">
     <button class="close-modal" onclick="document.getElementById('blogBackdrop').classList.remove('show')">✕</button>
     <h2 id="blogTitle" style="margin-top:0; text-transform:uppercase;"></h2>
-    <p id="blogContent" style="line-height:1.6; color:#444; font-size: 14px;"></p>
+    <div id="blogContent" style="line-height:1.6; color:#444; font-size: 14px;"></div>
   </div>
 </div>
 
 <script>
+// --- UI TOGGLES (DROPDOWN & DARK MODE) ---
+function toggleUserMenu(e) {
+  e.stopPropagation();
+  const menu = document.getElementById('userDropdown');
+  menu.classList.toggle('show');
+}
+
+// Close dropdown if clicked outside
+document.addEventListener('click', (e) => {
+  const menu = document.getElementById('userDropdown');
+  if (menu.classList.contains('show') && !e.target.closest('.user-dropdown-container')) {
+    menu.classList.remove('show');
+  }
+});
+
+function toggleDarkMode(e) {
+  e.stopPropagation(); // Keep dropdown open while toggling
+  const isDark = document.body.classList.toggle('dark-mode');
+  document.getElementById('darkModeToggle').classList.toggle('active', isDark);
+  localStorage.setItem('ye_archive_theme', isDark ? 'dark' : 'light');
+}
+
+// Initialize theme on load
+if (localStorage.getItem('ye_archive_theme') === 'dark') {
+  document.body.classList.add('dark-mode');
+  document.getElementById('darkModeToggle').classList.add('active');
+}
+
+// Modified to accept HTML content for bullet points etc.
+function openBlog(t, htmlContent) {
+  document.getElementById('blogTitle').textContent = t;
+  document.getElementById('blogContent').innerHTML = htmlContent;
+  document.getElementById('blogBackdrop').classList.add('show');
+  document.getElementById('userDropdown').classList.remove('show'); // Close menu on click
+}
+
 // --- DATABASE ---
 const database = [
   {
@@ -623,7 +773,6 @@ function toggleLikeData(pIdx, tIdx, btnElement = null) {
   localStorage.setItem('ye_archive_likes', JSON.stringify(likedSongs));
   updateLikedCountUI();
   
-  // Re-render only if we're viewing the liked playlist to actually visually remove it
   if (viewingPlaylistIndex === 'liked' && document.getElementById('albumView').classList.contains('show')) {
     renderTrackList();
   }
@@ -764,7 +913,6 @@ function playSongFromContext(pIdx, tIdx, contextList, type) {
   playSongDirect(pIdx, tIdx);
 }
 
-// Fixed Play Handler logic
 function playTrackClick(pIdx, tIdx) {
   let ctxList, type;
   if (viewingPlaylistIndex === 'liked') {
@@ -792,9 +940,8 @@ function openShuffle() {
     alb.tracks.forEach((_, tIdx) => allTracks.push({ p: pIdx, t: tIdx }));
   });
   
-  // Random sort
   allTracks.sort(() => Math.random() - 0.5);
-  generatedShufflePlaylist = allTracks.slice(0, 20); // Cap at 20
+  generatedShufflePlaylist = allTracks.slice(0, 20); 
 
   document.documentElement.style.setProperty('--album-accent', '#aaaaaa');
   document.getElementById('viewCover').src = 'https://images.unsplash.com/photo-1619983081563-430f63602796?auto=format&fit=crop&w=500&q=80';
@@ -814,7 +961,6 @@ function openLikedSongs() {
   
   document.documentElement.style.setProperty('--album-accent', '#8e2de2');
   
-  // Use the first liked song's cover as the playlist thumbnail
   const firstLikedAlbum = database[likedSongs[0].p];
   document.getElementById('viewCover').src = firstLikedAlbum ? firstLikedAlbum.cover : 'https://images.unsplash.com/photo-1557682250-33bd709cbe85?auto=format&fit=crop&w=500&q=80';
   
@@ -960,7 +1106,6 @@ function handleSearch(query, gridElementId) {
   }
 }
 
-// Desktop Search Listener
 document.getElementById('searchInputDesktop').addEventListener('input', (e) => {
   const q = e.target.value;
   if (!q) {
@@ -973,7 +1118,6 @@ document.getElementById('searchInputDesktop').addEventListener('input', (e) => {
   handleSearch(q, 'searchGrid');
 }, { passive: true });
 
-// Mobile Search Listener
 document.getElementById('searchInputMobile').addEventListener('input', (e) => {
   handleSearch(e.target.value, 'mobileSearchGrid');
 }, { passive: true });
@@ -1042,11 +1186,6 @@ fp.addEventListener('touchend', (e) => {
   isVerticalScroll = false;
 }, { passive: true });
 
-function openBlog(t, c) {
-  document.getElementById('blogTitle').textContent = t;
-  document.getElementById('blogContent').textContent = c;
-  document.getElementById('blogBackdrop').classList.add('show');
-}
 </script>
 </body>
 </html>
