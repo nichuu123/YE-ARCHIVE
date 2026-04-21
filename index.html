@@ -104,7 +104,6 @@
   body.dark-mode .full-btn-main { background: #fff; }
   body.dark-mode .full-btn-main svg { fill: #111; }
   body.dark-mode .full-like-btn svg { stroke: #fff; }
-  body.dark-mode .repeat-btn.active svg { stroke: var(--accent-color); fill: none; }
   body.dark-mode .volume-icon svg { stroke: #fff; fill: none; }
   
   body.dark-mode .modal { background: #111; border-color: var(--border-dark); color: #fff; }
@@ -345,9 +344,6 @@
   .full-btn { background: none; border: none; cursor: pointer; transition: transform 0.1s; display: flex; align-items: center; justify-content: center; }
   .full-btn:active { transform: scale(0.9); }
   .full-btn svg { width: 24px; height: 24px; fill: #111; }
-  
-  .repeat-btn svg { fill: none; stroke: #111; stroke-width: 2; }
-  .repeat-btn.active svg { stroke: var(--accent-color); }
 
   .volume-container { display: flex; align-items: center; gap: 10px; margin-left: 20px; }
   .volume-icon svg { width: 20px; height: 20px; stroke: #111; fill: none; stroke-width: 2; }
@@ -444,7 +440,7 @@
       </button>
       <div class="user-dropdown" id="userDropdown">
         <div class="dropdown-item" onclick="openBlog('THE VISION', 'Making the vault accessible. Less time searching, more time listening.')">THE VISION</div>
-        <div class="dropdown-item" onclick="openBlog('WHAT\'S NEW', '<div class=\'blog-bullet\'>• W Upgrades: Autoplay & Visualizer</div><div class=\'blog-bullet\'>• Audio Looping & Volume Sliders</div><div class=\'blog-bullet\'>• Keyboard Controls Included</div>')">WHAT'S NEW</div>
+        <div class="dropdown-item" onclick="openBlog('WHAT\'S NEW', '<div class=\'blog-bullet\'>• W Upgrades: Autoplay & Visualizer</div><div class=\'blog-bullet\'>• Volume Sliders</div><div class=\'blog-bullet\'>• Keyboard Controls Included</div>')">WHAT'S NEW</div>
         <div class="dropdown-item dark-mode-item" onclick="toggleSetting('theme', event)">
           <span>DARK MODE</span>
           <div class="dark-mode-toggle" id="darkModeToggle"></div>
@@ -481,7 +477,7 @@
         <div class="playlist-card shuffle">
           <svg viewBox="0 0 24 24"><path d="M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z"/></svg>
         </div>
-        <div class="album-name">SHUF-FLE</div>
+        <div class="album-name">SHUFFLE PLAYLIST</div>
         <div class="album-year">AUTO-GENERATED</div>
       </div>
       <div class="album-card" onclick="openLikedSongs()">
@@ -583,7 +579,12 @@
         </div>
       </div>
       
-
+      <div class="full-controls">
+        <button class="full-btn" onclick="playNextCmd(true)"><svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg></button>
+        <button class="full-btn full-btn-main" onclick="togglePlay()">
+          <svg id="fullIconPlay" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="fullIconPause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        </button>
         <button class="full-btn" onclick="playNextCmd(false)"><svg viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg></button>
         
         <div class="volume-container">
@@ -784,14 +785,12 @@ const database = [
     ]
   }
 ];
-
 // --- STATE ---
 let activePlaylistContext = null; 
 let activePlaylistIndex = -1, activeTrackIndex = -1, viewingPlaylistIndex = -1;
 let queue = [];
 let playbackList = []; 
 let generatedShufflePlaylist = [];
-let isRepeat = false;
 
 const audio = document.getElementById('globalAudio');
 const albumGrid = document.getElementById('albumGrid');
@@ -885,12 +884,6 @@ function addToQueue(pIdx, tIdx, btnElement) {
   }, 1000);
 }
 
-function toggleRepeat() {
-  isRepeat = !isRepeat;
-  audio.loop = isRepeat;
-  document.getElementById('repeatBtn').classList.toggle('active', isRepeat);
-}
-
 function playNextCmd(isPrev) {
   if (playbackList.length === 0) return;
   
@@ -912,7 +905,6 @@ function playNextCmd(isPrev) {
 }
 
 audio.onended = () => {
-  if (isRepeat) return; // Browser handles loop natively via audio.loop
   if (settings.autoplay || queue.length > 0) playNextCmd(false);
 };
 
@@ -1009,7 +1001,7 @@ function openShuffle() {
 
   document.documentElement.style.setProperty('--album-accent', '#aaaaaa');
   document.getElementById('viewCover').src = 'https://images.unsplash.com/photo-1619983081563-430f63602796?auto=format&fit=crop&w=500&q=80';
-  document.getElementById('viewTitle').textContent = 'SHUF-FLE';
+  document.getElementById('viewTitle').textContent = 'SHUFFLE';
   document.getElementById('viewMeta').textContent = `AUTO-GENERATED • 20 TRACKS`;
   document.getElementById('viewNotes').textContent = 'A fresh mix every time.';
   document.getElementById('albumDownload').style.display = 'none';
