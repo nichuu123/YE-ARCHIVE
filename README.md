@@ -32,5 +32,5 @@ ___
 
 ___
 <p align="center">
-  <em>feel free to contact bruhifyinglife@gmail.com for any inquiries </em>
+  <em>feel free to contact bruhifyinglife@gmail.com for any queries </em>
 </p>
