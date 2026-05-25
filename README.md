@@ -29,3 +29,8 @@ ___
 17. CRUEL WINTER
 18. LOVE EVERYONE
 19. TurboGrafx16
+
+___
+<p align="center">
+  <em>feel free to contact bruhifyinglife@gmail.com for any inquiries </em>
+</p>
