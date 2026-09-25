@@ -4075,59 +4075,59 @@ window.YE_ARCHIVE_DATABASE = [
         "tracks":  [
                        {
                            "title":  "12,000 Acres",
-                           "file":  "music/God's Country Era/God's Country/EVAN_mix [12,000 Acres].mp3"
+                           "file":  "music/God’s Country Era/God's Country/EVAN_mix [12,000 Acres].mp3"
                        },
                        {
                            "title":  "Awakening",
-                           "file":  "music/God's Country Era/God's Country/EVAN_mix [Awakening].mp3"
+                           "file":  "music/God’s Country Era/God's Country/EVAN_mix [Awakening].mp3"
                        },
                        {
                            "title":  "Everything",
-                           "file":  "music/God's Country Era/God's Country/EVAN_mix [Everything].mp3"
+                           "file":  "music/God’s Country Era/God's Country/EVAN_mix [Everything].mp3"
                        },
                        {
                            "title":  "Future Sounds",
-                           "file":  "music/God's Country Era/God's Country/EVAN_mix [Future Sounds].mp3"
+                           "file":  "music/God’s Country Era/God's Country/EVAN_mix [Future Sounds].mp3"
                        },
                        {
                            "title":  "God's Country",
-                           "file":  "music/God's Country Era/God's Country/EVAN_mix [God's Country].mp3"
+                           "file":  "music/God’s Country Era/God's Country/EVAN_mix [God's Country].mp3"
                        },
                        {
                            "title":  "I Feel Terrific V1",
-                           "file":  "music/God's Country Era/God's Country/EVAN_mix [I Feel Terrific V1].mp3"
+                           "file":  "music/God’s Country Era/God's Country/EVAN_mix [I Feel Terrific V1].mp3"
                        },
                        {
                            "title":  "Keep My Spirit Alive",
-                           "file":  "music/God's Country Era/God's Country/EVAN_mix [Keep My Spirit Alive].mp3"
+                           "file":  "music/God’s Country Era/God's Country/EVAN_mix [Keep My Spirit Alive].mp3"
                        },
                        {
                            "title":  "Lord I Need You",
-                           "file":  "music/God's Country Era/God's Country/EVAN_mix [Lord I Need You].mp3"
+                           "file":  "music/God’s Country Era/God's Country/EVAN_mix [Lord I Need You].mp3"
                        },
                        {
                            "title":  "Off The Grid",
-                           "file":  "music/God's Country Era/God's Country/EVAN_mix [Off The Grid].mp3"
+                           "file":  "music/God’s Country Era/God's Country/EVAN_mix [Off The Grid].mp3"
                        },
                        {
                            "title":  "Praise God V1",
-                           "file":  "music/God's Country Era/God's Country/EVAN_mix [Praise God V1].mp3"
+                           "file":  "music/God’s Country Era/God's Country/EVAN_mix [Praise God V1].mp3"
                        },
                        {
                            "title":  "Skuuurrr",
-                           "file":  "music/God's Country Era/God's Country/EVAN_mix [Skuuurrr].mp3"
+                           "file":  "music/God’s Country Era/God's Country/EVAN_mix [Skuuurrr].mp3"
                        },
                        {
                            "title":  "Tell The Vision",
-                           "file":  "music/God's Country Era/God's Country/EVAN_mix [Tell The Vision].mp3"
+                           "file":  "music/God’s Country Era/God's Country/EVAN_mix [Tell The Vision].mp3"
                        },
                        {
                            "title":  "Tulsa",
-                           "file":  "music/God's Country Era/God's Country/EVAN_mix [Tulsa].mp3"
+                           "file":  "music/God’s Country Era/God's Country/EVAN_mix [Tulsa].mp3"
                        },
                        {
                            "title":  "Welcome To My Life",
-                           "file":  "music/God's Country Era/God's Country/EVAN_mix [Welcome To My Life].mp3"
+                           "file":  "music/God’s Country Era/God's Country/EVAN_mix [Welcome To My Life].mp3"
                        }
                    ]
     },
@@ -4328,7 +4328,7 @@ window.YE_ARCHIVE_DATABASE = [
                            "file":  "music/God's Country Era/JESUS IS KING The Dr. Dre Version/01 Intro_Every Hour_Selah RE1 4.4 Final Main_4424_27FEB2020.mp3"
                        },
                        {
-                           "title":  "LA Monster,
+                           "title":  "LA Monster",
                            "file":  "music/God's Country Era/JESUS IS KING The Dr. Dre Version/02 LA Monster 01JUL2020.mp3"
                        },
                        {
@@ -4348,7 +4348,7 @@ window.YE_ARCHIVE_DATABASE = [
                            "file":  "music/God's Country Era/JESUS IS KING The Dr. Dre Version/06 Hands On (Remix) 3.2 Main_4424_02MAR2020.mp3"
                        },
                        {
-                           "title":  "Everything We Need,
+                           "title":  "Everything We Need",
                            "file":  "music/God's Country Era/JESUS IS KING The Dr. Dre Version/07 Everything We Need (Remix) RE2 2.1 Main_4424_02MAR2020.mp3"
                        },
                        {
