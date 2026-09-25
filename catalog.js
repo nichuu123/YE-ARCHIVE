@@ -4074,59 +4074,59 @@ window.YE_ARCHIVE_DATABASE = [
         "notes":  "ARCHIVE / God's Country Era",
         "tracks":  [
                        {
-                           "title":  "EVAN_mix [12,000 Acres]",
+                           "title":  "12,000 Acres",
                            "file":  "music/God's Country Era/God's Country/EVAN_mix [12,000 Acres].mp3"
                        },
                        {
-                           "title":  "EVAN_mix [Awakening]",
+                           "title":  "Awakening",
                            "file":  "music/God's Country Era/God's Country/EVAN_mix [Awakening].mp3"
                        },
                        {
-                           "title":  "EVAN_mix [Everything]",
+                           "title":  "Everything",
                            "file":  "music/God's Country Era/God's Country/EVAN_mix [Everything].mp3"
                        },
                        {
-                           "title":  "EVAN_mix [Future Sounds]",
+                           "title":  "Future Sounds",
                            "file":  "music/God's Country Era/God's Country/EVAN_mix [Future Sounds].mp3"
                        },
                        {
-                           "title":  "EVAN_mix [God's Country]",
+                           "title":  "God's Country",
                            "file":  "music/God's Country Era/God's Country/EVAN_mix [God's Country].mp3"
                        },
                        {
-                           "title":  "EVAN_mix [I Feel Terrific V1]",
+                           "title":  "I Feel Terrific V1",
                            "file":  "music/God's Country Era/God's Country/EVAN_mix [I Feel Terrific V1].mp3"
                        },
                        {
-                           "title":  "EVAN_mix [Keep My Spirit Alive]",
+                           "title":  "Keep My Spirit Alive",
                            "file":  "music/God's Country Era/God's Country/EVAN_mix [Keep My Spirit Alive].mp3"
                        },
                        {
-                           "title":  "EVAN_mix [Lord I Need You]",
+                           "title":  "Lord I Need You",
                            "file":  "music/God's Country Era/God's Country/EVAN_mix [Lord I Need You].mp3"
                        },
                        {
-                           "title":  "EVAN_mix [Off The Grid]",
+                           "title":  "Off The Grid",
                            "file":  "music/God's Country Era/God's Country/EVAN_mix [Off The Grid].mp3"
                        },
                        {
-                           "title":  "EVAN_mix [Praise God V1]",
+                           "title":  "Praise God V1",
                            "file":  "music/God's Country Era/God's Country/EVAN_mix [Praise God V1].mp3"
                        },
                        {
-                           "title":  "EVAN_mix [Skuuurrr]",
+                           "title":  "Skuuurrr",
                            "file":  "music/God's Country Era/God's Country/EVAN_mix [Skuuurrr].mp3"
                        },
                        {
-                           "title":  "EVAN_mix [Tell The Vision]",
+                           "title":  "Tell The Vision",
                            "file":  "music/God's Country Era/God's Country/EVAN_mix [Tell The Vision].mp3"
                        },
                        {
-                           "title":  "EVAN_mix [Tulsa]",
+                           "title":  "Tulsa",
                            "file":  "music/God's Country Era/God's Country/EVAN_mix [Tulsa].mp3"
                        },
                        {
-                           "title":  "EVAN_mix [Welcome To My Life]",
+                           "title":  "Welcome To My Life",
                            "file":  "music/God's Country Era/God's Country/EVAN_mix [Welcome To My Life].mp3"
                        }
                    ]
@@ -4262,7 +4262,7 @@ window.YE_ARCHIVE_DATABASE = [
                            "file":  "music/God's Country Era/Jesus Is Born/06-Father Stretch.mp3"
                        },
                        {
-                           "title":  "Follow Me ï¼ Faith",
+                           "title":  "Follow Me in Faith",
                            "file":  "music/God's Country Era/Jesus Is Born/07-Follow Me ï¼ Faith.mp3"
                        },
                        {
@@ -4324,47 +4324,47 @@ window.YE_ARCHIVE_DATABASE = [
         "notes":  "ARCHIVE / God's Country Era",
         "tracks":  [
                        {
-                           "title":  "Intro_Every Hour_Selah RE1 4.4 Final Main_4424_27FEB2020",
+                           "title":  "Intro",
                            "file":  "music/God's Country Era/JESUS IS KING The Dr. Dre Version/01 Intro_Every Hour_Selah RE1 4.4 Final Main_4424_27FEB2020.mp3"
                        },
                        {
-                           "title":  "LA Monster 01JUL2020",
+                           "title":  "LA Monster,
                            "file":  "music/God's Country Era/JESUS IS KING The Dr. Dre Version/02 LA Monster 01JUL2020.mp3"
                        },
                        {
-                           "title":  "Water (Remix) RE4 3.8 Main_4424_04MAR2020",
+                           "title":  "Water",
                            "file":  "music/God's Country Era/JESUS IS KING The Dr. Dre Version/03 Water (Remix) RE4 3.8 Main_4424_04MAR2020.mp3"
                        },
                        {
-                           "title":  "Closed On Sunday (Remix) RE2 3.5 Main_4424_24FEB2020",
+                           "title":  "Closed On Sunday",
                            "file":  "music/God's Country Era/JESUS IS KING The Dr. Dre Version/04 Closed On Sunday (Remix) RE2 3.5 Main_4424_24FEB2020.mp3"
                        },
                        {
-                           "title":  "On God (Remix) 02DEC2019",
+                           "title":  "On God",
                            "file":  "music/God's Country Era/JESUS IS KING The Dr. Dre Version/05 On God (Remix) 02DEC2019.mp3"
                        },
                        {
-                           "title":  "Hands On (Remix) 3.2 Main_4424_02MAR2020",
+                           "title":  "Hands On",
                            "file":  "music/God's Country Era/JESUS IS KING The Dr. Dre Version/06 Hands On (Remix) 3.2 Main_4424_02MAR2020.mp3"
                        },
                        {
-                           "title":  "Everything We Need (Remix) RE2 2.1 Main_4424_02MAR2020",
+                           "title":  "Everything We Need,
                            "file":  "music/God's Country Era/JESUS IS KING The Dr. Dre Version/07 Everything We Need (Remix) RE2 2.1 Main_4424_02MAR2020.mp3"
                        },
                        {
-                           "title":  "Ashes (Remix) 3.8 Main_4424_05MAR2020",
+                           "title":  "Ashes",
                            "file":  "music/God's Country Era/JESUS IS KING The Dr. Dre Version/08 Ashes (Remix) 3.8 Main_4424_05MAR2020.mp3"
                        },
                        {
-                           "title":  "Use This Gospel (Remix) RE2 3.8_MAIN",
+                           "title":  "Use This Gospel",
                            "file":  "music/God's Country Era/JESUS IS KING The Dr. Dre Version/10 Use This Gospel (Remix) RE2 3.8_MAIN.mp3"
                        },
                        {
-                           "title":  "God Is (Remix) 3.1 Main_4424_02MAR2020",
+                           "title":  "God Is",
                            "file":  "music/God's Country Era/JESUS IS KING The Dr. Dre Version/9 God Is (Remix) 3.1 Main_4424_02MAR2020.mp3"
                        },
                        {
-                           "title":  "Dr_DreKanye_West_-_Follow_God",
+                           "title":  "Follow God",
                            "file":  "music/God's Country Era/JESUS IS KING The Dr. Dre Version/Dr_DreKanye_West_-_Follow_God.mp3"
                        }
                    ]
@@ -4378,55 +4378,55 @@ window.YE_ARCHIVE_DATABASE = [
         "notes":  "ARCHIVE / God's Country Era",
         "tracks":  [
                        {
-                           "title":  "Hours_V4",
+                           "title":  "Hours",
                            "file":  "music/God's Country Era/JESUS IS LORD/24_Hours_V4.mp3"
                        },
                        {
-                           "title":  "Closed_On_Sunday_V24",
+                           "title":  "Closed On Sunday",
                            "file":  "music/God's Country Era/JESUS IS LORD/Closed_On_Sunday_V24.mp3"
                        },
                        {
-                           "title":  "Glory_V2",
+                           "title":  "Glory",
                            "file":  "music/God's Country Era/JESUS IS LORD/Glory_V2.mp3"
                        },
                        {
-                           "title":  "God's_Country_V5",
+                           "title":  "God's Country",
                            "file":  "music/God's Country Era/JESUS IS LORD/God's_Country_V5.mp3"
                        },
                        {
-                           "title":  "Keep_My_Spirit_Alive_V18",
+                           "title":  "Keep My Spirit Alive",
                            "file":  "music/God's Country Era/JESUS IS LORD/Keep_My_Spirit_Alive_V18.mp3"
                        },
                        {
-                           "title":  "Lord_I_Need_You_To_Wrap_Your_Arms_Around_Me_V5",
+                           "title":  "Lord I Need You To Wrap Your Arms Around Me",
                            "file":  "music/God's Country Era/JESUS IS LORD/Lord_I_Need_You_To_Wrap_Your_Arms_Around_Me_V5.mp3"
                        },
                        {
-                           "title":  "Our_King_V1",
+                           "title":  "Our King",
                            "file":  "music/God's Country Era/JESUS IS LORD/Our_King_V1.mp3"
                        },
                        {
-                           "title":  "Sean_Leon_The_Glade_V18",
+                           "title":  "The Glade",
                            "file":  "music/God's Country Era/JESUS IS LORD/Sean_Leon_The_Glade_V18.mp3"
                        },
                        {
-                           "title":  "This_Is_The_Glory_V5",
+                           "title":  "This Is The Glory",
                            "file":  "music/God's Country Era/JESUS IS LORD/This_Is_The_Glory_V5.mp3"
                        },
                        {
-                           "title":  "Use_This_Gospel_V25",
+                           "title":  "Use This Gospel",
                            "file":  "music/God's Country Era/JESUS IS LORD/Use_This_Gospel_V25.mp3"
                        },
                        {
-                           "title":  "Wash_Us_In_The_Blood_V14",
+                           "title":  "Wash Us In The Blood",
                            "file":  "music/God's Country Era/JESUS IS LORD/Wash_Us_In_The_Blood_V14.mp3"
                        },
                        {
-                           "title":  "Water_V15",
+                           "title":  "Water",
                            "file":  "music/God's Country Era/JESUS IS LORD/Water_V15.mp3"
                        },
                        {
-                           "title":  "Welcome_To_My_Life_V3",
+                           "title":  "Welcome To My Life",
                            "file":  "music/God's Country Era/JESUS IS LORD/Welcome_To_My_Life_V3.mp3"
                        }
                    ]
@@ -4440,67 +4440,67 @@ window.YE_ARCHIVE_DATABASE = [
         "notes":  "ARCHIVE / God's Country Era",
         "tracks":  [
                        {
-                           "title":  "000_Acres_V11",
+                           "title":  "12000 Acres",
                            "file":  "music/God's Country Era/JESUS IS LORD (Early)/12_000_Acres_V11.mp3"
                        },
                        {
-                           "title":  "All_Praises_Due_Him_V2",
+                           "title":  "All Praises Due Him",
                            "file":  "music/God's Country Era/JESUS IS LORD (Early)/All_Praises_Due_Him_V2.mp3"
                        },
                        {
-                           "title":  "Awakening_V2",
+                           "title":  "Awakening",
                            "file":  "music/God's Country Era/JESUS IS LORD (Early)/Awakening_V2.mp3"
                        },
                        {
-                           "title":  "Eternal_Life_V13",
+                           "title":  "Eternal Life",
                            "file":  "music/God's Country Era/JESUS IS LORD (Early)/Eternal_Life_V13.mp3"
                        },
                        {
-                           "title":  "Fighting_Fires_V7",
+                           "title":  "Fighting Fires",
                            "file":  "music/God's Country Era/JESUS IS LORD (Early)/Fighting_Fires_V7.mp3"
                        },
                        {
-                           "title":  "FreeDem_V6",
+                           "title":  "Free Dem",
                            "file":  "music/God's Country Era/JESUS IS LORD (Early)/FreeDem_V6.mp3"
                        },
                        {
-                           "title":  "Future_Bounce_V12",
+                           "title":  "Future Bounce",
                            "file":  "music/God's Country Era/JESUS IS LORD (Early)/Future_Bounce_V12.mp3"
                        },
                        {
-                           "title":  "He_Gave_It_All_V4",
+                           "title":  "He Gave It All",
                            "file":  "music/God's Country Era/JESUS IS LORD (Early)/He_Gave_It_All_V4.mp3"
                        },
                        {
-                           "title":  "Let_The_Spirit_Go_Wild_V3",
+                           "title":  "Let The Spirit Go Wild",
                            "file":  "music/God's Country Era/JESUS IS LORD (Early)/Let_The_Spirit_Go_Wild_V3.mp3"
                        },
                        {
-                           "title":  "Lord_I_Need_You_V12",
+                           "title":  "Lord I Need You",
                            "file":  "music/God's Country Era/JESUS IS LORD (Early)/Lord_I_Need_You_V12.mp3"
                        },
                        {
-                           "title":  "Palm_Springs_V1",
+                           "title":  "Palm Springs",
                            "file":  "music/God's Country Era/JESUS IS LORD (Early)/Palm_Springs_V1.mp3"
                        },
                        {
-                           "title":  "Prayed_Up_V1",
+                           "title":  "Prayed Up",
                            "file":  "music/God's Country Era/JESUS IS LORD (Early)/Prayed_Up_V1.mp3"
                        },
                        {
-                           "title":  "Sinner_V2",
+                           "title":  "Sinner",
                            "file":  "music/God's Country Era/JESUS IS LORD (Early)/Sinner_V2.mp3"
                        },
                        {
-                           "title":  "Spotlight_V10",
+                           "title":  "Spotlight",
                            "file":  "music/God's Country Era/JESUS IS LORD (Early)/Spotlight_V10.mp3"
                        },
                        {
-                           "title":  "Tulsa_V1",
+                           "title":  "Tulsa",
                            "file":  "music/God's Country Era/JESUS IS LORD (Early)/Tulsa_V1.mp3"
                        },
                        {
-                           "title":  "Wash_Us_In_The_Blood_V2",
+                           "title":  "Wash Us In The Blood",
                            "file":  "music/God's Country Era/JESUS IS LORD (Early)/Wash_Us_In_The_Blood_V2.mp3"
                        }
                    ]
@@ -4514,39 +4514,39 @@ window.YE_ARCHIVE_DATABASE = [
         "notes":  "ARCHIVE / God's Country Era",
         "tracks":  [
                        {
-                           "title":  "V6",
+                           "title":  "24",
                            "file":  "music/God's Country Era/JESUS IS LORD (Pre God's Country)/24_V6.mp3"
                        },
                        {
-                           "title":  "God's_Country_V5",
+                           "title":  "God's Country",
                            "file":  "music/God's Country Era/JESUS IS LORD (Pre God's Country)/God's_Country_V5.mp3"
                        },
                        {
-                           "title":  "Keep_My_Spirit_Alive_V18",
+                           "title":  "Keep My Spirit Alive",
                            "file":  "music/God's Country Era/JESUS IS LORD (Pre God's Country)/Keep_My_Spirit_Alive_V18.mp3"
                        },
                        {
-                           "title":  "Lord_I_Need_You_To_Wrap_Your_Arms_Around_Me_V9",
+                           "title":  "Lord I Need You To Wrap Your Arms Around Me",
                            "file":  "music/God's Country Era/JESUS IS LORD (Pre God's Country)/Lord_I_Need_You_To_Wrap_Your_Arms_Around_Me_V9.mp3"
                        },
                        {
-                           "title":  "Off_The_Grid_V2",
+                           "title":  "Off The Grid",
                            "file":  "music/God's Country Era/JESUS IS LORD (Pre God's Country)/Off_The_Grid_V2.mp3"
                        },
                        {
-                           "title":  "Our_King_V1",
+                           "title":  "Our King",
                            "file":  "music/God's Country Era/JESUS IS LORD (Pre God's Country)/Our_King_V1.mp3"
                        },
                        {
-                           "title":  "Skuuurrruurrr_V1",
+                           "title":  "Skuuurrruurrr",
                            "file":  "music/God's Country Era/JESUS IS LORD (Pre God's Country)/Skuuurrruurrr_V1.mp3"
                        },
                        {
-                           "title":  "Tell_The_Vision_V3",
+                           "title":  "Tell The Vision",
                            "file":  "music/God's Country Era/JESUS IS LORD (Pre God's Country)/Tell_The_Vision_V3.mp3"
                        },
                        {
-                           "title":  "Welcome_To_My_Life_V4",
+                           "title":  "Welcome To My Life",
                            "file":  "music/God's Country Era/JESUS IS LORD (Pre God's Country)/Welcome_To_My_Life_V4.mp3"
                        }
                    ]
@@ -4630,71 +4630,71 @@ window.YE_ARCHIVE_DATABASE = [
         "notes":  "ARCHIVE / God's Country Era",
         "tracks":  [
                        {
-                           "title":  "Hours_V4",
+                           "title":  "Hours",
                            "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/24_Hours_V4.mp3"
                        },
                        {
-                           "title":  "Donda_V10",
+                           "title":  "Donda",
                            "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/Donda_V10.mp3"
                        },
                        {
-                           "title":  "Future_Sounds_V14",
+                           "title":  "Future Sounds",
                            "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/Future_Sounds_V14.mp3"
                        },
                        {
-                           "title":  "God's_Country_V5",
+                           "title":  "God's Country",
                            "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/God's_Country_V5.mp3"
                        },
                        {
-                           "title":  "He_Gave_It_All_V3",
+                           "title":  "He Gave It All",
                            "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/He_Gave_It_All_V3.mp3"
                        },
                        {
-                           "title":  "Home_V8",
+                           "title":  "Home",
                            "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/Home_V8.mp3"
                        },
                        {
-                           "title":  "I_Feel_Terrific_V4",
+                           "title":  "I Feel Terrific",
                            "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/I_Feel_Terrific_V4.mp3"
                        },
                        {
-                           "title":  "LA_Monster_V8",
+                           "title":  "LA Monster",
                            "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/LA_Monster_V8.mp3"
                        },
                        {
-                           "title":  "Let_The_Spirit_Go_Wild_V6",
+                           "title":  "Let The Spirit Go Wild",
                            "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/Let_The_Spirit_Go_Wild_V6.mp3"
                        },
                        {
-                           "title":  "Lord_I_Need_You_V12",
+                           "title":  "Lord I Need You",
                            "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/Lord_I_Need_You_V12.mp3"
                        },
                        {
-                           "title":  "New_Body_V30",
+                           "title":  "New Body",
                            "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/New_Body_V30.mp3"
                        },
                        {
-                           "title":  "Praise_God_V10",
+                           "title":  "Praise God",
                            "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/Praise_God_V10.mp3"
                        },
                        {
-                           "title":  "The_Glory_V7",
+                           "title":  "The Glory",
                            "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/The_Glory_V7.mp3"
                        },
                        {
-                           "title":  "Up_From_The_Ashes_V17",
+                           "title":  "Up From The Ashes",
                            "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/Up_From_The_Ashes_V17.mp3"
                        },
                        {
-                           "title":  "Use_This_Gospel_V25",
+                           "title":  "Use This Gospel",
                            "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/Use_This_Gospel_V25.mp3"
                        },
                        {
-                           "title":  "Wash_Us_In_The_Blood_V2",
+                           "title":  "Wash Us In The Blood",
                            "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/Wash_Us_In_The_Blood_V2.mp3"
                        },
                        {
-                           "title":  "Work_It_Out_V3",
+                           "title":  "Work It Out",
                            "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/Work_It_Out_V3.mp3"
                        }
                    ]
@@ -4708,55 +4708,55 @@ window.YE_ARCHIVE_DATABASE = [
         "notes":  "ARCHIVE / God's Country Era",
         "tracks":  [
                        {
-                           "title":  "unhomme (evan version) (1)",
+                           "title":  "unhomme",
                            "file":  "music/God's Country Era/Soul Children_/01_unhomme (evan version) (1).mp3"
                        },
                        {
-                           "title":  "soul children(evan version) (1)",
+                           "title":  "soul children",
                            "file":  "music/God's Country Era/Soul Children_/02_soul children(evan version) (1).mp3"
                        },
                        {
-                           "title":  "nyce vieux(evan version) (1)",
+                           "title":  "nyce vieux",
                            "file":  "music/God's Country Era/Soul Children_/03_nyce vieux(evan version) (1).mp3"
                        },
                        {
-                           "title":  "elsa laurent (evan version) (1)",
+                           "title":  "elsa laurent",
                            "file":  "music/God's Country Era/Soul Children_/04_elsa laurent (evan version) (1).mp3"
                        },
                        {
-                           "title":  "wayback (evan version) (1)",
+                           "title":  "wayback",
                            "file":  "music/God's Country Era/Soul Children_/05_wayback (evan version) (1).mp3"
                        },
                        {
-                           "title":  "ny dreams (evan version) (1)",
+                           "title":  "ny dreams",
                            "file":  "music/God's Country Era/Soul Children_/06_ny dreams (evan version) (1).mp3"
                        },
                        {
-                           "title":  "joicing(evan version) (1)",
+                           "title":  "joicing",
                            "file":  "music/God's Country Era/Soul Children_/07_joicing(evan version) (1).mp3"
                        },
                        {
-                           "title":  "real mannish(evan version) (1)",
+                           "title":  "real mannish",
                            "file":  "music/God's Country Era/Soul Children_/08_real mannish(evan version) (1).mp3"
                        },
                        {
-                           "title":  "Lill Lindfors (evan version) (1)",
+                           "title":  "Lill Lindfors",
                            "file":  "music/God's Country Era/Soul Children_/09_Lill Lindfors (evan version) (1).mp3"
                        },
                        {
-                           "title":  "linda perhacs (evan version) (1)",
+                           "title":  "linda perhacs",
                            "file":  "music/God's Country Era/Soul Children_/10_linda perhacs (evan version) (1).mp3"
                        },
                        {
-                           "title":  "emerald web (evan version) (1)",
+                           "title":  "emerald web",
                            "file":  "music/God's Country Era/Soul Children_/11_emerald web (evan version) (1).mp3"
                        },
                        {
-                           "title":  "novi torpedo (evan version) (1)",
+                           "title":  "novi torpedo",
                            "file":  "music/God's Country Era/Soul Children_/12_novi torpedo (evan version) (1).mp3"
                        },
                        {
-                           "title":  "uke kaan (evan version) (1)",
+                           "title":  "uke kaan",
                            "file":  "music/God's Country Era/Soul Children_/13_uke kaan (evan version) (1).mp3"
                        }
                    ]
