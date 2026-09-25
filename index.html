@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
@@ -37,7 +37,7 @@
     --accent-color: #4a00e0;
   }
 
-  * { box-sizing: border-box; }
+  * { box-sizing: border-box; transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1); }
 
   body {
     margin: 0;
@@ -49,6 +49,7 @@
     -webkit-tap-highlight-color: transparent;
     overflow-y: auto;
     overflow-x: hidden;
+    scroll-behavior: smooth;
     transition: background 0.3s, color 0.3s;
   }
 
@@ -64,19 +65,26 @@
   body.dark-mode .nav-btn { background: #111; border-color: var(--border-dark); color: var(--text-dark); }
   body.dark-mode .nav-btn:hover { background: #1a1a1a; border-color: #fff; }
   
-  body.dark-mode .user-btn { background: #111; border-color: var(--border-dark); }
+  body.dark-mode .user-btn { background: #111; border-color: var(--border-dark); color: var(--text-dark); }
   body.dark-mode .user-btn:hover { background: #1a1a1a; border-color: #fff; }
-  body.dark-mode .user-icon { fill: var(--text-dark); }
+  body.dark-mode .settings-icon { stroke: var(--text-dark); }
   body.dark-mode .user-dropdown { background: #111; border-color: var(--border-dark); }
   body.dark-mode .dropdown-item { color: var(--text-dark); border-color: var(--border-dark); }
   body.dark-mode .dropdown-item:hover { background: #1a1a1a; }
   
   body.dark-mode .nav-link { color: var(--muted-dark); }
-  body.dark-mode .nav-link.active, body.dark-mode .nav-link:hover { color: var(--text-dark); }
+  body.dark-mode .nav-link.active { color: var(--text-dark); background: #222; border-color: #fff; }
+  body.dark-mode .nav-link:hover { color: var(--text-dark); background: #1a1a1a; }
   body.dark-mode .album-card img { background: #222; box-shadow: var(--shadow-dark); }
+  body.dark-mode .album-year,
+  body.dark-mode .track-index,
+  body.dark-mode .mp-album-label,
+  body.dark-mode .mp-time,
+  body.dark-mode .mp-right,
+  body.dark-mode .full-progress-times { color: #aaa; }
   body.dark-mode .mobile-search-box { background: #111; border-color: var(--border-dark); color: var(--text-dark); }
   
-  body.dark-mode .album-view { background: linear-gradient(180deg, var(--album-accent) 0%, var(--page-bg-dark) 500px, var(--page-bg-dark) 100%); color: var(--text-dark); }
+  body.dark-mode .album-view { background: var(--page-bg-dark); color: var(--text-dark); }
   body.dark-mode .album-view-header { background: rgba(10,10,10,0.7); border-bottom-color: rgba(255,255,255,0.05); }
   body.dark-mode .view-meta { color: #ccc; }
   body.dark-mode .view-notes { color: #aaa; }
@@ -96,7 +104,7 @@
   body.dark-mode .mp-btn-main { background: #fff; }
   body.dark-mode .mp-btn-main svg { fill: #111; }
   
-  body.dark-mode .full-player { background: linear-gradient(180deg, var(--album-accent) 0%, var(--page-bg-dark) 60%, var(--page-bg-dark) 100%); }
+  body.dark-mode .full-player { background: var(--page-bg-dark); }
   body.dark-mode .close-full { background: rgba(0,0,0,0.5); color: #fff; }
   body.dark-mode .close-full:hover { background: rgba(0,0,0,0.8); }
   body.dark-mode .full-info p { color: #ccc; }
@@ -109,13 +117,14 @@
   body.dark-mode .modal { background: #111; border-color: var(--border-dark); color: #fff; }
   body.dark-mode #blogContent { color: #ccc !important; }
   body.dark-mode .close-modal { background: #222; color: #fff; }
+  body.dark-mode .backdrop { background: rgba(0,0,0,0.78); }
 
   /* --- HEADER --- */
   header {
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 16px 20px; background: rgba(255,255,255,0.95);
-    backdrop-filter: blur(10px); border-bottom: 1px solid var(--border);
-    position: sticky; top: 0; z-index: 50; gap: 16px; flex-wrap: wrap;
+    display: flex; flex-direction: column; align-items: stretch; justify-content: flex-start;
+    width: 248px; min-height: 100vh; padding: 28px 22px; background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(10px); border-right: 1px solid var(--border);
+    position: fixed; inset: 0 auto 0 0; z-index: 50; gap: 26px;
     transition: background 0.3s, border-color 0.3s;
   }
   .header-left { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
@@ -126,16 +135,16 @@
   header h1 { font-size: 15px; margin: 0; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
 
   /* Desktop Search Capsule */
-  .search-container { flex: 1; display: flex; justify-content: center; min-width: 250px; }
+  .search-container { width: 100%; display: flex; justify-content: flex-start; min-width: 0; }
   .search-capsule {
-    width: 100%; max-width: 500px; background: #f0f0f0; border: 1px solid #e0e0e0;
-    border-radius: 20px; padding: 10px 20px; font-size: 13px; font-family: 'IBM Plex Mono', monospace;
+    width: 100%; max-width: none; background: #f0f0f0; border: 1px solid #e0e0e0;
+    border-radius: 4px; padding: 11px 12px; font-size: 11px; font-family: 'IBM Plex Mono', monospace;
     outline: none; transition: all 0.2s; color: #111;
   }
   .search-capsule::placeholder { color: #888; text-transform: uppercase; }
   .search-capsule:focus { background: #fff; border-color: #111; box-shadow: 0 0 0 3px rgba(0,0,0,0.08); }
 
-  .header-actions { display: flex; gap: 8px; flex-shrink: 0; align-items: center; }
+  .header-actions { display: flex; gap: 8px; flex-shrink: 0; align-items: center; width: 100%; margin-top: auto; }
   .nav-btn {
     background: #fff; border: 1px solid var(--border); padding: 8px 14px; border-radius: 4px;
     font-size: 11px; font-weight: 700; cursor: pointer; font-family: 'IBM Plex Mono', monospace;
@@ -146,23 +155,24 @@
   
   /* --- USER DROPDOWN --- */
   .user-btn {
-    background: #fff; border: 1px solid var(--border); padding: 8px; border-radius: 4px;
-    font-size: 14px; cursor: pointer; font-family: 'IBM Plex Mono', monospace;
-    transition: all 0.2s; color: var(--text); display: flex; align-items: center; justify-content: center;
-    width: 36px; height: 36px; position: relative;
+    background: #fff; border: none; padding: 8px 12px; border-radius: 4px;
+    cursor: pointer; font-family: 'IBM Plex Mono', monospace;
+    transition: all 0.2s; color: var(--text); display: flex; align-items: center; justify-content: flex-start; gap: 8px;
+    width: 100%; height: 36px; position: relative; font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
   }
-  .user-btn:hover { background: #f5f5f5; border-color: #000; }
-  .user-icon { width: 16px; height: 16px; fill: var(--text); transition: fill 0.3s; }
+  .user-btn:hover { background: #f5f5f5; }
+  .settings-icon { width: 16px; height: 16px; fill: none; stroke: var(--text); stroke-width: 2; transition: stroke 0.3s; }
   
-  .user-dropdown-container { position: relative; }
+  .user-dropdown-container { position: relative; width: 100%; }
   .user-dropdown {
-    position: absolute; top: 100%; right: 0; background: #fff; border: 1px solid var(--border);
-    border-radius: 6px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); min-width: 220px; z-index: 100;
-    display: none; margin-top: 8px; overflow: hidden;
+    position: static; width: 100%; background: #fff; border: none;
+    border-radius: 6px; box-shadow: none; min-width: 0; z-index: 100;
+    display: block; margin-top: 0; overflow: hidden; max-height: 0; opacity: 0; visibility: hidden;
+    transform: translateY(-6px); transition: max-height 0.3s ease, opacity 0.2s ease, transform 0.3s ease, visibility 0.3s;
   }
-  .user-dropdown.show { display: block; }
+  .user-dropdown.show { max-height: 320px; opacity: 1; visibility: visible; transform: translateY(0); margin-top: 8px; }
   .dropdown-item {
-    padding: 14px 16px; cursor: pointer; transition: background 0.2s; border-bottom: 1px solid var(--border);
+    padding: 14px 16px; cursor: pointer; transition: background 0.2s; border-bottom: none;
     font-size: 12px; font-weight: 600; text-transform: uppercase; font-family: 'IBM Plex Mono', monospace;
     color: var(--text);
   }
@@ -183,16 +193,16 @@
   
   /* --- NAVIGATION HEADER --- */
   .nav-header {
-    display: flex; align-items: center; gap: 12px; margin: 30px 0 20px;
-    font-size: 16px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    display: flex; flex-direction: column; align-items: stretch; gap: 4px; margin: 0;
+    font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
   }
-  .nav-link { color: var(--muted); cursor: pointer; transition: color 0.2s; }
-  .nav-link.active { color: var(--text); }
-  .nav-link:hover { color: var(--text); }
-  .nav-spacer { color: var(--border); }
+  .nav-link { color: var(--muted); cursor: pointer; transition: color 0.2s, background 0.2s; padding: 12px 10px; border-left: 2px solid transparent; }
+  .nav-link.active { color: var(--text); background: #f0f0f0; border-left-color: var(--text); }
+  .nav-link:hover { color: var(--text); background: #f5f5f5; }
+  .nav-spacer { display: none; }
 
   /* Mobile Specific Elements */
-  .mobile-nav-item { display: none; }
+  .mobile-nav-item { display: inline; }
   .mobile-search-screen { display: none; padding: 20px 0; }
   .mobile-search-box {
     width: 100%; padding: 16px; font-size: 15px; border-radius: 8px; border: 1px solid #ccc;
@@ -201,9 +211,10 @@
   }
 
   /* --- MAIN CONTENT & GRIDS --- */
-  main { max-width: 1300px; margin: 0 auto; padding: 0 20px 20px; }
+  main { max-width: 1440px; margin: 0 0 0 248px; padding: 42px 46px 120px; }
   
   .album-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 24px; }
+  .era-section-header { grid-column: 1 / -1; margin: 20px 0 0; padding: 14px 0 8px; border-bottom: 2px solid var(--text); font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; }
   .album-card { cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease; display: flex; flex-direction: column; }
   .album-card:hover { transform: translateY(-3px); }
   .album-card img { width: 100%; aspect-ratio: 1/1; border-radius: var(--radius); box-shadow: var(--shadow); object-fit: cover; margin-bottom: 12px; background: #eee; }
@@ -217,8 +228,8 @@
     box-shadow: var(--shadow); margin-bottom: 12px; transition: background 0.2s;
   }
   .playlist-card svg { width: 48px; height: 48px; fill: #fff; margin-bottom: 12px; }
-  .playlist-card.liked { background: linear-gradient(135deg, #4a00e0, #8e2de2); }
-  .playlist-card.shuffle { background: linear-gradient(135deg, #111, #333); }
+  .playlist-card.liked { background: #4a00e0; }
+  .playlist-card.shuffle { background: #222; }
 
   /* --- SEARCH UI (Desktop Overlay) --- */
   #searchUI { width: 100%; }
@@ -230,7 +241,7 @@
     position: fixed; inset: 0; color: var(--text); z-index: 80;
     transform: translateY(100%); transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
     overflow-y: auto; padding-bottom: 130px;
-    background: linear-gradient(180deg, var(--album-accent) 0%, var(--page-bg) 500px, var(--page-bg) 100%);
+    background: var(--page-bg);
   }
   .album-view.show { transform: translateY(0); }
   .album-view-header {
@@ -284,7 +295,7 @@
   .mp-info { display: flex; align-items: center; gap: 16px; overflow: hidden; cursor: pointer; padding: 8px; border-radius: 8px; transition: background 0.2s; }
   .mp-info:hover { background: #f5f5f5; }
   .mp-cover { width: 64px; height: 64px; min-width: 64px; aspect-ratio: 1/1; border-radius: 6px; background: #eee; object-fit: cover; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-  .mp-text-container { overflow: hidden; white-space: nowrap; position: relative; width: 100%; mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%); }
+  .mp-text-container { overflow: hidden; white-space: nowrap; position: relative; width: 100%; }
   .mp-title { font-size: 14px; font-weight: 700; color: #111; text-transform: uppercase; }
   .mp-album-label { font-size: 11px; color: var(--muted); font-weight: 600; text-transform: uppercase; margin-top: 4px; }
 
@@ -300,10 +311,12 @@
   .mp-progress-container { width: 100%; max-width: 480px; display: flex; align-items: center; gap: 12px; }
   .mp-time { font-size: 11px; color: #888; font-weight: 600; min-width: 40px; text-align: center; font-variant-numeric: tabular-nums; }
   
-  input[type=range] { -webkit-appearance: none; width: 100%; background: transparent; cursor: pointer; }
-  input[type=range]::-webkit-slider-runnable-track { width: 100%; height: 5px; background: #e0e0e0; border-radius: 3px; transition: background 0.2s; }
-  input[type=range]:hover::-webkit-slider-runnable-track { background: #d0d0d0; }
-  input[type=range]::-webkit-slider-thumb { height: 14px; width: 14px; border-radius: 50%; background: #111; -webkit-appearance: none; margin-top: -4.5px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+  input[type=range] { -webkit-appearance: none; appearance: none; width: 100%; background: transparent; cursor: pointer; }
+  input[type=range]::-webkit-slider-runnable-track { width: 100%; height: 5px; background: #4a4a4a; border-radius: 3px; transition: background 0.2s; }
+  input[type=range]:hover::-webkit-slider-runnable-track { background: #3a3a3a; }
+  input[type=range]::-webkit-slider-thumb { height: 14px; width: 14px; border-radius: 50%; background: #292929; -webkit-appearance: none; margin-top: -4.5px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
+  input[type=range]::-moz-range-track { width: 100%; height: 5px; background: #4a4a4a; border-radius: 3px; }
+  input[type=range]::-moz-range-thumb { height: 14px; width: 14px; border: 0; border-radius: 50%; background: #292929; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
 
   .mp-right { display: flex; justify-content: flex-end; align-items: center; font-size: 12px; color: #888; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; gap: 16px; }
 
@@ -311,8 +324,8 @@
   .full-player {
     position: fixed; inset: 0; z-index: 300; display: flex; flex-direction: column;
     padding: 20px; transform: translateY(100%); touch-action: none;
-    background: linear-gradient(180deg, var(--album-accent) 0%, var(--page-bg) 60%, var(--page-bg) 100%);
-    transition: transform 0.4s cubic-bezier(0.32, 1, 0.23, 1), background 0.8s ease;
+    background: var(--page-bg);
+    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
     align-items: center; justify-content: center;
     overflow: hidden;
   }
@@ -375,12 +388,20 @@
   }
 
   @media(max-width: 768px) {
-    header { padding: 12px 16px; gap: 12px; }
+    body { padding-bottom: calc(110px + env(safe-area-inset-bottom)); }
+    header { width: 100%; min-height: 0; padding: 14px 16px; position: sticky; inset: 0 0 auto; border-right: 0; border-bottom: 1px solid var(--border); gap: 14px; }
+    main { margin: 0; padding: 24px 16px 120px; }
     .search-container { display: none; } 
-    .mobile-nav-item { display: inline; } 
+    .header-actions { position: absolute; top: 12px; right: 16px; width: auto; margin-top: 0; }
+    .user-btn { width: 36px; padding: 8px; justify-content: center; }
+    .settings-label { display: none; }
+    .user-dropdown { position: absolute; top: 100%; bottom: auto; right: 0; width: 220px; min-width: 220px; max-height: none; margin-top: 8px; box-shadow: 0 4px 18px rgba(0,0,0,0.14); transform-origin: top right; transform: translateY(-8px); }
+    .user-dropdown.show { transform: translateY(0); }
     
     .nav-btn { font-size: 11px; padding: 8px 12px; }
-    .nav-header { font-size: 14px; margin: 20px 0 16px; }
+    .nav-header { flex-direction: row; align-items: center; gap: 4px; font-size: 11px; }
+    .nav-link { padding: 9px 8px; border-left: 0; border-bottom: 2px solid transparent; }
+    .nav-link.active { border-left-color: transparent; border-bottom-color: var(--text); }
     
     .album-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 16px; }
     .album-name { font-size: 13px; }
@@ -393,7 +414,7 @@
     .view-right { padding: 4px; background: transparent; box-shadow: none; width: 100%; }
     .track-item { padding: 12px 8px; font-size: 13px; }
     
-    .mini-player { grid-template-columns: 1fr auto; height: auto; padding: 12px 16px; gap: 12px; }
+    .mini-player { grid-template-columns: 1fr auto; height: auto; padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); gap: 12px; }
     .mp-info { max-width: calc(100vw - 140px); padding: 4px; }
     .mp-cover { width: 48px; height: 48px; min-width: 48px; }
     .mp-title { font-size: 13px; }
@@ -428,18 +449,21 @@
     <h1>YE-ARCHIVE</h1>
   </div>
   
-  <div class="search-container">
-    <input type="text" id="searchInputDesktop" class="search-capsule" placeholder="SEARCH TRACKS OR ALBUMS..." autocomplete="off">
-  </div>
+  <nav class="nav-header" aria-label="Primary navigation">
+    <span id="tab-collection" class="nav-link active" onclick="switchTab('collection')">THE COLLECTION</span>
+    <span id="tab-playlists" class="nav-link" onclick="switchTab('playlists')">PLAYLISTS</span>
+    <span id="tab-search" class="nav-link" onclick="switchTab('search')">SEARCH</span>
+  </nav>
 
   <div class="header-actions">
     <div class="user-dropdown-container">
       <button class="user-btn" onclick="toggleUserMenu(event)">
-        <svg class="user-icon" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+        <svg class="settings-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm9 3.5-2.1-.7a7.1 7.1 0 0 0-.6-1.5l1-2-2.1-2.1-2 1a7.1 7.1 0 0 0-1.5-.6L13 4h-2l-.7 2.1a7.1 7.1 0 0 0-1.5.6l-2-1L4.7 7.8l1 2a7.1 7.1 0 0 0-.6 1.5L3 12v2l2.1.7a7.1 7.1 0 0 0 .6 1.5l-1 2 2.1 2.1 2-1a7.1 7.1 0 0 0 1.5.6L11 22h2l.7-2.1a7.1 7.1 0 0 0 1.5-.6l2 1 2.1-2.1-1-2a7.1 7.1 0 0 0 .6-1.5L21 14v-2Z"/></svg>
+        <span class="settings-label">SETTINGS</span>
       </button>
       <div class="user-dropdown" id="userDropdown">
         <div class="dropdown-item" onclick="openBlog('THE VISION', 'Making the vault accessible. Less time searching, more time listening.')">THE VISION</div>
-        <div class="dropdown-item" onclick="openBlog('WHAT\'S NEW', '<div class=\'blog-bullet\'>• W Upgrades: Autoplay & Visualizer</div><div class=\'blog-bullet\'>• Volume Sliders</div><div class=\'blog-bullet\'>• Keyboard Controls Included</div>')">WHAT'S NEW</div>
+        <div class="dropdown-item" onclick="openBlog('WHAT\'S NEW', '<div class=\'blog-bullet\'>&bull; W Upgrades: Autoplay & Visualizer</div><div class=\'blog-bullet\'>&bull; Volume Sliders</div><div class=\'blog-bullet\'>&bull; Keyboard Controls Included</div>')">WHAT'S NEW</div>
         <div class="dropdown-item dark-mode-item" onclick="toggleSetting('theme', event)">
           <span>DARK MODE</span>
           <div class="dark-mode-toggle" id="darkModeToggle"></div>
@@ -458,14 +482,6 @@
 </header>
 
 <main>
-  <div class="nav-header">
-    <span id="tab-collection" class="nav-link active" onclick="switchTab('collection')">THE COLLECTION</span>
-    <span class="nav-spacer">/</span>
-    <span id="tab-playlists" class="nav-link" onclick="switchTab('playlists')">PLAYLISTS</span>
-    <span class="nav-spacer mobile-nav-item">/</span>
-    <span id="tab-search" class="nav-link mobile-nav-item" onclick="switchTab('search')">SEARCH</span>
-  </div>
-
   <div id="defaultUI">
     <div class="album-grid" id="albumGrid"></div>
   </div>
@@ -497,7 +513,7 @@
   <div id="searchUI" style="display: none;">
     <div class="search-header-row">
       <h2>SEARCH RESULTS</h2>
-      <button class="nav-btn" onclick="closeSearch()">CLOSE ✕</button>
+      <button class="nav-btn" onclick="closeSearch()">CLOSE &times;</button>
     </div>
     <div class="album-grid" id="searchGrid"></div>
   </div>
@@ -505,7 +521,7 @@
 
 <div id="albumView" class="album-view">
   <div class="album-view-header">
-    <button class="nav-btn" onclick="closeAlbum()">← BACK</button>
+    <button class="nav-btn" onclick="closeAlbum()">&larr; BACK</button>
   </div>
   <div class="album-content">
     <div class="view-left">
@@ -554,7 +570,7 @@
 <div id="fullPlayer" class="full-player">
   <canvas id="visualizerCanvas"></canvas>
   <div class="swipe-handle"></div>
-  <button class="close-full" onclick="toggleFullPlayer()">✕</button>
+  <button class="close-full" onclick="toggleFullPlayer()">&times;</button>
   
   <div class="full-content">
     <img id="fullCover" class="full-cover" src="">
@@ -597,16 +613,17 @@
   </div>
 </div>
 
-<audio id="globalAudio" crossorigin="anonymous" preload="metadata"></audio>
+<audio id="globalAudio" preload="metadata"></audio>
 
 <div class="backdrop" id="blogBackdrop">
   <div class="modal">
-    <button class="close-modal" onclick="document.getElementById('blogBackdrop').classList.remove('show')">✕</button>
+    <button class="close-modal" onclick="document.getElementById('blogBackdrop').classList.remove('show')">&times;</button>
     <h2 id="blogTitle" style="margin-top:0; text-transform:uppercase;"></h2>
     <div id="blogContent" style="line-height:1.6; color:#444; font-size: 14px;"></div>
   </div>
 </div>
 
+<script src="catalog.js"></script>
 <script>
 // --- SETTINGS & DROPDOWN ---
 let settings = {
@@ -668,122 +685,37 @@ function openBlog(t, htmlContent) {
 }
 
 // --- DATABASE ---
-const database = [
-  {
-    id: "yandhi", title: "YANDHI", year: "2018", cover: "https://i.redd.it/3two3fms4nf41.jpg", accent: "#a679b8", notes: "for what reason did he not release ts 💔", downloadUrl: "https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/Yandhi.zip",
-    tracks: [
-      { title: "Chakras", file: "music/Yandhi/01 Chakras.mp3" }, { title: "Calm (Interlude)", file: "music/Yandhi/02 Calm (Interlude).mp3" }, { title: "The Storm", file: "music/Yandhi/03 The Storm.mp3" }, { title: "Spread Your Wings", file: "music/Yandhi/04 Spread Your Wings.mp3" }, { title: "New Body", file: "music/Yandhi/05 New Body.mp3" }, { title: "Hurricane", file: "music/Yandhi/06 Hurricane.mp3" }, { title: "Alien (Interlude)", file: "music/Yandhi/07 Alien (Interlude).mp3" }, { title: "Alien", file: "music/Yandhi/08 Alien.mp3" }, { title: "Home", file: "music/Yandhi/09 Home.mp3" }, { title: "City In The Sky", file: "music/Yandhi/10 City In The Sky.mp3" }, { title: "Brothers", file: "music/Yandhi/11 Brothers.mp3" }, { title: "Cash To Burn", file: "music/Yandhi/12 Cash To Burn.mp3" }, { title: "We Got Love", file: "music/Yandhi/13 We Got Love.mp3" }, { title: "All Dreams Real", file: "music/Yandhi/14 All Dreams Real.mp3" }, { title: "The Garden", file: "music/Yandhi/15 The Garden.mp3" }, { title: "Last Name", file: "music/Yandhi/16 Last Name.mp3" }, { title: "Law Of Attraction", file: "music/Yandhi/17 Law Of Attraction.mp3" }, { title: "End Of It", file: "music/Yandhi/18 End Of It.mp3" }
-    ]
-  },
-  {
-    id: "bully", title: "BULLY V2", year: "2025 (pre-release)", cover: "https://upload.wikimedia.org/wikipedia/en/f/f1/Ye_%28Kanye_West%29_-_Bully_-_Album_Cover.png", accent: "#9babab", notes: "Cinematic dark energy.", downloadUrl: "https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/BULLY.zip",
-    tracks: [
-      { title: "PREACHER MAN", file: "music/BULLY/PREACHER MAN.mp3" }, { title: "BEAUTY AND THE BEAST", file: "music/BULLY/BEAUTY AND THE BEAST.mp3" }, { title: "LAST BREATH", file: "music/BULLY/LAST BREATH.mp3" }, { title: "WHITE LINES", file: "music/BULLY/WHITE LINES.mp3" }, { title: "I CAN'T WAIT", file: "music/BULLY/I CAN'T WAIT.mp3" }, { title: "BULLY", file: "music/BULLY/BULLY.mp3" }, { title: "ALL THE LOVE", file: "music/BULLY/ALL THE LOVE.mp3" }, { title: "THIS ONE HERE", file: "music/BULLY/THIS ONE HERE.mp3" }, { title: "HIGHS AND LOWS", file: "music/BULLY/HIGHS AND LOWS.mp3" }, { title: "MISSION CONTROL", file: "music/BULLY/MISSION CONTROL.mp3" }, { title: "CIRCLES", file: "music/BULLY/CIRCLES.mp3" }, { title: "DAMN", file: "music/BULLY/DAMN.mp3" }, { title: "LOSING YOUR MIND", file: "music/BULLY/LOSING YOUR MIND.mp3" }, { title: "MELROSE", file: "music/BULLY/MELROSE.mp3" }
-    ]
-  },
-  {
-    id: "swish", title: "SWISH", year: "2016", cover: "https://lastfm.freetls.fastly.net/i/u/500x500/0ed29c6907a535d3a71baec2820c047b.jpg", accent: "#ffedcc", notes: "Pre-Pablo vibes.", downloadUrl: "https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/SWISH.zip",
-    tracks: [
-      { title: "Freestyle 4", file: "music/SWISH/Freestyle 4 (feat. Tyler, The Creator, A$AP Ferg, A$AP Rocky _ Big Sean).mp3" }, { title: "Highlights", file: "music/SWISH/Highlights (feat. Young Thug).mp3" }, { title: "I Miss The Old Kanye", file: "music/SWISH/I Miss The Old Kanye.mp3" }, { title: "New Angels", file: "music/SWISH/New Angels.mp3" }, { title: "Nina Chop", file: "music/SWISH/Nina Chop (feat. Young Thug).m4a" }, { title: "Real Friends", file: "music/SWISH/Real Friends (feat. Ty Dolla $ign _ DMX).mp3" }, { title: "Ultralight Prayer Interlude", file: "music/SWISH/Ultralight Prayer Interlude (feat. Kirk Franklin).m4a" }, { title: "Wolves", file: "music/SWISH/Wolves (feat. Frank Ocean, Sia, _ Vic Mensa).mp3" }, { title: "Can U Be", file: "music/SWISH/Can U Be.mp3" }, { title: "Fade", file: "music/SWISH/Fade (feat. Ty Dolla $ign _ Post Malone).mp3" }, { title: "Father Stretch My Hands", file: "music/SWISH/Father Stretch My Hands (feat. Kendrick Lamar).mp3" }, { title: "No More Parties In LA", file: "music/SWISH/No More Parties In LA (feat. Kendrick Lamar _ Freddie Gibbs).mp3" }, { title: "The Mind is Powerful", file: "music/SWISH/The Mind is Powerful (feat. Swizz Beats) 1.mp3" }, { title: "Waves", file: "music/SWISH/Waves (feat. Chris Brown).mp3" }, { title: "Deja Vu", file: "music/SWISH/Deja Vu.mp3" }, { title: "Facts", file: "music/SWISH/Facts.mp3" }, { title: "Fall Out of Heaven", file: "music/SWISH/Fall Out of Heaven (feat. Bon Iver _ The Dream).mp3" }, { title: "FML", file: "music/SWISH/FML (feat. Travi$ Scott _ The Weeknd).mp3" }
-    ]
-  },
-  {
-    id: "so_help_me_god", title: "SO HELP ME GOD", year: "2015", cover: "https://preview.redd.it/li7lzs7f5gv81.png?width=1000&format=png&auto=webp&s=1a56acfeeca7b9309b53396bed5cc9133839e1f7", accent: "#9babab", notes: "if yeezus and life of pablo had a child", downloadUrl: "https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/SO_HELP_ME_GOD.zip",
-    tracks: [
-      { title: "FALL OUT OF HEAVEN", file: "music/SO_HELP_ME_GOD/FALL OUT OF HEAVEN.mp3" }, { title: "FOREVER", file: "music/SO_HELP_ME_GOD/FOREVER.mp3" }, { title: "FOURFIVESECONDS", file: "music/SO_HELP_ME_GOD/FOURFIVESECONDS.mp3" }, { title: "GOD LEVEL", file: "music/SO_HELP_ME_GOD/GOD LEVEL.mp3" }, { title: "GRAVE", file: "music/SO_HELP_ME_GOD/GRAVE.mp3" }, { title: "I FEEL LIKE THAT", file: "music/SO_HELP_ME_GOD/I FEEL LIKE THAT.mp3" }, { title: "MAN UP", file: "music/SO_HELP_ME_GOD/MAN UP.mp3" }, { title: "NEW ANGELS", file: "music/SO_HELP_ME_GOD/NEW ANGELS.mp3" }, { title: "NINJA CHOP", file: "music/SO_HELP_ME_GOD/NINJA CHOP.mp3" }, { title: "ONE I LOVE", file: "music/SO_HELP_ME_GOD/ONE I LOVE.mp3" }, { title: "ONLY ONE", file: "music/SO_HELP_ME_GOD/ONLY ONE.mp3" }, { title: "RIHANNA", file: "music/SO_HELP_ME_GOD/RIHANNA.mp3" }, { title: "SOUTHSIDE SERENADE", file: "music/SO_HELP_ME_GOD/SOUTHSIDE SERENADE.mp3" }, { title: "SPECIAL", file: "music/SO_HELP_ME_GOD/SPECIAL.mp3" }, { title: "THE MIND IS POWERFUL", file: "music/SO_HELP_ME_GOD/THE MIND IS POWERFUL.mp3" }, { title: "WOLVES", file: "music/SO_HELP_ME_GOD/WOLVES.mp3" }, { title: "ALL DAY", file: "music/SO_HELP_ME_GOD/ALL DAY.mp3" }, { title: "CAN U BE", file: "music/SO_HELP_ME_GOD/CAN U BE.mp3" }, { title: "CAN'T GET OVER ME", file: "music/SO_HELP_ME_GOD/CAN'T GET OVER ME.mp3" }, { title: "CAN'T LOOK IN MY EYES", file: "music/SO_HELP_ME_GOD/CAN'T LOOK IN MY EYES.mp3" }, { title: "CEREBERUS", file: "music/SO_HELP_ME_GOD/CEREBERUS.mp3" }
-    ]
-  },
-  {
-    id: "jesus_is_king_ii", title: "JESUS IS KING II", year: "2019", cover: "https://i1.sndcdn.com/artworks-ylvpZVfTMUQGF7D6-LWwOSA-t1080x1080.jpg", accent: "#d6e0ff", notes: "Dr. Dre remix.", downloadUrl: "https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/JESUS_IS_KING_II.zip",
-    tracks: [
-      { title: "God Is", file: "music/JESUS_IS_KING_II/God Is.mp3" }, { title: "Hands On", file: "music/JESUS_IS_KING_II/Hands On.mp3" }, { title: "LA Monster", file: "music/JESUS_IS_KING_II/LA Monster.mp3" }, { title: "On God", file: "music/JESUS_IS_KING_II/On God.mp3" }, { title: "Selah", file: "music/JESUS_IS_KING_II/Selah.mp3" }, { title: "Use This Gospel", file: "music/JESUS_IS_KING_II/Use This Gospel.mp3" }, { title: "Water", file: "music/JESUS_IS_KING_II/Water.mp3" }, { title: "Ashes", file: "music/JESUS_IS_KING_II/Ashes.mp3" }, { title: "Closed On Sunday", file: "music/JESUS_IS_KING_II/Closed On Sunday.mp3" }, { title: "Everything We Need", file: "music/JESUS_IS_KING_II/Everything We Need.mp3" }, { title: "Follow God", file: "music/JESUS_IS_KING_II/Follow God.mp3" }
-    ]
-  },
-  {
-    id: "in_gods_country", title: "In God's Country", year: "2020", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjshGbXgjo0umSQJACQcIsTv-B4NrFeLOQUw&s", accent: "#e8ffd6", notes: "this w", downloadUrl: "https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/In_God.s_Country.zip",
-    tracks: [
-      { title: "Hold The Line", file: "music/In_God's_Country/Hold The Line.mp3" }, { title: "Hurricane", file: "music/In_God's_Country/Hurricane.mp3" }, { title: "Life Of The Party", file: "music/In_God's_Country/Life Of The Party.mp3" }, { title: "New Body", file: "music/In_God's_Country/New Body.mp3" }, { title: "Off The Grid", file: "music/In_God's_Country/Off The Grid.mp3" }, { title: "Praise God", file: "music/In_God's_Country/Praise God.mp3" }, { title: "Skuuurrr", file: "music/In_God's_Country/Skuuurrr.mp3" }, { title: "Up From The Ashes", file: "music/In_God's_Country/Up From The Ashes.mp3" }, { title: "Wash Us In The Blood", file: "music/In_God's_Country/Wash Us In The Blood.mp3" }, { title: "Welcome To My Life", file: "music/In_God's_Country/Welcome To My Life.mp3" }, { title: "You Was Right", file: "music/In_God's_Country/You Was Right.mp3" }, { title: "24", file: "music/In_God's_Country/24.mp3" }, { title: "God's Test", file: "music/In_God's_Country/God's Test.mp3" }, { title: "I Feel Terrific", file: "music/In_God's_Country/I Feel Terrific.mp3" }, { title: "In God's Country", file: "music/In_God's_Country/In God's Country.mp3" }, { title: "Keep My Spirit Alive", file: "music/In_God's_Country/Keep My Spirit Alive.mp3" }, { title: "Lord I Need You", file: "music/In_God's_Country/Lord I Need You.mp3" }, { title: "Tell The Vision", file: "music/In_God's_Country/Tell The Vision.mp3" }, { title: "Donda", file: "music/In_God's_Country/Donda.mp3" }, { title: "Everything", file: "music/In_God's_Country/Everything.mp3" }, { title: "Future_Sounds", file: "music/In_God's_Country/Future_Sounds.mp3" }, { title: "God's Country", file: "music/In_God's_Country/God's Country.mp3" }
-    ]
-  },
-  {
-    id: "in_a_perfect_world", title: "IN A PERFECT WORLD", year: "Concept", cover: "https://i.redd.it/donda-with-child-comps-v0-7g88f66h92za1.jpg?width=1170&format=pjpg&auto=webp&s=fc82675c76943922cbef3dfc0a759d3dc93f373d", accent: "#2cc9c7", notes: "Melodic unreleased.", downloadUrl: "https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/IN_A_PERFECT_WORLD.zip",
-    tracks: [
-      { title: "Fake Friends (Interlude)", file: "music/IN_A_PERFECT_WORLD/Fake Friends (Interlude).mp3" }, { title: "Alive", file: "music/IN_A_PERFECT_WORLD/Alive.mp3" }, { title: "All The Love", file: "music/IN_A_PERFECT_WORLD/All The Love.mp3" }, { title: "Bésame Mama", file: "music/IN_A_PERFECT_WORLD/Bésame Mama.mp3" }, { title: "Bianca", file: "music/IN_A_PERFECT_WORLD/Bianca.mp3" }, { title: "World Peace", file: "music/IN_A_PERFECT_WORLD/World Peace.mp3" }, { title: "Nitrous", file: "music/IN_A_PERFECT_WORLD/Nitrous.mp3" }, { title: "Oh No My Hoodie My Hoodie", file: "music/IN_A_PERFECT_WORLD/Oh No My Hoodie My Hoodie.mp3" }, { title: "Press", file: "music/IN_A_PERFECT_WORLD/Press.mp3" }, { title: "Same Shit", file: "music/IN_A_PERFECT_WORLD/Same Shit.mp3" }, { title: "The Dream Is Over (Interlude)", file: "music/IN_A_PERFECT_WORLD/The Dream Is Over (Interlude).mp3" }, { title: "Highschool ID", file: "music/IN_A_PERFECT_WORLD/Highschool ID.mp3" }, { title: "King Of Soul", file: "music/IN_A_PERFECT_WORLD/King Of Soul.mp3" }, { title: "Love Love Love", file: "music/IN_A_PERFECT_WORLD/Love Love Love.mp3" }, { title: "Mama Said", file: "music/IN_A_PERFECT_WORLD/Mama Said.mp3" }, { title: "Morning Light (Interlude)", file: "music/IN_A_PERFECT_WORLD/Morning Light (Interlude).mp3" }, { title: "Cash Cow", file: "music/IN_A_PERFECT_WORLD/Cash Cow.mp3" }, { title: "Cousins", file: "music/IN_A_PERFECT_WORLD/Cousins.mp3" }, { title: "Dark Matter", file: "music/IN_A_PERFECT_WORLD/Dark Matter.mp3" }, { title: "Drown", file: "music/IN_A_PERFECT_WORLD/Drown.mp3" }
-    ]
-  },
-  {
-    id: "good_ass_job", title: "Good Ass Job", year: "2009", cover: "https://i1.sndcdn.com/artworks-3gNVl4tvXUtYA3Uy-nywH4A-t500x500.jpg", accent: "#ffccd5", notes: "MBDTF Prequel.", downloadUrl: "https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/Good_Ass_Job.zip",
-    tracks: [
-      { title: "Devil in a New Dress", file: "music/Good_Ass_Job/1-13. Devil in a New Dress.mp3" }, { title: "POWER", file: "music/Good_Ass_Job/1-06. POWER.mp3" }, { title: "Ghetto University", file: "music/Good_Ass_Job/1-07. Ghetto University.mp3" }, { title: "Christian Dior Denim Flow", file: "music/Good_Ass_Job/1-08. Christian Dior Denim Flow.mp3" }, { title: "So Appalled", file: "music/Good_Ass_Job/1-09. So Appalled.mp3" }, { title: "Dark Fantasy", file: "music/Good_Ass_Job/1-02. Dark Fantasy.mp3" }, { title: "The Joy", file: "music/Good_Ass_Job/1-03. The Joy.mp3" }, { title: "Hard Horn Nightmare", file: "music/Good_Ass_Job/1-04. Hard Horn Nightmare.mp3" }, { title: "Lord Lord Lord", file: "music/Good_Ass_Job/1-05. Lord Lord Lord.mp3" }, { title: "Hell of a Life", file: "music/Good_Ass_Job/1-01. Hell of a Life.mp3" }, { title: "Hard Horn Nightmare (Alternate Version)", file: "music/Good_Ass_Job/2-03. Hard Horn Nightmare (Alternate Version).mp3" }, { title: "Money Everywhere", file: "music/Good_Ass_Job/2-04. Money Everywhere.mp3" }, { title: "Monster", file: "music/Good_Ass_Job/1-18. Monster.mp3" }, { title: "All of the Lights", file: "music/Good_Ass_Job/2-01. All of the Lights.mp3" }, { title: "Blame Game", file: "music/Good_Ass_Job/2-02. Blame Game.mp3" }, { title: "Runaway", file: "music/Good_Ass_Job/1-14. Runaway.mp3" }, { title: "Good Friday", file: "music/Good_Ass_Job/1-15. Good Friday.mp3" }, { title: "Never See Me Again", file: "music/Good_Ass_Job/1-16. Never See Me Again.mp3" }, { title: "Mama's Boyfriend", file: "music/Good_Ass_Job/1-17. Mama's Boyfriend.mp3" }, { title: "Eyes Closed", file: "music/Good_Ass_Job/1-10. Eyes Closed.mp3" }, { title: "Whole Lifetime", file: "music/Good_Ass_Job/1-11. Whole Lifetime.mp3" }, { title: "Chain Heavy", file: "music/Good_Ass_Job/1-12. Chain Heavy.mp3" }
-    ]
-  },
-  {
-    id: "thank_god_for_drugs", title: "THANK GOD FOR DRUGS", year: "2013", cover: "https://i1.sndcdn.com/artworks-cUMvFdyz1fJfgbaA-Urphzg-t500x500.jpg", accent: "#e2e2e2", notes: "Pre-Yeezus.", downloadUrl: "https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/THANK_GOD_FOR_DRUGS.zip",
-    tracks: [
-      { title: "CAN'T GET OVER ME", file: "music/THANK_GOD_FOR_DRUGS/CAN'T GET OVER ME.mp3" }, { title: "EMOTIONLESS", file: "music/THANK_GOD_FOR_DRUGS/EMOTIONLESS.mp3" }, { title: "GOD!", file: "music/THANK_GOD_FOR_DRUGS/GOD!.mp3" }, { title: "GOOD THINGS DON'T LAST", file: "music/THANK_GOD_FOR_DRUGS/GOOD THINGS DON'T LAST.mp3" }, { title: "GUILT TRIP", file: "music/THANK_GOD_FOR_DRUGS/GUILT TRIP.mp3" }, { title: "HOLLYWOOD", file: "music/THANK_GOD_FOR_DRUGS/HOLLYWOOD.mp3" }, { title: "I AM NOT HOME", file: "music/THANK_GOD_FOR_DRUGS/I AM NOT HOME.mp3" }, { title: "LOUDER", file: "music/THANK_GOD_FOR_DRUGS/LOUDER.mp3" }, { title: "NEW SLAVES", file: "music/THANK_GOD_FOR_DRUGS/NEW SLAVES.mp3" }, { title: "NO", file: "music/THANK_GOD_FOR_DRUGS/NO.mp3" }, { title: "ON SIGHT", file: "music/THANK_GOD_FOR_DRUGS/ON SIGHT.mp3" }, { title: "ONE I LOVE", file: "music/THANK_GOD_FOR_DRUGS/ONE I LOVE.mp3" }, { title: "PERFECT", file: "music/THANK_GOD_FOR_DRUGS/PERFECT.mp3" }, { title: "SEND IT UP", file: "music/THANK_GOD_FOR_DRUGS/SEND IT UP.mp3" }, { title: "TALK TO ME", file: "music/THANK_GOD_FOR_DRUGS/TALK TO ME.mp3" }, { title: "YEEZUS", file: "music/THANK_GOD_FOR_DRUGS/YEEZUS.mp3" }, { title: "BOUND", file: "music/THANK_GOD_FOR_DRUGS/BOUND.mp3" }, { title: "AWESOME", file: "music/THANK_GOD_FOR_DRUGS/AWESOME.mp3" }, { title: "BLACK SKINHEAD", file: "music/THANK_GOD_FOR_DRUGS/BLACK SKINHEAD.mp3" }, { title: "BLOOD ON THE LEAVES", file: "music/THANK_GOD_FOR_DRUGS/BLOOD ON THE LEAVES.mp3" }
-    ]
-  },
-  {
-    id: "yeezus_ii", title: "YEEZUS II", year: "2014", cover: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9cS414A_UlfnBHoImrJP3oywnQ8BqUtZNYA&s", accent: "#ffffff", notes: "Sequel to the madness.", downloadUrl: "https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/Yeezus_II.zip",
-    tracks: [
-      { title: "The World (Intro)", file: "music/Yeezus_II/1. The World (Intro).mp3" }, { title: "However You Want It", file: "music/Yeezus_II/2. However You Want It (feat. Paul McCartney).mp3" }, { title: "God Level", file: "music/Yeezus_II/3. God Level.mp3" }, { title: "Can U Be..", file: "music/Yeezus_II/4. Can U Be..mp3" }, { title: "Forever", file: "music/Yeezus_II/5. Forever.mp3" }, { title: "FML", file: "music/Yeezus_II/6. FML (feat. Travis Scott & The Weeknd).mp3" }, { title: "Can't Get Over Me", file: "music/Yeezus_II/7. Can't Get Over Me (feat. Tony Williams, Bon Iver & The-Dream).mp3" }, { title: "FourFiveSeconds", file: "music/Yeezus_II/8. FourFiveSeconds (feat. Rihanna & Paul McCartney).mp3" }, { title: "Only One", file: "music/Yeezus_II/9. Only One (feat. Caroline Shaw & Paul McCartney).mp3" }
-    ]
-  },
-  {
-    id: "bad_bitch_playbook", title: "BAD BITCH PLAYBOOK", year: "2023", rating: "9.0", accent: "#89C79B", cover: "https://preview.redd.it/does-anybody-know-any-darker-sounding-more-2023-atmosphere-v0-2qju242ln03g1.jpeg?auto=webp&s=5e9c56fa94bd3d0547f596ec737d480094a860dc", notes: "Vultures if it was less villain-ish", downloadUrl: "https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/BAD_BITCH_PLAYBOOK.zip",
-    tracks: [
-      { title: "GUN TO MY HEAD", file: "music/BAD_BITCH_PLAYBOOK/GUN TO MY HEAD.mp3" }, { title: "TAKE OFF YOUR DRESS", file: "music/BAD_BITCH_PLAYBOOK/TAKE OFF YOUR DRESS.mp3" }, { title: "WELCOME TO MY LIFE", file: "music/BAD_BITCH_PLAYBOOK/WELCOME TO MY LIFE.mp3" }, { title: "PRESSURE", file: "music/BAD_BITCH_PLAYBOOK/PRESSURE.mp3" }, { title: "RIVER", file: "music/BAD_BITCH_PLAYBOOK/RIVER.mp3" }, { title: "MY SOUL", file: "music/BAD_BITCH_PLAYBOOK/MY SOUL.mp3" }, { title: "EVERYBODY", file: "music/BAD_BITCH_PLAYBOOK/EVERYBODY.mp3" }, { title: "BACK TO ME", file: "music/BAD_BITCH_PLAYBOOK/BACK TO ME.mp3" }, { title: "FUK SUMN", file: "music/BAD_BITCH_PLAYBOOK/FUK SUMN.mp3" }, { title: "FIELD TRIP", file: "music/BAD_BITCH_PLAYBOOK/FIELD TRIP.mp3" }, { title: "DRUNK", file: "music/BAD_BITCH_PLAYBOOK/DRUNK.mp3" }, { title: "MELROSE", file: "music/BAD_BITCH_PLAYBOOK/MELROSE.mp3" }, { title: "IN THE STARS", file: "music/BAD_BITCH_PLAYBOOK/IN THE STARS.mp3" }, { title: "SO SOON", file: "music/BAD_BITCH_PLAYBOOK/SO SOON.mp3" }, { title: "LOVE LOVE LOVE", file: "music/BAD_BITCH_PLAYBOOK/LOVE LOVE LOVE.mp3" }, { title: "SO CALLED FRIENDS", file: "music/BAD_BITCH_PLAYBOOK/SO CALLED FRIENDS.mp3" }, { title: "SLIDE", file: "music/BAD_BITCH_PLAYBOOK/SLIDE.mp3" }, { title: "FLOWERS", file: "music/BAD_BITCH_PLAYBOOK/FLOWERS.mp3" }, { title: "PROMOTION", file: "music/BAD_BITCH_PLAYBOOK/PROMOTION.mp3" }, { title: "BURN", file: "music/BAD_BITCH_PLAYBOOK/BURN.mp3" }, { title: "LIFESTYLE", file: "music/BAD_BITCH_PLAYBOOK/LIFESTYLE.mp3" }, { title: "NEW BODY", file: "music/BAD_BITCH_PLAYBOOK/NEW BODY.mp3" }, { title: "THE GARDEN", file: "music/BAD_BITCH_PLAYBOOK/THE GARDEN.mp3" }, { title: "SKY CITY", file: "music/BAD_BITCH_PLAYBOOK/SKY CITY.mp3" }
-    ]
-  },
-  {
-    id: "donda_2", title: "DONDA 2", year: "2022", rating: "6", accent: "#c9832c", cover: "https://upload.wikimedia.org/wikipedia/en/a/a6/Donda_2_streaming_album_cover.jpg", notes: "The start of the new era..", downloadUrl: "https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/DONDA_2.zip",
-    tracks: [
-      { title: "TRUE LOVE", file: "music/DONDA_2/01 TRUE LOVE.mp3" }, { title: "BROKEN ROAD", file: "music/DONDA_2/02 BROKEN ROAD.mp3" }, { title: "GET LOST", file: "music/DONDA_2/03 GET LOST.mp3" }, { title: "KEEP THE FLOWERS", file: "music/DONDA_2/04 KEEP THE FLOWERS.mp3" }, { title: "TOO EASY", file: "music/DONDA_2/05 TOO EASY.mp3" }, { title: "PABLO", file: "music/DONDA_2/06 PABLO.mp3" }, { title: "MR MIAGI", file: "music/DONDA_2/07 MR MIAGI.mp3" }, { title: "HAPPY", file: "music/DONDA_2/08 HAPPY.mp3" }, { title: "SECURITY", file: "music/DONDA_2/09 SECURITY.mp3" }, { title: "CITY OF GOD", file: "music/DONDA_2/10 CITY OF GOD.mp3" }, { title: "530", file: "music/DONDA_2/11 530.mp3" }, { title: "SCIFI", file: "music/DONDA_2/12 SCIFI.mp3" }, { title: "BURN EVERYTHING", file: "music/DONDA_2/13 BURN EVERYTHING.mp3" }, { title: "LOUIE BAG", file: "music/DONDA_2/14 LOUIE BAG.mp3" }, { title: "WE DID IT", file: "music/DONDA_2/15 WE DID IT.mp3" }, { title: "MAINTENANCE", file: "music/DONDA_2/16 MAINTENANCE.mp3" }, { title: "LORD LIFT", file: "music/DONDA_2/17 LORD LIFT.mp3" }, { title: "FIRST TIME", file: "music/DONDA_2/18 FIRST TIME.mp3" }
-    ]
-  },
-  {
-    id: "war", title: "WAR", year: "2022", rating: "9.2", accent: "#e0e0e0", cover: "https://i.ytimg.com/vi/_dw7JafNGdY/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLB1SMs38jeXk2EGsqIQzHOF9PCi9Q", notes: "Collaboration Album with James Blake", downloadUrl: "https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/WAR.zip",
-    tracks: [
-      { title: "MY WAY", file: "music/WAR/My Way.mp3" }, { title: "MELT BEAT", file: "music/WAR/melt beat.mp3" }, { title: "WHAT I WOULD HAVE SAID", file: "music/WAR/What I Would Have Said At Virgils Funeral.mp3" }, { title: "BOBBY DIGITAL", file: "music/WAR/Bobby Digital .mp3" }, { title: "SPIKY", file: "music/WAR/Spiky.mp3" }, { title: "ALL IS LOVE", file: "music/WAR/All is love .mp3" }, { title: "QUIET", file: "music/WAR/Quiet.mp3" }, { title: "NEVER COMING BACK", file: "music/WAR/Never Coming Back.mp3" }, { title: "LOVE LOVE LOVE", file: "music/WAR/Love Love Love.mp3" }, { title: "SHOWTIME", file: "music/WAR/Showtime.mp3" }, { title: "TALKING", file: "music/WAR/Talking.mp3" }, { title: "LET IT IN", file: "music/WAR/Let It In.mp3" }
-    ]
-  },
-  {
-    id: "good_ass_job_pastelle", title: "GOOD ASS JOB PASTELLE", year: "2010", rating: "9.8", accent: "#ffccd5", cover: "https://t2.genius.com/unsafe/535x0/https%3A%2F%2Fimages.genius.com%2F1ee84d5a78bb5d2b2f6318bff0b90f64.1000x1000x1.png", notes: "no words for this", downloadUrl: "https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/GOOD_ASS_JOB_PASTELLE.zip",
-    tracks: [
-      { title: "NEVER SEE ME AGAIN", file: "music/GOOD_ASS_JOB_PASTELLE/15._Never_See_Me_Again.mp3" }, { title: "HARD HORN NIGHTMARE", file: "music/GOOD_ASS_JOB_PASTELLE/01._Hard_Horn_Nightmare.mp3" }, { title: "SWEAT ON MY FACE", file: "music/GOOD_ASS_JOB_PASTELLE/02._Sweat_On_My_Face_feat._Mos_Def__Talib_Kweli.mp3" }, { title: "THATS MY BITCH", file: "music/GOOD_ASS_JOB_PASTELLE/03._Thats_My_Bitch_feat._Jay-Z_Electrik_Red_Charlie_Wilson__Bon_Iver.mp3" }, { title: "DOWNTOWN", file: "music/GOOD_ASS_JOB_PASTELLE/04._Downtown_feat._Jeezy.mp3" }, { title: "THROW MY MONEY EVERYWHERE", file: "music/GOOD_ASS_JOB_PASTELLE/05._Throw_My_Money_Everywhere.mp3" }, { title: "FLASHING LIGHTS 2", file: "music/GOOD_ASS_JOB_PASTELLE/06._Flashing_Lights_2_feat._Charlie_Wilson.mp3" }, { title: "NOT THE SAME", file: "music/GOOD_ASS_JOB_PASTELLE/07._Not_The_Same_feat._Shire__Rick_Ross.mp3" }, { title: "MAMAS BOYFRIEND", file: "music/GOOD_ASS_JOB_PASTELLE/08._Mamas_Boyfriend.mp3" }, { title: "NO MORE PARTIES IN LA", file: "music/GOOD_ASS_JOB_PASTELLE/09._No_More_Parties_In_LA_feat._Lupe_Fiasco__Pharrell_Williams.mp3" }, { title: "SHOOT UP", file: "music/GOOD_ASS_JOB_PASTELLE/10._Shoot_Up_feat._Bon_Iver.mp3" }, { title: "EYES CLOSED", file: "music/GOOD_ASS_JOB_PASTELLE/11._Eyes_Closed_feat._John_Legend.mp3" }, { title: "ARMINA", file: "music/GOOD_ASS_JOB_PASTELLE/12._Armina_feat._Kid_Cudi.mp3" }, { title: "YOU KNOW YOU KNOW", file: "music/GOOD_ASS_JOB_PASTELLE/13._You_Know_You_Know_feat._Lil_Wayne__Drake.mp3" }, { title: "WHOOPTY DOO", file: "music/GOOD_ASS_JOB_PASTELLE/14._Whoopty_Doo_feat._Cyhi_The_Prynce__Big_Sean.mp3" }
-    ]
-  },
-  {
-    id: "god_unwilling", title: "GOD UNWILLING", year: "2008", rating: "8.0", accent: "#B08D7D", cover: "https://static.wikitide.net/timelinetweakwiki/1/18/GodUnwilling.jpg", notes: "Three legends in one album", downloadUrl: "https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/GOD_UNWILLING.zip",
-    tracks: [
-      { title: "INTRO", file: "music/GOD_UNWILLING/1. Intro.mp3" }, { title: "SKY HIGH GRADUATES", file: "music/GOD_UNWILLING/2. Sky High Graduates.mp3" }, { title: "US PLACERS", file: "music/GOD_UNWILLING/3. Us Placers.mp3" }, { title: "YE'S INTERLUDE", file: "music/GOD_UNWILLING/4. Ye's Interlude.mp3" }, { title: "DON'T STOP!", file: "music/GOD_UNWILLING/5. Don't Stop!.mp3" }, { title: "DON'T LOOK DOWN", file: "music/GOD_UNWILLING/6. Don't Look Down.mp3" }, { title: "MONEY EVERYWHERE", file: "music/GOD_UNWILLING/7. Money Everywhere.mp3" }, { title: "P'S INTERLUDE", file: "music/GOD_UNWILLING/8. P's Interlude.mp3" }, { title: "EVERYONE NOSE (REMIX)", file: "music/GOD_UNWILLING/9. Everyone Nose (Remix).mp3" }, { title: "NUMBER ONE", file: "music/GOD_UNWILLING/10. Number One.mp3" }, { title: "FRONTIN'", file: "music/GOD_UNWILLING/11. Frontin'.mp3" }, { title: "LU'S INTERLUDE", file: "music/GOD_UNWILLING/12. Lu's Interlude.mp3" }, { title: "CHANGE", file: "music/GOD_UNWILLING/13. Change.mp3" }, { title: "PARIS, TOKYO (REMIX)", file: "music/GOD_UNWILLING/14. Paris, Tokyo (Remix).mp3" }, { title: "OUTRO", file: "music/GOD_UNWILLING/15. Outro.mp3" }
-    ]
-  },
-  {
-    id: "calabasas_is_the_new_abu_dhabi", title: "CALABASAS IS THE NEW ABU DHABI", year: "2016", rating: "8.7", accent: "#24bf58", cover: "https://preview.redd.it/calabasas-is-the-new-abu-dhabi-v0-m89z8qlqiyxf1.jpg?width=640&crop=smart&auto=webp&s=690a6730cdcd6744543e642935f33f8eb0b3d7ec", notes: "no words for this either....", downloadUrl: "https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/CALABASAS_IS_THE_NEW_ABU_DHABI.zip",
-    tracks: [
-      { title: "EVOLVE WHEN I SEE IT", file: "music/CALABASAS_IS_THE_NEW_ABU_DHABI/Evolve When I See It.mp3" }, { title: "SUMMER SIXTEEN", file: "music/CALABASAS_IS_THE_NEW_ABU_DHABI/Summer Sixteen.mp3" }, { title: "BLESSINGS", file: "music/CALABASAS_IS_THE_NEW_ABU_DHABI/Blessings.mp3" }, { title: "POP STYLE", file: "music/CALABASAS_IS_THE_NEW_ABU_DHABI/Pop Style.mp3" }, { title: "GLOW", file: "music/CALABASAS_IS_THE_NEW_ABU_DHABI/Glow.mp3" }, { title: "FINAL FANTASY", file: "music/CALABASAS_IS_THE_NEW_ABU_DHABI/Final Fantasy.mp3" }, { title: "WESTON ROAD FLOWS", file: "music/CALABASAS_IS_THE_NEW_ABU_DHABI/Weston Road Flows.mp3" }
-    ]
-  },
-  {
-    id: "cruel_winter", title: "CRUEL WINTER", year: "2017", rating: "8.2", accent: "#DEC79B", cover: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Kanye_West_-_Champions_Cover.jpg/960px-Kanye_West_-_Champions_Cover.jpg", notes: "The G.O.O.D. Music guys lined up for a sequel", downloadUrl: "https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/CRUEL_WINTER.zip",
-    tracks: [
-      { title: "FACE DOWN", file: "music/CRUEL_WINTER/Face_Down_V5.mp3" }, { title: "PANDA REMIX", file: "music/CRUEL_WINTER/Panda_Remix_V1.mp3" }, { title: "ALL I KNOW", file: "music/CRUEL_WINTER/All_I_Know_V3.mp3" }, { title: "CIRCLE", file: "music/CRUEL_WINTER/Circle.mp3" }, { title: "CHAMPIONS", file: "music/CRUEL_WINTER/Champions_V7.mp3" }
-    ]
-  },
-  {
-    id: "love_everyone", title: "LOVE EVERYONE", year: "2018", cover: "https://i.redd.it/htvu0c2jcxu01.jpg", accent: "#f2f2f2", notes: "Forgiving era", downloadUrl: "https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/LOVE_EVERYONE.zip",
-    tracks: [
-      { title: "Ye vs. The People", file: "music/LOVE_EVERYONE/1. Ye vs. The People.mp3" }, { title: "Wouldn't Leave", file: "music/LOVE_EVERYONE/2. Wouldn_t Leave.mp3" }, { title: "Simulation Baptize", file: "music/LOVE_EVERYONE/3. Simulation Baptize.mp3" }, { title: "Queen Bitch", file: "music/LOVE_EVERYONE/4. Queen Bitch.mp3" }, { title: "Bad People", file: "music/LOVE_EVERYONE/5. Bad People.mp3" }, { title: "Yikes", file: "music/LOVE_EVERYONE/6. Yikes.mp3" }, { title: "Ass Shot", file: "music/LOVE_EVERYONE/7. Ass Shot.mp3" }, { title: "You Ain't No Model", file: "music/LOVE_EVERYONE/8. You Ain_t No Model.mp3" }, { title: "Ecstasy", file: "music/LOVE_EVERYONE/9. Ecstasy.mp3" }, { title: "I Feel Free", file: "music/LOVE_EVERYONE/10. I Feel Free.mp3" }, { title: "Moonlight", file: "music/LOVE_EVERYONE/11. Moonlight.mp3" }, { title: "Skeletons", file: "music/LOVE_EVERYONE/12. Skeletons.mp3" }, { title: "Take Me to the Light", file: "music/LOVE_EVERYONE/13. Take Me to the Light.mp3" }, { title: "Everything", file: "music/LOVE_EVERYONE/14. Everything.mp3" }, { title: "Brothers", file: "music/LOVE_EVERYONE/15. Brothers.mp3" }, { title: "Violent Crimes", file: "music/LOVE_EVERYONE/16. Violent Crimes.mp3" }
-    ]
-  },
-  {
-    id: "turbografx16", title: "TurboGrafx16", year: "2016", cover: "https://lastfm.freetls.fastly.net/i/u/770x0/68bd0237ddfa94159b35a684e5ee8be7.jpg#68bd0237ddfa94159b35a684e5ee8be7", accent: "#d1d1d1", notes: "almost swish but choppier", downloadUrl: "https://github.com/nichuu123/YE-ARCHIVE/releases/download/music/TurboGrafx16.zip",
-    tracks: [
-      { title: "All Eyes on Ye", file: "music/TurboGrafx16/01 All Eyes on Ye.mp3" }, { title: "Rich Nigga Drunk", file: "music/TurboGrafx16/02 Rich Nigga Drunk.mp3" }, { title: "Caprisun", file: "music/TurboGrafx16/03 Caprisun (feat. Young Thug _ Tyga).mp3" }, { title: "No Reason", file: "music/TurboGrafx16/04 No Reason.mp3" }, { title: "Euro / Switch Hands", file: "music/TurboGrafx16/05 Euro _ Switch Hands (feat. A$AP Rocky).mp3" }, { title: "XTCY", file: "music/TurboGrafx16/06 XTCY.mp3" }, { title: "Face Down", file: "music/TurboGrafx16/07 Face Down (feat. Quavo _ Lil Yachty).mp3" }, { title: "Jealous", file: "music/TurboGrafx16/08 Jealous (feat. Justin Bieber _ Post Malone).mp3" }, { title: "Hold Tight", file: "music/TurboGrafx16/09 Hold Tight (feat. Migos _ Young Thug).mp3" }, { title: "New Angels", file: "music/TurboGrafx16/10 New Angels.mp3" }, { title: "All I Know (Remix)", file: "music/TurboGrafx16/11 All I Know [G.O.O.D. Music Remix] (Demo).mp3" }, { title: "Only Ye", file: "music/TurboGrafx16/12 Only Ye.mp3" }, { title: "Don't Jump", file: "music/TurboGrafx16/13 Don_t Jump.mp3" }
-    ]
+const database = window.YE_ARCHIVE_DATABASE;
+const fallbackCoverFor = album => coverFor(album.title, album.era);
+const coverPathFor = album => {
+  const firstTrack = album.tracks.find(track => track.file);
+  if (!firstTrack) return fallbackCoverFor(album);
+  return `${firstTrack.file.slice(0, firstTrack.file.lastIndexOf('/'))}/coverart.jpg`;
+};
+const setCoverImage = async (image, album) => {
+  const fallback = fallbackCoverFor(album);
+  image.onerror = () => {
+    image.onerror = null;
+    image.src = fallback;
+  };
+  if (window.location.protocol === 'file:' && album.cover.startsWith('music/')) {
+    try {
+      const response = await fetch(album.cover);
+      if (!response.ok) throw new Error(`Could not load cover: ${response.status}`);
+      image.src = URL.createObjectURL(await response.blob());
+      return;
+    } catch (error) {
+      image.onerror = null;
+      image.src = fallback;
+      return;
+    }
   }
-];
+  image.src = album.cover;
+};
+database.forEach((album) => {
+  album.fallbackCover = fallbackCoverFor(album);
+  album.cover = album.cover || coverPathFor(album);
+});
 // --- STATE ---
 let activePlaylistContext = null; 
 let activePlaylistIndex = -1, activeTrackIndex = -1, viewingPlaylistIndex = -1;
@@ -793,6 +725,25 @@ let generatedShufflePlaylist = [];
 
 const audio = document.getElementById('globalAudio');
 const albumGrid = document.getElementById('albumGrid');
+let audioObjectUrl = null;
+
+function setAudioSource(file) {
+  if (window.location.protocol !== 'file:') {
+    audio.src = file;
+    audio.load();
+    return null;
+  }
+
+  return (async () => {
+    const response = await fetch(file);
+    if (!response.ok) throw new Error(`Could not load audio: ${response.status}`);
+    const blob = await response.blob();
+    if (audioObjectUrl) URL.revokeObjectURL(audioObjectUrl);
+    audioObjectUrl = URL.createObjectURL(blob);
+    audio.src = audioObjectUrl;
+    audio.load();
+  })();
+}
 
 // --- LOCAL STORAGE (LIKES) ---
 let likedSongs = JSON.parse(localStorage.getItem('ye_archive_likes')) || [];
@@ -845,10 +796,19 @@ function updateLikeButtonsForCurrent() {
 }
 
 // Init Grid
+let currentEra = '';
 database.forEach((alb, i) => {
+  if (alb.era !== currentEra) {
+    currentEra = alb.era;
+    const heading = document.createElement('h2');
+    heading.className = 'era-section-header';
+    heading.textContent = alb.era;
+    albumGrid.appendChild(heading);
+  }
   const div = document.createElement('div');
   div.className = 'album-card';
-  div.innerHTML = `<img src="${alb.cover}" loading="lazy"><div class="album-name">${alb.title}</div><div class="album-year">${alb.year}</div>`;
+  div.innerHTML = `<img loading="lazy" alt="${alb.title} cover"><div class="album-name">${alb.title}</div><div class="album-year">${alb.tracks.length} TRACKS</div>`;
+  setCoverImage(div.querySelector('img'), alb);
   div.onclick = () => openAlbum(i);
   albumGrid.appendChild(div);
 });
@@ -873,7 +833,7 @@ function switchTab(tab) {
 // --- QUEUE & PLAYBACK LOGIC ---
 function addToQueue(pIdx, tIdx, btnElement) {
   queue.push({ p: pIdx, t: tIdx });
-  btnElement.textContent = '✓';
+  btnElement.textContent = '\u2713';
   btnElement.style.borderColor = '#111';
   btnElement.style.color = '#111';
   setTimeout(() => {
@@ -912,14 +872,22 @@ document.getElementById('volumeSlider').addEventListener('input', (e) => {
   audio.volume = e.target.value;
 });
 
-function playSongDirect(pIdx, tIdx) {
+async function playSongDirect(pIdx, tIdx) {
   activePlaylistIndex = pIdx; 
   activeTrackIndex = tIdx;
   const alb = database[pIdx];
   const song = alb.tracks[tIdx];
   
   document.documentElement.style.setProperty('--album-accent', alb.accent || '#e2e2e2');
-  audio.src = song.file;
+  try {
+    const sourceReady = setAudioSource(song.file);
+    if (sourceReady) await sourceReady;
+  } catch (error) {
+    console.error('Audio load failed:', error);
+    updatePlayPauseUI(false);
+    document.getElementById('mpAlbum').textContent = 'AUDIO FILE COULD NOT LOAD';
+    return;
+  }
   
   if ('mediaSession' in navigator) {
     navigator.mediaSession.metadata = new MediaMetadata({
@@ -947,12 +915,12 @@ function playSongDirect(pIdx, tIdx) {
   updateLikeButtonsForCurrent();
   
   document.getElementById('miniPlayer').classList.add('active');
-  document.getElementById('mpCover').src = alb.cover;
+  setCoverImage(document.getElementById('mpCover'), alb);
   document.getElementById('mpTitle').textContent = song.title;
   document.getElementById('mpAlbum').textContent = alb.title;
   
   if (document.getElementById('fullPlayer').classList.contains('active')) {
-    document.getElementById('fullCover').src = alb.cover;
+    setCoverImage(document.getElementById('fullCover'), alb);
     document.getElementById('fullTitle').textContent = song.title;
     document.getElementById('fullAlbum').textContent = alb.title;
   }
@@ -1001,7 +969,7 @@ function openShuffle() {
   document.documentElement.style.setProperty('--album-accent', '#aaaaaa');
   document.getElementById('viewCover').src = 'https://images.unsplash.com/photo-1619983081563-430f63602796?auto=format&fit=crop&w=500&q=80';
   document.getElementById('viewTitle').textContent = 'SHUFFLE';
-  document.getElementById('viewMeta').textContent = `AUTO-GENERATED • 20 TRACKS`;
+  document.getElementById('viewMeta').textContent = `AUTO-GENERATED \u2022 20 TRACKS`;
   document.getElementById('viewNotes').textContent = 'A fresh mix every time.';
   document.getElementById('albumDownload').style.display = 'none';
 
@@ -1020,7 +988,7 @@ function openLikedSongs() {
   document.getElementById('viewCover').src = firstLikedAlbum ? firstLikedAlbum.cover : 'https://images.unsplash.com/photo-1557682250-33bd709cbe85?auto=format&fit=crop&w=500&q=80';
   
   document.getElementById('viewTitle').textContent = 'LIKED SONGS';
-  document.getElementById('viewMeta').textContent = `CUSTOM PLAYLIST • ${likedSongs.length} TRACKS`;
+  document.getElementById('viewMeta').textContent = `CUSTOM PLAYLIST \u2022 ${likedSongs.length} TRACKS`;
   document.getElementById('viewNotes').textContent = 'Your personal vault.';
   document.getElementById('albumDownload').style.display = 'none';
 
@@ -1054,13 +1022,14 @@ function openAlbum(i) {
   const alb = database[i];
 
   document.documentElement.style.setProperty('--album-accent', alb.accent || '#ffffff');
-  document.getElementById('viewCover').src = alb.cover;
+  setCoverImage(document.getElementById('viewCover'), alb);
   document.getElementById('viewTitle').textContent = alb.title;
-  document.getElementById('viewMeta').textContent = `${alb.year} • ${alb.tracks.length} TRACKS`;
+  document.getElementById('viewMeta').textContent = `${alb.year} \u2022 ${alb.tracks.length} TRACKS`;
   document.getElementById('viewNotes').textContent = alb.notes;
   
-  document.getElementById('albumDownload').style.display = 'block';
-  document.getElementById('albumDownload').href = alb.downloadUrl || '#';
+  const download = document.getElementById('albumDownload');
+  download.style.display = alb.downloadUrl ? 'block' : 'none';
+  download.href = alb.downloadUrl || '#';
 
   viewingPlaylistIndex = i;
   document.getElementById('albumView').classList.add('show');
@@ -1125,7 +1094,7 @@ function toggleFullPlayer() {
   if (fp.classList.toggle('active') && activePlaylistIndex !== -1) {
     const alb = database[activePlaylistIndex];
     const song = alb.tracks[activeTrackIndex];
-    document.getElementById('fullCover').src = alb.cover;
+    setCoverImage(document.getElementById('fullCover'), alb);
     document.getElementById('fullTitle').textContent = song.title;
     document.getElementById('fullAlbum').textContent = alb.title;
     updateLikeButtonsForCurrent();
@@ -1204,7 +1173,8 @@ function handleSearch(query, gridElementId) {
       foundResults = true;
       const div = document.createElement('div');
       div.className = 'album-card';
-      div.innerHTML = `<img src="${alb.cover}"><div class="album-name">${alb.title}</div><div class="album-year">ALBUM • ${alb.year}</div>`;
+      div.innerHTML = `<img alt="${alb.title} cover"><div class="album-name">${alb.title}</div><div class="album-year">ALBUM \u2022 ${alb.year}</div>`;
+      setCoverImage(div.querySelector('img'), alb);
       div.onclick = () => { closeSearch(); openAlbum(index); };
       grid.appendChild(div);
     }
@@ -1217,7 +1187,8 @@ function handleSearch(query, gridElementId) {
         const div = document.createElement('div');
         div.className = 'album-card';
         div.onclick = () => { closeSearch(); playSong(plIdx, sIdx); };
-        div.innerHTML = `<img src="${alb.cover}"><div class="album-name">${song.title}</div><div class="album-year">TRACK • ${alb.title}</div>`;
+        div.innerHTML = `<img alt="${alb.title} cover"><div class="album-name">${song.title}</div><div class="album-year">TRACK \u2022 ${alb.title}</div>`;
+        setCoverImage(div.querySelector('img'), alb);
         grid.appendChild(div);
       }
     });
@@ -1228,24 +1199,13 @@ function handleSearch(query, gridElementId) {
   }
 }
 
-document.getElementById('searchInputDesktop').addEventListener('input', (e) => {
-  const q = e.target.value;
-  if (!q) {
-    closeSearch();
-    return;
-  }
-  document.getElementById('searchUI').style.display = 'block';
-  document.getElementById('defaultUI').style.display = 'none';
-  document.getElementById('playlistsUI').style.display = 'none';
-  handleSearch(q, 'searchGrid');
-}, { passive: true });
-
 document.getElementById('searchInputMobile').addEventListener('input', (e) => {
   handleSearch(e.target.value, 'mobileSearchGrid');
 }, { passive: true });
 
 function closeSearch() {
-  document.getElementById('searchInputDesktop').value = "";
+  const desktopSearch = document.getElementById('searchInputDesktop');
+  if (desktopSearch) desktopSearch.value = "";
   document.getElementById('searchUI').style.display = 'none';
   
   if(document.getElementById('tab-collection').classList.contains('active')){
@@ -1311,3 +1271,4 @@ fp.addEventListener('touchend', (e) => {
 </script>
 </body>
 </html>
+
