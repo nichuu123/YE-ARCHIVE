@@ -325,7 +325,7 @@ window.YE_ARCHIVE_DATABASE = [
     },
     {
         "id":  "808s-heartbreak-era-sky-high-a-we-got-the-remix-special-edition",
-        "title":  "Sky High_ A We Got The Remix Special Edition",
+        "title":  "Sky High: A We Got The Remix Special Edition",
         "era":  "808s \u0026 Heartbreak Era",
         "year":  "808s \u0026 Heartbreak",
         "accent":  "#111111",
@@ -769,7 +769,7 @@ window.YE_ARCHIVE_DATABASE = [
     },
     {
         "id":  "bully-era-bully-irko-s-version",
-        "title":  "BULLY (IRKO_s version)",
+        "title":  "BULLY (IRKO's version)",
         "era":  "Bully Era",
         "year":  "Bully",
         "accent":  "#111111",
@@ -3638,1214 +3638,1210 @@ window.YE_ARCHIVE_DATABASE = [
                    ]
     },
     {
-        "id":  "god-ass-job-era-child-rebel-soldier",
+        "id":  "good-ass-job-era-child-rebel-soldier",
         "title":  "Child Rebel Soldier",
-        "era":  "God Ass Job Era",
-        "year":  "God Ass Job",
+        "era":  "Good Ass Job Era",
+        "year":  "Good Ass Job",
         "accent":  "#111111",
-        "notes":  "ARCHIVE / God Ass Job Era",
+        "notes":  "ARCHIVE / Good Ass Job Era",
         "tracks":  [
                        {
                            "title":  "Don\u0027t Stop!",
-                           "file":  "music/God Ass Job Era/Child Rebel Soldier/08. Don_t Stop! (Feat. Lupe Fiasco _ Pharrell).mp3"
+                           "file":  "music/Good Ass Job Era/Child Rebel Soldier/08. Don_t Stop! (Feat. Lupe Fiasco _ Pharrell).mp3"
                        },
                        {
                            "title":  "Us Placers",
-                           "file":  "music/God Ass Job Era/Child Rebel Soldier/12. Us Placers (feat. Lupe Fiasco \u0026 Pharrell).mp3"
+                           "file":  "music/Good Ass Job Era/Child Rebel Soldier/12. Us Placers (feat. Lupe Fiasco \u0026 Pharrell).mp3"
                        },
                        {
                            "title":  "Frontin\u0027",
-                           "file":  "music/God Ass Job Era/Child Rebel Soldier/2058 GW 11 Frontin_.mp3"
+                           "file":  "music/Good Ass Job Era/Child Rebel Soldier/2058 GW 11 Frontin_.mp3"
                        },
                        {
                            "title":  "Beat Goes On (feat. Madonna)",
-                           "file":  "music/God Ass Job Era/Child Rebel Soldier/Beat Goes On (feat. Kanye West)-yt.savetube.me.mp3"
+                           "file":  "music/Good Ass Job Era/Child Rebel Soldier/Beat Goes On (feat. Kanye West)-yt.savetube.me.mp3"
                        },
                        {
                            "title":  "Fucced Up",
-                           "file":  "music/God Ass Job Era/Child Rebel Soldier/Fucced Up-yt.savetube.me.mp3"
+                           "file":  "music/Good Ass Job Era/Child Rebel Soldier/Fucced Up-yt.savetube.me.mp3"
                        },
                        {
                            "title":  "Diamonds \u0026 Dollars",
-                           "file":  "music/God Ass Job Era/Child Rebel Soldier/Kanye West, Pharrell Williams - Diamonds \u0026 Dollars (2009)_UNRELEAED.mp3"
+                           "file":  "music/Good Ass Job Era/Child Rebel Soldier/Kanye West, Pharrell Williams - Diamonds \u0026 Dollars (2009)_UNRELEAED.mp3"
                        },
                        {
                            "title":  "Paris Tokyo remix (feat. Q-Tip \u0026 Sarah Green)",
-                           "file":  "music/God Ass Job Era/Child Rebel Soldier/Lupe Fiasco-Paris Tokyo remix Ft. Pharrell,Q-Tip,Sarah Green-yt.savetube.me.mp3"
+                           "file":  "music/Good Ass Job Era/Child Rebel Soldier/Lupe Fiasco-Paris Tokyo remix Ft. Pharrell,Q-Tip,Sarah Green-yt.savetube.me.mp3"
                        },
                        {
                            "title":  "Everyone Nose",
-                           "file":  "music/God Ass Job Era/Child Rebel Soldier/NERD- everyone nose remix ft kanye west, lupe fiasco-yt.savetube.me.mp3"
+                           "file":  "music/Good Ass Job Era/Child Rebel Soldier/NERD- everyone nose remix ft kanye west, lupe fiasco-yt.savetube.me.mp3"
                        },
                        {
                            "title":  "Number One",
-                           "file":  "music/God Ass Job Era/Child Rebel Soldier/Number One-yt.savetube.me.mp3"
+                           "file":  "music/Good Ass Job Era/Child Rebel Soldier/Number One-yt.savetube.me.mp3"
                        }
                    ]
     },
     {
-        "id":  "god-ass-job-era-good-ass-job",
+        "id":  "good-ass-job-era-good-ass-job",
         "title":  "Good Ass Job",
-        "era":  "God Ass Job Era",
-        "year":  "God Ass Job",
+        "era":  "Good Ass Job Era",
+        "year":  "Good Ass Job",
         "accent":  "#111111",
-        "notes":  "ARCHIVE / God Ass Job Era",
+        "notes":  "ARCHIVE / Good Ass Job Era",
         "tracks":  [
                        {
                            "title":  "Crazy Life",
-                           "file":  "music/God Ass Job Era/Good Ass Job/Crazy_Life_V1.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job/Crazy_Life_V1.mp3"
                        },
                        {
                            "title":  "Down Town (feat. Jeff Bhasker)",
-                           "file":  "music/God Ass Job Era/Good Ass Job/Down_Town_V3.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job/Down_Town_V3.mp3"
                        },
                        {
                            "title":  "Eyes Closed (feat. John Legend)",
-                           "file":  "music/God Ass Job Era/Good Ass Job/Eyes_Closed_V2.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job/Eyes_Closed_V2.mp3"
                        },
                        {
                            "title":  "Flashing Lights 2 (feat. Charlie Wilson)",
-                           "file":  "music/God Ass Job Era/Good Ass Job/Flashing Lights 2 (feat. Charlie Wilson).mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job/Flashing Lights 2 (feat. Charlie Wilson).mp3"
                        },
                        {
                            "title":  "Ghetto University (feat. Kid Cudi)",
-                           "file":  "music/God Ass Job Era/Good Ass Job/Ghetto_University_V18.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job/Ghetto_University_V18.mp3"
                        },
                        {
                            "title":  "Flight School (feat. GLC \u0026 T-Pain)",
-                           "file":  "music/God Ass Job Era/Good Ass Job/GLC_Flight_School.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job/GLC_Flight_School.mp3"
                        },
                        {
                            "title":  "Gorgeous (feat. Kid Cudi)",
-                           "file":  "music/God Ass Job Era/Good Ass Job/Gorgeous_V5.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job/Gorgeous_V5.mp3"
                        },
                        {
                            "title":  "Hard Horn Nightmare (feat. The WRLDFMS Tony Williams \u0026 Connie Mitchell)",
-                           "file":  "music/God Ass Job Era/Good Ass Job/Hard_Horn_Nightmare_V6.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job/Hard_Horn_Nightmare_V6.mp3"
                        },
                        {
                            "title":  "Heartbreakers",
-                           "file":  "music/God Ass Job Era/Good Ass Job/Heartbreaker_V4.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job/Heartbreaker_V4.mp3"
                        },
                        {
                            "title":  "Hell Of A Life",
-                           "file":  "music/God Ass Job Era/Good Ass Job/Hell_Of_A_Life_V1.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job/Hell_Of_A_Life_V1.mp3"
                        },
                        {
                            "title":  "Dark Fantasy Higher",
-                           "file":  "music/God Ass Job Era/Good Ass Job/Higher_V2.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job/Higher_V2.mp3"
                        },
                        {
                            "title":  "Holding Me Back",
-                           "file":  "music/God Ass Job Era/Good Ass Job/Holding_Me_Back.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job/Holding_Me_Back.mp3"
                        },
                        {
                            "title":  "I\u0027ll Be Alright",
-                           "file":  "music/God Ass Job Era/Good Ass Job/I_ll_Be_Alright_V1.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job/I_ll_Be_Alright_V1.mp3"
                        },
                        {
                            "title":  "Ice Cube",
-                           "file":  "music/God Ass Job Era/Good Ass Job/Ice_Cube.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job/Ice_Cube.mp3"
                        },
                        {
                            "title":  "Take One For The Team (featt. Keri Hilson, Pusha T \u0026 Cyhi The Prynce)-yt.savetube.me",
-                           "file":  "music/God Ass Job Era/Good Ass Job/Kanye West - Take One For The Team (ft. Keri Hilson, Pusha T \u0026 Cyhi The Prynce)-yt.savetube.me.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job/Kanye West - Take One For The Team (ft. Keri Hilson, Pusha T \u0026 Cyhi The Prynce)-yt.savetube.me.mp3"
                        },
                        {
                            "title":  "Lonely",
-                           "file":  "music/God Ass Job Era/Good Ass Job/Lonely_V1.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job/Lonely_V1.mp3"
                        },
                        {
                            "title":  "Lost In The World (feat. Bon Iver, Charlie Wilson, The WRLDFMS Tony Williams \u0026 La Roux)",
-                           "file":  "music/God Ass Job Era/Good Ass Job/Lost_In_The_World_V2.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job/Lost_In_The_World_V2.mp3"
                        },
                        {
                            "title":  "Mama\u0027s Boy",
-                           "file":  "music/God Ass Job Era/Good Ass Job/Mama_s_Boy_V4.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job/Mama_s_Boy_V4.mp3"
                        },
                        {
                            "title":  "Never See Me Again",
-                           "file":  "music/God Ass Job Era/Good Ass Job/Never See Me Again.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job/Never See Me Again.mp3"
                        },
                        {
                            "title":  "No Parties In LA (feat. Mr Hudson \u0026 Elly Jackson)",
-                           "file":  "music/God Ass Job Era/Good Ass Job/No_Parties_In_LA_V1.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job/No_Parties_In_LA_V1.mp3"
                        },
                        {
                            "title":  "Power (feat. Dwele)",
-                           "file":  "music/God Ass Job Era/Good Ass Job/Power_V7.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job/Power_V7.mp3"
                        },
                        {
                            "title":  "Run away (feat. Pusha T \u0026 The WRLDFMS Tony Williams)",
-                           "file":  "music/God Ass Job Era/Good Ass Job/Runaway_V51.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job/Runaway_V51.mp3"
                        },
                        {
                            "title":  "White Dress",
-                           "file":  "music/God Ass Job Era/Good Ass Job/RZA_White_Dress_V2.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job/RZA_White_Dress_V2.mp3"
                        },
                        {
                            "title":  "Shoot Up The Station (feat. Bon Iver \u0026 Santigold)",
-                           "file":  "music/God Ass Job Era/Good Ass Job/Shoot_Up_The_Station_V1.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job/Shoot_Up_The_Station_V1.mp3"
                        },
                        {
                            "title":  "So Appalled (feat. Pusha T, RZA \u0026 CyHi)",
-                           "file":  "music/God Ass Job Era/Good Ass Job/So_Appalled_V6.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job/So_Appalled_V6.mp3"
                        },
                        {
                            "title":  "Takin\u0027 Off",
-                           "file":  "music/God Ass Job Era/Good Ass Job/Supernova_V2.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job/Supernova_V2.mp3"
                        },
                        {
                            "title":  "Sweat On My Face",
-                           "file":  "music/God Ass Job Era/Good Ass Job/Sweat_On_My_Face_V1.mp3"
-                       },
-                       {
-                           "title":  "The Joy (feat. Curtis Mayfield, Kid Cudi \u0026 Pete Rock)",
-                           "file":  "music/God Ass Job Era/Good Ass Job/The_Joy_V4.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job/Sweat_On_My_Face_V1.mp3"
                        },
                        {
                            "title":  "Throw Money Everywhere",
-                           "file":  "music/God Ass Job Era/Good Ass Job/Throw_Money_Everywhere_V3.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job/Throw_Money_Everywhere_V3.mp3"
                        }
                    ]
     },
     {
-        "id":  "god-ass-job-era-good-ass-job-early",
+        "id":  "good-ass-job-era-good-ass-job-early",
         "title":  "Good Ass Job (Early)",
-        "era":  "God Ass Job Era",
-        "year":  "God Ass Job",
+        "era":  "Good Ass Job Era",
+        "year":  "Good Ass Job",
         "accent":  "#111111",
-        "notes":  "ARCHIVE / God Ass Job Era",
+        "notes":  "ARCHIVE / Good Ass Job Era",
         "tracks":  [
                        {
                            "title":  "Give It All Away ",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Early)/Give_It_All_Away_V2.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Early)/Give_It_All_Away_V2.mp3"
                        },
                        {
                            "title":  "Live Fast, Die Yung",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Early)/Hard_Horn_Nightmare_V5.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Early)/Hard_Horn_Nightmare_V5.mp3"
                        },
                        {
                            "title":  "Heartbreaker ",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Early)/Heartbreaker_V3.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Early)/Heartbreaker_V3.mp3"
                        },
                        {
                            "title":  "Hell Of A Life ",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Early)/Hell_Of_A_Life_V1.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Early)/Hell_Of_A_Life_V1.mp3"
                        },
                        {
                            "title":  "Dark Fantasy ",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Early)/Higher_V1.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Early)/Higher_V1.mp3"
                        },
                        {
                            "title":  "Lost In The World ",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Early)/Lost_In_The_World_V3.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Early)/Lost_In_The_World_V3.mp3"
                        },
                        {
                            "title":  "Mama\u0027s Boy ",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Early)/Mama_s_Boy_V5.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Early)/Mama_s_Boy_V5.mp3"
                        },
                        {
                            "title":  "Monster ",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Early)/Monster_V3.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Early)/Monster_V3.mp3"
                        },
                        {
                            "title":  "Runaway ",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Early)/Runaway_V51.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Early)/Runaway_V51.mp3"
                        },
                        {
                            "title":  "The Joy",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Early)/The_Joy_V4.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Early)/The_Joy_V4.mp3"
                        }
                    ]
     },
     {
-        "id":  "god-ass-job-era-good-ass-job-pre-my-dark-twisted-fantasy",
+        "id":  "good-ass-job-era-good-ass-job-pre-my-dark-twisted-fantasy",
         "title":  "Good Ass Job (Pre My Dark Twisted Fantasy)",
-        "era":  "God Ass Job Era",
-        "year":  "God Ass Job",
+        "era":  "Good Ass Job Era",
+        "year":  "Good Ass Job",
         "accent":  "#111111",
-        "notes":  "ARCHIVE / God Ass Job Era",
+        "notes":  "ARCHIVE / Good Ass Job Era",
         "tracks":  [
                        {
                            "title":  "Hell of a Life",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Pre My Dark Twisted Fantasy)/1 Hell of a Life HW.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Pre My Dark Twisted Fantasy)/1 Hell of a Life HW.mp3"
                        },
                        {
                            "title":  "Monster",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Pre My Dark Twisted Fantasy)/10 Monster HW.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Pre My Dark Twisted Fantasy)/10 Monster HW.mp3"
                        },
                        {
                            "title":  "Holding Me Back",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Pre My Dark Twisted Fantasy)/11 Holding Me Back HW.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Pre My Dark Twisted Fantasy)/11 Holding Me Back HW.mp3"
                        },
                        {
                            "title":  "Devil in a New Dress",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Pre My Dark Twisted Fantasy)/12 Devil in a New Dress HW.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Pre My Dark Twisted Fantasy)/12 Devil in a New Dress HW.mp3"
                        },
                        {
                            "title":  "The Joy",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Pre My Dark Twisted Fantasy)/13 The Joy HW.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Pre My Dark Twisted Fantasy)/13 The Joy HW.mp3"
                        },
                        {
                            "title":  "So Appauled",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Pre My Dark Twisted Fantasy)/14 So Appauled HW.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Pre My Dark Twisted Fantasy)/14 So Appauled HW.mp3"
                        },
                        {
                            "title":  "Blame Game",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Pre My Dark Twisted Fantasy)/15 Blame Game HW .mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Pre My Dark Twisted Fantasy)/15 Blame Game HW .mp3"
                        },
                        {
                            "title":  "Sweat on My Face",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Pre My Dark Twisted Fantasy)/16 Sweat on My Face HW.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Pre My Dark Twisted Fantasy)/16 Sweat on My Face HW.mp3"
                        },
                        {
                            "title":  "Dark Fantasy",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Pre My Dark Twisted Fantasy)/2 Dark Fantasy HW.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Pre My Dark Twisted Fantasy)/2 Dark Fantasy HW.mp3"
                        },
                        {
                            "title":  "Power",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Pre My Dark Twisted Fantasy)/3 Power HW.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Pre My Dark Twisted Fantasy)/3 Power HW.mp3"
                        },
                        {
                            "title":  "Chain Heavy",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Pre My Dark Twisted Fantasy)/4 Chain Heavy HW.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Pre My Dark Twisted Fantasy)/4 Chain Heavy HW.mp3"
                        },
                        {
                            "title":  "Ghetto University",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Pre My Dark Twisted Fantasy)/5 Ghetto University HW.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Pre My Dark Twisted Fantasy)/5 Ghetto University HW.mp3"
                        },
                        {
                            "title":  "That\u0027s My Bitch",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Pre My Dark Twisted Fantasy)/6 That_s My Bitch HW.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Pre My Dark Twisted Fantasy)/6 That_s My Bitch HW.mp3"
                        },
                        {
                            "title":  "Runaway",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Pre My Dark Twisted Fantasy)/7 Runaway HW.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Pre My Dark Twisted Fantasy)/7 Runaway HW.mp3"
                        },
                        {
                            "title":  "Lost In the World",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Pre My Dark Twisted Fantasy)/8 Lost In the World HW.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Pre My Dark Twisted Fantasy)/8 Lost In the World HW.mp3"
                        },
                        {
                            "title":  "Gorgeours",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Pre My Dark Twisted Fantasy)/9 Gorgeours HW.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Pre My Dark Twisted Fantasy)/9 Gorgeours HW.mp3"
                        }
                    ]
     },
     {
-        "id":  "god-ass-job-era-good-ass-job-pre-vma-s",
-        "title":  "Good Ass Job (Pre VMAÂ´s)",
-        "era":  "God Ass Job Era",
-        "year":  "God Ass Job",
+        "id":  "good-ass-job-era-good-ass-job-pre-vma-s",
+        "title":  "Good Ass Job (Pre VMA´s)",
+        "era":  "Good Ass Job Era",
+        "year":  "Good Ass Job",
         "accent":  "#111111",
-        "notes":  "ARCHIVE / God Ass Job Era",
+        "notes":  "ARCHIVE / Good Ass Job Era",
         "tracks":  [
                        {
                            "title":  "Armed and Dangerous TRACK INST",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Pre VMAÂ´s)/Armed and Dangerous TRACK INST.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Pre VMA´s)/Armed and Dangerous TRACK INST.mp3"
                        },
                        {
                            "title":  "Choir Sample Try2 92.5BPM RUFF INST",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Pre VMAÂ´s)/Choir Sample Try2 92.5BPM RUFF INST.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Pre VMA´s)/Choir Sample Try2 92.5BPM RUFF INST.mp3"
                        },
                        {
                            "title":  "Dance at Night Horn track RUFF INST",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Pre VMAÂ´s)/Dance at Night Horn track RUFF INST.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Pre VMA´s)/Dance at Night Horn track RUFF INST.mp3"
                        },
                        {
                            "title":  "Give it all away RUFF INST",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Pre VMAÂ´s)/Give it all away RUFF INST.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Pre VMA´s)/Give it all away RUFF INST.mp3"
                        },
                        {
                            "title":  "Hi Beat5 Name Ring RUFF",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Pre VMAÂ´s)/Hi Beat5 Name Ring RUFF.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Pre VMA´s)/Hi Beat5 Name Ring RUFF.mp3"
                        },
                        {
                            "title":  "Higher Ruff INST",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Pre VMAÂ´s)/Higher Ruff INST.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Pre VMA´s)/Higher Ruff INST.mp3"
                        },
                        {
                            "title":  "Hornz Shuffle Groove Track INST RUFF",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Pre VMAÂ´s)/Hornz Shuffle Groove Track INST RUFF.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Pre VMA´s)/Hornz Shuffle Groove Track INST RUFF.mp3"
                        },
                        {
                            "title":  "HypeMeUp RUFF INST",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Pre VMAÂ´s)/HypeMeUp RUFF INST.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Pre VMA´s)/HypeMeUp RUFF INST.mp3"
                        },
                        {
                            "title":  "Lonely INST RUFF",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Pre VMAÂ´s)/Lonely INST RUFF.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Pre VMA´s)/Lonely INST RUFF.mp3"
                        },
                        {
                            "title":  "Make that money sample pitchfix RUFF",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Pre VMAÂ´s)/Make that money sample pitchfix RUFF.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Pre VMA´s)/Make that money sample pitchfix RUFF.mp3"
                        },
                        {
                            "title":  "Ohh Kanye Beat RUFF INST",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Pre VMAÂ´s)/Ohh Kanye Beat RUFF INST.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Pre VMA´s)/Ohh Kanye Beat RUFF INST.mp3"
                        },
                        {
                            "title":  "Ohh Yeah Tellem RUFF",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Pre VMAÂ´s)/Ohh Yeah Tellem RUFF.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Pre VMA´s)/Ohh Yeah Tellem RUFF.mp3"
                        },
                        {
                            "title":  "RUFF 8 Loop 83BPM",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Pre VMAÂ´s)/RUFF 8 Loop 83BPM.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Pre VMA´s)/RUFF 8 Loop 83BPM.mp3"
                        },
                        {
                            "title":  "String Pad Uptempo RUFF INST (1)",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Pre VMAÂ´s)/String Pad Uptempo RUFF INST (1).mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Pre VMA´s)/String Pad Uptempo RUFF INST (1).mp3"
                        },
                        {
                            "title":  "Tellin u Before.6 DRUMS RUFF",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Pre VMAÂ´s)/Tellin u Before.6 DRUMS RUFF.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Pre VMA´s)/Tellin u Before.6 DRUMS RUFF.mp3"
                        },
                        {
                            "title":  "TellinUBefore.12 INST RUFF",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Pre VMAÂ´s)/TellinUBefore.12 INST RUFF.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Pre VMA´s)/TellinUBefore.12 INST RUFF.mp3"
                        },
                        {
                            "title":  "Throw My Money Every RUFF INST",
-                           "file":  "music/God Ass Job Era/Good Ass Job (Pre VMAÂ´s)/Throw My Money Every RUFF INST.mp3"
+                           "file":  "music/Good Ass Job Era/Good Ass Job (Pre VMA´s)/Throw My Money Every RUFF INST.mp3"
                        }
                    ]
     },
     {
-        "id":  "god-ass-job-era-winter-spring-summer-fall",
+        "id":  "good-ass-job-era-winter-spring-summer-fall",
         "title":  "Winter Spring Summer Fall",
-        "era":  "God Ass Job Era",
-        "year":  "God Ass Job",
+        "era":  "Good Ass Job Era",
+        "year":  "Good Ass Job",
         "accent":  "#111111",
-        "notes":  "ARCHIVE / God Ass Job Era",
+        "notes":  "ARCHIVE / Good Ass Job Era",
         "tracks":  [
                        {
                            "title":  "Blame Game",
-                           "file":  "music/God Ass Job Era/Winter Spring Summer Fall/Blame_Game_V2.mp3"
+                           "file":  "music/Good Ass Job Era/Winter Spring Summer Fall/Blame_Game_V2.mp3"
                        },
                        {
                            "title":  "Flashing Lights 2 (feat. Charlie Wilson)",
-                           "file":  "music/God Ass Job Era/Winter Spring Summer Fall/Flashing Lights 2 (feat. Charlie Wilson).mp3"
+                           "file":  "music/Good Ass Job Era/Winter Spring Summer Fall/Flashing Lights 2 (feat. Charlie Wilson).mp3"
                        },
                        {
                            "title":  "Hard Horn Nightmare (feat. The WRLDFMS Tony Williams \u0026 Connie Mitchell)",
-                           "file":  "music/God Ass Job Era/Winter Spring Summer Fall/Hard_Horn_Nightmare_V5.mp3"
+                           "file":  "music/Good Ass Job Era/Winter Spring Summer Fall/Hard_Horn_Nightmare_V5.mp3"
                        },
                        {
                            "title":  "Erase Me (feat. Kanye West)",
-                           "file":  "music/God Ass Job Era/Winter Spring Summer Fall/Kid_Cudi_Erase_Me_V3.mp3"
+                           "file":  "music/Good Ass Job Era/Winter Spring Summer Fall/Kid_Cudi_Erase_Me_V3.mp3"
                        },
                        {
                            "title":  "Mama\u0027s Boy",
-                           "file":  "music/God Ass Job Era/Winter Spring Summer Fall/Mama_s_Boy_V4.mp3"
+                           "file":  "music/Good Ass Job Era/Winter Spring Summer Fall/Mama_s_Boy_V4.mp3"
                        },
                        {
                            "title":  "Not Enough Time",
-                           "file":  "music/God Ass Job Era/Winter Spring Summer Fall/Not_Enough_Time_V1.mp3"
+                           "file":  "music/Good Ass Job Era/Winter Spring Summer Fall/Not_Enough_Time_V1.mp3"
                        },
                        {
                            "title":  "Runaway (feat. Pusha T \u0026 The WRLDFMS Tony Williams)",
-                           "file":  "music/God Ass Job Era/Winter Spring Summer Fall/Runaway_V51.mp3"
+                           "file":  "music/Good Ass Job Era/Winter Spring Summer Fall/Runaway_V51.mp3"
                        },
                        {
                            "title":  "Never See Me Again (feat. Bon Iver, The WRLDFMS Tony Williams, John Legend \u0026 Elly Jackson)",
-                           "file":  "music/God Ass Job Era/Winter Spring Summer Fall/See_Me_V4.mp3"
+                           "file":  "music/Good Ass Job Era/Winter Spring Summer Fall/See_Me_V4.mp3"
                        },
                        {
                            "title":  "Shoot Up The Station (feat. Bon Iver \u0026 Santigold)",
-                           "file":  "music/God Ass Job Era/Winter Spring Summer Fall/Shoot_Up_The_Station_V1.mp3"
+                           "file":  "music/Good Ass Job Era/Winter Spring Summer Fall/Shoot_Up_The_Station_V1.mp3"
                        },
                        {
                            "title":  "Supernova",
-                           "file":  "music/God Ass Job Era/Winter Spring Summer Fall/Supernova_V2.mp3"
+                           "file":  "music/Good Ass Job Era/Winter Spring Summer Fall/Supernova_V2.mp3"
                        },
                        {
                            "title":  "We Fight/We Love (feat. Consequense \u0026 Q Tip)",
-                           "file":  "music/God Ass Job Era/Winter Spring Summer Fall/We Fight_We Love (feat. Kanye West \u0026 Q Tip) (Remix)-yt.savetube.me.mp3"
+                           "file":  "music/Good Ass Job Era/Winter Spring Summer Fall/We Fight_We Love (feat. Kanye West \u0026 Q Tip) (Remix)-yt.savetube.me.mp3"
                        },
                        {
                            "title":  "What It Is ",
-                           "file":  "music/God Ass Job Era/Winter Spring Summer Fall/What_It_Is.mp3"
+                           "file":  "music/Good Ass Job Era/Winter Spring Summer Fall/What_It_Is.mp3"
                        }
                    ]
     },
     {
         "id":  "god-s-country-era-god-s-country",
         "title":  "God_s Country",
-        "era":  "Godâ€™s Country Era",
-        "year":  "Godâ€™s Country",
+        "era":  "God's Country Era",
+        "year":  "God's Country",
         "accent":  "#111111",
-        "notes":  "ARCHIVE / Godâ€™s Country Era",
+        "notes":  "ARCHIVE / God's Country Era",
         "tracks":  [
                        {
                            "title":  "EVAN_mix [12,000 Acres]",
-                           "file":  "music/Godâ€™s Country Era/God_s Country/EVAN_mix [12,000 Acres].mp3"
+                           "file":  "music/God's Country Era/God_s Country/EVAN_mix [12,000 Acres].mp3"
                        },
                        {
                            "title":  "EVAN_mix [Awakening]",
-                           "file":  "music/Godâ€™s Country Era/God_s Country/EVAN_mix [Awakening].mp3"
+                           "file":  "music/God's Country Era/God_s Country/EVAN_mix [Awakening].mp3"
                        },
                        {
                            "title":  "EVAN_mix [Everything]",
-                           "file":  "music/Godâ€™s Country Era/God_s Country/EVAN_mix [Everything].mp3"
+                           "file":  "music/God's Country Era/God_s Country/EVAN_mix [Everything].mp3"
                        },
                        {
                            "title":  "EVAN_mix [Future Sounds]",
-                           "file":  "music/Godâ€™s Country Era/God_s Country/EVAN_mix [Future Sounds].mp3"
+                           "file":  "music/God's Country Era/God_s Country/EVAN_mix [Future Sounds].mp3"
                        },
                        {
                            "title":  "EVAN_mix [God_s Country]",
-                           "file":  "music/Godâ€™s Country Era/God_s Country/EVAN_mix [God_s Country].mp3"
+                           "file":  "music/God's Country Era/God_s Country/EVAN_mix [God_s Country].mp3"
                        },
                        {
                            "title":  "EVAN_mix [I Feel Terrific V1]",
-                           "file":  "music/Godâ€™s Country Era/God_s Country/EVAN_mix [I Feel Terrific V1].mp3"
+                           "file":  "music/God's Country Era/God_s Country/EVAN_mix [I Feel Terrific V1].mp3"
                        },
                        {
                            "title":  "EVAN_mix [Keep My Spirit Alive]",
-                           "file":  "music/Godâ€™s Country Era/God_s Country/EVAN_mix [Keep My Spirit Alive].mp3"
+                           "file":  "music/God's Country Era/God_s Country/EVAN_mix [Keep My Spirit Alive].mp3"
                        },
                        {
                            "title":  "EVAN_mix [Lord I Need You]",
-                           "file":  "music/Godâ€™s Country Era/God_s Country/EVAN_mix [Lord I Need You].mp3"
+                           "file":  "music/God's Country Era/God_s Country/EVAN_mix [Lord I Need You].mp3"
                        },
                        {
                            "title":  "EVAN_mix [Off The Grid]",
-                           "file":  "music/Godâ€™s Country Era/God_s Country/EVAN_mix [Off The Grid].mp3"
+                           "file":  "music/God's Country Era/God_s Country/EVAN_mix [Off The Grid].mp3"
                        },
                        {
                            "title":  "EVAN_mix [Praise God V1]",
-                           "file":  "music/Godâ€™s Country Era/God_s Country/EVAN_mix [Praise God V1].mp3"
+                           "file":  "music/God's Country Era/God_s Country/EVAN_mix [Praise God V1].mp3"
                        },
                        {
                            "title":  "EVAN_mix [Skuuurrr]",
-                           "file":  "music/Godâ€™s Country Era/God_s Country/EVAN_mix [Skuuurrr].mp3"
+                           "file":  "music/God's Country Era/God_s Country/EVAN_mix [Skuuurrr].mp3"
                        },
                        {
                            "title":  "EVAN_mix [Tell The Vision]",
-                           "file":  "music/Godâ€™s Country Era/God_s Country/EVAN_mix [Tell The Vision].mp3"
+                           "file":  "music/God's Country Era/God_s Country/EVAN_mix [Tell The Vision].mp3"
                        },
                        {
                            "title":  "EVAN_mix [Tulsa]",
-                           "file":  "music/Godâ€™s Country Era/God_s Country/EVAN_mix [Tulsa].mp3"
+                           "file":  "music/God's Country Era/God_s Country/EVAN_mix [Tulsa].mp3"
                        },
                        {
                            "title":  "EVAN_mix [Welcome To My Life]",
-                           "file":  "music/Godâ€™s Country Era/God_s Country/EVAN_mix [Welcome To My Life].mp3"
+                           "file":  "music/God's Country Era/God_s Country/EVAN_mix [Welcome To My Life].mp3"
                        }
                    ]
     },
     {
         "id":  "god-s-country-era-god-s-country-jesus-is-king-the-dre-version",
         "title":  "God_s Country (JESUS IS KING THE DRE VERSION)",
-        "era":  "Godâ€™s Country Era",
-        "year":  "Godâ€™s Country",
+        "era":  "God's Country Era",
+        "year":  "God's Country",
         "accent":  "#111111",
-        "notes":  "ARCHIVE / Godâ€™s Country Era",
+        "notes":  "ARCHIVE / God's Country Era",
         "tracks":  [
                        {
                            "title":  "V6",
-                           "file":  "music/Godâ€™s Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/24_V6.mp3"
+                           "file":  "music/God's Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/24_V6.mp3"
                        },
                        {
                            "title":  "Donda_V10",
-                           "file":  "music/Godâ€™s Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/Donda_V10.mp3"
+                           "file":  "music/God's Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/Donda_V10.mp3"
                        },
                        {
                            "title":  "Eternal_Life_V12",
-                           "file":  "music/Godâ€™s Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/Eternal_Life_V12.mp3"
+                           "file":  "music/God's Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/Eternal_Life_V12.mp3"
                        },
                        {
                            "title":  "Fighting_Fires_V10",
-                           "file":  "music/Godâ€™s Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/Fighting_Fires_V10.mp3"
+                           "file":  "music/God's Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/Fighting_Fires_V10.mp3"
                        },
                        {
                            "title":  "Future_Sounds_V14",
-                           "file":  "music/Godâ€™s Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/Future_Sounds_V14.mp3"
+                           "file":  "music/God's Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/Future_Sounds_V14.mp3"
                        },
                        {
                            "title":  "God_s_Country_V5",
-                           "file":  "music/Godâ€™s Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/God_s_Country_V5.mp3"
+                           "file":  "music/God's Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/God_s_Country_V5.mp3"
                        },
                        {
                            "title":  "Home_V8",
-                           "file":  "music/Godâ€™s Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/Home_V8.mp3"
+                           "file":  "music/God's Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/Home_V8.mp3"
                        },
                        {
                            "title":  "Hurricane_V36",
-                           "file":  "music/Godâ€™s Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/Hurricane_V36.mp3"
+                           "file":  "music/God's Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/Hurricane_V36.mp3"
                        },
                        {
                            "title":  "I_Feel_Terrific_V12",
-                           "file":  "music/Godâ€™s Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/I_Feel_Terrific_V12.mp3"
+                           "file":  "music/God's Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/I_Feel_Terrific_V12.mp3"
                        },
                        {
                            "title":  "In_God_s_Country_V5",
-                           "file":  "music/Godâ€™s Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/In_God_s_Country_V5.mp3"
+                           "file":  "music/God's Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/In_God_s_Country_V5.mp3"
                        },
                        {
                            "title":  "Keep_My_Spirit_Alive_V18",
-                           "file":  "music/Godâ€™s Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/Keep_My_Spirit_Alive_V18.mp3"
+                           "file":  "music/God's Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/Keep_My_Spirit_Alive_V18.mp3"
                        },
                        {
                            "title":  "Let_The_Spirit_Go_Wild_V6",
-                           "file":  "music/Godâ€™s Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/Let_The_Spirit_Go_Wild_V6.mp3"
+                           "file":  "music/God's Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/Let_The_Spirit_Go_Wild_V6.mp3"
                        },
                        {
                            "title":  "Lord_I_Need_You_To_Wrap_Your_Arms_Around_Me_V9",
-                           "file":  "music/Godâ€™s Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/Lord_I_Need_You_To_Wrap_Your_Arms_Around_Me_V9.mp3"
+                           "file":  "music/God's Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/Lord_I_Need_You_To_Wrap_Your_Arms_Around_Me_V9.mp3"
                        },
                        {
                            "title":  "Off_The_Grid_V4",
-                           "file":  "music/Godâ€™s Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/Off_The_Grid_V4.mp3"
+                           "file":  "music/God's Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/Off_The_Grid_V4.mp3"
                        },
                        {
                            "title":  "Praise_God_V10",
-                           "file":  "music/Godâ€™s Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/Praise_God_V10.mp3"
+                           "file":  "music/God's Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/Praise_God_V10.mp3"
                        },
                        {
                            "title":  "Pull_Up_Like_Skuuurrr_V3",
-                           "file":  "music/Godâ€™s Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/Pull_Up_Like_Skuuurrr_V3.mp3"
+                           "file":  "music/God's Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/Pull_Up_Like_Skuuurrr_V3.mp3"
                        },
                        {
                            "title":  "Sean_Leon_The_Glade_V21",
-                           "file":  "music/Godâ€™s Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/Sean_Leon_The_Glade_V21.mp3"
+                           "file":  "music/God's Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/Sean_Leon_The_Glade_V21.mp3"
                        },
                        {
                            "title":  "Spread_Your_Wings_Get_Back_V6",
-                           "file":  "music/Godâ€™s Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/Spread_Your_Wings_Get_Back_V6.mp3"
+                           "file":  "music/God's Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/Spread_Your_Wings_Get_Back_V6.mp3"
                        },
                        {
                            "title":  "Tell_The_Vision_V3",
-                           "file":  "music/Godâ€™s Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/Tell_The_Vision_V3.mp3"
+                           "file":  "music/God's Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/Tell_The_Vision_V3.mp3"
                        },
                        {
                            "title":  "This_Is_The_Glory_V6",
-                           "file":  "music/Godâ€™s Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/This_Is_The_Glory_V6.mp3"
+                           "file":  "music/God's Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/This_Is_The_Glory_V6.mp3"
                        },
                        {
                            "title":  "Want_You_V1",
-                           "file":  "music/Godâ€™s Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/Want_You_V1.mp3"
+                           "file":  "music/God's Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/Want_You_V1.mp3"
                        },
                        {
                            "title":  "Wash_Us_In_The_Blood_V15",
-                           "file":  "music/Godâ€™s Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/Wash_Us_In_The_Blood_V15.mp3"
+                           "file":  "music/God's Country Era/God_s Country (JESUS IS KING THE DRE VERSION)/Wash_Us_In_The_Blood_V15.mp3"
                        }
                    ]
     },
     {
         "id":  "god-s-country-era-jesus-is-born",
         "title":  "Jesus Is Born",
-        "era":  "Godâ€™s Country Era",
-        "year":  "Godâ€™s Country",
+        "era":  "God's Country Era",
+        "year":  "God's Country",
         "accent":  "#111111",
-        "notes":  "ARCHIVE / Godâ€™s Country Era",
+        "notes":  "ARCHIVE / God's Country Era",
         "tracks":  [
                        {
                            "title":  "Count Your Blessings",
-                           "file":  "music/Godâ€™s Country Era/Jesus Is Born/01-Count Your Blessings.mp3"
+                           "file":  "music/God's Country Era/Jesus Is Born/01-Count Your Blessings.mp3"
                        },
                        {
                            "title":  "Excellent",
-                           "file":  "music/Godâ€™s Country Era/Jesus Is Born/02-Excellent.mp3"
+                           "file":  "music/God's Country Era/Jesus Is Born/02-Excellent.mp3"
                        },
                        {
                            "title":  "Revelations 19.1",
-                           "file":  "music/Godâ€™s Country Era/Jesus Is Born/03-Revelations 19.1.mp3"
+                           "file":  "music/God's Country Era/Jesus Is Born/03-Revelations 19.1.mp3"
                        },
                        {
                            "title":  "Rain",
-                           "file":  "music/Godâ€™s Country Era/Jesus Is Born/04-Rain.mp3"
+                           "file":  "music/God's Country Era/Jesus Is Born/04-Rain.mp3"
                        },
                        {
                            "title":  "Balm In Gilead",
-                           "file":  "music/Godâ€™s Country Era/Jesus Is Born/05-Balm In Gilead.mp3"
+                           "file":  "music/God's Country Era/Jesus Is Born/05-Balm In Gilead.mp3"
                        },
                        {
                            "title":  "Father Stretch",
-                           "file":  "music/Godâ€™s Country Era/Jesus Is Born/06-Father Stretch.mp3"
+                           "file":  "music/God's Country Era/Jesus Is Born/06-Father Stretch.mp3"
                        },
                        {
                            "title":  "Follow Me ï¼ Faith",
-                           "file":  "music/Godâ€™s Country Era/Jesus Is Born/07-Follow Me ï¼ Faith.mp3"
+                           "file":  "music/God's Country Era/Jesus Is Born/07-Follow Me ï¼ Faith.mp3"
                        },
                        {
                            "title":  "Ultralight Beam",
-                           "file":  "music/Godâ€™s Country Era/Jesus Is Born/08-Ultralight Beam.mp3"
+                           "file":  "music/God's Country Era/Jesus Is Born/08-Ultralight Beam.mp3"
                        },
                        {
                            "title":  "Lift Up Your Voices",
-                           "file":  "music/Godâ€™s Country Era/Jesus Is Born/09-Lift Up Your Voices.mp3"
+                           "file":  "music/God's Country Era/Jesus Is Born/09-Lift Up Your Voices.mp3"
                        },
                        {
                            "title":  "More Than Anything",
-                           "file":  "music/Godâ€™s Country Era/Jesus Is Born/10-More Than Anything.mp3"
+                           "file":  "music/God's Country Era/Jesus Is Born/10-More Than Anything.mp3"
                        },
                        {
                            "title":  "Weak",
-                           "file":  "music/Godâ€™s Country Era/Jesus Is Born/11-Weak.mp3"
+                           "file":  "music/God's Country Era/Jesus Is Born/11-Weak.mp3"
                        },
                        {
                            "title":  "That_s How The Good Lord Works",
-                           "file":  "music/Godâ€™s Country Era/Jesus Is Born/12-That_s How The Good Lord Works.mp3"
+                           "file":  "music/God's Country Era/Jesus Is Born/12-That_s How The Good Lord Works.mp3"
                        },
                        {
                            "title":  "Sunshine",
-                           "file":  "music/Godâ€™s Country Era/Jesus Is Born/13-Sunshine.mp3"
+                           "file":  "music/God's Country Era/Jesus Is Born/13-Sunshine.mp3"
                        },
                        {
                            "title":  "Back To Life",
-                           "file":  "music/Godâ€™s Country Era/Jesus Is Born/14-Back To Life.mp3"
+                           "file":  "music/God's Country Era/Jesus Is Born/14-Back To Life.mp3"
                        },
                        {
                            "title":  "Souls Anchored",
-                           "file":  "music/Godâ€™s Country Era/Jesus Is Born/15-Souls Anchored.mp3"
+                           "file":  "music/God's Country Era/Jesus Is Born/15-Souls Anchored.mp3"
                        },
                        {
                            "title":  "Sweet Grace",
-                           "file":  "music/Godâ€™s Country Era/Jesus Is Born/16-Sweet Grace.mp3"
+                           "file":  "music/God's Country Era/Jesus Is Born/16-Sweet Grace.mp3"
                        },
                        {
                            "title":  "Paradise",
-                           "file":  "music/Godâ€™s Country Era/Jesus Is Born/17-Paradise.mp3"
+                           "file":  "music/God's Country Era/Jesus Is Born/17-Paradise.mp3"
                        },
                        {
                            "title":  "Satan, We_re Gonna Tear Your Kingdom Down",
-                           "file":  "music/Godâ€™s Country Era/Jesus Is Born/18-Satan, We_re Gonna Tear Your Kingdom Down.mp3"
+                           "file":  "music/God's Country Era/Jesus Is Born/18-Satan, We_re Gonna Tear Your Kingdom Down.mp3"
                        },
                        {
                            "title":  "Total Praise",
-                           "file":  "music/Godâ€™s Country Era/Jesus Is Born/19-Total Praise.mp3"
+                           "file":  "music/God's Country Era/Jesus Is Born/19-Total Praise.mp3"
                        }
                    ]
     },
     {
         "id":  "god-s-country-era-jesus-is-king-the-dr-dre-version",
         "title":  "JESUS IS KING The Dr. Dre Version",
-        "era":  "Godâ€™s Country Era",
-        "year":  "Godâ€™s Country",
+        "era":  "God's Country Era",
+        "year":  "God's Country",
         "accent":  "#111111",
-        "notes":  "ARCHIVE / Godâ€™s Country Era",
+        "notes":  "ARCHIVE / God's Country Era",
         "tracks":  [
                        {
                            "title":  "Intro_Every Hour_Selah RE1 4.4 Final Main_4424_27FEB2020",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS KING The Dr. Dre Version/01 Intro_Every Hour_Selah RE1 4.4 Final Main_4424_27FEB2020.mp3"
+                           "file":  "music/God's Country Era/JESUS IS KING The Dr. Dre Version/01 Intro_Every Hour_Selah RE1 4.4 Final Main_4424_27FEB2020.mp3"
                        },
                        {
                            "title":  "LA Monster 01JUL2020",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS KING The Dr. Dre Version/02 LA Monster 01JUL2020.mp3"
+                           "file":  "music/God's Country Era/JESUS IS KING The Dr. Dre Version/02 LA Monster 01JUL2020.mp3"
                        },
                        {
                            "title":  "Water (Remix) RE4 3.8 Main_4424_04MAR2020",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS KING The Dr. Dre Version/03 Water (Remix) RE4 3.8 Main_4424_04MAR2020.mp3"
+                           "file":  "music/God's Country Era/JESUS IS KING The Dr. Dre Version/03 Water (Remix) RE4 3.8 Main_4424_04MAR2020.mp3"
                        },
                        {
                            "title":  "Closed On Sunday (Remix) RE2 3.5 Main_4424_24FEB2020",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS KING The Dr. Dre Version/04 Closed On Sunday (Remix) RE2 3.5 Main_4424_24FEB2020.mp3"
+                           "file":  "music/God's Country Era/JESUS IS KING The Dr. Dre Version/04 Closed On Sunday (Remix) RE2 3.5 Main_4424_24FEB2020.mp3"
                        },
                        {
                            "title":  "On God (Remix) 02DEC2019",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS KING The Dr. Dre Version/05 On God (Remix) 02DEC2019.mp3"
+                           "file":  "music/God's Country Era/JESUS IS KING The Dr. Dre Version/05 On God (Remix) 02DEC2019.mp3"
                        },
                        {
                            "title":  "Hands On (Remix) 3.2 Main_4424_02MAR2020",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS KING The Dr. Dre Version/06 Hands On (Remix) 3.2 Main_4424_02MAR2020.mp3"
+                           "file":  "music/God's Country Era/JESUS IS KING The Dr. Dre Version/06 Hands On (Remix) 3.2 Main_4424_02MAR2020.mp3"
                        },
                        {
                            "title":  "Everything We Need (Remix) RE2 2.1 Main_4424_02MAR2020",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS KING The Dr. Dre Version/07 Everything We Need (Remix) RE2 2.1 Main_4424_02MAR2020.mp3"
+                           "file":  "music/God's Country Era/JESUS IS KING The Dr. Dre Version/07 Everything We Need (Remix) RE2 2.1 Main_4424_02MAR2020.mp3"
                        },
                        {
                            "title":  "Ashes (Remix) 3.8 Main_4424_05MAR2020",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS KING The Dr. Dre Version/08 Ashes (Remix) 3.8 Main_4424_05MAR2020.mp3"
+                           "file":  "music/God's Country Era/JESUS IS KING The Dr. Dre Version/08 Ashes (Remix) 3.8 Main_4424_05MAR2020.mp3"
                        },
                        {
                            "title":  "Use This Gospel (Remix) RE2 3.8_MAIN",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS KING The Dr. Dre Version/10 Use This Gospel (Remix) RE2 3.8_MAIN.mp3"
+                           "file":  "music/God's Country Era/JESUS IS KING The Dr. Dre Version/10 Use This Gospel (Remix) RE2 3.8_MAIN.mp3"
                        },
                        {
                            "title":  "God Is (Remix) 3.1 Main_4424_02MAR2020",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS KING The Dr. Dre Version/9 God Is (Remix) 3.1 Main_4424_02MAR2020.mp3"
+                           "file":  "music/God's Country Era/JESUS IS KING The Dr. Dre Version/9 God Is (Remix) 3.1 Main_4424_02MAR2020.mp3"
                        },
                        {
                            "title":  "Dr_DreKanye_West_-_Follow_God",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS KING The Dr. Dre Version/Dr_DreKanye_West_-_Follow_God.mp3"
+                           "file":  "music/God's Country Era/JESUS IS KING The Dr. Dre Version/Dr_DreKanye_West_-_Follow_God.mp3"
                        }
                    ]
     },
     {
         "id":  "god-s-country-era-jesus-is-lord",
         "title":  "JESUS IS LORD",
-        "era":  "Godâ€™s Country Era",
-        "year":  "Godâ€™s Country",
+        "era":  "God's Country Era",
+        "year":  "God's Country",
         "accent":  "#111111",
-        "notes":  "ARCHIVE / Godâ€™s Country Era",
+        "notes":  "ARCHIVE / God's Country Era",
         "tracks":  [
                        {
                            "title":  "Hours_V4",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS LORD/24_Hours_V4.mp3"
+                           "file":  "music/God's Country Era/JESUS IS LORD/24_Hours_V4.mp3"
                        },
                        {
                            "title":  "Closed_On_Sunday_V24",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS LORD/Closed_On_Sunday_V24.mp3"
+                           "file":  "music/God's Country Era/JESUS IS LORD/Closed_On_Sunday_V24.mp3"
                        },
                        {
                            "title":  "Glory_V2",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS LORD/Glory_V2.mp3"
+                           "file":  "music/God's Country Era/JESUS IS LORD/Glory_V2.mp3"
                        },
                        {
                            "title":  "God_s_Country_V5",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS LORD/God_s_Country_V5.mp3"
+                           "file":  "music/God's Country Era/JESUS IS LORD/God_s_Country_V5.mp3"
                        },
                        {
                            "title":  "Keep_My_Spirit_Alive_V18",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS LORD/Keep_My_Spirit_Alive_V18.mp3"
+                           "file":  "music/God's Country Era/JESUS IS LORD/Keep_My_Spirit_Alive_V18.mp3"
                        },
                        {
                            "title":  "Lord_I_Need_You_To_Wrap_Your_Arms_Around_Me_V5",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS LORD/Lord_I_Need_You_To_Wrap_Your_Arms_Around_Me_V5.mp3"
+                           "file":  "music/God's Country Era/JESUS IS LORD/Lord_I_Need_You_To_Wrap_Your_Arms_Around_Me_V5.mp3"
                        },
                        {
                            "title":  "Our_King_V1",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS LORD/Our_King_V1.mp3"
+                           "file":  "music/God's Country Era/JESUS IS LORD/Our_King_V1.mp3"
                        },
                        {
                            "title":  "Sean_Leon_The_Glade_V18",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS LORD/Sean_Leon_The_Glade_V18.mp3"
+                           "file":  "music/God's Country Era/JESUS IS LORD/Sean_Leon_The_Glade_V18.mp3"
                        },
                        {
                            "title":  "This_Is_The_Glory_V5",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS LORD/This_Is_The_Glory_V5.mp3"
+                           "file":  "music/God's Country Era/JESUS IS LORD/This_Is_The_Glory_V5.mp3"
                        },
                        {
                            "title":  "Use_This_Gospel_V25",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS LORD/Use_This_Gospel_V25.mp3"
+                           "file":  "music/God's Country Era/JESUS IS LORD/Use_This_Gospel_V25.mp3"
                        },
                        {
                            "title":  "Wash_Us_In_The_Blood_V14",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS LORD/Wash_Us_In_The_Blood_V14.mp3"
+                           "file":  "music/God's Country Era/JESUS IS LORD/Wash_Us_In_The_Blood_V14.mp3"
                        },
                        {
                            "title":  "Water_V15",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS LORD/Water_V15.mp3"
+                           "file":  "music/God's Country Era/JESUS IS LORD/Water_V15.mp3"
                        },
                        {
                            "title":  "Welcome_To_My_Life_V3",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS LORD/Welcome_To_My_Life_V3.mp3"
+                           "file":  "music/God's Country Era/JESUS IS LORD/Welcome_To_My_Life_V3.mp3"
                        }
                    ]
     },
     {
         "id":  "god-s-country-era-jesus-is-lord-early",
         "title":  "JESUS IS LORD (Early)",
-        "era":  "Godâ€™s Country Era",
-        "year":  "Godâ€™s Country",
+        "era":  "God's Country Era",
+        "year":  "God's Country",
         "accent":  "#111111",
-        "notes":  "ARCHIVE / Godâ€™s Country Era",
+        "notes":  "ARCHIVE / God's Country Era",
         "tracks":  [
                        {
                            "title":  "000_Acres_V11",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS LORD (Early)/12_000_Acres_V11.mp3"
+                           "file":  "music/God's Country Era/JESUS IS LORD (Early)/12_000_Acres_V11.mp3"
                        },
                        {
                            "title":  "All_Praises_Due_Him_V2",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS LORD (Early)/All_Praises_Due_Him_V2.mp3"
+                           "file":  "music/God's Country Era/JESUS IS LORD (Early)/All_Praises_Due_Him_V2.mp3"
                        },
                        {
                            "title":  "Awakening_V2",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS LORD (Early)/Awakening_V2.mp3"
+                           "file":  "music/God's Country Era/JESUS IS LORD (Early)/Awakening_V2.mp3"
                        },
                        {
                            "title":  "Eternal_Life_V13",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS LORD (Early)/Eternal_Life_V13.mp3"
+                           "file":  "music/God's Country Era/JESUS IS LORD (Early)/Eternal_Life_V13.mp3"
                        },
                        {
                            "title":  "Fighting_Fires_V7",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS LORD (Early)/Fighting_Fires_V7.mp3"
+                           "file":  "music/God's Country Era/JESUS IS LORD (Early)/Fighting_Fires_V7.mp3"
                        },
                        {
                            "title":  "FreeDem_V6",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS LORD (Early)/FreeDem_V6.mp3"
+                           "file":  "music/God's Country Era/JESUS IS LORD (Early)/FreeDem_V6.mp3"
                        },
                        {
                            "title":  "Future_Bounce_V12",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS LORD (Early)/Future_Bounce_V12.mp3"
+                           "file":  "music/God's Country Era/JESUS IS LORD (Early)/Future_Bounce_V12.mp3"
                        },
                        {
                            "title":  "He_Gave_It_All_V4",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS LORD (Early)/He_Gave_It_All_V4.mp3"
+                           "file":  "music/God's Country Era/JESUS IS LORD (Early)/He_Gave_It_All_V4.mp3"
                        },
                        {
                            "title":  "Let_The_Spirit_Go_Wild_V3",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS LORD (Early)/Let_The_Spirit_Go_Wild_V3.mp3"
+                           "file":  "music/God's Country Era/JESUS IS LORD (Early)/Let_The_Spirit_Go_Wild_V3.mp3"
                        },
                        {
                            "title":  "Lord_I_Need_You_V12",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS LORD (Early)/Lord_I_Need_You_V12.mp3"
+                           "file":  "music/God's Country Era/JESUS IS LORD (Early)/Lord_I_Need_You_V12.mp3"
                        },
                        {
                            "title":  "Palm_Springs_V1",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS LORD (Early)/Palm_Springs_V1.mp3"
+                           "file":  "music/God's Country Era/JESUS IS LORD (Early)/Palm_Springs_V1.mp3"
                        },
                        {
                            "title":  "Prayed_Up_V1",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS LORD (Early)/Prayed_Up_V1.mp3"
+                           "file":  "music/God's Country Era/JESUS IS LORD (Early)/Prayed_Up_V1.mp3"
                        },
                        {
                            "title":  "Sinner_V2",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS LORD (Early)/Sinner_V2.mp3"
+                           "file":  "music/God's Country Era/JESUS IS LORD (Early)/Sinner_V2.mp3"
                        },
                        {
                            "title":  "Spotlight_V10",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS LORD (Early)/Spotlight_V10.mp3"
+                           "file":  "music/God's Country Era/JESUS IS LORD (Early)/Spotlight_V10.mp3"
                        },
                        {
                            "title":  "Tulsa_V1",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS LORD (Early)/Tulsa_V1.mp3"
+                           "file":  "music/God's Country Era/JESUS IS LORD (Early)/Tulsa_V1.mp3"
                        },
                        {
                            "title":  "Wash_Us_In_The_Blood_V2",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS LORD (Early)/Wash_Us_In_The_Blood_V2.mp3"
+                           "file":  "music/God's Country Era/JESUS IS LORD (Early)/Wash_Us_In_The_Blood_V2.mp3"
                        }
                    ]
     },
     {
         "id":  "god-s-country-era-jesus-is-lord-pre-god-s-country",
         "title":  "JESUS IS LORD (Pre God_s Country)",
-        "era":  "Godâ€™s Country Era",
-        "year":  "Godâ€™s Country",
+        "era":  "God's Country Era",
+        "year":  "God's Country",
         "accent":  "#111111",
-        "notes":  "ARCHIVE / Godâ€™s Country Era",
+        "notes":  "ARCHIVE / God's Country Era",
         "tracks":  [
                        {
                            "title":  "V6",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS LORD (Pre God_s Country)/24_V6.mp3"
+                           "file":  "music/God's Country Era/JESUS IS LORD (Pre God_s Country)/24_V6.mp3"
                        },
                        {
                            "title":  "God_s_Country_V5",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS LORD (Pre God_s Country)/God_s_Country_V5.mp3"
+                           "file":  "music/God's Country Era/JESUS IS LORD (Pre God_s Country)/God_s_Country_V5.mp3"
                        },
                        {
                            "title":  "Keep_My_Spirit_Alive_V18",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS LORD (Pre God_s Country)/Keep_My_Spirit_Alive_V18.mp3"
+                           "file":  "music/God's Country Era/JESUS IS LORD (Pre God_s Country)/Keep_My_Spirit_Alive_V18.mp3"
                        },
                        {
                            "title":  "Lord_I_Need_You_To_Wrap_Your_Arms_Around_Me_V9",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS LORD (Pre God_s Country)/Lord_I_Need_You_To_Wrap_Your_Arms_Around_Me_V9.mp3"
+                           "file":  "music/God's Country Era/JESUS IS LORD (Pre God_s Country)/Lord_I_Need_You_To_Wrap_Your_Arms_Around_Me_V9.mp3"
                        },
                        {
                            "title":  "Off_The_Grid_V2",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS LORD (Pre God_s Country)/Off_The_Grid_V2.mp3"
+                           "file":  "music/God's Country Era/JESUS IS LORD (Pre God_s Country)/Off_The_Grid_V2.mp3"
                        },
                        {
                            "title":  "Our_King_V1",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS LORD (Pre God_s Country)/Our_King_V1.mp3"
+                           "file":  "music/God's Country Era/JESUS IS LORD (Pre God_s Country)/Our_King_V1.mp3"
                        },
                        {
                            "title":  "Skuuurrruurrr_V1",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS LORD (Pre God_s Country)/Skuuurrruurrr_V1.mp3"
+                           "file":  "music/God's Country Era/JESUS IS LORD (Pre God_s Country)/Skuuurrruurrr_V1.mp3"
                        },
                        {
                            "title":  "Tell_The_Vision_V3",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS LORD (Pre God_s Country)/Tell_The_Vision_V3.mp3"
+                           "file":  "music/God's Country Era/JESUS IS LORD (Pre God_s Country)/Tell_The_Vision_V3.mp3"
                        },
                        {
                            "title":  "Welcome_To_My_Life_V4",
-                           "file":  "music/Godâ€™s Country Era/JESUS IS LORD (Pre God_s Country)/Welcome_To_My_Life_V4.mp3"
+                           "file":  "music/God's Country Era/JESUS IS LORD (Pre God_s Country)/Welcome_To_My_Life_V4.mp3"
                        }
                    ]
     },
     {
         "id":  "god-s-country-era-nebuchadnezzar-a-kanye-west-opera",
         "title":  "Nebuchadnezzar A Kanye West Opera",
-        "era":  "Godâ€™s Country Era",
-        "year":  "Godâ€™s Country",
+        "era":  "God's Country Era",
+        "year":  "God's Country",
         "accent":  "#111111",
-        "notes":  "ARCHIVE / Godâ€™s Country Era",
+        "notes":  "ARCHIVE / God's Country Era",
         "tracks":  [
                        {
                            "title":  "Our King I",
-                           "file":  "music/Godâ€™s Country Era/Nebuchadnezzar A Kanye West Opera/01 Our King I.mp3"
+                           "file":  "music/God's Country Era/Nebuchadnezzar A Kanye West Opera/01 Our King I.mp3"
                        },
                        {
                            "title":  "Say You Will",
-                           "file":  "music/Godâ€™s Country Era/Nebuchadnezzar A Kanye West Opera/02 Say You Will.mp3"
+                           "file":  "music/God's Country Era/Nebuchadnezzar A Kanye West Opera/02 Say You Will.mp3"
                        },
                        {
                            "title":  "Eternal Rest",
-                           "file":  "music/Godâ€™s Country Era/Nebuchadnezzar A Kanye West Opera/03 Eternal Rest.mp3"
+                           "file":  "music/God's Country Era/Nebuchadnezzar A Kanye West Opera/03 Eternal Rest.mp3"
                        },
                        {
                            "title":  "Mo Bamba",
-                           "file":  "music/Godâ€™s Country Era/Nebuchadnezzar A Kanye West Opera/04 Mo Bamba.mp3"
+                           "file":  "music/God's Country Era/Nebuchadnezzar A Kanye West Opera/04 Mo Bamba.mp3"
                        },
                        {
                            "title":  "Wash Us in the Blood",
-                           "file":  "music/Godâ€™s Country Era/Nebuchadnezzar A Kanye West Opera/05 Wash Us in the Blood.mp3"
+                           "file":  "music/God's Country Era/Nebuchadnezzar A Kanye West Opera/05 Wash Us in the Blood.mp3"
                        },
                        {
                            "title":  "12,000 Acres",
-                           "file":  "music/Godâ€™s Country Era/Nebuchadnezzar A Kanye West Opera/06 12,000 Acres.mp3"
+                           "file":  "music/God's Country Era/Nebuchadnezzar A Kanye West Opera/06 12,000 Acres.mp3"
                        },
                        {
                            "title":  "Infinity Song",
-                           "file":  "music/Godâ€™s Country Era/Nebuchadnezzar A Kanye West Opera/07 Infinity Song.mp3"
+                           "file":  "music/God's Country Era/Nebuchadnezzar A Kanye West Opera/07 Infinity Song.mp3"
                        },
                        {
                            "title":  "Sunshine I",
-                           "file":  "music/Godâ€™s Country Era/Nebuchadnezzar A Kanye West Opera/08 Sunshine I.mp3"
+                           "file":  "music/God's Country Era/Nebuchadnezzar A Kanye West Opera/08 Sunshine I.mp3"
                        },
                        {
                            "title":  "Sunshine II",
-                           "file":  "music/Godâ€™s Country Era/Nebuchadnezzar A Kanye West Opera/09 Sunshine II.mp3"
+                           "file":  "music/God's Country Era/Nebuchadnezzar A Kanye West Opera/09 Sunshine II.mp3"
                        },
                        {
                            "title":  "Wolves",
-                           "file":  "music/Godâ€™s Country Era/Nebuchadnezzar A Kanye West Opera/10 Wolves.mp3"
+                           "file":  "music/God's Country Era/Nebuchadnezzar A Kanye West Opera/10 Wolves.mp3"
                        },
                        {
                            "title":  "Fighting Fires",
-                           "file":  "music/Godâ€™s Country Era/Nebuchadnezzar A Kanye West Opera/11 Fighting Fires.mp3"
+                           "file":  "music/God's Country Era/Nebuchadnezzar A Kanye West Opera/11 Fighting Fires.mp3"
                        },
                        {
                            "title":  "Our King II",
-                           "file":  "music/Godâ€™s Country Era/Nebuchadnezzar A Kanye West Opera/12 Our King II.mp3"
+                           "file":  "music/God's Country Era/Nebuchadnezzar A Kanye West Opera/12 Our King II.mp3"
                        },
                        {
                            "title":  "Our King III",
-                           "file":  "music/Godâ€™s Country Era/Nebuchadnezzar A Kanye West Opera/13 Our King III.mp3"
+                           "file":  "music/God's Country Era/Nebuchadnezzar A Kanye West Opera/13 Our King III.mp3"
                        },
                        {
                            "title":  "Our King IV",
-                           "file":  "music/Godâ€™s Country Era/Nebuchadnezzar A Kanye West Opera/14 Our King IV.mp3"
+                           "file":  "music/God's Country Era/Nebuchadnezzar A Kanye West Opera/14 Our King IV.mp3"
                        },
                        {
                            "title":  "Total Praise",
-                           "file":  "music/Godâ€™s Country Era/Nebuchadnezzar A Kanye West Opera/15 Total Praise.mp3"
+                           "file":  "music/God's Country Era/Nebuchadnezzar A Kanye West Opera/15 Total Praise.mp3"
                        }
                    ]
     },
     {
         "id":  "god-s-country-era-our-beautiful-amazing-reality",
         "title":  "OUR BEAUTIFUL AMAZING REALITY",
-        "era":  "Godâ€™s Country Era",
-        "year":  "Godâ€™s Country",
+        "era":  "God's Country Era",
+        "year":  "God's Country",
         "accent":  "#111111",
-        "notes":  "ARCHIVE / Godâ€™s Country Era",
+        "notes":  "ARCHIVE / God's Country Era",
         "tracks":  [
                        {
                            "title":  "Hours_V4",
-                           "file":  "music/Godâ€™s Country Era/OUR BEAUTIFUL AMAZING REALITY/24_Hours_V4.mp3"
+                           "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/24_Hours_V4.mp3"
                        },
                        {
                            "title":  "Donda_V10",
-                           "file":  "music/Godâ€™s Country Era/OUR BEAUTIFUL AMAZING REALITY/Donda_V10.mp3"
+                           "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/Donda_V10.mp3"
                        },
                        {
                            "title":  "Future_Sounds_V14",
-                           "file":  "music/Godâ€™s Country Era/OUR BEAUTIFUL AMAZING REALITY/Future_Sounds_V14.mp3"
+                           "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/Future_Sounds_V14.mp3"
                        },
                        {
                            "title":  "God_s_Country_V5",
-                           "file":  "music/Godâ€™s Country Era/OUR BEAUTIFUL AMAZING REALITY/God_s_Country_V5.mp3"
+                           "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/God_s_Country_V5.mp3"
                        },
                        {
                            "title":  "He_Gave_It_All_V3",
-                           "file":  "music/Godâ€™s Country Era/OUR BEAUTIFUL AMAZING REALITY/He_Gave_It_All_V3.mp3"
+                           "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/He_Gave_It_All_V3.mp3"
                        },
                        {
                            "title":  "Home_V8",
-                           "file":  "music/Godâ€™s Country Era/OUR BEAUTIFUL AMAZING REALITY/Home_V8.mp3"
+                           "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/Home_V8.mp3"
                        },
                        {
                            "title":  "I_Feel_Terrific_V4",
-                           "file":  "music/Godâ€™s Country Era/OUR BEAUTIFUL AMAZING REALITY/I_Feel_Terrific_V4.mp3"
+                           "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/I_Feel_Terrific_V4.mp3"
                        },
                        {
                            "title":  "LA_Monster_V8",
-                           "file":  "music/Godâ€™s Country Era/OUR BEAUTIFUL AMAZING REALITY/LA_Monster_V8.mp3"
+                           "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/LA_Monster_V8.mp3"
                        },
                        {
                            "title":  "Let_The_Spirit_Go_Wild_V6",
-                           "file":  "music/Godâ€™s Country Era/OUR BEAUTIFUL AMAZING REALITY/Let_The_Spirit_Go_Wild_V6.mp3"
+                           "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/Let_The_Spirit_Go_Wild_V6.mp3"
                        },
                        {
                            "title":  "Lord_I_Need_You_V12",
-                           "file":  "music/Godâ€™s Country Era/OUR BEAUTIFUL AMAZING REALITY/Lord_I_Need_You_V12.mp3"
+                           "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/Lord_I_Need_You_V12.mp3"
                        },
                        {
                            "title":  "New_Body_V30",
-                           "file":  "music/Godâ€™s Country Era/OUR BEAUTIFUL AMAZING REALITY/New_Body_V30.mp3"
+                           "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/New_Body_V30.mp3"
                        },
                        {
                            "title":  "Praise_God_V10",
-                           "file":  "music/Godâ€™s Country Era/OUR BEAUTIFUL AMAZING REALITY/Praise_God_V10.mp3"
+                           "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/Praise_God_V10.mp3"
                        },
                        {
                            "title":  "The_Glory_V7",
-                           "file":  "music/Godâ€™s Country Era/OUR BEAUTIFUL AMAZING REALITY/The_Glory_V7.mp3"
+                           "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/The_Glory_V7.mp3"
                        },
                        {
                            "title":  "Up_From_The_Ashes_V17",
-                           "file":  "music/Godâ€™s Country Era/OUR BEAUTIFUL AMAZING REALITY/Up_From_The_Ashes_V17.mp3"
+                           "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/Up_From_The_Ashes_V17.mp3"
                        },
                        {
                            "title":  "Use_This_Gospel_V25",
-                           "file":  "music/Godâ€™s Country Era/OUR BEAUTIFUL AMAZING REALITY/Use_This_Gospel_V25.mp3"
+                           "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/Use_This_Gospel_V25.mp3"
                        },
                        {
                            "title":  "Wash_Us_In_The_Blood_V2",
-                           "file":  "music/Godâ€™s Country Era/OUR BEAUTIFUL AMAZING REALITY/Wash_Us_In_The_Blood_V2.mp3"
+                           "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/Wash_Us_In_The_Blood_V2.mp3"
                        },
                        {
                            "title":  "Work_It_Out_V3",
-                           "file":  "music/Godâ€™s Country Era/OUR BEAUTIFUL AMAZING REALITY/Work_It_Out_V3.mp3"
+                           "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/Work_It_Out_V3.mp3"
                        }
                    ]
     },
     {
         "id":  "god-s-country-era-soul-children",
         "title":  "Soul Children_",
-        "era":  "Godâ€™s Country Era",
-        "year":  "Godâ€™s Country",
+        "era":  "God's Country Era",
+        "year":  "God's Country",
         "accent":  "#111111",
-        "notes":  "ARCHIVE / Godâ€™s Country Era",
+        "notes":  "ARCHIVE / God's Country Era",
         "tracks":  [
                        {
                            "title":  "unhomme (evan version) (1)",
-                           "file":  "music/Godâ€™s Country Era/Soul Children_/01_unhomme (evan version) (1).mp3"
+                           "file":  "music/God's Country Era/Soul Children_/01_unhomme (evan version) (1).mp3"
                        },
                        {
                            "title":  "soul children(evan version) (1)",
-                           "file":  "music/Godâ€™s Country Era/Soul Children_/02_soul children(evan version) (1).mp3"
+                           "file":  "music/God's Country Era/Soul Children_/02_soul children(evan version) (1).mp3"
                        },
                        {
                            "title":  "nyce vieux(evan version) (1)",
-                           "file":  "music/Godâ€™s Country Era/Soul Children_/03_nyce vieux(evan version) (1).mp3"
+                           "file":  "music/God's Country Era/Soul Children_/03_nyce vieux(evan version) (1).mp3"
                        },
                        {
                            "title":  "elsa laurent (evan version) (1)",
-                           "file":  "music/Godâ€™s Country Era/Soul Children_/04_elsa laurent (evan version) (1).mp3"
+                           "file":  "music/God's Country Era/Soul Children_/04_elsa laurent (evan version) (1).mp3"
                        },
                        {
                            "title":  "wayback (evan version) (1)",
-                           "file":  "music/Godâ€™s Country Era/Soul Children_/05_wayback (evan version) (1).mp3"
+                           "file":  "music/God's Country Era/Soul Children_/05_wayback (evan version) (1).mp3"
                        },
                        {
                            "title":  "ny dreams (evan version) (1)",
-                           "file":  "music/Godâ€™s Country Era/Soul Children_/06_ny dreams (evan version) (1).mp3"
+                           "file":  "music/God's Country Era/Soul Children_/06_ny dreams (evan version) (1).mp3"
                        },
                        {
                            "title":  "joicing(evan version) (1)",
-                           "file":  "music/Godâ€™s Country Era/Soul Children_/07_joicing(evan version) (1).mp3"
+                           "file":  "music/God's Country Era/Soul Children_/07_joicing(evan version) (1).mp3"
                        },
                        {
                            "title":  "real mannish(evan version) (1)",
-                           "file":  "music/Godâ€™s Country Era/Soul Children_/08_real mannish(evan version) (1).mp3"
+                           "file":  "music/God's Country Era/Soul Children_/08_real mannish(evan version) (1).mp3"
                        },
                        {
                            "title":  "Lill Lindfors (evan version) (1)",
-                           "file":  "music/Godâ€™s Country Era/Soul Children_/09_Lill Lindfors (evan version) (1).mp3"
+                           "file":  "music/God's Country Era/Soul Children_/09_Lill Lindfors (evan version) (1).mp3"
                        },
                        {
                            "title":  "linda perhacs (evan version) (1)",
-                           "file":  "music/Godâ€™s Country Era/Soul Children_/10_linda perhacs (evan version) (1).mp3"
+                           "file":  "music/God's Country Era/Soul Children_/10_linda perhacs (evan version) (1).mp3"
                        },
                        {
                            "title":  "emerald web (evan version) (1)",
-                           "file":  "music/Godâ€™s Country Era/Soul Children_/11_emerald web (evan version) (1).mp3"
+                           "file":  "music/God's Country Era/Soul Children_/11_emerald web (evan version) (1).mp3"
                        },
                        {
                            "title":  "novi torpedo (evan version) (1)",
-                           "file":  "music/Godâ€™s Country Era/Soul Children_/12_novi torpedo (evan version) (1).mp3"
+                           "file":  "music/God's Country Era/Soul Children_/12_novi torpedo (evan version) (1).mp3"
                        },
                        {
                            "title":  "uke kaan (evan version) (1)",
-                           "file":  "music/Godâ€™s Country Era/Soul Children_/13_uke kaan (evan version) (1).mp3"
+                           "file":  "music/God's Country Era/Soul Children_/13_uke kaan (evan version) (1).mp3"
                        }
                    ]
     },
     {
         "id":  "god-s-country-era-yetopia",
         "title":  "YeTopia",
-        "era":  "Godâ€™s Country Era",
-        "year":  "Godâ€™s Country",
+        "era":  "God's Country Era",
+        "year":  "God's Country",
         "accent":  "#111111",
-        "notes":  "ARCHIVE / Godâ€™s Country Era",
+        "notes":  "ARCHIVE / God's Country Era",
         "tracks":  [
                        {
                            "title":  "Travis Freestyles 1",
-                           "file":  "music/Godâ€™s Country Era/YeTopia/200514 Travis Freestyles 1.mp3"
+                           "file":  "music/God's Country Era/YeTopia/200514 Travis Freestyles 1.mp3"
                        },
                        {
                            "title":  "Travis Freestyles 10",
-                           "file":  "music/Godâ€™s Country Era/YeTopia/200514 Travis Freestyles 10.mp3"
+                           "file":  "music/God's Country Era/YeTopia/200514 Travis Freestyles 10.mp3"
                        },
                        {
                            "title":  "Travis Freestyles 11",
-                           "file":  "music/Godâ€™s Country Era/YeTopia/200514 Travis Freestyles 11.mp3"
+                           "file":  "music/God's Country Era/YeTopia/200514 Travis Freestyles 11.mp3"
                        },
                        {
                            "title":  "Travis Freestyles 12",
-                           "file":  "music/Godâ€™s Country Era/YeTopia/200514 Travis Freestyles 12.mp3"
+                           "file":  "music/God's Country Era/YeTopia/200514 Travis Freestyles 12.mp3"
                        },
                        {
                            "title":  "Travis Freestyles 13",
-                           "file":  "music/Godâ€™s Country Era/YeTopia/200514 Travis Freestyles 13.mp3"
+                           "file":  "music/God's Country Era/YeTopia/200514 Travis Freestyles 13.mp3"
                        },
                        {
                            "title":  "Travis Freestyles 14",
-                           "file":  "music/Godâ€™s Country Era/YeTopia/200514 Travis Freestyles 14.mp3"
+                           "file":  "music/God's Country Era/YeTopia/200514 Travis Freestyles 14.mp3"
                        },
                        {
                            "title":  "Travis Freestyles 15",
-                           "file":  "music/Godâ€™s Country Era/YeTopia/200514 Travis Freestyles 15.mp3"
+                           "file":  "music/God's Country Era/YeTopia/200514 Travis Freestyles 15.mp3"
                        },
                        {
                            "title":  "Travis Freestyles 16",
-                           "file":  "music/Godâ€™s Country Era/YeTopia/200514 Travis Freestyles 16.mp3"
+                           "file":  "music/God's Country Era/YeTopia/200514 Travis Freestyles 16.mp3"
                        },
                        {
                            "title":  "Travis Freestyles 17",
-                           "file":  "music/Godâ€™s Country Era/YeTopia/200514 Travis Freestyles 17.mp3"
+                           "file":  "music/God's Country Era/YeTopia/200514 Travis Freestyles 17.mp3"
                        },
                        {
                            "title":  "Travis Freestyles 2",
-                           "file":  "music/Godâ€™s Country Era/YeTopia/200514 Travis Freestyles 2.mp3"
+                           "file":  "music/God's Country Era/YeTopia/200514 Travis Freestyles 2.mp3"
                        },
                        {
                            "title":  "Travis Freestyles 3",
-                           "file":  "music/Godâ€™s Country Era/YeTopia/200514 Travis Freestyles 3.mp3"
+                           "file":  "music/God's Country Era/YeTopia/200514 Travis Freestyles 3.mp3"
                        },
                        {
                            "title":  "Travis Freestyles 4",
-                           "file":  "music/Godâ€™s Country Era/YeTopia/200514 Travis Freestyles 4.mp3"
+                           "file":  "music/God's Country Era/YeTopia/200514 Travis Freestyles 4.mp3"
                        },
                        {
                            "title":  "Travis Freestyles 5",
-                           "file":  "music/Godâ€™s Country Era/YeTopia/200514 Travis Freestyles 5.mp3"
+                           "file":  "music/God's Country Era/YeTopia/200514 Travis Freestyles 5.mp3"
                        },
                        {
                            "title":  "Travis Freestyles 6",
-                           "file":  "music/Godâ€™s Country Era/YeTopia/200514 Travis Freestyles 6.mp3"
+                           "file":  "music/God's Country Era/YeTopia/200514 Travis Freestyles 6.mp3"
                        },
                        {
                            "title":  "Travis Freestyles 7",
-                           "file":  "music/Godâ€™s Country Era/YeTopia/200514 Travis Freestyles 7.mp3"
+                           "file":  "music/God's Country Era/YeTopia/200514 Travis Freestyles 7.mp3"
                        },
                        {
                            "title":  "Travis Freestyles 8",
-                           "file":  "music/Godâ€™s Country Era/YeTopia/200514 Travis Freestyles 8.mp3"
+                           "file":  "music/God's Country Era/YeTopia/200514 Travis Freestyles 8.mp3"
                        },
                        {
                            "title":  "Travis Freestyles 9",
-                           "file":  "music/Godâ€™s Country Era/YeTopia/200514 Travis Freestyles 9.mp3"
+                           "file":  "music/God's Country Era/YeTopia/200514 Travis Freestyles 9.mp3"
                        }
                    ]
     },
     {
         "id":  "graduation-era-can-t-tell-me-nothing",
-        "title":  "Can_t Tell Me Nothing",
+        "title":  "Can't Tell Me Nothing",
         "era":  "Graduation Era",
         "year":  "Graduation",
         "accent":  "#111111",
@@ -5045,7 +5041,7 @@ window.YE_ARCHIVE_DATABASE = [
     },
     {
         "id":  "graduation-era-g-o-o-d-music-class-of-06",
-        "title":  "G.O.O.D. Music Class of _06",
+        "title":  "G.O.O.D. Music Class of '06",
         "era":  "Graduation Era",
         "year":  "Graduation",
         "accent":  "#111111",
@@ -5451,7 +5447,7 @@ window.YE_ARCHIVE_DATABASE = [
     },
     {
         "id":  "graduation-era-welcome-to-kanye-s-soul-mix-show",
-        "title":  "Welcome To Kanye_s Soul Mix Show",
+        "title":  "Welcome To Kanye's Soul Mix Show",
         "era":  "Graduation Era",
         "year":  "Graduation",
         "accent":  "#111111",
@@ -6216,7 +6212,7 @@ window.YE_ARCHIVE_DATABASE = [
     },
     {
         "id":  "late-registration-era-tapemasters-inc-presents-the-last-shall-be-first",
-        "title":  "Tapemasters Inc. Presents_ The Last Shall Be First",
+        "title":  "Tapemasters Inc. Presents: The Last Shall Be First",
         "era":  "Late Registration Era",
         "year":  "Late Registration",
         "accent":  "#111111",
@@ -6482,7 +6478,7 @@ window.YE_ARCHIVE_DATABASE = [
     },
     {
         "id":  "my-beautiful-dark-twisted-fantasy-era-donda-s-boy",
-        "title":  "Donda_s Boy",
+        "title":  "Donda's Boy",
         "era":  "My Beautiful Dark Twisted Fantasy Era",
         "year":  "My Beautiful Dark Twisted Fantasy",
         "accent":  "#111111",
@@ -7116,7 +7112,7 @@ window.YE_ARCHIVE_DATABASE = [
     },
     {
         "id":  "so-help-me-god-era-808-s-heartbreak-hollywood-bowl",
-        "title":  "808_s \u0026 Heartbreak (Hollywood Bowl)",
+        "title":  "808s \u0026 Heartbreak (Hollywood Bowl)",
         "era":  "So Help Me God Era",
         "year":  "So Help Me God",
         "accent":  "#111111",
@@ -7339,1190 +7335,1190 @@ window.YE_ARCHIVE_DATABASE = [
                    ]
     },
     {
-        "id":  "the-collage-dropout-era-akademiks-vol-1",
+        "id":  "the-college-dropout-era-akademiks-vol-1",
         "title":  "Akademiks Vol. 1",
-        "era":  "The Collage Dropout Era",
-        "year":  "The Collage Dropout",
+        "era":  "The College Dropout Era",
+        "year":  "The College Dropout",
         "accent":  "#111111",
-        "notes":  "ARCHIVE / The Collage Dropout Era",
+        "notes":  "ARCHIVE / The College Dropout Era",
         "tracks":  [
                        {
                            "title":  "Intro",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 1/01 Intro.mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 1/01 Intro.mp3"
                        },
                        {
                            "title":  "Excuse Me Miss (Remix) (feat. Kanye West)",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 1/02 Excuse Me Miss (Feat. Kanye West).mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 1/02 Excuse Me Miss (Feat. Kanye West).mp3"
                        },
                        {
                            "title":  "Drop Dead Gorgeous (feat. Murphy Lee)",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 1/03 Drop Dead Gorgeous.mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 1/03 Drop Dead Gorgeous.mp3"
                        },
                        {
                            "title":  "2 Words (feat. Mos Def, Freeway \u0026 Harlem Boys Choir)",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 1/04 2 Words.mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 1/04 2 Words.mp3"
                        },
                        {
                            "title":  "A Million Freestyle",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 1/05 A Million (Freestyle).mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 1/05 A Million (Freestyle).mp3"
                        },
                        {
                            "title":  "My Life (feat. Mary J. Blige)",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 1/06 My Life.mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 1/06 My Life.mp3"
                        },
                        {
                            "title":  "Champions (Snippet) (feat. Kanye West)",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 1/07 Champions (Snippet).mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 1/07 Champions (Snippet).mp3"
                        },
                        {
                            "title":  "Jesus Walks (Snippet)",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 1/08 Jesus Walks (Snippet).mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 1/08 Jesus Walks (Snippet).mp3"
                        },
                        {
                            "title":  "The Bounce (feat. Kanye West)",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 1/09 The Bounce.mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 1/09 The Bounce.mp3"
                        },
                        {
                            "title":  "We Can\u0027t Tell Freestyle",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 1/10 We Can_t Tell (Freestyle).mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 1/10 We Can_t Tell (Freestyle).mp3"
                        },
                        {
                            "title":  "Turn Out The Lights (Freewest) (feat. Kanye West)",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 1/11 Turn Out The Lights (Freewest).mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 1/11 Turn Out The Lights (Freewest).mp3"
                        },
                        {
                            "title":  "Came Back For You Freestyle",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 1/12 Came Back For You (Freestyle).mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 1/12 Came Back For You (Freestyle).mp3"
                        },
                        {
                            "title":  "Came Back For You",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 1/13 Came Back For You.mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 1/13 Came Back For You.mp3"
                        },
                        {
                            "title":  "The Good, The Bad, The Ugly (feat. Consequence)",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 1/14 The Good, The Bad, The Ugly.mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 1/14 The Good, The Bad, The Ugly.mp3"
                        },
                        {
                            "title":  "Electric Relaxation Freestyle (feat. Consequence)",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 1/15 Electric Relaxation (Freestyle).mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 1/15 Electric Relaxation (Freestyle).mp3"
                        },
                        {
                            "title":  "I Use To Love You",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 1/16 I Use To Love You.mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 1/16 I Use To Love You.mp3"
                        },
                        {
                            "title":  "Get By",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 1/17 Get By.mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 1/17 Get By.mp3"
                        },
                        {
                            "title":  "Soul Of A Hustler",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 1/18 Soul Of A Hustler.mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 1/18 Soul Of A Hustler.mp3"
                        },
                        {
                            "title":  "In Cold Blood",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 1/19 In Cold Blood.mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 1/19 In Cold Blood.mp3"
                        },
                        {
                            "title":  "In Cold Blood Freestyle",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 1/20 In Cold Blood (Freestyle).mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 1/20 In Cold Blood (Freestyle).mp3"
                        },
                        {
                            "title":  "B R Right (feat. Ludacris)",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 1/21 B R Right.mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 1/21 B R Right.mp3"
                        },
                        {
                            "title":  "Poppin\u0027 Tags (Snippet) (feat. Twista)",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 1/22 Poppin_ Tags (Snippet).mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 1/22 Poppin_ Tags (Snippet).mp3"
                        },
                        {
                            "title":  "Hood Celebrity",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 1/23 Hood Celebrity.mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 1/23 Hood Celebrity.mp3"
                        },
                        {
                            "title":  "About An Angel (Got Nowhere) (feat. John Legend)",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 1/24 About An Angel (Got Nowhere).mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 1/24 About An Angel (Got Nowhere).mp3"
                        },
                        {
                            "title":  "Through The Wire",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 1/25 Through The Wire.mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 1/25 Through The Wire.mp3"
                        }
                    ]
     },
     {
         "id":  "the-collage-dropout-era-akademiks-vol-2",
         "title":  "Akademiks Vol. 2",
-        "era":  "The Collage Dropout Era",
-        "year":  "The Collage Dropout",
+        "era":  "The College Dropout Era",
+        "year":  "The College Dropout",
         "accent":  "#111111",
-        "notes":  "ARCHIVE / The Collage Dropout Era",
+        "notes":  "ARCHIVE / The College Dropout Era",
         "tracks":  [
                        {
                            "title":  "Intro ",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 2/01. Kanye West , Intro - Kanye West.mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 2/01. Kanye West , Intro - Kanye West.mp3"
                        },
                        {
                            "title":  "Stand Up (Remix) (feat. Kanye West)",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 2/02. Ludacris , Stand Up (Remix) - Kanye West.mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 2/02. Ludacris , Stand Up (Remix) - Kanye West.mp3"
                        },
                        {
                            "title":  "Keep The Receipt (feat. Ol\u0027 Dirty Bastard)",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 2/03. Kanye West , Keep The Receipt - Kanye West.mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 2/03. Kanye West , Keep The Receipt - Kanye West.mp3"
                        },
                        {
                            "title":  "Get By (Remix) (feat. Mos Def, Jay Z, Kanye West, Busta Rhymes \u0026 50 Cent)",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 2/04. Talib Kweli , Get By (Remix) - Kanye West.mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 2/04. Talib Kweli , Get By (Remix) - Kanye West.mp3"
                        },
                        {
                            "title":  "Slow Jamz (feat. Twista \u0026 Jamie Foxx)",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 2/05. Kanye West , Slow Jam - Kanye West.mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 2/05. Kanye West , Slow Jam - Kanye West.mp3"
                        },
                        {
                            "title":  "Live It Up ",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 2/06. John Legend , Live It Up - Kanye West.mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 2/06. John Legend , Live It Up - Kanye West.mp3"
                        },
                        {
                            "title":  "Knock Knock (feat. Kanye West)",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 2/07. Monica , Knock Knock - Kanye West.mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 2/07. Monica , Knock Knock - Kanye West.mp3"
                        },
                        {
                            "title":  "Doing My Job ",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 2/08. T.I. , Doing My Job - Kanye West.mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 2/08. T.I. , Doing My Job - Kanye West.mp3"
                        },
                        {
                            "title":  " 03\u0027 Til Infinity (feat. Consequence)",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 2/09. Kanye West , 03_ Til Infinity - Kanye West.mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 2/09. Kanye West , 03_ Til Infinity - Kanye West.mp3"
                        },
                        {
                            "title":  "Turn Yourself In ",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 2/10. Consequence (2) , Turn Yourself In - Kanye West.mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 2/10. Consequence (2) , Turn Yourself In - Kanye West.mp3"
                        },
                        {
                            "title":  "Heavy Hitters (feat. GLC)",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 2/11. Kanye West , Heavy Hitters - Kanye West.mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 2/11. Kanye West , Heavy Hitters - Kanye West.mp3"
                        },
                        {
                            "title":  "It Wasn\u0027t My Cadillac (feat. Najah)",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 2/12. GLC , It Wasn_t My Cadillac - Kanye West.mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 2/12. GLC , It Wasn_t My Cadillac - Kanye West.mp3"
                        },
                        {
                            "title":  "Brown Sugar ",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 2/13. Mos Def , Brown Sugar - Kanye West.mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 2/13. Mos Def , Brown Sugar - Kanye West.mp3"
                        },
                        {
                            "title":  "Some People Hate",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 2/14. Jay-Z , Some People Hate - Kanye West.mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 2/14. Jay-Z , Some People Hate - Kanye West.mp3"
                        },
                        {
                            "title":  "Nothing Like It",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 2/15. Beanie Sigel , Nothing Like It - Kanye West.mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 2/15. Beanie Sigel , Nothing Like It - Kanye West.mp3"
                        },
                        {
                            "title":  "You Know (feat. Kanye West, Belo \u0026 John Legend)",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 2/16. White Boy (4) , You Know - Kanye West.mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 2/16. White Boy (4) , You Know - Kanye West.mp3"
                        },
                        {
                            "title":  "Through The Wire (Remix) ",
-                           "file":  "music/The Collage Dropout Era/Akademiks Vol. 2/17. Kanye West , Through The Wire (Remix) - Kanye West.mp3"
+                           "file":  "music/The College Dropout Era/Akademiks Vol. 2/17. Kanye West , Through The Wire (Remix) - Kanye West.mp3"
                        }
                    ]
     },
     {
         "id":  "the-collage-dropout-era-college-dropout-pre-the-collage-dropout",
-        "title":  "College Dropout (Pre The Collage Dropout)",
-        "era":  "The Collage Dropout Era",
-        "year":  "The Collage Dropout",
+        "title":  "College Dropout (Pre The College Dropout)",
+        "era":  "The College Dropout Era",
+        "year":  "The College Dropout",
         "accent":  "#111111",
-        "notes":  "ARCHIVE / The Collage Dropout Era",
+        "notes":  "ARCHIVE / The College Dropout Era",
         "tracks":  [
                        {
                            "title":  "Can´t Nobody (Instrumental)",
-                           "file":  "music/The Collage Dropout Era/College Dropout (Pre The Collage Dropout)/01-kanye_west-unreleased_instrumental-ecr.mp3"
+                           "file":  "music/The College Dropout Era/College Dropout (Pre The College Dropout)/01-kanye_west-unreleased_instrumental-ecr.mp3"
                        },
                        {
                            "title":  "Doing Fine",
-                           "file":  "music/The Collage Dropout Era/College Dropout (Pre The Collage Dropout)/02-kanye_west-untitled-ecr.mp3"
+                           "file":  "music/The College Dropout Era/College Dropout (Pre The College Dropout)/02-kanye_west-untitled-ecr.mp3"
                        },
                        {
                            "title":  "Breathe In Breathe Out",
-                           "file":  "music/The Collage Dropout Era/College Dropout (Pre The Collage Dropout)/03-kanye_west-breathe_in_breathe_out-ecr.mp3"
+                           "file":  "music/The College Dropout Era/College Dropout (Pre The College Dropout)/03-kanye_west-breathe_in_breathe_out-ecr.mp3"
                        },
                        {
                            "title":  "Self Conscious",
-                           "file":  "music/The Collage Dropout Era/College Dropout (Pre The Collage Dropout)/04-kanye_west-self_conscious-ecr.mp3"
+                           "file":  "music/The College Dropout Era/College Dropout (Pre The College Dropout)/04-kanye_west-self_conscious-ecr.mp3"
                        },
                        {
                            "title":  "Niggas Gossip",
-                           "file":  "music/The Collage Dropout Era/College Dropout (Pre The Collage Dropout)/05-kanye_west-niggas_gossip-ecr.mp3"
+                           "file":  "music/The College Dropout Era/College Dropout (Pre The College Dropout)/05-kanye_west-niggas_gossip-ecr.mp3"
                        },
                        {
                            "title":  "Wack Niggas (feat Talib Kweli)",
-                           "file":  "music/The Collage Dropout Era/College Dropout (Pre The Collage Dropout)/06-kanye_west-wack_niggas_(feat_talib_kweli)-ecr.mp3"
+                           "file":  "music/The College Dropout Era/College Dropout (Pre The College Dropout)/06-kanye_west-wack_niggas_(feat_talib_kweli)-ecr.mp3"
                        },
                        {
                            "title":  "I Need to Know",
-                           "file":  "music/The Collage Dropout Era/College Dropout (Pre The Collage Dropout)/07-kanye_west-i_need_to_know-ecr.mp3"
+                           "file":  "music/The College Dropout Era/College Dropout (Pre The College Dropout)/07-kanye_west-i_need_to_know-ecr.mp3"
                        },
                        {
                            "title":  "Jesus Walks",
-                           "file":  "music/The Collage Dropout Era/College Dropout (Pre The Collage Dropout)/08-kanye_west-jesus_walks-ecr.mp3"
+                           "file":  "music/The College Dropout Era/College Dropout (Pre The College Dropout)/08-kanye_west-jesus_walks-ecr.mp3"
                        },
                        {
                            "title":  "Out Of Your Mind",
-                           "file":  "music/The Collage Dropout Era/College Dropout (Pre The Collage Dropout)/09-kanye_west-untitled-ecr.mp3"
+                           "file":  "music/The College Dropout Era/College Dropout (Pre The College Dropout)/09-kanye_west-untitled-ecr.mp3"
                        },
                        {
                            "title":  "Just a muvie",
-                           "file":  "music/The Collage Dropout Era/College Dropout (Pre The Collage Dropout)/10-kanye_west-untitled-ecr.mp3"
+                           "file":  "music/The College Dropout Era/College Dropout (Pre The College Dropout)/10-kanye_west-untitled-ecr.mp3"
                        },
                        {
                            "title":  "Gorgeous",
-                           "file":  "music/The Collage Dropout Era/College Dropout (Pre The Collage Dropout)/11-kanye_west-gorgeous-ecr.mp3"
+                           "file":  "music/The College Dropout Era/College Dropout (Pre The College Dropout)/11-kanye_west-gorgeous-ecr.mp3"
                        },
                        {
                            "title":  "Wow",
-                           "file":  "music/The Collage Dropout Era/College Dropout (Pre The Collage Dropout)/12-kanye_west-wow-ecr.mp3"
+                           "file":  "music/The College Dropout Era/College Dropout (Pre The College Dropout)/12-kanye_west-wow-ecr.mp3"
                        },
                        {
                            "title":  "Apologize",
-                           "file":  "music/The Collage Dropout Era/College Dropout (Pre The Collage Dropout)/13-kanye_west-untitled-ecr.mp3"
+                           "file":  "music/The College Dropout Era/College Dropout (Pre The College Dropout)/13-kanye_west-untitled-ecr.mp3"
                        },
                        {
                            "title":  "Family Business",
-                           "file":  "music/The Collage Dropout Era/College Dropout (Pre The Collage Dropout)/14-kanye_west-family_business-ecr.mp3"
+                           "file":  "music/The College Dropout Era/College Dropout (Pre The College Dropout)/14-kanye_west-family_business-ecr.mp3"
                        },
                        {
                            "title":  "Hey Mama",
-                           "file":  "music/The Collage Dropout Era/College Dropout (Pre The Collage Dropout)/15-kanye_west-hey_mama-ecr.mp3"
+                           "file":  "music/The College Dropout Era/College Dropout (Pre The College Dropout)/15-kanye_west-hey_mama-ecr.mp3"
                        }
                    ]
     },
     {
         "id":  "the-collage-dropout-era-ferris-bueller-plain-pat-present-behind-the-beats-with-kanye-west",
         "title":  "Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West",
-        "era":  "The Collage Dropout Era",
-        "year":  "The Collage Dropout",
+        "era":  "The College Dropout Era",
+        "year":  "The College Dropout",
         "accent":  "#111111",
-        "notes":  "ARCHIVE / The Collage Dropout Era",
+        "notes":  "ARCHIVE / The College Dropout Era",
         "tracks":  [
                        {
                            "title":  "Intro",
-                           "file":  "music/The Collage Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/01 Intro.mp3"
+                           "file":  "music/The College Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/01 Intro.mp3"
                        },
                        {
                            "title":  "Two Words Interlude",
-                           "file":  "music/The Collage Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/02 Two Words Interlude.mp3"
+                           "file":  "music/The College Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/02 Two Words Interlude.mp3"
                        },
                        {
                            "title":  "Two Words",
-                           "file":  "music/The Collage Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/03 Two Words.mp3"
+                           "file":  "music/The College Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/03 Two Words.mp3"
                        },
                        {
                            "title":  "My Life",
-                           "file":  "music/The Collage Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/04 My Life - Foxy Brown.mp3"
+                           "file":  "music/The College Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/04 My Life - Foxy Brown.mp3"
                        },
                        {
                            "title":  "You Made Me ",
-                           "file":  "music/The Collage Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/05 You Made Me - Harlem World.mp3"
+                           "file":  "music/The College Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/05 You Made Me - Harlem World.mp3"
                        },
                        {
                            "title":  "The Truth Interlude",
-                           "file":  "music/The Collage Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/06 The Truth Interlude.mp3"
+                           "file":  "music/The College Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/06 The Truth Interlude.mp3"
                        },
                        {
                            "title":  "The Truth",
-                           "file":  "music/The Collage Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/07 The Truth - Beanie Sigel.mp3"
+                           "file":  "music/The College Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/07 The Truth - Beanie Sigel.mp3"
                        },
                        {
                            "title":  "Nothing Like It Interlude",
-                           "file":  "music/The Collage Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/08 Nothing Like It Interlude.mp3"
+                           "file":  "music/The College Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/08 Nothing Like It Interlude.mp3"
                        },
                        {
                            "title":  "Nothing Like It ",
-                           "file":  "music/The Collage Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/09 Nothing Like It - Beanie Sigel.mp3"
+                           "file":  "music/The College Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/09 Nothing Like It - Beanie Sigel.mp3"
                        },
                        {
                            "title":  "Gangsta Gangsta ",
-                           "file":  "music/The Collage Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/10 Gangsta Gangsta - Beanie Sigel.mp3"
+                           "file":  "music/The College Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/10 Gangsta Gangsta - Beanie Sigel.mp3"
                        },
                        {
                            "title":  "This Can\u0027t Be Life Interlude",
-                           "file":  "music/The Collage Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/11 This Can_t Be Life Interlude.mp3"
+                           "file":  "music/The College Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/11 This Can_t Be Life Interlude.mp3"
                        },
                        {
                            "title":  "This Can\u0027t Be Life ",
-                           "file":  "music/The Collage Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/12 This Can_t Be Life - Jay-Z.mp3"
+                           "file":  "music/The College Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/12 This Can_t Be Life - Jay-Z.mp3"
                        },
                        {
                            "title":  "Izzo ",
-                           "file":  "music/The Collage Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/13 Izzo - Jay-Z.mp3"
+                           "file":  "music/The College Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/13 Izzo - Jay-Z.mp3"
                        },
                        {
                            "title":  "Takeover Interlude",
-                           "file":  "music/The Collage Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/14 Takeover Interlude.mp3"
+                           "file":  "music/The College Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/14 Takeover Interlude.mp3"
                        },
                        {
                            "title":  "Takeover ",
-                           "file":  "music/The Collage Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/15 Takeover - Jay-Z.mp3"
+                           "file":  "music/The College Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/15 Takeover - Jay-Z.mp3"
                        },
                        {
                            "title":  "Heart of The City ",
-                           "file":  "music/The Collage Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/16 Heart of The City - Jay-Z.mp3"
+                           "file":  "music/The College Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/16 Heart of The City - Jay-Z.mp3"
                        },
                        {
                            "title":  "Never Change ",
-                           "file":  "music/The Collage Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/17 Never Change - Jay-Z.mp3"
+                           "file":  "music/The College Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/17 Never Change - Jay-Z.mp3"
                        },
                        {
                            "title":  "Got Nowhere",
-                           "file":  "music/The Collage Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/18 Got Nowhere - State Property.mp3"
+                           "file":  "music/The College Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/18 Got Nowhere - State Property.mp3"
                        },
                        {
                            "title":  "Respect Carter",
-                           "file":  "music/The Collage Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/19 Respect Carter - Geda K.mp3"
+                           "file":  "music/The College Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/19 Respect Carter - Geda K.mp3"
                        },
                        {
                            "title":  "Dead or Alive",
-                           "file":  "music/The Collage Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/20 Dead or Alive - Cam_ron.mp3"
+                           "file":  "music/The College Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/20 Dead or Alive - Cam_ron.mp3"
                        },
                        {
                            "title":  "In Cold Blood",
-                           "file":  "music/The Collage Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/21 In Cold Blood - Scarface.mp3"
+                           "file":  "music/The College Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/21 In Cold Blood - Scarface.mp3"
                        },
                        {
                            "title":  "Guess Who\u0027s Back",
-                           "file":  "music/The Collage Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/22 Guess Who_s Back - Scarface.mp3"
+                           "file":  "music/The College Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/22 Guess Who_s Back - Scarface.mp3"
                        },
                        {
                            "title":  "A Dream",
-                           "file":  "music/The Collage Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/23 A Dream - Jay-Z.mp3"
+                           "file":  "music/The College Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/23 A Dream - Jay-Z.mp3"
                        },
                        {
                            "title":  "Bonnie \u0026 Clyde",
-                           "file":  "music/The Collage Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/24 Bonnie \u0026 Clyde - Jay-Z.mp3"
+                           "file":  "music/The College Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/24 Bonnie \u0026 Clyde - Jay-Z.mp3"
                        },
                        {
                            "title":  "Some People Hate ",
-                           "file":  "music/The Collage Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/25 Some People Hate - Jay-Z.mp3"
+                           "file":  "music/The College Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/25 Some People Hate - Jay-Z.mp3"
                        },
                        {
                            "title":  "Poppin Tags ",
-                           "file":  "music/The Collage Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/26 Poppin Tags - Jay-Z.mp3"
+                           "file":  "music/The College Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/26 Poppin Tags - Jay-Z.mp3"
                        },
                        {
                            "title":  "B R Right Interlude",
-                           "file":  "music/The Collage Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/27 B R Right Interlude.mp3"
+                           "file":  "music/The College Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/27 B R Right Interlude.mp3"
                        },
                        {
                            "title":  "B R Right (feat. Ludacris)",
-                           "file":  "music/The Collage Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/28 B R Right - Trina \u0026 Ludacris.mp3"
+                           "file":  "music/The College Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/28 B R Right - Trina \u0026 Ludacris.mp3"
                        },
                        {
                            "title":  "Guerilla Monsoon Rap",
-                           "file":  "music/The Collage Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/29 Guerilla Monsoon Rap - Talib Kweli.mp3"
+                           "file":  "music/The College Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/29 Guerilla Monsoon Rap - Talib Kweli.mp3"
                        },
                        {
                            "title":  "Good To You",
-                           "file":  "music/The Collage Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/30 Good To You - Talib Kweli.mp3"
+                           "file":  "music/The College Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/30 Good To You - Talib Kweli.mp3"
                        },
                        {
                            "title":  "Get By Interlude",
-                           "file":  "music/The Collage Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/31 Get By Interlude.mp3"
+                           "file":  "music/The College Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/31 Get By Interlude.mp3"
                        },
                        {
                            "title":  "Get By ",
-                           "file":  "music/The Collage Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/32 Get By - Talib Kweli.mp3"
+                           "file":  "music/The College Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/32 Get By - Talib Kweli.mp3"
                        },
                        {
                            "title":  "Brown Sugar",
-                           "file":  "music/The Collage Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/33 Brown Sugar - Mos Def.mp3"
+                           "file":  "music/The College Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/33 Brown Sugar - Mos Def.mp3"
                        },
                        {
                            "title":  "Champions Interlude",
-                           "file":  "music/The Collage Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/34 Champions Interlude.mp3"
+                           "file":  "music/The College Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/34 Champions Interlude.mp3"
                        },
                        {
                            "title":  "Champions",
-                           "file":  "music/The Collage Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/35 Champions - Dream Team.mp3"
+                           "file":  "music/The College Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/35 Champions - Dream Team.mp3"
                        },
                        {
                            "title":  "Came Back For You",
-                           "file":  "music/The Collage Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/36 Came Back For You - Lil Kim.mp3"
+                           "file":  "music/The College Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/36 Came Back For You - Lil Kim.mp3"
                        },
                        {
                            "title":  "Through The Wire Interlude",
-                           "file":  "music/The Collage Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/37 Through The Wire Interlude.mp3"
+                           "file":  "music/The College Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/37 Through The Wire Interlude.mp3"
                        },
                        {
                            "title":  "Through The Wire",
-                           "file":  "music/The Collage Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/38 Through The Wire - Kanye West.mp3"
+                           "file":  "music/The College Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/38 Through The Wire - Kanye West.mp3"
                        },
                        {
                            "title":  "Through The Wire (Vocal)",
-                           "file":  "music/The Collage Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/39 Through The Wire (Vocal).mp3"
+                           "file":  "music/The College Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/39 Through The Wire (Vocal).mp3"
                        },
                        {
                            "title":  "Jesus Walks (snippet)",
-                           "file":  "music/The Collage Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/40 Jesus Walks (snippet) - Kanye West.mp3"
+                           "file":  "music/The College Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/40 Jesus Walks (snippet) - Kanye West.mp3"
                        },
                        {
                            "title":  "Ferris Speaks",
-                           "file":  "music/The Collage Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/41 Ferris Speaks.mp3"
+                           "file":  "music/The College Dropout Era/Ferris Bueller \u0026 Plain Pat Present Behind The Beats with Kanye West/41 Ferris Speaks.mp3"
                        }
                    ]
     },
     {
         "id":  "the-collage-dropout-era-freshmen-adjustment",
         "title":  "Freshmen Adjustment",
-        "era":  "The Collage Dropout Era",
-        "year":  "The Collage Dropout",
+        "era":  "The College Dropout Era",
+        "year":  "The College Dropout",
         "accent":  "#111111",
-        "notes":  "ARCHIVE / The Collage Dropout Era",
+        "notes":  "ARCHIVE / The College Dropout Era",
         "tracks":  [
                        {
                            "title":  "Intro",
-                           "file":  "music/The Collage Dropout Era/Freshmen Adjustment/01 - Intro.mp3"
+                           "file":  "music/The College Dropout Era/Freshmen Adjustment/01 - Intro.mp3"
                        },
                        {
                            "title":  "Doing Fine",
-                           "file":  "music/The Collage Dropout Era/Freshmen Adjustment/02 - Doing Fine.mp3"
+                           "file":  "music/The College Dropout Era/Freshmen Adjustment/02 - Doing Fine.mp3"
                        },
                        {
                            "title":  "Self Conscious (AKA Yeah)",
-                           "file":  "music/The Collage Dropout Era/Freshmen Adjustment/03 - Self Conscious (AKA Yeah).mp3"
+                           "file":  "music/The College Dropout Era/Freshmen Adjustment/03 - Self Conscious (AKA Yeah).mp3"
                        },
                        {
                            "title":  "Gossip Files",
-                           "file":  "music/The Collage Dropout Era/Freshmen Adjustment/04 - Gossip Files.mp3"
+                           "file":  "music/The College Dropout Era/Freshmen Adjustment/04 - Gossip Files.mp3"
                        },
                        {
                            "title":  "Wack Niggaz",
-                           "file":  "music/The Collage Dropout Era/Freshmen Adjustment/05 - Wack Niggaz.mp3"
+                           "file":  "music/The College Dropout Era/Freshmen Adjustment/05 - Wack Niggaz.mp3"
                        },
                        {
                            "title":  "I Need To Know",
-                           "file":  "music/The Collage Dropout Era/Freshmen Adjustment/06 - I Need To Know.mp3"
+                           "file":  "music/The College Dropout Era/Freshmen Adjustment/06 - I Need To Know.mp3"
                        },
                        {
                            "title":  "Out Of Your Mind",
-                           "file":  "music/The Collage Dropout Era/Freshmen Adjustment/07 - Out Of Your Mind.mp3"
+                           "file":  "music/The College Dropout Era/Freshmen Adjustment/07 - Out Of Your Mind.mp3"
                        },
                        {
                            "title":  "Livin In A Movie",
-                           "file":  "music/The Collage Dropout Era/Freshmen Adjustment/08 - Livin In A Movie.mp3"
+                           "file":  "music/The College Dropout Era/Freshmen Adjustment/08 - Livin In A Movie.mp3"
                        },
                        {
                            "title":  "Drop Dead Gorgeous",
-                           "file":  "music/The Collage Dropout Era/Freshmen Adjustment/09 - Drop Dead Gorgeous.mp3"
+                           "file":  "music/The College Dropout Era/Freshmen Adjustment/09 - Drop Dead Gorgeous.mp3"
                        },
                        {
                            "title":  "Wow",
-                           "file":  "music/The Collage Dropout Era/Freshmen Adjustment/10 - Wow.mp3"
+                           "file":  "music/The College Dropout Era/Freshmen Adjustment/10 - Wow.mp3"
                        },
                        {
                            "title":  "Apologize",
-                           "file":  "music/The Collage Dropout Era/Freshmen Adjustment/11 - Apologize.mp3"
+                           "file":  "music/The College Dropout Era/Freshmen Adjustment/11 - Apologize.mp3"
                        },
                        {
                            "title":  "Hey Mama",
-                           "file":  "music/The Collage Dropout Era/Freshmen Adjustment/12 - Hey Mama.mp3"
+                           "file":  "music/The College Dropout Era/Freshmen Adjustment/12 - Hey Mama.mp3"
                        },
                        {
                            "title":  "The Good The Bad The Ugly",
-                           "file":  "music/The Collage Dropout Era/Freshmen Adjustment/13 - The Good The Bad The Ugly.mp3"
+                           "file":  "music/The College Dropout Era/Freshmen Adjustment/13 - The Good The Bad The Ugly.mp3"
                        },
                        {
                            "title":  "Keep The Receipt",
-                           "file":  "music/The Collage Dropout Era/Freshmen Adjustment/14 - Keep The Receipt.mp3"
+                           "file":  "music/The College Dropout Era/Freshmen Adjustment/14 - Keep The Receipt.mp3"
                        },
                        {
                            "title":  "Heavy Hitters",
-                           "file":  "music/The Collage Dropout Era/Freshmen Adjustment/15 - Heavy Hitters.mp3"
+                           "file":  "music/The College Dropout Era/Freshmen Adjustment/15 - Heavy Hitters.mp3"
                        },
                        {
                            "title":  "My Way",
-                           "file":  "music/The Collage Dropout Era/Freshmen Adjustment/16 - My Way.mp3"
+                           "file":  "music/The College Dropout Era/Freshmen Adjustment/16 - My Way.mp3"
                        },
                        {
                            "title":  "Home",
-                           "file":  "music/The Collage Dropout Era/Freshmen Adjustment/17 - Home.mp3"
+                           "file":  "music/The College Dropout Era/Freshmen Adjustment/17 - Home.mp3"
                        },
                        {
                            "title":  "03 Electric Relaxation",
-                           "file":  "music/The Collage Dropout Era/Freshmen Adjustment/18 - 03 Electric Relaxation.mp3"
+                           "file":  "music/The College Dropout Era/Freshmen Adjustment/18 - 03 Electric Relaxation.mp3"
                        },
                        {
                            "title":  "All Falls Down (Ft. Keyshia Co",
-                           "file":  "music/The Collage Dropout Era/Freshmen Adjustment/19 - All Falls Down.mp3"
+                           "file":  "music/The College Dropout Era/Freshmen Adjustment/19 - All Falls Down.mp3"
                        }
                    ]
     },
     {
         "id":  "the-collage-dropout-era-get-well-soon",
         "title":  "Get Well Soon",
-        "era":  "The Collage Dropout Era",
-        "year":  "The Collage Dropout",
+        "era":  "The College Dropout Era",
+        "year":  "The College Dropout",
         "accent":  "#111111",
-        "notes":  "ARCHIVE / The Collage Dropout Era",
+        "notes":  "ARCHIVE / The College Dropout Era",
         "tracks":  [
                        {
                            "title":  "Intro (feat. Free of 106 \u0026 Park)",
-                           "file":  "music/The Collage Dropout Era/Get Well Soon/1 - Kanye West - Intro (feat.Free of 106  Park).mp3"
+                           "file":  "music/The College Dropout Era/Get Well Soon/1 - Kanye West - Intro (feat.Free of 106  Park).mp3"
                        },
                        {
                            "title":  "The Bounce (feat. Kanye West)",
-                           "file":  "music/The Collage Dropout Era/Get Well Soon/10 - JAY-Z - The Bounce (feat. Kanye West).mp3"
+                           "file":  "music/The College Dropout Era/Get Well Soon/10 - JAY-Z - The Bounce (feat. Kanye West).mp3"
                        },
                        {
                            "title":  "Poppin\u0027 Tags (feat. Twista \u0026 Big Boi)",
-                           "file":  "music/The Collage Dropout Era/Get Well Soon/11_JAY_Z_Poppin_Tags_feat_TwistaOutkast.mp3"
+                           "file":  "music/The College Dropout Era/Get Well Soon/11_JAY_Z_Poppin_Tags_feat_TwistaOutkast.mp3"
                        },
                        {
                            "title":  "A Million Freestyle",
-                           "file":  "music/The Collage Dropout Era/Get Well Soon/12 - Kanye West - A Million Freestyle.mp3"
+                           "file":  "music/The College Dropout Era/Get Well Soon/12 - Kanye West - A Million Freestyle.mp3"
                        },
                        {
                            "title":  "JAY-Z - 03 Bonnie  Clyde (feat. BeyoncÃ©)",
-                           "file":  "music/The Collage Dropout Era/Get Well Soon/13 - JAY-Z - 03 Bonnie  Clyde (feat. BeyoncÃ©).mp3"
+                           "file":  "music/The College Dropout Era/Get Well Soon/13 - JAY-Z - 03 Bonnie  Clyde (feat. BeyoncÃ©).mp3"
                        },
                        {
                            "title":  "B R Right (feat. Ludacris)",
-                           "file":  "music/The Collage Dropout Era/Get Well Soon/14 - Trina - B R Right (feat.Ludacris).mp3"
+                           "file":  "music/The College Dropout Era/Get Well Soon/14 - Trina - B R Right (feat.Ludacris).mp3"
                        },
                        {
                            "title":  "Brown Sugar",
-                           "file":  "music/The Collage Dropout Era/Get Well Soon/15 - Mos Def - Brown Sugar.mp3"
+                           "file":  "music/The College Dropout Era/Get Well Soon/15 - Mos Def - Brown Sugar.mp3"
                        },
                        {
                            "title":  "Good to You",
-                           "file":  "music/The Collage Dropout Era/Get Well Soon/16 - Talib Kweli - Good to You.mp3"
+                           "file":  "music/The College Dropout Era/Get Well Soon/16 - Talib Kweli - Good to You.mp3"
                        },
                        {
                            "title":  "The Good, The Bad, The Ugly (feat",
-                           "file":  "music/The Collage Dropout Era/Get Well Soon/17_Kanye_West_Consequence_The_Good,_The_Bad,_The_Ugly.mp3"
+                           "file":  "music/The College Dropout Era/Get Well Soon/17_Kanye_West_Consequence_The_Good,_The_Bad,_The_Ugly.mp3"
                        },
                        {
                            "title":  "Dead or Alive",
-                           "file":  "music/The Collage Dropout Era/Get Well Soon/18 - CamRon - Dead or Alive.mp3"
+                           "file":  "music/The College Dropout Era/Get Well Soon/18 - CamRon - Dead or Alive.mp3"
                        },
                        {
                            "title":  "Takeover Freestyle",
-                           "file":  "music/The Collage Dropout Era/Get Well Soon/19 - CamRon - Takeover Freestyle.mp3"
+                           "file":  "music/The College Dropout Era/Get Well Soon/19 - CamRon - Takeover Freestyle.mp3"
                        },
                        {
                            "title":  "Live From Irving Plaza, NY (feat. Kanye West \u0026 Mos Def)",
-                           "file":  "music/The Collage Dropout Era/Get Well Soon/2_Kanye_West__Talib_KweliMos_Def_Live_From_Irving_Plaza,_NY.mp3"
+                           "file":  "music/The College Dropout Era/Get Well Soon/2_Kanye_West__Talib_KweliMos_Def_Live_From_Irving_Plaza,_NY.mp3"
                        },
                        {
                            "title":  "Got Nowhere (feat. Beanie Sigel \u0026 Freeway)",
-                           "file":  "music/The Collage Dropout Era/Get Well Soon/20 - State Property - Got Nowhere.mp3"
+                           "file":  "music/The College Dropout Era/Get Well Soon/20 - State Property - Got Nowhere.mp3"
                        },
                        {
                            "title":  "Poppa Was A Playa",
-                           "file":  "music/The Collage Dropout Era/Get Well Soon/21 - Nas - Poppa Was a Player.mp3"
+                           "file":  "music/The College Dropout Era/Get Well Soon/21 - Nas - Poppa Was a Player.mp3"
                        },
                        {
                            "title":  "Home",
-                           "file":  "music/The Collage Dropout Era/Get Well Soon/22 - Kanye West - Home.mp3"
+                           "file":  "music/The College Dropout Era/Get Well Soon/22 - Kanye West - Home.mp3"
                        },
                        {
                            "title":  "Reebok Commercial",
-                           "file":  "music/The Collage Dropout Era/Get Well Soon/23 - Scarface - Reebok Commercial.mp3"
+                           "file":  "music/The College Dropout Era/Get Well Soon/23 - Scarface - Reebok Commercial.mp3"
                        },
                        {
                            "title":  "Heaven (feat. Kanye West)",
-                           "file":  "music/The Collage Dropout Era/Get Well Soon/24 - Scarface - Heaven (feat. Kelly Price).mp3"
+                           "file":  "music/The College Dropout Era/Get Well Soon/24 - Scarface - Heaven (feat. Kelly Price).mp3"
                        },
                        {
                            "title":  "In Cold Blood",
-                           "file":  "music/The Collage Dropout Era/Get Well Soon/25 - Scarface - In Cold Blood.mp3"
+                           "file":  "music/The College Dropout Era/Get Well Soon/25 - Scarface - In Cold Blood.mp3"
                        },
                        {
                            "title":  "My Way",
-                           "file":  "music/The Collage Dropout Era/Get Well Soon/26 - Kanye West - My Way.mp3"
+                           "file":  "music/The College Dropout Era/Get Well Soon/26 - Kanye West - My Way.mp3"
                        },
                        {
                            "title":  "You Made Me (feat. Carl Thomas \u0026 Nas)",
-                           "file":  "music/The Collage Dropout Era/Get Well Soon/27_Harlem_World_You_Made_Me_feat_Carl_ThomasNas.mp3"
+                           "file":  "music/The College Dropout Era/Get Well Soon/27_Harlem_World_You_Made_Me_feat_Carl_ThomasNas.mp3"
                        },
                        {
                            "title":  "My Life",
-                           "file":  "music/The Collage Dropout Era/Get Well Soon/28 - Foxy Brown - My Life.mp3"
+                           "file":  "music/The College Dropout Era/Get Well Soon/28 - Foxy Brown - My Life.mp3"
                        },
                        {
                            "title":  "Ghetto (feat. Carl Thomas \u0026 Raekwon)",
-                           "file":  "music/The Collage Dropout Era/Get Well Soon/29_The_Madd_Rapper_Ghetto_feat_Carl_ThomasRaekwon.mp3"
+                           "file":  "music/The College Dropout Era/Get Well Soon/29_The_Madd_Rapper_Ghetto_feat_Carl_ThomasRaekwon.mp3"
                        },
                        {
                            "title":  "Guess Who\u0027s Back? Freestyle",
-                           "file":  "music/The Collage Dropout Era/Get Well Soon/3 - 50 Cent - Guess Whos Back Freestyle.mp3"
+                           "file":  "music/The College Dropout Era/Get Well Soon/3 - 50 Cent - Guess Whos Back Freestyle.mp3"
                        },
                        {
                            "title":  "The Truth",
-                           "file":  "music/The Collage Dropout Era/Get Well Soon/30 - Beanie Sigel - The Truth.mp3"
+                           "file":  "music/The College Dropout Era/Get Well Soon/30 - Beanie Sigel - The Truth.mp3"
                        },
                        {
                            "title":  "This Can\u0027t Be Life ",
-                           "file":  "music/The Collage Dropout Era/Get Well Soon/31 - JAY-Z - This Cant Be Life (feat.Beanie Sigel).mp3"
+                           "file":  "music/The College Dropout Era/Get Well Soon/31 - JAY-Z - This Cant Be Life (feat.Beanie Sigel).mp3"
                        },
                        {
                            "title":  "Nothing Like It (feat. The Boys Choir Of Harlem)",
-                           "file":  "music/The Collage Dropout Era/Get Well Soon/32_Beanie_Sigel_Nothing_Like_It_feat_Harlem_Boys_Choir.mp3"
+                           "file":  "music/The College Dropout Era/Get Well Soon/32_Beanie_Sigel_Nothing_Like_It_feat_Harlem_Boys_Choir.mp3"
                        },
                        {
                            "title":  "Izzo (H.O.V.A.) (Unplugged Version)",
-                           "file":  "music/The Collage Dropout Era/Get Well Soon/33 - JAY-Z - Izzo (H.O.V.A.) Unplugged Version.mp3"
+                           "file":  "music/The College Dropout Era/Get Well Soon/33 - JAY-Z - Izzo (H.O.V.A.) Unplugged Version.mp3"
                        },
                        {
                            "title":  "Heart of the City (Ain\u0027t No Love) Unplugged Version",
-                           "file":  "music/The Collage Dropout Era/Get Well Soon/34_JAY_Z_Heart_of_the_City_Aint_No_Love_Unplugged_Version.mp3"
+                           "file":  "music/The College Dropout Era/Get Well Soon/34_JAY_Z_Heart_of_the_City_Aint_No_Love_Unplugged_Version.mp3"
                        },
                        {
                            "title":  "Never Change (feat. Kanye West)",
-                           "file":  "music/The Collage Dropout Era/Get Well Soon/35 - JAY-Z - Never Change (feat. Kanye West).mp3"
+                           "file":  "music/The College Dropout Era/Get Well Soon/35 - JAY-Z - Never Change (feat. Kanye West).mp3"
                        },
                        {
                            "title":  "My Life, My Love",
-                           "file":  "music/The Collage Dropout Era/Get Well Soon/36 - GLC of the GoGetters - My Life, My Love.mp3"
+                           "file":  "music/The College Dropout Era/Get Well Soon/36 - GLC of the GoGetters - My Life, My Love.mp3"
                        },
                        {
                            "title":  "Jesus Walks (Snippet)",
-                           "file":  "music/The Collage Dropout Era/Get Well Soon/4 - Kanye West - Jesus Walks (Snippet).mp3"
+                           "file":  "music/The College Dropout Era/Get Well Soon/4 - Kanye West - Jesus Walks (Snippet).mp3"
                        },
                        {
                            "title":  "Through the Wire (Still Standing)",
-                           "file":  "music/The Collage Dropout Era/Get Well Soon/5_Kanye_West_Through_the_Wire_Still_Standing_feat_Chaka_Khan.mp3"
+                           "file":  "music/The College Dropout Era/Get Well Soon/5_Kanye_West_Through_the_Wire_Still_Standing_feat_Chaka_Khan.mp3"
                        },
                        {
                            "title":  "2 Words (feat. Mos Def, Freeway \u0026 The Boys Choir of Harlem)",
-                           "file":  "music/The Collage Dropout Era/Get Well Soon/6_Kanye_West_2_Words_feat_Mos_Def,Freeway,Harlem_Boys_Choir.mp3"
+                           "file":  "music/The College Dropout Era/Get Well Soon/6_Kanye_West_2_Words_feat_Mos_Def,Freeway,Harlem_Boys_Choir.mp3"
                        },
                        {
                            "title":  "Show Go On (feat. Twista)",
-                           "file":  "music/The Collage Dropout Era/Get Well Soon/7 - FreewayTwista - Show Go On.mp3"
+                           "file":  "music/The College Dropout Era/Get Well Soon/7 - FreewayTwista - Show Go On.mp3"
                        },
                        {
                            "title":  "Champions (feat. Kanye West, Young Chris, Beanie Sigel, Cam\u0027Ron \u0026 Twista)",
-                           "file":  "music/The Collage Dropout Era/Get Well Soon/8_Kanye_West_Young_Chris,Beanie_Sigel,CamRon,Twista_Champion.mp3"
+                           "file":  "music/The College Dropout Era/Get Well Soon/8_Kanye_West_Young_Chris,Beanie_Sigel,CamRon,Twista_Champion.mp3"
                        },
                        {
                            "title":  "Live From Tweeter Center, IL (feat. Kanye West)",
-                           "file":  "music/The Collage Dropout Era/Get Well Soon/9 - Kanye West  JAY-Z - Live From Tweeter Center, IL.mp3"
+                           "file":  "music/The College Dropout Era/Get Well Soon/9 - Kanye West  JAY-Z - Live From Tweeter Center, IL.mp3"
                        }
                    ]
     },
     {
         "id":  "the-collage-dropout-era-i-m-good",
-        "title":  "I_m Good",
-        "era":  "The Collage Dropout Era",
-        "year":  "The Collage Dropout",
+        "title":  "I'm Good",
+        "era":  "The College Dropout Era",
+        "year":  "The College Dropout",
         "accent":  "#111111",
-        "notes":  "ARCHIVE / The Collage Dropout Era",
+        "notes":  "ARCHIVE / The College Dropout Era",
         "tracks":  [
                        {
                            "title":  "Intro",
-                           "file":  "music/The Collage Dropout Era/I_m Good/01 Intro.mp3"
+                           "file":  "music/The College Dropout Era/I_m Good/01 Intro.mp3"
                        },
                        {
                            "title":  "Heavy Hitters (feat. GLC)",
-                           "file":  "music/The Collage Dropout Era/I_m Good/02 Heavy Hitters.mp3"
+                           "file":  "music/The College Dropout Era/I_m Good/02 Heavy Hitters.mp3"
                        },
                        {
                            "title":  "Excuse Me Miss (Remix) (feat. Kanye West)",
-                           "file":  "music/The Collage Dropout Era/I_m Good/03 Excuse Me Miss (Remix).mp3"
+                           "file":  "music/The College Dropout Era/I_m Good/03 Excuse Me Miss (Remix).mp3"
                        },
                        {
                            "title":  "Jesus Walks",
-                           "file":  "music/The Collage Dropout Era/I_m Good/04 Jesus Walks.mp3"
+                           "file":  "music/The College Dropout Era/I_m Good/04 Jesus Walks.mp3"
                        },
                        {
                            "title":  "Two Words (feat. Mos Def, Freeway \u0026 The Boys Choir Of Harlem)",
-                           "file":  "music/The Collage Dropout Era/I_m Good/05 Two Words.mp3"
+                           "file":  "music/The College Dropout Era/I_m Good/05 Two Words.mp3"
                        },
                        {
                            "title":  "Used To Love You",
-                           "file":  "music/The Collage Dropout Era/I_m Good/06 Used To Love You.mp3"
+                           "file":  "music/The College Dropout Era/I_m Good/06 Used To Love You.mp3"
                        },
                        {
                            "title":  "Get By (Remix) (feat. Mos Def, JAY-Z, Kanye West, Busta Rhymes )",
-                           "file":  "music/The Collage Dropout Era/I_m Good/07 Get By (Remix).mp3"
+                           "file":  "music/The College Dropout Era/I_m Good/07 Get By (Remix).mp3"
                        },
                        {
                            "title":  "In Cold Blood (Remix) (feat. 50 Cent \u0026 Lloyd Banks)",
-                           "file":  "music/The Collage Dropout Era/I_m Good/08 In Cold Blood (Remix).mp3"
+                           "file":  "music/The College Dropout Era/I_m Good/08 In Cold Blood (Remix).mp3"
                        },
                        {
                            "title":  "Philly Niggas (feat. Freeway)",
-                           "file":  "music/The Collage Dropout Era/I_m Good/09 Philly Niggas.mp3"
+                           "file":  "music/The College Dropout Era/I_m Good/09 Philly Niggas.mp3"
                        },
                        {
                            "title":  "Y\u0027all Not Ready",
-                           "file":  "music/The Collage Dropout Era/I_m Good/10 Y_all Not Ready.mp3"
+                           "file":  "music/The College Dropout Era/I_m Good/10 Y_all Not Ready.mp3"
                        },
                        {
                            "title":  "Drop Dead Gorgeous (feat. Murphy Lee)",
-                           "file":  "music/The Collage Dropout Era/I_m Good/11 Drop Dead Gorgeous.mp3"
+                           "file":  "music/The College Dropout Era/I_m Good/11 Drop Dead Gorgeous.mp3"
                        },
                        {
                            "title":  "When I Die",
-                           "file":  "music/The Collage Dropout Era/I_m Good/12 When I Die.mp3"
+                           "file":  "music/The College Dropout Era/I_m Good/12 When I Die.mp3"
                        },
                        {
                            "title":  "Digital Thugz (feat. Kanye West \u0026 Mikkey Halsted)",
-                           "file":  "music/The Collage Dropout Era/I_m Good/13 Digital Thugz.mp3"
+                           "file":  "music/The College Dropout Era/I_m Good/13 Digital Thugz.mp3"
                        },
                        {
                            "title":  "Poppin\u0027 Tags (Remix)",
-                           "file":  "music/The Collage Dropout Era/I_m Good/14 Poppin_ Tags (Remix).mp3"
+                           "file":  "music/The College Dropout Era/I_m Good/14 Poppin_ Tags (Remix).mp3"
                        },
                        {
                            "title":  "Badonkadonk",
-                           "file":  "music/The Collage Dropout Era/I_m Good/15 Badonkadonk.mp3"
+                           "file":  "music/The College Dropout Era/I_m Good/15 Badonkadonk.mp3"
                        },
                        {
                            "title":  "Half Price",
-                           "file":  "music/The Collage Dropout Era/I_m Good/16 Half Price.mp3"
+                           "file":  "music/The College Dropout Era/I_m Good/16 Half Price.mp3"
                        },
                        {
                            "title":  "Heartbreaker",
-                           "file":  "music/The Collage Dropout Era/I_m Good/17 Heartbreaker.mp3"
+                           "file":  "music/The College Dropout Era/I_m Good/17 Heartbreaker.mp3"
                        },
                        {
                            "title":  "03\u0027 Electric Relaxation (feat. Consequence)",
-                           "file":  "music/The Collage Dropout Era/I_m Good/18 03_ Electric Relaxation.mp3"
+                           "file":  "music/The College Dropout Era/I_m Good/18 03_ Electric Relaxation.mp3"
                        },
                        {
                            "title":  "Out The Game (feat. Consequence \u0026 John Legend)",
-                           "file":  "music/The Collage Dropout Era/I_m Good/19 Out The Game.mp3"
+                           "file":  "music/The College Dropout Era/I_m Good/19 Out The Game.mp3"
                        },
                        {
                            "title":  "The Knockout King",
-                           "file":  "music/The Collage Dropout Era/I_m Good/20 The Knockout King.mp3"
+                           "file":  "music/The College Dropout Era/I_m Good/20 The Knockout King.mp3"
                        },
                        {
                            "title":  "Muzik",
-                           "file":  "music/The Collage Dropout Era/I_m Good/21 Muzik.mp3"
+                           "file":  "music/The College Dropout Era/I_m Good/21 Muzik.mp3"
                        },
                        {
                            "title":  "Freewest (feat. Kanye West)",
-                           "file":  "music/The Collage Dropout Era/I_m Good/22 Freewest.mp3"
+                           "file":  "music/The College Dropout Era/I_m Good/22 Freewest.mp3"
                        },
                        {
                            "title":  "Hear The Song (feat. Terrey Torae)",
-                           "file":  "music/The Collage Dropout Era/I_m Good/23 Hear The Song.mp3"
+                           "file":  "music/The College Dropout Era/I_m Good/23 Hear The Song.mp3"
                        },
                        {
                            "title":  "Blueprint Compilation",
-                           "file":  "music/The Collage Dropout Era/I_m Good/24 Blueprint Compilation.mp3"
+                           "file":  "music/The College Dropout Era/I_m Good/24 Blueprint Compilation.mp3"
                        },
                        {
                            "title":  "Girls, Girls, Girls, (Remix) (feat. Kanye West)",
-                           "file":  "music/The Collage Dropout Era/I_m Good/25 Girls, Girls, Girls, (Remix).mp3"
+                           "file":  "music/The College Dropout Era/I_m Good/25 Girls, Girls, Girls, (Remix).mp3"
                        },
                        {
                            "title":  "Bonnie \u0026 Clyde (Freestyle)",
-                           "file":  "music/The Collage Dropout Era/I_m Good/26 Bonnie \u0026 Clyde (Freestyle).mp3"
+                           "file":  "music/The College Dropout Era/I_m Good/26 Bonnie \u0026 Clyde (Freestyle).mp3"
                        },
                        {
                            "title":  "Stir Crazy (feat. Madd Rapper)",
-                           "file":  "music/The Collage Dropout Era/I_m Good/27 Stir Crazy.mp3"
+                           "file":  "music/The College Dropout Era/I_m Good/27 Stir Crazy.mp3"
                        },
                        {
                            "title":  "Deja Vu (Remix) (feat. Ma$e \u0026 Big Pun)",
-                           "file":  "music/The Collage Dropout Era/I_m Good/28 Deja Vu (Remix).mp3"
+                           "file":  "music/The College Dropout Era/I_m Good/28 Deja Vu (Remix).mp3"
                        },
                        {
                            "title":  "OlskoolIceGre",
-                           "file":  "music/The Collage Dropout Era/I_m Good/29 Olskool Ice Gre.mp3"
+                           "file":  "music/The College Dropout Era/I_m Good/29 Olskool Ice Gre.mp3"
                        },
                        {
                            "title":  "Get By (Remix) (feat. Mr. Cheeks)",
-                           "file":  "music/The Collage Dropout Era/I_m Good/30 Get By (Remix).mp3"
+                           "file":  "music/The College Dropout Era/I_m Good/30 Get By (Remix).mp3"
                        },
                        {
                            "title":  "Through The Wire",
-                           "file":  "music/The Collage Dropout Era/I_m Good/31 Through The Wire.mp3"
+                           "file":  "music/The College Dropout Era/I_m Good/31 Through The Wire.mp3"
                        }
                    ]
     },
     {
         "id":  "the-collage-dropout-era-kon-the-louis-vuitton-don",
         "title":  "Kon The Louis Vuitton Don",
-        "era":  "The Collage Dropout Era",
-        "year":  "The Collage Dropout",
+        "era":  "The College Dropout Era",
+        "year":  "The College Dropout",
         "accent":  "#111111",
-        "notes":  "ARCHIVE / The Collage Dropout Era",
+        "notes":  "ARCHIVE / The College Dropout Era",
         "tracks":  [
                        {
                            "title":  "Intro",
-                           "file":  "music/The Collage Dropout Era/Kon The Louis Vuitton Don/01 Intro (feat. JAY Z).mp3"
+                           "file":  "music/The College Dropout Era/Kon The Louis Vuitton Don/01 Intro (feat. JAY Z).mp3"
                        },
                        {
                            "title":  "Better Than Yours (feat. Common)",
-                           "file":  "music/The Collage Dropout Era/Kon The Louis Vuitton Don/02 Better Than Yours (feat. Common).mp3"
+                           "file":  "music/The College Dropout Era/Kon The Louis Vuitton Don/02 Better Than Yours (feat. Common).mp3"
                        },
                        {
                            "title":  "Chase The Devil",
-                           "file":  "music/The Collage Dropout Era/Kon The Louis Vuitton Don/03 Chase The Devil (feat. Lee _Scrat.mp3"
+                           "file":  "music/The College Dropout Era/Kon The Louis Vuitton Don/03 Chase The Devil (feat. Lee _Scrat.mp3"
                        },
                        {
                            "title":  "Chase You Outta Here",
-                           "file":  "music/The Collage Dropout Era/Kon The Louis Vuitton Don/04 Chase You Outta Here (feat. 50 Ce.mp3"
+                           "file":  "music/The College Dropout Era/Kon The Louis Vuitton Don/04 Chase You Outta Here (feat. 50 Ce.mp3"
                        },
                        {
                            "title":  "Lucifer",
-                           "file":  "music/The Collage Dropout Era/Kon The Louis Vuitton Don/05 Lucifer (feat. JAY Z).mp3"
+                           "file":  "music/The College Dropout Era/Kon The Louis Vuitton Don/05 Lucifer (feat. JAY Z).mp3"
                        },
                        {
                            "title":  "Encore (feat. John Legend, Don C, GLC \u0026 Kanye West)",
-                           "file":  "music/The Collage Dropout Era/Kon The Louis Vuitton Don/06 Encore (feat. JAY Z, John Legend,.mp3"
+                           "file":  "music/The College Dropout Era/Kon The Louis Vuitton Don/06 Encore (feat. JAY Z, John Legend,.mp3"
                        },
                        {
                            "title":  "You Don\u0027t Know My Name",
-                           "file":  "music/The Collage Dropout Era/Kon The Louis Vuitton Don/07 You Dont Know My Name (feat. Ali.mp3"
+                           "file":  "music/The College Dropout Era/Kon The Louis Vuitton Don/07 You Dont Know My Name (feat. Ali.mp3"
                        },
                        {
                            "title":  "Slow Jams (feat. Kanye West)",
-                           "file":  "music/The Collage Dropout Era/Kon The Louis Vuitton Don/08 Slow Jamz (feat. Twista).mp3"
+                           "file":  "music/The College Dropout Era/Kon The Louis Vuitton Don/08 Slow Jamz (feat. Twista).mp3"
                        },
                        {
                            "title":  "Knock Knock (Remix) (feat.Kanye West )",
-                           "file":  "music/The Collage Dropout Era/Kon The Louis Vuitton Don/09 Knock Knock Remix (feat. Monica).mp3"
+                           "file":  "music/The College Dropout Era/Kon The Louis Vuitton Don/09 Knock Knock Remix (feat. Monica).mp3"
                        },
                        {
                            "title":  "Wouldn\u0027t You Like 2 Ryde (feat. Kanye West \u0026 Common)",
-                           "file":  "music/The Collage Dropout Era/Kon The Louis Vuitton Don/10 Wouldnt You Like 2 Ryde (feat. C.mp3"
+                           "file":  "music/The College Dropout Era/Kon The Louis Vuitton Don/10 Wouldnt You Like 2 Ryde (feat. C.mp3"
                        },
                        {
                            "title":  "Me Against the Music (feat. Britney Spears)",
-                           "file":  "music/The Collage Dropout Era/Kon The Louis Vuitton Don/11 Me Against the Music (feat. Britn.mp3"
+                           "file":  "music/The College Dropout Era/Kon The Louis Vuitton Don/11 Me Against the Music (feat. Britn.mp3"
                        },
                        {
                            "title":  "No More For Me (feat. Kanye West)",
-                           "file":  "music/The Collage Dropout Era/Kon The Louis Vuitton Don/12 No More For Me (feat. Mark Spitz).mp3"
+                           "file":  "music/The College Dropout Era/Kon The Louis Vuitton Don/12 No More For Me (feat. Mark Spitz).mp3"
                        },
                        {
                            "title":  "Keep the Reciept (feat. Dirt McGirt)",
-                           "file":  "music/The Collage Dropout Era/Kon The Louis Vuitton Don/13 Keep the Reciept (feat. Dirt McGi.mp3"
+                           "file":  "music/The College Dropout Era/Kon The Louis Vuitton Don/13 Keep the Reciept (feat. Dirt McGi.mp3"
                        },
                        {
                            "title":  "Freestyle",
-                           "file":  "music/The Collage Dropout Era/Kon The Louis Vuitton Don/14 Freestyle (feat. JAY Z).mp3"
+                           "file":  "music/The College Dropout Era/Kon The Louis Vuitton Don/14 Freestyle (feat. JAY Z).mp3"
                        },
                        {
                            "title":  "Dog\u0027s Out",
-                           "file":  "music/The Collage Dropout Era/Kon The Louis Vuitton Don/16 Dawgs Out (feat. DMX).mp3"
+                           "file":  "music/The College Dropout Era/Kon The Louis Vuitton Don/16 Dawgs Out (feat. DMX).mp3"
                        },
                        {
                            "title":  "Turn Yourself In",
-                           "file":  "music/The Collage Dropout Era/Kon The Louis Vuitton Don/18 Turn Yourself In (feat. Consequen.mp3"
+                           "file":  "music/The College Dropout Era/Kon The Louis Vuitton Don/18 Turn Yourself In (feat. Consequen.mp3"
                        },
                        {
                            "title":  "03 Til\u0027... (feat. Consequence)",
-                           "file":  "music/The Collage Dropout Era/Kon The Louis Vuitton Don/19 03 Til (feat. Consequence).mp3"
+                           "file":  "music/The College Dropout Era/Kon The Louis Vuitton Don/19 03 Til (feat. Consequence).mp3"
                        },
                        {
                            "title":  "Defence (feat. Meka)",
-                           "file":  "music/The Collage Dropout Era/Kon The Louis Vuitton Don/20 Defence (feat. GLC Meka).mp3"
+                           "file":  "music/The College Dropout Era/Kon The Louis Vuitton Don/20 Defence (feat. GLC Meka).mp3"
                        },
                        {
                            "title":  "You (feat. Kanye West)",
-                           "file":  "music/The Collage Dropout Era/Kon The Louis Vuitton Don/22 You (feat. Mela).mp3"
+                           "file":  "music/The College Dropout Era/Kon The Louis Vuitton Don/22 You (feat. Mela).mp3"
                        },
                        {
                            "title":  "Certified Gangstas",
-                           "file":  "music/The Collage Dropout Era/Kon The Louis Vuitton Don/23 Certified Gangstas (feat. Jim Jon.mp3"
+                           "file":  "music/The College Dropout Era/Kon The Louis Vuitton Don/23 Certified Gangstas (feat. Jim Jon.mp3"
                        },
                        {
                            "title":  "Stand Up (Remix) (feat. Ludacris)",
-                           "file":  "music/The Collage Dropout Era/Kon The Louis Vuitton Don/Stand Up (Remix) [feat.Ludacris].mp3"
+                           "file":  "music/The College Dropout Era/Kon The Louis Vuitton Don/Stand Up (Remix) [feat.Ludacris].mp3"
                        },
                        {
                            "title":  "Through The Wire (Remix)",
-                           "file":  "music/The Collage Dropout Era/Kon The Louis Vuitton Don/Through The Wire (Remix).mp3"
+                           "file":  "music/The College Dropout Era/Kon The Louis Vuitton Don/Through The Wire (Remix).mp3"
                        }
                    ]
     },
     {
         "id":  "the-collage-dropout-era-the-college-dropout",
         "title":  "The College Dropout",
-        "era":  "The Collage Dropout Era",
-        "year":  "The Collage Dropout",
+        "era":  "The College Dropout Era",
+        "year":  "The College Dropout",
         "accent":  "#111111",
-        "notes":  "ARCHIVE / The Collage Dropout Era",
+        "notes":  "ARCHIVE / The College Dropout Era",
         "tracks":  [
                        {
                            "title":  "Intro",
-                           "file":  "music/The Collage Dropout Era/The College Dropout/01_Intro.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout/01_Intro.mp3"
                        },
                        {
                            "title":  "Heavy Hitters (feat. GLC)",
-                           "file":  "music/The Collage Dropout Era/The College Dropout/02 Heavy Hitters (online-audio-converter.com).mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout/02 Heavy Hitters (online-audio-converter.com).mp3"
                        },
                        {
                            "title":  "Drug Dealin (feat. GLC \u0026 Keyshia Co)",
-                           "file":  "music/The Collage Dropout Era/The College Dropout/02_Drug_Dealin_ft._GLC_Keyshia_Co.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout/02_Drug_Dealin_ft._GLC_Keyshia_Co.mp3"
                        },
                        {
                            "title":  "Falls Down",
-                           "file":  "music/The Collage Dropout Era/The College Dropout/04-kanye_west-self_conscious-ecr.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout/04-kanye_west-self_conscious-ecr.mp3"
                        },
                        {
                            "title":  "Good Bad Ugly",
-                           "file":  "music/The Collage Dropout Era/The College Dropout/06 The Good, The Bad and The Ugly.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout/06 The Good, The Bad and The Ugly.mp3"
                        },
                        {
                            "title":  "Keep The Receipt (feat. Dirt McGirt)",
-                           "file":  "music/The Collage Dropout Era/The College Dropout/08 Keep The Receipt (feat. Dirt McGirt).mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout/08 Keep The Receipt (feat. Dirt McGirt).mp3"
                        },
                        {
                            "title":  "Hey Ma",
-                           "file":  "music/The Collage Dropout Era/The College Dropout/09-kanye_west-hey_mama.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout/09-kanye_west-hey_mama.mp3"
                        },
                        {
                            "title":  "My Way",
-                           "file":  "music/The Collage Dropout Era/The College Dropout/11 My Way.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout/11 My Way.mp3"
                        },
                        {
                            "title":  "Family Affair",
-                           "file":  "music/The Collage Dropout Era/The College Dropout/11-kanye_west-family_business.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout/11-kanye_west-family_business.mp3"
                        },
                        {
                            "title":  "18 Years",
-                           "file":  "music/The Collage Dropout Era/The College Dropout/18 Years.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout/18 Years.mp3"
                        },
                        {
                            "title":  "2 Words",
-                           "file":  "music/The Collage Dropout Era/The College Dropout/2 Words.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout/2 Words.mp3"
                        },
                        {
                            "title":  "Through the Wire (Still Standing)",
-                           "file":  "music/The Collage Dropout Era/The College Dropout/5_Kanye_West_Through_the_Wire_Still_Standing_feat_Chaka_Khan (online-audio-converter.com).mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout/5_Kanye_West_Through_the_Wire_Still_Standing_feat_Chaka_Khan (online-audio-converter.com).mp3"
                        },
                        {
                            "title":  "Champions",
-                           "file":  "music/The Collage Dropout Era/The College Dropout/8_Kanye_West_Young_Chris,Beanie_Sigel,CamRon,Twista_Champion.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout/8_Kanye_West_Young_Chris,Beanie_Sigel,CamRon,Twista_Champion.mp3"
                        },
                        {
                            "title":  "Breathe In",
-                           "file":  "music/The Collage Dropout Era/The College Dropout/Breathe_In_Breathe_Out_mp3-9b233c.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout/Breathe_In_Breathe_Out_mp3-9b233c.mp3"
                        },
                        {
                            "title":  "Home (feat. John Legend)",
-                           "file":  "music/The Collage Dropout Era/The College Dropout/Home_V2.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout/Home_V2.mp3"
                        },
                        {
                            "title":  "Jesus Walks (feat. Rhymefest)",
-                           "file":  "music/The Collage Dropout Era/The College Dropout/Jesus_Walks_feat._Rhymefest.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout/Jesus_Walks_feat._Rhymefest.mp3"
                        },
                        {
                            "title":  "Never Let Me Down (feat. JAY-Z, J. Ivy \u0026 Saul Williams)",
-                           "file":  "music/The Collage Dropout Era/The College Dropout/Never_Let_Me_Down_V3.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout/Never_Let_Me_Down_V3.mp3"
                        },
                        {
                            "title":  "Slow Jams (feat. Twista \u0026 Jamie_Foxx)",
-                           "file":  "music/The Collage Dropout Era/The College Dropout/Slow_Jamz_V2_feat._Twista___Jamie_Foxx.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout/Slow_Jamz_V2_feat._Twista___Jamie_Foxx.mp3"
                        }
                    ]
     },
     {
         "id":  "the-collage-dropout-era-the-college-dropout-album-sampler",
         "title":  "The College Dropout (Album Sampler)",
-        "era":  "The Collage Dropout Era",
-        "year":  "The Collage Dropout",
+        "era":  "The College Dropout Era",
+        "year":  "The College Dropout",
         "accent":  "#111111",
-        "notes":  "ARCHIVE / The Collage Dropout Era",
+        "notes":  "ARCHIVE / The College Dropout Era",
         "tracks":  [
                        {
                            "title":  "Intro",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Album Sampler)/01 Intro.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Album Sampler)/01 Intro.mp3"
                        },
                        {
                            "title":  "Through The Wire",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Album Sampler)/02 Through The Wire.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Album Sampler)/02 Through The Wire.mp3"
                        },
                        {
                            "title":  "Slow Jamz",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Album Sampler)/03 Slow Jamz.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Album Sampler)/03 Slow Jamz.mp3"
                        },
                        {
                            "title":  "Breathe In Breathe Out",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Album Sampler)/04 Breathe In.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Album Sampler)/04 Breathe In.mp3"
                        },
                        {
                            "title":  "Two Words",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Album Sampler)/05 Two Words.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Album Sampler)/05 Two Words.mp3"
                        },
                        {
                            "title":  "Outro",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Album Sampler)/06 Outro.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Album Sampler)/06 Outro.mp3"
                        }
                    ]
     },
     {
         "id":  "the-collage-dropout-era-the-college-dropout-demo",
         "title":  "The College Dropout (Demo)",
-        "era":  "The Collage Dropout Era",
-        "year":  "The Collage Dropout",
+        "era":  "The College Dropout Era",
+        "year":  "The College Dropout",
         "accent":  "#111111",
-        "notes":  "ARCHIVE / The Collage Dropout Era",
+        "notes":  "ARCHIVE / The College Dropout Era",
         "tracks":  [
                        {
                            "title":  "Intro",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Demo)/01 Kanye West - Intro.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Demo)/01 Kanye West - Intro.mp3"
                        },
                        {
                            "title":  "We Don\u0027t Care",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Demo)/02 Kanye West - We Don_t Care.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Demo)/02 Kanye West - We Don_t Care.mp3"
                        },
                        {
                            "title":  "Graduation Day",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Demo)/03 Kanye West - Graduation Day.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Demo)/03 Kanye West - Graduation Day.mp3"
                        },
                        {
                            "title":  "All Falls Down (feat. Lauryn Hill)",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Demo)/04 Kanye West feat. Lauryn Hill - All Falls Down.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Demo)/04 Kanye West feat. Lauryn Hill - All Falls Down.mp3"
                        },
                        {
                            "title":  "I\u0027ll Fly Away",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Demo)/05 Kanye West - I_ll Fly Away.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Demo)/05 Kanye West - I_ll Fly Away.mp3"
                        },
                        {
                            "title":  "Spaceship (feat. GLC \u0026 Consequence)",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Demo)/06 Kanye West feat. GLC \u0026 Consequence - Spaceship.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Demo)/06 Kanye West feat. GLC \u0026 Consequence - Spaceship.mp3"
                        },
                        {
                            "title":  "Jesus Walks",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Demo)/07 Kanye West - Jesus Walks.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Demo)/07 Kanye West - Jesus Walks.mp3"
                        },
                        {
                            "title":  "Never Let Me Down (feat. Jay-Z \u0026 J. Ivy)",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Demo)/08 Kanye West feat. Jay-Z \u0026 J. Ivy - Never Let Me Down.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Demo)/08 Kanye West feat. Jay-Z \u0026 J. Ivy - Never Let Me Down.mp3"
                        },
                        {
                            "title":  "Get Em High (feat. Talib Kweli \u0026 Common)",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Demo)/09 Kanye West feat. Talib Kweli \u0026 Common - Get Em High.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Demo)/09 Kanye West feat. Talib Kweli \u0026 Common - Get Em High.mp3"
                        },
                        {
                            "title":  "Workout Plan",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Demo)/10 Kanye West - Workout Plan.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Demo)/10 Kanye West - Workout Plan.mp3"
                        },
                        {
                            "title":  "The New Workout Plan",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Demo)/11 Kanye West - The New Workout Plan.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Demo)/11 Kanye West - The New Workout Plan.mp3"
                        },
                        {
                            "title":  "Slow Jamz (feat. Twista \u0026 Jamie Foxx)",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Demo)/12 Kanye West feat. Twista \u0026 Jamie Foxx - Slow Jamz.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Demo)/12 Kanye West feat. Twista \u0026 Jamie Foxx - Slow Jamz.mp3"
                        },
                        {
                            "title":  "Breathe In Breathe Out (feat. Ludacris)",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Demo)/13 Kanye West feat. Ludacris - Breathe In Breathe Out.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Demo)/13 Kanye West feat. Ludacris - Breathe In Breathe Out.mp3"
                        },
                        {
                            "title":  "School Spirit (skit 1)",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Demo)/14 Kanye West - School Spirit (skit 1).mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Demo)/14 Kanye West - School Spirit (skit 1).mp3"
                        },
                        {
                            "title":  "School Spirit",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Demo)/15 Kanye West - School Spirit.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Demo)/15 Kanye West - School Spirit.mp3"
                        },
                        {
                            "title":  "School Spirit (skit 2)",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Demo)/16 Kanye West - School Spirit (skit 2).mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Demo)/16 Kanye West - School Spirit (skit 2).mp3"
                        },
                        {
                            "title":  "Lil Jimmy (skit)",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Demo)/17 Kanye West - Lil Jimmy (skit).mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Demo)/17 Kanye West - Lil Jimmy (skit).mp3"
                        },
                        {
                            "title":  "Two Words (feat. Mos Def, Freeway \u0026 The Harlem Boys Choir)",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Demo)/18 Kanye West feat. Mos Def, Freeway \u0026 The Harlem Boys Choir - Two Words.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Demo)/18 Kanye West feat. Mos Def, Freeway \u0026 The Harlem Boys Choir - Two Words.mp3"
                        },
                        {
                            "title":  "Through the Wire",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Demo)/19 Kanye West - Through the Wire.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Demo)/19 Kanye West - Through the Wire.mp3"
                        },
                        {
                            "title":  "Family Business",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Demo)/20 Kanye West - Family Business.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Demo)/20 Kanye West - Family Business.mp3"
                        },
                        {
                            "title":  "Last Call",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Demo)/21 Kanye West - Last Call.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Demo)/21 Kanye West - Last Call.mp3"
                        },
                        {
                            "title":  "We Don\u0027t Care (reprise) (feat. Keyshia Cole)",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Demo)/22 Kanye West feat. Keyshia Cole - We Don_t Care (reprise).mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Demo)/22 Kanye West feat. Keyshia Cole - We Don_t Care (reprise).mp3"
                        }
                    ]
     },
     {
         "id":  "the-collage-dropout-era-the-college-dropout-early",
         "title":  "The College Dropout (Early)",
-        "era":  "The Collage Dropout Era",
-        "year":  "The Collage Dropout",
+        "era":  "The College Dropout Era",
+        "year":  "The College Dropout",
         "accent":  "#111111",
-        "notes":  "ARCHIVE / The Collage Dropout Era",
+        "notes":  "ARCHIVE / The College Dropout Era",
         "tracks":  [
                        {
                            "title":  "Intro",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Early)/01 Intro.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Early)/01 Intro.mp3"
                        },
                        {
                            "title":  "All Falls Down (feat. Lauryn Hill)",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Early)/02 All Falls Down (feat. Lauryn Hill).mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Early)/02 All Falls Down (feat. Lauryn Hill).mp3"
                        },
                        {
                            "title":  "Jesus Walks (Intro)",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Early)/03 Jesus Walks (Intro).mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Early)/03 Jesus Walks (Intro).mp3"
                        },
                        {
                            "title":  "Jesus Walks",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Early)/04 Jesus Walks.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Early)/04 Jesus Walks.mp3"
                        },
                        {
                            "title":  "Two Words (feat. Mos Def \u0026 Floetry)",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Early)/05 Two Words (feat. Mos Def \u0026 Floetry).mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Early)/05 Two Words (feat. Mos Def \u0026 Floetry).mp3"
                        },
                        {
                            "title":  "The Good, The Bad and The Ugly",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Early)/06 The Good, The Bad and The Ugly.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Early)/06 The Good, The Bad and The Ugly.mp3"
                        },
                        {
                            "title":  "The New Workout Plan",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Early)/07 The New Workout Plan.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Early)/07 The New Workout Plan.mp3"
                        },
                        {
                            "title":  "Keep The Receipt (feat. Dirt McGirt)",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Early)/08 Keep The Receipt (feat. Dirt McGirt).mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Early)/08 Keep The Receipt (feat. Dirt McGirt).mp3"
                        },
                        {
                            "title":  "Heavy Hitters (feat. GLC)",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Early)/09 Heavy Hitters (feat. GLC).mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Early)/09 Heavy Hitters (feat. GLC).mp3"
                        },
                        {
                            "title":  "Slow Jamz (feat. Twista \u0026 Jamie Foxx)",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Early)/10 Slow Jamz (feat. Twista \u0026 Jamie Foxx).mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Early)/10 Slow Jamz (feat. Twista \u0026 Jamie Foxx).mp3"
                        },
                        {
                            "title":  "My Way",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Early)/11 My Way.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Early)/11 My Way.mp3"
                        },
                        {
                            "title":  "Family Affair",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Early)/12 Family Affair.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Early)/12 Family Affair.mp3"
                        },
                        {
                            "title":  "Through the Wire",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Early)/13 Through the Wire.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Early)/13 Through the Wire.mp3"
                        },
                        {
                            "title":  "Never Let Me Down (feat. JAY-Z \u0026 Saul Williams)",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Early)/14 Never Let Me Down (feat. JAY-Z \u0026 Saul Williams).mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Early)/14 Never Let Me Down (feat. JAY-Z \u0026 Saul Williams).mp3"
                        },
                        {
                            "title":  "Home",
-                           "file":  "music/The Collage Dropout Era/The College Dropout (Early)/15 Home.mp3"
+                           "file":  "music/The College Dropout Era/The College Dropout (Early)/15 Home.mp3"
                        }
                    ]
     },
@@ -9493,17 +9489,6 @@ window.YE_ARCHIVE_DATABASE = [
                    ]
     },
     {
-        "id":  "the-life-of-pablo-era-tlop",
-        "title":  "tlop",
-        "era":  "The Life of Pablo Era",
-        "year":  "The Life of Pablo",
-        "accent":  "#111111",
-        "notes":  "ARCHIVE / The Life of Pablo Era",
-        "tracks":  [
-
-                   ]
-    },
-    {
         "id":  "the-life-of-pablo-era-turbografx16",
         "title":  "TurboGrafx16",
         "era":  "The Life of Pablo Era",
@@ -9825,7 +9810,7 @@ window.YE_ARCHIVE_DATABASE = [
     },
     {
         "id":  "the-prerequisite-era-demo-beat-tape-sept-97",
-        "title":  "Demo Beat Tape Sept. 97Â´",
+        "title":  "Demo Beat Tape Sept. 97",
         "era":  "The Prerequisite Era",
         "year":  "The Prerequisite",
         "accent":  "#111111",
@@ -9833,35 +9818,35 @@ window.YE_ARCHIVE_DATABASE = [
         "tracks":  [
                        {
                            "title":  "Unreleased Kanye Beat Tape (C. Sept 97_) Beat 1",
-                           "file":  "music/The Prerequisite Era/Demo Beat Tape Sept. 97Â´/Unreleased Kanye Beat Tape (C. Sept 97_) Beat 1.mp3"
+                           "file":  "music/The Prerequisite Era/Demo Beat Tape Sept. 97/Unreleased Kanye Beat Tape (C. Sept 97_) Beat 1.mp3"
                        },
                        {
                            "title":  "Unreleased Kanye Beat Tape (C. Sept 97_) Beat 2",
-                           "file":  "music/The Prerequisite Era/Demo Beat Tape Sept. 97Â´/Unreleased Kanye Beat Tape (C. Sept 97_) Beat 2.mp3"
+                           "file":  "music/The Prerequisite Era/Demo Beat Tape Sept. 97/Unreleased Kanye Beat Tape (C. Sept 97_) Beat 2.mp3"
                        },
                        {
                            "title":  "Unreleased Kanye Beat Tape (C. Sept 97_) Beat 3",
-                           "file":  "music/The Prerequisite Era/Demo Beat Tape Sept. 97Â´/Unreleased Kanye Beat Tape (C. Sept 97_) Beat 3.mp3"
+                           "file":  "music/The Prerequisite Era/Demo Beat Tape Sept. 97/Unreleased Kanye Beat Tape (C. Sept 97_) Beat 3.mp3"
                        },
                        {
                            "title":  "Unreleased Kanye Beat Tape (C. Sept 97_) Beat 4",
-                           "file":  "music/The Prerequisite Era/Demo Beat Tape Sept. 97Â´/Unreleased Kanye Beat Tape (C. Sept 97_) Beat 4.mp3"
+                           "file":  "music/The Prerequisite Era/Demo Beat Tape Sept. 97/Unreleased Kanye Beat Tape (C. Sept 97_) Beat 4.mp3"
                        },
                        {
                            "title":  "Unreleased Kanye Beat Tape (C. Sept 97_) Beat 5",
-                           "file":  "music/The Prerequisite Era/Demo Beat Tape Sept. 97Â´/Unreleased Kanye Beat Tape (C. Sept 97_) Beat 5.mp3"
+                           "file":  "music/The Prerequisite Era/Demo Beat Tape Sept. 97/Unreleased Kanye Beat Tape (C. Sept 97_) Beat 5.mp3"
                        },
                        {
                            "title":  "Unreleased Kanye Beat Tape (C. Sept 97_) Beat 6",
-                           "file":  "music/The Prerequisite Era/Demo Beat Tape Sept. 97Â´/Unreleased Kanye Beat Tape (C. Sept 97_) Beat 6.mp3"
+                           "file":  "music/The Prerequisite Era/Demo Beat Tape Sept. 97/Unreleased Kanye Beat Tape (C. Sept 97_) Beat 6.mp3"
                        },
                        {
                            "title":  "Unreleased Kanye Beat Tape (C. Sept 97_) Beat 7",
-                           "file":  "music/The Prerequisite Era/Demo Beat Tape Sept. 97Â´/Unreleased Kanye Beat Tape (C. Sept 97_) Beat 7.mp3"
+                           "file":  "music/The Prerequisite Era/Demo Beat Tape Sept. 97/Unreleased Kanye Beat Tape (C. Sept 97_) Beat 7.mp3"
                        },
                        {
                            "title":  "Unreleased Kanye Beat Tape (C. Sept 97_) Beat 8",
-                           "file":  "music/The Prerequisite Era/Demo Beat Tape Sept. 97Â´/Unreleased Kanye Beat Tape (C. Sept 97_) Beat 8.mp3"
+                           "file":  "music/The Prerequisite Era/Demo Beat Tape Sept. 97/Unreleased Kanye Beat Tape (C. Sept 97_) Beat 8.mp3"
                        }
                    ]
     },
@@ -10182,8 +10167,8 @@ window.YE_ARCHIVE_DATABASE = [
                    ]
     },
     {
-        "id":  "the-prerequisite-era-world-record-holders-cd-versi-n",
-        "title":  "World Record Holders (CD VersiÃ³n)",
+        "id":  "the-prerequisite-era-world-record-holders-cd-version",
+        "title":  "World Record Holders (CD Version)",
         "era":  "The Prerequisite Era",
         "year":  "The Prerequisite",
         "accent":  "#111111",
@@ -10191,1385 +10176,99 @@ window.YE_ARCHIVE_DATABASE = [
         "tracks":  [
                        {
                            "title":  "Intro",
-                           "file":  "music/The Prerequisite Era/World Record Holders (CD VersiÃ³n)/01. Intro.mp3"
+                           "file":  "music/The Prerequisite Era/World Record Holders (CD Version)/01. Intro.mp3"
                        },
                        {
                            "title":  "Nothing_s Gonna Stop Me",
-                           "file":  "music/The Prerequisite Era/World Record Holders (CD VersiÃ³n)/02. Nothing_s Gonna Stop Me.mp3"
+                           "file":  "music/The Prerequisite Era/World Record Holders (CD Version)/02. Nothing_s Gonna Stop Me.mp3"
                        },
                        {
                            "title":  "World Record Holders",
-                           "file":  "music/The Prerequisite Era/World Record Holders (CD VersiÃ³n)/03. World Record Holders.mp3"
+                           "file":  "music/The Prerequisite Era/World Record Holders (CD Version)/03. World Record Holders.mp3"
                        },
                        {
                            "title":  "Them Guyz",
-                           "file":  "music/The Prerequisite Era/World Record Holders (CD VersiÃ³n)/04. Them Guyz.mp3"
+                           "file":  "music/The Prerequisite Era/World Record Holders (CD Version)/04. Them Guyz.mp3"
                        },
                        {
                            "title":  "Ghetto Senorita",
-                           "file":  "music/The Prerequisite Era/World Record Holders (CD VersiÃ³n)/05. Ghetto Senorita.mp3"
+                           "file":  "music/The Prerequisite Era/World Record Holders (CD Version)/05. Ghetto Senorita.mp3"
                        },
                        {
                            "title":  "All I Have",
-                           "file":  "music/The Prerequisite Era/World Record Holders (CD VersiÃ³n)/06. All I Have.mp3"
+                           "file":  "music/The Prerequisite Era/World Record Holders (CD Version)/06. All I Have.mp3"
                        },
                        {
                            "title":  "Foolish Game",
-                           "file":  "music/The Prerequisite Era/World Record Holders (CD VersiÃ³n)/07. Foolish Game.mp3"
+                           "file":  "music/The Prerequisite Era/World Record Holders (CD Version)/07. Foolish Game.mp3"
                        },
                        {
                            "title":  "No Luv",
-                           "file":  "music/The Prerequisite Era/World Record Holders (CD VersiÃ³n)/08. No Luv.mp3"
+                           "file":  "music/The Prerequisite Era/World Record Holders (CD Version)/08. No Luv.mp3"
                        },
                        {
                            "title":  "Fight With the Best",
-                           "file":  "music/The Prerequisite Era/World Record Holders (CD VersiÃ³n)/09. Fight With the Best.mp3"
+                           "file":  "music/The Prerequisite Era/World Record Holders (CD Version)/09. Fight With the Best.mp3"
                        },
                        {
                            "title":  "On 10 in a Benz",
-                           "file":  "music/The Prerequisite Era/World Record Holders (CD VersiÃ³n)/10. On 10 in a Benz.mp3"
+                           "file":  "music/The Prerequisite Era/World Record Holders (CD Version)/10. On 10 in a Benz.mp3"
                        },
                        {
                            "title":  "Raekwon - Ghetto",
-                           "file":  "music/The Prerequisite Era/World Record Holders (CD VersiÃ³n)/11. Raekwon - Ghetto.mp3"
+                           "file":  "music/The Prerequisite Era/World Record Holders (CD Version)/11. Raekwon - Ghetto.mp3"
                        },
                        {
                            "title":  "Nas - Poppa Was a Playa",
-                           "file":  "music/The Prerequisite Era/World Record Holders (CD VersiÃ³n)/12. Nas - Poppa Was a Playa.mp3"
+                           "file":  "music/The Prerequisite Era/World Record Holders (CD Version)/12. Nas - Poppa Was a Playa.mp3"
                        },
                        {
                            "title":  "Big Pun - Is It You_ (Deja Vu) Remix",
-                           "file":  "music/The Prerequisite Era/World Record Holders (CD VersiÃ³n)/13. Big Pun - Is It You_ (Deja Vu) Remix.mp3"
+                           "file":  "music/The Prerequisite Era/World Record Holders (CD Version)/13. Big Pun - Is It You_ (Deja Vu) Remix.mp3"
                        },
                        {
                            "title":  "Ma$he - That_s What_s Happenin_",
-                           "file":  "music/The Prerequisite Era/World Record Holders (CD VersiÃ³n)/14. Ma$he - That_s What_s Happenin_.mp3"
+                           "file":  "music/The Prerequisite Era/World Record Holders (CD Version)/14. Ma$he - That_s What_s Happenin_.mp3"
                        },
                        {
                            "title":  "Foxy Brown - My Life",
-                           "file":  "music/The Prerequisite Era/World Record Holders (CD VersiÃ³n)/15. Foxy Brown - My Life.mp3"
+                           "file":  "music/The Prerequisite Era/World Record Holders (CD Version)/15. Foxy Brown - My Life.mp3"
                        },
                        {
                            "title":  "Goodie Mob - Rebuilding",
-                           "file":  "music/The Prerequisite Era/World Record Holders (CD VersiÃ³n)/16. Goodie Mob - Rebuilding.mp3"
+                           "file":  "music/The Prerequisite Era/World Record Holders (CD Version)/16. Goodie Mob - Rebuilding.mp3"
                        },
                        {
                            "title":  "Eminem \u0026 The Madd Rapper - Stir Crazy",
-                           "file":  "music/The Prerequisite Era/World Record Holders (CD VersiÃ³n)/17. Eminem \u0026 The Madd Rapper - Stir Crazy.mp3"
+                           "file":  "music/The Prerequisite Era/World Record Holders (CD Version)/17. Eminem \u0026 The Madd Rapper - Stir Crazy.mp3"
                        },
                        {
                            "title":  "Trina \u0026 Tamara - Joanne (Remix)",
-                           "file":  "music/The Prerequisite Era/World Record Holders (CD VersiÃ³n)/18. Trina \u0026 Tamara - Joanne (Remix).mp3"
+                           "file":  "music/The Prerequisite Era/World Record Holders (CD Version)/18. Trina \u0026 Tamara - Joanne (Remix).mp3"
                        },
                        {
                            "title":  "Nas - You Made Me",
-                           "file":  "music/The Prerequisite Era/World Record Holders (CD VersiÃ³n)/19. Nas - You Made Me.mp3"
+                           "file":  "music/The Prerequisite Era/World Record Holders (CD Version)/19. Nas - You Made Me.mp3"
                        },
                        {
                            "title":  "R.O.C - 4 Richer or Poorer",
-                           "file":  "music/The Prerequisite Era/World Record Holders (CD VersiÃ³n)/20. R.O.C - 4 Richer or Poorer.mp3"
+                           "file":  "music/The Prerequisite Era/World Record Holders (CD Version)/20. R.O.C - 4 Richer or Poorer.mp3"
                        },
                        {
                            "title":  "Outro",
-                           "file":  "music/The Prerequisite Era/World Record Holders (CD VersiÃ³n)/21. Outro.mp3"
+                           "file":  "music/The Prerequisite Era/World Record Holders (CD Version)/21. Outro.mp3"
                        },
                        {
                            "title":  "Oh, Oh, Oh",
-                           "file":  "music/The Prerequisite Era/World Record Holders (CD VersiÃ³n)/22. Oh, Oh, Oh.mp3"
+                           "file":  "music/The Prerequisite Era/World Record Holders (CD Version)/22. Oh, Oh, Oh.mp3"
                        },
                        {
                            "title":  "Mind Your Business",
-                           "file":  "music/The Prerequisite Era/World Record Holders (CD VersiÃ³n)/23. Mind Your Business.mp3"
+                           "file":  "music/The Prerequisite Era/World Record Holders (CD Version)/23. Mind Your Business.mp3"
                        },
                        {
                            "title":  "Let My Niggas In",
-                           "file":  "music/The Prerequisite Era/World Record Holders (CD VersiÃ³n)/24. Let My Niggas In.mp3"
-                       }
-                   ]
-    },
-    {
-        "id":  "tlop-saint-pablo-tour",
-        "title":  "Saint Pablo Tour",
-        "era":  "tlop",
-        "year":  "tlop",
-        "accent":  "#111111",
-        "notes":  "ARCHIVE / tlop",
-        "tracks":  [
-                       {
-                           "title":  "Father Stretch My Hands",
-                           "file":  "music/tlop/Saint Pablo Tour/01. Father Stretch My Hands.mp3"
-                       },
-                       {
-                           "title":  "Famous",
-                           "file":  "music/tlop/Saint Pablo Tour/02. Famous.mp3"
-                       },
-                       {
-                           "title":  "Pop Style",
-                           "file":  "music/tlop/Saint Pablo Tour/03. Pop Style.mp3"
-                       },
-                       {
-                           "title":  "That Part",
-                           "file":  "music/tlop/Saint Pablo Tour/04. That Part.mp3"
-                       },
-                       {
-                           "title":  "Facts",
-                           "file":  "music/tlop/Saint Pablo Tour/05. Facts.mp3"
-                       },
-                       {
-                           "title":  "Mercy",
-                           "file":  "music/tlop/Saint Pablo Tour/06. Mercy.mp3"
-                       },
-                       {
-                           "title":  "Don_t Like",
-                           "file":  "music/tlop/Saint Pablo Tour/07. Don_t Like.mp3"
-                       },
-                       {
-                           "title":  "All Day",
-                           "file":  "music/tlop/Saint Pablo Tour/08. All Day.mp3"
-                       },
-                       {
-                           "title":  "Black Skinhead",
-                           "file":  "music/tlop/Saint Pablo Tour/09. Black Skinhead.mp3"
-                       },
-                       {
-                           "title":  "Can_t Tell Me Nothing",
-                           "file":  "music/tlop/Saint Pablo Tour/10. Can_t Tell Me Nothing.mp3"
-                       },
-                       {
-                           "title":  "Power",
-                           "file":  "music/tlop/Saint Pablo Tour/11. Power.mp3"
-                       },
-                       {
-                           "title":  "Interlude",
-                           "file":  "music/tlop/Saint Pablo Tour/12. Interlude.mp3"
-                       },
-                       {
-                           "title":  "Blood On The Leaves",
-                           "file":  "music/tlop/Saint Pablo Tour/13. Blood On The Leaves.mp3"
-                       },
-                       {
-                           "title":  "30 Hours",
-                           "file":  "music/tlop/Saint Pablo Tour/14. 30 Hours.mp3"
-                       },
-                       {
-                           "title":  "Freestyle 4",
-                           "file":  "music/tlop/Saint Pablo Tour/15. Freestyle 4.mp3"
-                       },
-                       {
-                           "title":  "No More Parties In LA",
-                           "file":  "music/tlop/Saint Pablo Tour/16. No More Parties In LA.mp3"
-                       },
-                       {
-                           "title":  "Jesus Walks",
-                           "file":  "music/tlop/Saint Pablo Tour/17. Jesus Walks.mp3"
-                       },
-                       {
-                           "title":  "Flashing Lights",
-                           "file":  "music/tlop/Saint Pablo Tour/18. Flashing Lights.mp3"
-                       },
-                       {
-                           "title":  "Lowlights",
-                           "file":  "music/tlop/Saint Pablo Tour/19. Lowlights.mp3"
-                       },
-                       {
-                           "title":  "Highlights",
-                           "file":  "music/tlop/Saint Pablo Tour/20. Highlights.mp3"
-                       },
-                       {
-                           "title":  "Feedback",
-                           "file":  "music/tlop/Saint Pablo Tour/21. Feedback.mp3"
-                       },
-                       {
-                           "title":  "Wolves",
-                           "file":  "music/tlop/Saint Pablo Tour/22. Wolves.mp3"
-                       },
-                       {
-                           "title":  "Heartless",
-                           "file":  "music/tlop/Saint Pablo Tour/23. Heartless.mp3"
-                       },
-                       {
-                           "title":  "Runaway",
-                           "file":  "music/tlop/Saint Pablo Tour/24. Runaway.mp3"
-                       },
-                       {
-                           "title":  "Only One",
-                           "file":  "music/tlop/Saint Pablo Tour/25. Only One.mp3"
-                       },
-                       {
-                           "title":  "I Love Kanye",
-                           "file":  "music/tlop/Saint Pablo Tour/26. I Love Kanye.mp3"
-                       },
-                       {
-                           "title":  "Waves",
-                           "file":  "music/tlop/Saint Pablo Tour/27. Waves.mp3"
-                       },
-                       {
-                           "title":  "FML",
-                           "file":  "music/tlop/Saint Pablo Tour/28. FML.mp3"
-                       },
-                       {
-                           "title":  "All Of The Lights",
-                           "file":  "music/tlop/Saint Pablo Tour/29. All Of The Lights.mp3"
-                       },
-                       {
-                           "title":  "Good Life",
-                           "file":  "music/tlop/Saint Pablo Tour/30. Good Life.mp3"
-                       },
-                       {
-                           "title":  "Stronger",
-                           "file":  "music/tlop/Saint Pablo Tour/31. Stronger.mp3"
-                       },
-                       {
-                           "title":  "Fade",
-                           "file":  "music/tlop/Saint Pablo Tour/32. Fade.mp3"
-                       },
-                       {
-                           "title":  "Saint Pablo",
-                           "file":  "music/tlop/Saint Pablo Tour/33. Saint Pablo.mp3"
-                       },
-                       {
-                           "title":  "Ultralight Beam",
-                           "file":  "music/tlop/Saint Pablo Tour/34. Ultralight Beam.mp3"
-                       }
-                   ]
-    },
-    {
-        "id":  "tlop-saint-pablo-tour-chicago",
-        "title":  "Saint Pablo Tour (Chicago)",
-        "era":  "tlop",
-        "year":  "tlop",
-        "accent":  "#111111",
-        "notes":  "ARCHIVE / tlop",
-        "tracks":  [
-                       {
-                           "title":  "Father Stretch My Hands pt 1",
-                           "file":  "music/tlop/Saint Pablo Tour (Chicago)/01. Father Stretch My Hands pt 1.mp3"
-                       },
-                       {
-                           "title":  "Pt 2",
-                           "file":  "music/tlop/Saint Pablo Tour (Chicago)/02. Pt 2.mp3"
-                       },
-                       {
-                           "title":  "Famous",
-                           "file":  "music/tlop/Saint Pablo Tour (Chicago)/03. Famous.mp3"
-                       },
-                       {
-                           "title":  "Pop Style",
-                           "file":  "music/tlop/Saint Pablo Tour (Chicago)/04. Pop Style.mp3"
-                       },
-                       {
-                           "title":  "THat Part",
-                           "file":  "music/tlop/Saint Pablo Tour (Chicago)/05. THat Part.mp3"
-                       },
-                       {
-                           "title":  "Facts (Charlie Heat Version)",
-                           "file":  "music/tlop/Saint Pablo Tour (Chicago)/06. Facts (Charlie Heat Version).mp3"
-                       },
-                       {
-                           "title":  "Mercy Dont Like",
-                           "file":  "music/tlop/Saint Pablo Tour (Chicago)/07. Mercy Dont Like.mp3"
-                       },
-                       {
-                           "title":  "All Day Black Skinhead",
-                           "file":  "music/tlop/Saint Pablo Tour (Chicago)/08. All Day Black Skinhead.mp3"
-                       },
-                       {
-                           "title":  "Niggas In Paris",
-                           "file":  "music/tlop/Saint Pablo Tour (Chicago)/09. Niggas In Paris.mp3"
-                       },
-                       {
-                           "title":  "Cant Tell Me Nothing",
-                           "file":  "music/tlop/Saint Pablo Tour (Chicago)/10. Cant Tell Me Nothing.mp3"
-                       },
-                       {
-                           "title":  "POWER",
-                           "file":  "music/tlop/Saint Pablo Tour (Chicago)/11. POWER.mp3"
-                       },
-                       {
-                           "title":  "Blade Runner Intermission 1",
-                           "file":  "music/tlop/Saint Pablo Tour (Chicago)/12. Blade Runner Intermission 1.mp3"
-                       },
-                       {
-                           "title":  "Blood On The Leaves",
-                           "file":  "music/tlop/Saint Pablo Tour (Chicago)/13. Blood On The Leaves.mp3"
-                       },
-                       {
-                           "title":  "Freestyle 4",
-                           "file":  "music/tlop/Saint Pablo Tour (Chicago)/14. Freestyle 4.mp3"
-                       },
-                       {
-                           "title":  "Jesus Walks",
-                           "file":  "music/tlop/Saint Pablo Tour (Chicago)/15. Jesus Walks.mp3"
-                       },
-                       {
-                           "title":  "Flashing Lights",
-                           "file":  "music/tlop/Saint Pablo Tour (Chicago)/16. Flashing Lights.mp3"
-                       },
-                       {
-                           "title":  "Lowlights",
-                           "file":  "music/tlop/Saint Pablo Tour (Chicago)/17. Lowlights.mp3"
-                       },
-                       {
-                           "title":  "Highlights",
-                           "file":  "music/tlop/Saint Pablo Tour (Chicago)/18. Highlights.mp3"
-                       },
-                       {
-                           "title":  "Feedback",
-                           "file":  "music/tlop/Saint Pablo Tour (Chicago)/19. Feedback.mp3"
-                       },
-                       {
-                           "title":  "Blade Runner Intermission 2",
-                           "file":  "music/tlop/Saint Pablo Tour (Chicago)/20. Blade Runner Intermission 2.mp3"
-                       },
-                       {
-                           "title":  "Wolves",
-                           "file":  "music/tlop/Saint Pablo Tour (Chicago)/21. Wolves.mp3"
-                       },
-                       {
-                           "title":  "Heartless",
-                           "file":  "music/tlop/Saint Pablo Tour (Chicago)/22. Heartless.mp3"
-                       },
-                       {
-                           "title":  "Runaway",
-                           "file":  "music/tlop/Saint Pablo Tour (Chicago)/23. Runaway.mp3"
-                       },
-                       {
-                           "title":  "Only One",
-                           "file":  "music/tlop/Saint Pablo Tour (Chicago)/24. Only One.mp3"
-                       },
-                       {
-                           "title":  "I Love Kanye",
-                           "file":  "music/tlop/Saint Pablo Tour (Chicago)/25. I Love Kanye.mp3"
-                       },
-                       {
-                           "title":  "Waves",
-                           "file":  "music/tlop/Saint Pablo Tour (Chicago)/26. Waves.mp3"
-                       },
-                       {
-                           "title":  "Touch The Sky",
-                           "file":  "music/tlop/Saint Pablo Tour (Chicago)/27. Touch The Sky.mp3"
-                       },
-                       {
-                           "title":  "All Of The Lights",
-                           "file":  "music/tlop/Saint Pablo Tour (Chicago)/28. All Of The Lights.mp3"
-                       },
-                       {
-                           "title":  "Good Life",
-                           "file":  "music/tlop/Saint Pablo Tour (Chicago)/29. Good Life.mp3"
-                       },
-                       {
-                           "title":  "Stronger",
-                           "file":  "music/tlop/Saint Pablo Tour (Chicago)/30. Stronger.mp3"
-                       },
-                       {
-                           "title":  "Fade",
-                           "file":  "music/tlop/Saint Pablo Tour (Chicago)/31. Fade.mp3"
-                       },
-                       {
-                           "title":  "Blade Runner Intermission 3",
-                           "file":  "music/tlop/Saint Pablo Tour (Chicago)/32. Blade Runner Intermission 3.mp3"
-                       },
-                       {
-                           "title":  "Ultralight Beam",
-                           "file":  "music/tlop/Saint Pablo Tour (Chicago)/33. Ultralight Beam.mp3"
-                       }
-                   ]
-    },
-    {
-        "id":  "tlop-swish",
-        "title":  "SWISH",
-        "era":  "tlop",
-        "year":  "tlop",
-        "accent":  "#111111",
-        "notes":  "ARCHIVE / tlop",
-        "tracks":  [
-                       {
-                           "title":  "17_Freestyle_4_feat_Tyler,_The_Creator,_A$AP_Ferg,_A$AP_Rocky (online-audio-converter.com)",
-                           "file":  "music/tlop/SWISH/2_17_Freestyle_4_feat_Tyler,_The_Creator,_A$AP_Ferg,_A$AP_Rocky (online-audio-converter.com).mp3"
-                       },
-                       {
-                           "title":  "Rihannas_V9",
-                           "file":  "music/tlop/SWISH/2_Rihannas_V9.mp3"
-                       },
-                       {
-                           "title":  "Hours_V11",
-                           "file":  "music/tlop/SWISH/30_Hours_V11.mp3"
-                       },
-                       {
-                           "title":  "Anxiety_V2",
-                           "file":  "music/tlop/SWISH/Anxiety_V2.mp3"
-                       },
-                       {
-                           "title":  "Bad_Night_V10",
-                           "file":  "music/tlop/SWISH/Bad_Night_V10.mp3"
-                       },
-                       {
-                           "title":  "Come_and_Go_V2",
-                           "file":  "music/tlop/SWISH/Come_and_Go_V2.mp3"
-                       },
-                       {
-                           "title":  "Don_t_Jump_V2",
-                           "file":  "music/tlop/SWISH/Don_t_Jump_V2.mp3"
-                       },
-                       {
-                           "title":  "Enya_V2",
-                           "file":  "music/tlop/SWISH/Enya_V2.mp3"
-                       },
-                       {
-                           "title":  "Euro_2_V1",
-                           "file":  "music/tlop/SWISH/Euro_2_V1.mp3"
-                       },
-                       {
-                           "title":  "Facts_V2",
-                           "file":  "music/tlop/SWISH/Facts_V2.mp3"
-                       },
-                       {
-                           "title":  "Fade_V12",
-                           "file":  "music/tlop/SWISH/Fade_V12.mp3"
-                       },
-                       {
-                           "title":  "Father_Stretch_V4",
-                           "file":  "music/tlop/SWISH/Father_Stretch_V4.mp3"
-                       },
-                       {
-                           "title":  "Feedback_V1",
-                           "file":  "music/tlop/SWISH/Feedback_V1.mp3"
-                       },
-                       {
-                           "title":  "FML_V5",
-                           "file":  "music/tlop/SWISH/FML_V5.mp3"
-                       },
-                       {
-                           "title":  "Forever_V2",
-                           "file":  "music/tlop/SWISH/Forever_V2.mp3"
-                       },
-                       {
-                           "title":  "God_Level_V19",
-                           "file":  "music/tlop/SWISH/God_Level_V19.mp3"
-                       },
-                       {
-                           "title":  "High_Life_V2",
-                           "file":  "music/tlop/SWISH/High_Life_V2.mp3"
-                       },
-                       {
-                           "title":  "Highlights_V6",
-                           "file":  "music/tlop/SWISH/Highlights_V6.mp3"
-                       },
-                       {
-                           "title":  "I_Feel_Like_That_V11",
-                           "file":  "music/tlop/SWISH/I_Feel_Like_That_V11.mp3"
-                       },
-                       {
-                           "title":  "I_Love_Kanye_V2",
-                           "file":  "music/tlop/SWISH/I_Love_Kanye_V2.mp3"
-                       },
-                       {
-                           "title":  "Kanye West - Deja Vu (feat. Kendrick Lamar \u0026 Pusha T)-yt.savetube.me",
-                           "file":  "music/tlop/SWISH/Kanye West - Deja Vu (feat. Kendrick Lamar \u0026 Pusha T)-yt.savetube.me.mp3"
-                       },
-                       {
-                           "title":  "Nina_Chop_V5",
-                           "file":  "music/tlop/SWISH/Nina_Chop_V5.mp3"
-                       },
-                       {
-                           "title":  "No_More_Parties_in_LA_V2",
-                           "file":  "music/tlop/SWISH/No_More_Parties_in_LA_V2.mp3"
-                       },
-                       {
-                           "title":  "Only_One_V6",
-                           "file":  "music/tlop/SWISH/Only_One_V6.mp3"
-                       },
-                       {
-                           "title":  "Only_V3",
-                           "file":  "music/tlop/SWISH/Only_V3.mp3"
-                       },
-                       {
-                           "title":  "Over_V14",
-                           "file":  "music/tlop/SWISH/Over_V14.mp3"
-                       },
-                       {
-                           "title":  "Post_Malone_Fuck_The_Internet_V4",
-                           "file":  "music/tlop/SWISH/Post_Malone_Fuck_The_Internet_V4.mp3"
-                       },
-                       {
-                           "title":  "Prayer_V3",
-                           "file":  "music/tlop/SWISH/Prayer_V3.mp3"
-                       },
-                       {
-                           "title":  "Real_Friends_V3",
-                           "file":  "music/tlop/SWISH/Real_Friends_V3.mp3"
-                       },
-                       {
-                           "title":  "Rich_Nigga_Drunk_V5",
-                           "file":  "music/tlop/SWISH/Rich_Nigga_Drunk_V5.mp3"
-                       },
-                       {
-                           "title":  "Sell_Your_Soul_V1",
-                           "file":  "music/tlop/SWISH/Sell_Your_Soul_V1.mp3"
-                       },
-                       {
-                           "title":  "The_Mall_V2",
-                           "file":  "music/tlop/SWISH/The_Mall_V2.mp3"
-                       },
-                       {
-                           "title":  "trav_uzi_pressure_with_ATpro_fixed",
-                           "file":  "music/tlop/SWISH/trav_uzi_pressure_with_ATpro_fixed.mp3"
-                       },
-                       {
-                           "title":  "Ultimate_Lie_V2",
-                           "file":  "music/tlop/SWISH/Ultimate_Lie_V2.mp3"
-                       },
-                       {
-                           "title":  "Waves_V7",
-                           "file":  "music/tlop/SWISH/Waves_V7.mp3"
-                       },
-                       {
-                           "title":  "Wolves_V20",
-                           "file":  "music/tlop/SWISH/Wolves_V20.mp3"
-                       }
-                   ]
-    },
-    {
-        "id":  "tlop-swish-early",
-        "title":  "SWISH (Early)",
-        "era":  "tlop",
-        "year":  "tlop",
-        "accent":  "#111111",
-        "notes":  "ARCHIVE / tlop",
-        "tracks":  [
-                       {
-                           "title":  "Hours_V13",
-                           "file":  "music/tlop/SWISH (Early)/30_Hours_V13.mp3"
-                       },
-                       {
-                           "title":  "Fade_V12",
-                           "file":  "music/tlop/SWISH (Early)/Fade_V12.mp3"
-                       },
-                       {
-                           "title":  "Father_Stretch_V4",
-                           "file":  "music/tlop/SWISH (Early)/Father_Stretch_V4.mp3"
-                       },
-                       {
-                           "title":  "Feedback_V1",
-                           "file":  "music/tlop/SWISH (Early)/Feedback_V1.mp3"
-                       },
-                       {
-                           "title":  "FML_V3",
-                           "file":  "music/tlop/SWISH (Early)/FML_V3.mp3"
-                       },
-                       {
-                           "title":  "Highlights_V6",
-                           "file":  "music/tlop/SWISH (Early)/Highlights_V6.mp3"
-                       },
-                       {
-                           "title":  "I_Feel_Like_That_V11",
-                           "file":  "music/tlop/SWISH (Early)/I_Feel_Like_That_V11.mp3"
-                       },
-                       {
-                           "title":  "Nina_Chop_V7",
-                           "file":  "music/tlop/SWISH (Early)/Nina_Chop_V7.mp3"
-                       },
-                       {
-                           "title":  "No_More_Parties_in_LA_V4",
-                           "file":  "music/tlop/SWISH (Early)/No_More_Parties_in_LA_V4.mp3"
-                       },
-                       {
-                           "title":  "Only_One_V6",
-                           "file":  "music/tlop/SWISH (Early)/Only_One_V6.mp3"
-                       },
-                       {
-                           "title":  "Real_Friends_V4",
-                           "file":  "music/tlop/SWISH (Early)/Real_Friends_V4.mp3"
-                       },
-                       {
-                           "title":  "WE_FUCK_V1",
-                           "file":  "music/tlop/SWISH (Early)/WE_FUCK_V1.mp3"
-                       },
-                       {
-                           "title":  "Wolves_V20",
-                           "file":  "music/tlop/SWISH (Early)/Wolves_V20.mp3"
-                       }
-                   ]
-    },
-    {
-        "id":  "tlop-swish-pre-waves",
-        "title":  "SWISH (Pre WAVES)",
-        "era":  "tlop",
-        "year":  "tlop",
-        "accent":  "#111111",
-        "notes":  "ARCHIVE / tlop",
-        "tracks":  [
-                       {
-                           "title":  "Hours_V14",
-                           "file":  "music/tlop/SWISH (Pre WAVES)/30_Hours_V14.mp3"
-                       },
-                       {
-                           "title":  "Fade_V19",
-                           "file":  "music/tlop/SWISH (Pre WAVES)/Fade_V19.mp3"
-                       },
-                       {
-                           "title":  "Father_Stretch_My_Hands_Pt._1_Reprise",
-                           "file":  "music/tlop/SWISH (Pre WAVES)/Father_Stretch_My_Hands_Pt._1_Reprise.mp3"
-                       },
-                       {
-                           "title":  "FML_V10",
-                           "file":  "music/tlop/SWISH (Pre WAVES)/FML_V10.mp3"
-                       },
-                       {
-                           "title":  "Highlights_V9",
-                           "file":  "music/tlop/SWISH (Pre WAVES)/Highlights_V9.mp3"
-                       },
-                       {
-                           "title":  "Kanye West - Pt. 2 (online-audio-converter.com)",
-                           "file":  "music/tlop/SWISH (Pre WAVES)/Kanye West - Pt. 2 (online-audio-converter.com).mp3"
-                       },
-                       {
-                           "title":  "Nina_Chop_V7",
-                           "file":  "music/tlop/SWISH (Pre WAVES)/Nina_Chop_V7.mp3"
-                       },
-                       {
-                           "title":  "No_More_Parties_in_LA_V5",
-                           "file":  "music/tlop/SWISH (Pre WAVES)/No_More_Parties_in_LA_V5.mp3"
-                       },
-                       {
-                           "title":  "Real_Friends_Remix",
-                           "file":  "music/tlop/SWISH (Pre WAVES)/Real_Friends_Remix.mp3"
-                       },
-                       {
-                           "title":  "Waves_V9",
-                           "file":  "music/tlop/SWISH (Pre WAVES)/Waves_V9.mp3"
-                       },
-                       {
-                           "title":  "Wolves_V20",
-                           "file":  "music/tlop/SWISH (Pre WAVES)/Wolves_V20.mp3"
-                       }
-                   ]
-    },
-    {
-        "id":  "tlop-the-death-of-pablo",
-        "title":  "The Death Of Pablo",
-        "era":  "tlop",
-        "year":  "tlop",
-        "accent":  "#111111",
-        "notes":  "ARCHIVE / tlop",
-        "tracks":  [
-                       {
-                           "title":  "The Pablo Collective - The Death of Pablo - 01 Ultralight Wall",
-                           "file":  "music/tlop/The Death Of Pablo/The Pablo Collective - The Death of Pablo - 01 Ultralight Wall.mp3"
-                       },
-                       {
-                           "title":  "The Pablo Collective - The Death of Pablo - 02 Washed Up",
-                           "file":  "music/tlop/The Death Of Pablo/The Pablo Collective - The Death of Pablo - 02 Washed Up.mp3"
-                       },
-                       {
-                           "title":  "The Pablo Collective - The Death of Pablo - 03 Father Stretch My Hands Pt.3",
-                           "file":  "music/tlop/The Death Of Pablo/The Pablo Collective - The Death of Pablo - 03 Father Stretch My Hands Pt.3.mp3"
-                       },
-                       {
-                           "title":  "The Pablo Collective - The Death of Pablo - 04 Fade Pt.2",
-                           "file":  "music/tlop/The Death Of Pablo/The Pablo Collective - The Death of Pablo - 04 Fade Pt.2.mp3"
-                       }
-                   ]
-    },
-    {
-        "id":  "tlop-the-life-of-pablo",
-        "title":  "The Life Of Pablo",
-        "era":  "tlop",
-        "year":  "tlop",
-        "accent":  "#111111",
-        "notes":  "ARCHIVE / tlop",
-        "tracks":  [
-                       {
-                           "title":  "Fade_V19",
-                           "file":  "music/tlop/The Life Of Pablo/Fade_V19.mp3"
-                       },
-                       {
-                           "title":  "Father_Stretch_My_Hands_Pt._1_Reprise",
-                           "file":  "music/tlop/The Life Of Pablo/Father_Stretch_My_Hands_Pt._1_Reprise.mp3"
-                       },
-                       {
-                           "title":  "Feedback_V3",
-                           "file":  "music/tlop/The Life Of Pablo/Feedback_V3.mp3"
-                       },
-                       {
-                           "title":  "FML_V12",
-                           "file":  "music/tlop/The Life Of Pablo/FML_V12.mp3"
-                       },
-                       {
-                           "title":  "Highlights_V9",
-                           "file":  "music/tlop/The Life Of Pablo/Highlights_V9.mp3"
-                       },
-                       {
-                           "title":  "Kanye West - Pt. 2",
-                           "file":  "music/tlop/The Life Of Pablo/Kanye West - Pt. 2.mp3"
-                       },
-                       {
-                           "title":  "Nina_Chop_V7",
-                           "file":  "music/tlop/The Life Of Pablo/Nina_Chop_V7.mp3"
-                       },
-                       {
-                           "title":  "Real_Friends_V3",
-                           "file":  "music/tlop/The Life Of Pablo/Real_Friends_V3.mp3"
-                       },
-                       {
-                           "title":  "Saint_Pablo_V13",
-                           "file":  "music/tlop/The Life Of Pablo/Saint_Pablo_V13.mp3"
-                       },
-                       {
-                           "title":  "Ultralight_Beam_V5",
-                           "file":  "music/tlop/The Life Of Pablo/Ultralight_Beam_V5.mp3"
-                       },
-                       {
-                           "title":  "WE_FUCK_V1",
-                           "file":  "music/tlop/The Life Of Pablo/WE_FUCK_V1.mp3"
-                       },
-                       {
-                           "title":  "Wolves_V20",
-                           "file":  "music/tlop/The Life Of Pablo/Wolves_V20.mp3"
-                       }
-                   ]
-    },
-    {
-        "id":  "tlop-the-life-of-pablo-djds-version",
-        "title":  "The Life Of Pablo (DJDS Version)",
-        "era":  "tlop",
-        "year":  "tlop",
-        "accent":  "#111111",
-        "notes":  "ARCHIVE / tlop",
-        "tracks":  [
-                       {
-                           "title":  "hours reference",
-                           "file":  "music/tlop/The Life Of Pablo (DJDS Version)/30 hours reference.mp3"
-                       },
-                       {
-                           "title":  "DJDS Highlights Intro",
-                           "file":  "music/tlop/The Life Of Pablo (DJDS Version)/DJDS Highlights Intro.mp3"
-                       },
-                       {
-                           "title":  "Facts DJDS Full Track 2.3.16",
-                           "file":  "music/tlop/The Life Of Pablo (DJDS Version)/Facts DJDS Full Track 2.3.16.mp3"
-                       },
-                       {
-                           "title":  "fade_full_stems",
-                           "file":  "music/tlop/The Life Of Pablo (DJDS Version)/fade_full_stems.mp3"
-                       },
-                       {
-                           "title":  "father stretch djds to play kanyev2",
-                           "file":  "music/tlop/The Life Of Pablo (DJDS Version)/father stretch djds to play kanyev2.mp3"
-                       },
-                       {
-                           "title":  "FML - DJDS FULL SONG @ 123",
-                           "file":  "music/tlop/The Life Of Pablo (DJDS Version)/FML - DJDS FULL SONG @ 123.mp3"
-                       },
-                       {
-                           "title":  "Freestyle 4 DJDS Full Track",
-                           "file":  "music/tlop/The Life Of Pablo (DJDS Version)/Freestyle 4 DJDS Full Track.mp3"
-                       },
-                       {
-                           "title":  "Highlights - DJDS - reference song",
-                           "file":  "music/tlop/The Life Of Pablo (DJDS Version)/Highlights - DJDS - reference song.mp3"
-                       },
-                       {
-                           "title":  "Highlights - DJDS FULL SONG @ 100",
-                           "file":  "music/tlop/The Life Of Pablo (DJDS Version)/Highlights - DJDS FULL SONG @ 100.mp3"
-                       },
-                       {
-                           "title":  "Kanye - I.F.L.T - DJDS FULL SONG @ 110",
-                           "file":  "music/tlop/The Life Of Pablo (DJDS Version)/Kanye - I.F.L.T - DJDS FULL SONG @ 110.mp3"
-                       },
-                       {
-                           "title":  "ninachop",
-                           "file":  "music/tlop/The Life Of Pablo (DJDS Version)/ninachop.mp3"
-                       },
-                       {
-                           "title":  "Spread My Wings DJDS Full Track",
-                           "file":  "music/tlop/The Life Of Pablo (DJDS Version)/Spread My Wings DJDS Full Track.mp3"
-                       },
-                       {
-                           "title":  "ultralightbeams",
-                           "file":  "music/tlop/The Life Of Pablo (DJDS Version)/ultralightbeams.mp3"
-                       },
-                       {
-                           "title":  "we deserve djds 2.8.16 to play kanye",
-                           "file":  "music/tlop/The Life Of Pablo (DJDS Version)/we deserve djds 2.8.16 to play kanye.mp3"
-                       }
-                   ]
-    },
-    {
-        "id":  "tlop-the-life-of-pablo-first-version",
-        "title":  "The Life Of Pablo (First Version)",
-        "era":  "tlop",
-        "year":  "tlop",
-        "accent":  "#111111",
-        "notes":  "ARCHIVE / tlop",
-        "tracks":  [
-                       {
-                           "title":  "Ultralight Beam",
-                           "file":  "music/tlop/The Life Of Pablo (First Version)/01 Ultralight Beam.mp3"
-                       },
-                       {
-                           "title":  "Father Stretch My Hands Pt. 1",
-                           "file":  "music/tlop/The Life Of Pablo (First Version)/02 Father Stretch My Hands Pt. 1.mp3"
-                       },
-                       {
-                           "title":  "Pt. 2",
-                           "file":  "music/tlop/The Life Of Pablo (First Version)/03 Pt. 2.mp3"
-                       },
-                       {
-                           "title":  "Famous",
-                           "file":  "music/tlop/The Life Of Pablo (First Version)/04 Famous.mp3"
-                       },
-                       {
-                           "title":  "Feedback",
-                           "file":  "music/tlop/The Life Of Pablo (First Version)/05 Feedback.mp3"
-                       },
-                       {
-                           "title":  "Low Lights",
-                           "file":  "music/tlop/The Life Of Pablo (First Version)/06 Low Lights.mp3"
-                       },
-                       {
-                           "title":  "Highlights",
-                           "file":  "music/tlop/The Life Of Pablo (First Version)/07 Highlights.mp3"
-                       },
-                       {
-                           "title":  "Freestyle 4",
-                           "file":  "music/tlop/The Life Of Pablo (First Version)/08 Freestyle 4.mp3"
-                       },
-                       {
-                           "title":  "I Love Kanye",
-                           "file":  "music/tlop/The Life Of Pablo (First Version)/09 I Love Kanye.mp3"
-                       },
-                       {
-                           "title":  "Waves",
-                           "file":  "music/tlop/The Life Of Pablo (First Version)/10 Waves.mp3"
-                       },
-                       {
-                           "title":  "FML",
-                           "file":  "music/tlop/The Life Of Pablo (First Version)/11 FML.mp3"
-                       },
-                       {
-                           "title":  "Real Friends",
-                           "file":  "music/tlop/The Life Of Pablo (First Version)/12 Real Friends.mp3"
-                       },
-                       {
-                           "title":  "Wolves",
-                           "file":  "music/tlop/The Life Of Pablo (First Version)/13 Wolves.mp3"
-                       },
-                       {
-                           "title":  "Silver Surfer Intermission",
-                           "file":  "music/tlop/The Life Of Pablo (First Version)/14 Silver Surfer Intermission.mp3"
-                       },
-                       {
-                           "title":  "30 Hours",
-                           "file":  "music/tlop/The Life Of Pablo (First Version)/15 30 Hours.mp3"
-                       },
-                       {
-                           "title":  "No More Parties In LA",
-                           "file":  "music/tlop/The Life Of Pablo (First Version)/16 No More Parties In LA.mp3"
-                       },
-                       {
-                           "title":  "Facts (Charlie Heat Version)",
-                           "file":  "music/tlop/The Life Of Pablo (First Version)/17 Facts (Charlie Heat Version).mp3"
-                       },
-                       {
-                           "title":  "Fade",
-                           "file":  "music/tlop/The Life Of Pablo (First Version)/18 Fade.mp3"
-                       }
-                   ]
-    },
-    {
-        "id":  "tlop-the-life-of-pablo-madison-square-garden",
-        "title":  "The Life of Pablo (Madison Square Garden)",
-        "era":  "tlop",
-        "year":  "tlop",
-        "accent":  "#111111",
-        "notes":  "ARCHIVE / tlop",
-        "tracks":  [
-                       {
-                           "title":  "Ultralight Beam",
-                           "file":  "music/tlop/The Life of Pablo (Madison Square Garden)/1.- Ultralight Beam.mp3"
-                       },
-                       {
-                           "title":  "FML",
-                           "file":  "music/tlop/The Life of Pablo (Madison Square Garden)/10 .- FML.mp3"
-                       },
-                       {
-                           "title":  "Real Friends",
-                           "file":  "music/tlop/The Life of Pablo (Madison Square Garden)/11.- Real Friends.mp3"
-                       },
-                       {
-                           "title":  "Wolves",
-                           "file":  "music/tlop/The Life of Pablo (Madison Square Garden)/12.- Wolves.mp3"
-                       },
-                       {
-                           "title":  "Frank_s Track",
-                           "file":  "music/tlop/The Life of Pablo (Madison Square Garden)/13.- Frank_s Track.mp3"
-                       },
-                       {
-                           "title":  "Facts (Charlie Heat Version)",
-                           "file":  "music/tlop/The Life of Pablo (Madison Square Garden)/14.- Facts (Charlie Heat Version).mp3"
-                       },
-                       {
-                           "title":  "Fade",
-                           "file":  "music/tlop/The Life of Pablo (Madison Square Garden)/15.- Fade.mp3"
-                       },
-                       {
-                           "title":  "With Them",
-                           "file":  "music/tlop/The Life of Pablo (Madison Square Garden)/16.- With Them.mp3"
-                       },
-                       {
-                           "title":  "Danger",
-                           "file":  "music/tlop/The Life of Pablo (Madison Square Garden)/17.- Danger.mp3"
-                       },
-                       {
-                           "title":  "Only One (The Game)",
-                           "file":  "music/tlop/The Life of Pablo (Madison Square Garden)/18.- Only One (The Game).mp3"
-                       },
-                       {
-                           "title":  "All Day",
-                           "file":  "music/tlop/The Life of Pablo (Madison Square Garden)/19.- All Day.mp3"
-                       },
-                       {
-                           "title":  "Father Stretch My Hands Pt. 1",
-                           "file":  "music/tlop/The Life of Pablo (Madison Square Garden)/2.- Father Stretch My Hands Pt. 1.mp3"
-                       },
-                       {
-                           "title":  "Pt. 2",
-                           "file":  "music/tlop/The Life of Pablo (Madison Square Garden)/3.- Pt. 2.mp3"
-                       },
-                       {
-                           "title":  "Feedback",
-                           "file":  "music/tlop/The Life of Pablo (Madison Square Garden)/4.- Feedback.mp3"
-                       },
-                       {
-                           "title":  "Famous",
-                           "file":  "music/tlop/The Life of Pablo (Madison Square Garden)/5.- Famous.mp3"
-                       },
-                       {
-                           "title":  "Low Lights",
-                           "file":  "music/tlop/The Life of Pablo (Madison Square Garden)/6.- Low Lights.mp3"
-                       },
-                       {
-                           "title":  "Highlights",
-                           "file":  "music/tlop/The Life of Pablo (Madison Square Garden)/7.- Highlights.mp3"
-                       },
-                       {
-                           "title":  "Freestyle 4",
-                           "file":  "music/tlop/The Life of Pablo (Madison Square Garden)/8.- Freestyle 4.mp3"
-                       },
-                       {
-                           "title":  "I Love Kanye",
-                           "file":  "music/tlop/The Life of Pablo (Madison Square Garden)/9.- I Love Kanye.mp3"
-                       }
-                   ]
-    },
-    {
-        "id":  "tlop-the-life-of-pablo-second-version",
-        "title":  "The Life Of Pablo (Second Version)",
-        "era":  "tlop",
-        "year":  "tlop",
-        "accent":  "#111111",
-        "notes":  "ARCHIVE / tlop",
-        "tracks":  [
-                       {
-                           "title":  "Ultralight Beam",
-                           "file":  "music/tlop/The Life Of Pablo (Second Version)/01 Ultralight Beam.mp3"
-                       },
-                       {
-                           "title":  "Father Stretch My Hands Pt. 1",
-                           "file":  "music/tlop/The Life Of Pablo (Second Version)/02 Father Stretch My Hands Pt. 1.mp3"
-                       },
-                       {
-                           "title":  "Pt. 2",
-                           "file":  "music/tlop/The Life Of Pablo (Second Version)/03 Pt. 2.mp3"
-                       },
-                       {
-                           "title":  "Famous",
-                           "file":  "music/tlop/The Life Of Pablo (Second Version)/04 Famous.mp3"
-                       },
-                       {
-                           "title":  "Feedback",
-                           "file":  "music/tlop/The Life Of Pablo (Second Version)/05 Feedback.mp3"
-                       },
-                       {
-                           "title":  "Low Lights",
-                           "file":  "music/tlop/The Life Of Pablo (Second Version)/06 Low Lights.mp3"
-                       },
-                       {
-                           "title":  "Highlights",
-                           "file":  "music/tlop/The Life Of Pablo (Second Version)/07 Highlights.mp3"
-                       },
-                       {
-                           "title":  "Freestyle 4",
-                           "file":  "music/tlop/The Life Of Pablo (Second Version)/08 Freestyle 4.mp3"
-                       },
-                       {
-                           "title":  "I Love Kanye",
-                           "file":  "music/tlop/The Life Of Pablo (Second Version)/09 I Love Kanye.mp3"
-                       },
-                       {
-                           "title":  "Waves",
-                           "file":  "music/tlop/The Life Of Pablo (Second Version)/10 Waves.mp3"
-                       },
-                       {
-                           "title":  "FML",
-                           "file":  "music/tlop/The Life Of Pablo (Second Version)/11 FML.mp3"
-                       },
-                       {
-                           "title":  "Real Friends",
-                           "file":  "music/tlop/The Life Of Pablo (Second Version)/12 Real Friends.mp3"
-                       },
-                       {
-                           "title":  "Wolves",
-                           "file":  "music/tlop/The Life Of Pablo (Second Version)/13 Wolves.mp3"
-                       },
-                       {
-                           "title":  "Frank_s Track",
-                           "file":  "music/tlop/The Life Of Pablo (Second Version)/14 Frank_s Track.mp3"
-                       },
-                       {
-                           "title":  "Siiiiiiiiilver Surffffeeeeer Intermissi",
-                           "file":  "music/tlop/The Life Of Pablo (Second Version)/15 Siiiiiiiiilver Surffffeeeeer Intermissi.mp3"
-                       },
-                       {
-                           "title":  "30 Hours",
-                           "file":  "music/tlop/The Life Of Pablo (Second Version)/16 30 Hours.mp3"
-                       },
-                       {
-                           "title":  "No More Parties In LA",
-                           "file":  "music/tlop/The Life Of Pablo (Second Version)/17 No More Parties In LA.mp3"
-                       },
-                       {
-                           "title":  "Facts (Charlie Heat Version)",
-                           "file":  "music/tlop/The Life Of Pablo (Second Version)/18 Facts (Charlie Heat Version).mp3"
-                       },
-                       {
-                           "title":  "Fade",
-                           "file":  "music/tlop/The Life Of Pablo (Second Version)/19 Fade.mp3"
-                       },
-                       {
-                           "title":  "Saint Pablo",
-                           "file":  "music/tlop/The Life Of Pablo (Second Version)/20 Saint Pablo.mp3"
-                       }
-                   ]
-    },
-    {
-        "id":  "tlop-turbografx16",
-        "title":  "TurboGrafx16",
-        "era":  "tlop",
-        "year":  "tlop",
-        "accent":  "#111111",
-        "notes":  "ARCHIVE / tlop",
-        "tracks":  [
-                       {
-                           "title":  "All Eyes On Ye",
-                           "file":  "music/tlop/TurboGrafx16/03 All Eyes On Ye.mp3"
-                       },
-                       {
-                           "title":  "Only Ye",
-                           "file":  "music/tlop/TurboGrafx16/07 Only Ye.mp3"
-                       },
-                       {
-                           "title":  "A_AP_Rocky_Motivated_V2",
-                           "file":  "music/tlop/TurboGrafx16/A_AP_Rocky_Motivated_V2.mp3"
-                       },
-                       {
-                           "title":  "Bad_Night_V10",
-                           "file":  "music/tlop/TurboGrafx16/Bad_Night_V10.mp3"
-                       },
-                       {
-                           "title":  "Can_t_Look_In_My_Eyes_V6",
-                           "file":  "music/tlop/TurboGrafx16/Can_t_Look_In_My_Eyes_V6.mp3"
-                       },
-                       {
-                           "title":  "Face_Down_V5",
-                           "file":  "music/tlop/TurboGrafx16/Face_Down_V5.mp3"
-                       },
-                       {
-                           "title":  "Floatin",
-                           "file":  "music/tlop/TurboGrafx16/Floatin.mp3"
-                       },
-                       {
-                           "title":  "Hold_Tight_V3",
-                           "file":  "music/tlop/TurboGrafx16/Hold_Tight_V3.mp3"
-                       },
-                       {
-                           "title":  "kanye_west_can_u_be_pressure_ft_travis_scott_kirby_lauryen_be",
-                           "file":  "music/tlop/TurboGrafx16/kanye_west_can_u_be_pressure_ft_travis_scott_kirby_lauryen_be.mp3"
-                       },
-                       {
-                           "title":  "Post_Malone_Don_t_Act_Like_You_Care_V2",
-                           "file":  "music/tlop/TurboGrafx16/Post_Malone_Don_t_Act_Like_You_Care_V2.mp3"
-                       },
-                       {
-                           "title":  "Post_Malone_No_Reason_V2",
-                           "file":  "music/tlop/TurboGrafx16/Post_Malone_No_Reason_V2.mp3"
-                       },
-                       {
-                           "title":  "Rich_Nigga_Drunk_V5",
-                           "file":  "music/tlop/TurboGrafx16/Rich_Nigga_Drunk_V5.mp3"
-                       },
-                       {
-                           "title":  "The_Mind_Is_Powerful_V13",
-                           "file":  "music/tlop/TurboGrafx16/The_Mind_Is_Powerful_V13.mp3"
-                       },
-                       {
-                           "title":  "Tyga_Feel_Me_V8",
-                           "file":  "music/tlop/TurboGrafx16/Tyga_Feel_Me_V8.mp3"
-                       }
-                   ]
-    },
-    {
-        "id":  "tlop-turbografx16-early",
-        "title":  "TurboGrafx16 (Early)",
-        "era":  "tlop",
-        "year":  "tlop",
-        "accent":  "#111111",
-        "notes":  "ARCHIVE / tlop",
-        "tracks":  [
-                       {
-                           "title":  "A_AP_Rocky_Euro_2_V2",
-                           "file":  "music/tlop/TurboGrafx16 (Early)/A_AP_Rocky_Euro_2_V2.mp3"
-                       },
-                       {
-                           "title":  "Bad_Night_V14",
-                           "file":  "music/tlop/TurboGrafx16 (Early)/Bad_Night_V14.mp3"
-                       },
-                       {
-                           "title":  "Can_t_Look_In_My_Eyes_V6",
-                           "file":  "music/tlop/TurboGrafx16 (Early)/Can_t_Look_In_My_Eyes_V6.mp3"
-                       },
-                       {
-                           "title":  "Damn_Come_On_V2",
-                           "file":  "music/tlop/TurboGrafx16 (Early)/Damn_Come_On_V2.mp3"
-                       },
-                       {
-                           "title":  "Hold_Tight_V3",
-                           "file":  "music/tlop/TurboGrafx16 (Early)/Hold_Tight_V3.mp3"
-                       },
-                       {
-                           "title":  "Post_Malone_Don_t_Act_Like_You_Care_V2",
-                           "file":  "music/tlop/TurboGrafx16 (Early)/Post_Malone_Don_t_Act_Like_You_Care_V2.mp3"
-                       },
-                       {
-                           "title":  "Post_Malone_No_Reason_V2",
-                           "file":  "music/tlop/TurboGrafx16 (Early)/Post_Malone_No_Reason_V2.mp3"
-                       }
-                   ]
-    },
-    {
-        "id":  "tlop-waves-final-stage-pre-the-life-of-pablo",
-        "title":  "WAVES (Final Stage) (Pre The Life Of Pablo)",
-        "era":  "tlop",
-        "year":  "tlop",
-        "accent":  "#111111",
-        "notes":  "ARCHIVE / tlop",
-        "tracks":  [
-                       {
-                           "title":  "Hours_V14",
-                           "file":  "music/tlop/WAVES (Final Stage) (Pre The Life Of Pablo)/30_Hours_V14.mp3"
-                       },
-                       {
-                           "title":  "Fade_V14",
-                           "file":  "music/tlop/WAVES (Final Stage) (Pre The Life Of Pablo)/Fade_V14.mp3"
-                       },
-                       {
-                           "title":  "Father_Stretch_My_Hands_Pt._1_Reprise",
-                           "file":  "music/tlop/WAVES (Final Stage) (Pre The Life Of Pablo)/Father_Stretch_My_Hands_Pt._1_Reprise.mp3"
-                       },
-                       {
-                           "title":  "FML_V11",
-                           "file":  "music/tlop/WAVES (Final Stage) (Pre The Life Of Pablo)/FML_V11.mp3"
-                       },
-                       {
-                           "title":  "Freestyle_4_V6",
-                           "file":  "music/tlop/WAVES (Final Stage) (Pre The Life Of Pablo)/Freestyle_4_V6.mp3"
-                       },
-                       {
-                           "title":  "Highlights_V10",
-                           "file":  "music/tlop/WAVES (Final Stage) (Pre The Life Of Pablo)/Highlights_V10.mp3"
-                       },
-                       {
-                           "title":  "Nina_Chop_V4",
-                           "file":  "music/tlop/WAVES (Final Stage) (Pre The Life Of Pablo)/Nina_Chop_V4.mp3"
-                       },
-                       {
-                           "title":  "No_More_Parties_in_LA_V2",
-                           "file":  "music/tlop/WAVES (Final Stage) (Pre The Life Of Pablo)/No_More_Parties_in_LA_V2.mp3"
-                       },
-                       {
-                           "title":  "Pt. 2 - Kanye West (320) (online-audio-converter.com)",
-                           "file":  "music/tlop/WAVES (Final Stage) (Pre The Life Of Pablo)/Pt. 2 - Kanye West (320) (online-audio-converter.com).mp3"
-                       },
-                       {
-                           "title":  "Real_Friends_V3",
-                           "file":  "music/tlop/WAVES (Final Stage) (Pre The Life Of Pablo)/Real_Friends_V3.mp3"
-                       },
-                       {
-                           "title":  "Ultralight_Beam_V3",
-                           "file":  "music/tlop/WAVES (Final Stage) (Pre The Life Of Pablo)/Ultralight_Beam_V3.mp3"
-                       },
-                       {
-                           "title":  "Waves_V9",
-                           "file":  "music/tlop/WAVES (Final Stage) (Pre The Life Of Pablo)/Waves_V9.mp3"
-                       },
-                       {
-                           "title":  "Wolves_V19",
-                           "file":  "music/tlop/WAVES (Final Stage) (Pre The Life Of Pablo)/Wolves_V19.mp3"
-                       }
-                   ]
-    },
-    {
-        "id":  "tlop-waves-first-stage",
-        "title":  "WAVES (First Stage)",
-        "era":  "tlop",
-        "year":  "tlop",
-        "accent":  "#111111",
-        "notes":  "ARCHIVE / tlop",
-        "tracks":  [
-                       {
-                           "title":  "Hours_V14",
-                           "file":  "music/tlop/WAVES (First Stage)/30_Hours_V14.mp3"
-                       },
-                       {
-                           "title":  "Fade_V14",
-                           "file":  "music/tlop/WAVES (First Stage)/Fade_V14.mp3"
-                       },
-                       {
-                           "title":  "Father_Stretch_My_Hands_Pt._1_Reprise",
-                           "file":  "music/tlop/WAVES (First Stage)/Father_Stretch_My_Hands_Pt._1_Reprise.mp3"
-                       },
-                       {
-                           "title":  "Highlights_V8",
-                           "file":  "music/tlop/WAVES (First Stage)/Highlights_V8.mp3"
-                       },
-                       {
-                           "title":  "Kanye West - Pt. 2",
-                           "file":  "music/tlop/WAVES (First Stage)/Kanye West - Pt. 2.mp3"
-                       },
-                       {
-                           "title":  "KW - FML 125 BPM 1.21.16",
-                           "file":  "music/tlop/WAVES (First Stage)/KW - FML 125 BPM 1.21.16.mp3"
-                       },
-                       {
-                           "title":  "Nina_Chop_V10",
-                           "file":  "music/tlop/WAVES (First Stage)/Nina_Chop_V10.mp3"
-                       },
-                       {
-                           "title":  "No_More_Parties_in_LA_V5",
-                           "file":  "music/tlop/WAVES (First Stage)/No_More_Parties_in_LA_V5.mp3"
-                       },
-                       {
-                           "title":  "Real_Friends_Remix",
-                           "file":  "music/tlop/WAVES (First Stage)/Real_Friends_Remix.mp3"
-                       },
-                       {
-                           "title":  "Ultralight_Beam_V4",
-                           "file":  "music/tlop/WAVES (First Stage)/Ultralight_Beam_V4.mp3"
-                       },
-                       {
-                           "title":  "Waves_V9",
-                           "file":  "music/tlop/WAVES (First Stage)/Waves_V9.mp3"
-                       },
-                       {
-                           "title":  "Wolves_V20",
-                           "file":  "music/tlop/WAVES (First Stage)/Wolves_V20.mp3"
-                       }
-                   ]
-    },
-    {
-        "id":  "tlop-wolves",
-        "title":  "Wolves",
-        "era":  "tlop",
-        "year":  "tlop",
-        "accent":  "#111111",
-        "notes":  "ARCHIVE / tlop",
-        "tracks":  [
-                       {
-                           "title":  "Summer 6ixteen",
-                           "file":  "music/tlop/Wolves/1 Summer 6ixteen.mp3"
-                       },
-                       {
-                           "title":  "Glow",
-                           "file":  "music/tlop/Wolves/10 Glow.mp3"
-                       },
-                       {
-                           "title":  "Jumpman (Remix)",
-                           "file":  "music/tlop/Wolves/2 Jumpman (Remix).mp3"
-                       },
-                       {
-                           "title":  "Yikes",
-                           "file":  "music/tlop/Wolves/3 Yikes.mp3"
-                       },
-                       {
-                           "title":  "9",
-                           "file":  "music/tlop/Wolves/4 9.mp3"
-                       },
-                       {
-                           "title":  "One Dance",
-                           "file":  "music/tlop/Wolves/5 One Dance.mp3"
-                       },
-                       {
-                           "title":  "Deja Vu",
-                           "file":  "music/tlop/Wolves/6 Deja Vu.mp3"
-                       },
-                       {
-                           "title":  "Pop Style",
-                           "file":  "music/tlop/Wolves/7 Pop Style.mp3"
-                       },
-                       {
-                           "title":  "Tell Your Friends (Remix)",
-                           "file":  "music/tlop/Wolves/8 Tell Your Friends (Remix).mp3"
-                       },
-                       {
-                           "title":  "U With Me_",
-                           "file":  "music/tlop/Wolves/9 U With Me_.mp3"
-                       }
-                   ]
-    },
-    {
-        "id":  "tlop-wolves-early",
-        "title":  "Wolves (Early)",
-        "era":  "tlop",
-        "year":  "tlop",
-        "accent":  "#111111",
-        "notes":  "ARCHIVE / tlop",
-        "tracks":  [
-                       {
-                           "title":  "Glow",
-                           "file":  "music/tlop/Wolves (Early)/01 Glow.mp3"
-                       },
-                       {
-                           "title":  "Pop Style (feat. JAY-Z)",
-                           "file":  "music/tlop/Wolves (Early)/01 Pop Style (feat. JAY-Z).mp3"
-                       },
-                       {
-                           "title":  "Jumpman Remix (feat. Future)",
-                           "file":  "music/tlop/Wolves (Early)/02 Jumpman Remix (feat. Future).mp3"
-                       },
-                       {
-                           "title":  "Summer Sixteen",
-                           "file":  "music/tlop/Wolves (Early)/06 Summer Sixteen.mp3"
-                       },
-                       {
-                           "title":  "9",
-                           "file":  "music/tlop/Wolves (Early)/07 9.mp3"
-                       },
-                       {
-                           "title":  "When I See It",
-                           "file":  "music/tlop/Wolves (Early)/08 When I See It.mp3"
-                       },
-                       {
-                           "title":  "Hell On Earth (Interlude)",
-                           "file":  "music/tlop/Wolves (Early)/Hell On Earth (Interlude).mp3"
-                       },
-                       {
-                           "title":  "Hype",
-                           "file":  "music/tlop/Wolves (Early)/Hype.mp3"
-                       },
-                       {
-                           "title":  "Revenge",
-                           "file":  "music/tlop/Wolves (Early)/Revenge.mp3"
+                           "file":  "music/The Prerequisite Era/World Record Holders (CD Version)/24. Let My Niggas In.mp3"
                        }
                    ]
     },
@@ -12101,7 +10800,7 @@ window.YE_ARCHIVE_DATABASE = [
     },
     {
         "id":  "vultures-era-vultures-2-all-deluxe-s",
-        "title":  "VULTURES 2 (All DeluxeÂ´s)",
+        "title":  "VULTURES 2 (All Deluxes)",
         "era":  "Vultures Era",
         "year":  "Vultures",
         "accent":  "#111111",
@@ -12109,87 +10808,87 @@ window.YE_ARCHIVE_DATABASE = [
         "tracks":  [
                        {
                            "title":  "Â¥$, Kanye West, Ty Dolla $ign - SLIDE(Explicit)",
-                           "file":  "music/Vultures Era/VULTURES 2 (All DeluxeÂ´s)/01 - Â¥$, Kanye West, Ty Dolla $ign - SLIDE(Explicit).mp3"
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/01 - Â¥$, Kanye West, Ty Dolla $ign - SLIDE(Explicit).mp3"
                        },
                        {
                            "title":  "Â¥$, Kanye West, Ty Dolla $ign - TIME MOVING SLOW(Explicit)",
-                           "file":  "music/Vultures Era/VULTURES 2 (All DeluxeÂ´s)/02 - Â¥$, Kanye West, Ty Dolla $ign - TIME MOVING SLOW(Explicit).mp3"
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/02 - Â¥$, Kanye West, Ty Dolla $ign - TIME MOVING SLOW(Explicit).mp3"
                        },
                        {
                            "title":  "Â¥$, Kanye West, Ty Dolla $ign - FIELD TRIP(Explicit)",
-                           "file":  "music/Vultures Era/VULTURES 2 (All DeluxeÂ´s)/03 - Â¥$, Kanye West, Ty Dolla $ign - FIELD TRIP(Explicit).mp3"
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/03 - Â¥$, Kanye West, Ty Dolla $ign - FIELD TRIP(Explicit).mp3"
                        },
                        {
                            "title":  "Â¥$, Kanye West, Ty Dolla $ign - FRIED(Explicit)",
-                           "file":  "music/Vultures Era/VULTURES 2 (All DeluxeÂ´s)/04 - Â¥$, Kanye West, Ty Dolla $ign - FRIED(Explicit).mp3"
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/04 - Â¥$, Kanye West, Ty Dolla $ign - FRIED(Explicit).mp3"
                        },
                        {
                            "title":  "Â¥$, Kanye West, Ty Dolla $ign - ISABELLA(Explicit)",
-                           "file":  "music/Vultures Era/VULTURES 2 (All DeluxeÂ´s)/05 - Â¥$, Kanye West, Ty Dolla $ign - ISABELLA(Explicit).mp3"
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/05 - Â¥$, Kanye West, Ty Dolla $ign - ISABELLA(Explicit).mp3"
                        },
                        {
                            "title":  "Â¥$, Kanye West, Ty Dolla $ign - PROMOTION(Explicit)",
-                           "file":  "music/Vultures Era/VULTURES 2 (All DeluxeÂ´s)/06 - Â¥$, Kanye West, Ty Dolla $ign - PROMOTION(Explicit).mp3"
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/06 - Â¥$, Kanye West, Ty Dolla $ign - PROMOTION(Explicit).mp3"
                        },
                        {
                            "title":  "Â¥$, Kanye West, Ty Dolla $ign - HUSBAND(Explicit)",
-                           "file":  "music/Vultures Era/VULTURES 2 (All DeluxeÂ´s)/07 - Â¥$, Kanye West, Ty Dolla $ign - HUSBAND(Explicit).mp3"
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/07 - Â¥$, Kanye West, Ty Dolla $ign - HUSBAND(Explicit).mp3"
                        },
                        {
                            "title":  "Â¥$, Kanye West, Ty Dolla $ign - LIFESTYLE",
-                           "file":  "music/Vultures Era/VULTURES 2 (All DeluxeÂ´s)/08 - Â¥$, Kanye West, Ty Dolla $ign - LIFESTYLE.mp3"
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/08 - Â¥$, Kanye West, Ty Dolla $ign - LIFESTYLE.mp3"
                        },
                        {
                            "title":  "Â¥$, Kanye West, Ty Dolla $ign - FOREVER(Explicit)",
-                           "file":  "music/Vultures Era/VULTURES 2 (All DeluxeÂ´s)/09 - Â¥$, Kanye West, Ty Dolla $ign - FOREVER(Explicit).mp3"
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/09 - Â¥$, Kanye West, Ty Dolla $ign - FOREVER(Explicit).mp3"
                        },
                        {
                            "title":  "Â¥$, Kanye West, Ty Dolla $ign - BOMB(Explicit)",
-                           "file":  "music/Vultures Era/VULTURES 2 (All DeluxeÂ´s)/10 - Â¥$, Kanye West, Ty Dolla $ign - BOMB(Explicit).mp3"
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/10 - Â¥$, Kanye West, Ty Dolla $ign - BOMB(Explicit).mp3"
                        },
                        {
                            "title":  "Â¥$, Kanye West, Ty Dolla $ign - RIVER(Explicit)",
-                           "file":  "music/Vultures Era/VULTURES 2 (All DeluxeÂ´s)/11 - Â¥$, Kanye West, Ty Dolla $ign - RIVER(Explicit).mp3"
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/11 - Â¥$, Kanye West, Ty Dolla $ign - RIVER(Explicit).mp3"
                        },
                        {
                            "title":  "Â¥$, Kanye West, Ty Dolla $ign - 530(Explicit)",
-                           "file":  "music/Vultures Era/VULTURES 2 (All DeluxeÂ´s)/12 - Â¥$, Kanye West, Ty Dolla $ign - 530(Explicit).mp3"
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/12 - Â¥$, Kanye West, Ty Dolla $ign - 530(Explicit).mp3"
                        },
                        {
                            "title":  "Â¥$, Kanye West, Ty Dolla $ign - DEAD(Explicit)",
-                           "file":  "music/Vultures Era/VULTURES 2 (All DeluxeÂ´s)/13 - Â¥$, Kanye West, Ty Dolla $ign - DEAD(Explicit).mp3"
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/13 - Â¥$, Kanye West, Ty Dolla $ign - DEAD(Explicit).mp3"
                        },
                        {
                            "title":  "Â¥$, Kanye West, Ty Dolla $ign - FOREVER ROLLING(Explicit)",
-                           "file":  "music/Vultures Era/VULTURES 2 (All DeluxeÂ´s)/14 - Â¥$, Kanye West, Ty Dolla $ign - FOREVER ROLLING(Explicit).mp3"
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/14 - Â¥$, Kanye West, Ty Dolla $ign - FOREVER ROLLING(Explicit).mp3"
                        },
                        {
                            "title":  "Â¥$, Kanye West, Ty Dolla $ign - SKY CITY(Explicit)",
-                           "file":  "music/Vultures Era/VULTURES 2 (All DeluxeÂ´s)/15 - Â¥$, Kanye West, Ty Dolla $ign - SKY CITY(Explicit).mp3"
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/15 - Â¥$, Kanye West, Ty Dolla $ign - SKY CITY(Explicit).mp3"
                        },
                        {
                            "title":  "Â¥$, Kanye West, Ty Dolla $ign - MY SOUL(Explicit)",
-                           "file":  "music/Vultures Era/VULTURES 2 (All DeluxeÂ´s)/16 - Â¥$, Kanye West, Ty Dolla $ign - MY SOUL(Explicit).mp3"
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/16 - Â¥$, Kanye West, Ty Dolla $ign - MY SOUL(Explicit).mp3"
                        },
                        {
                            "title":  "Â¥$, Kanye West, Ty Dolla $ign - TAKE OFF YOUR DRESS(Explicit)",
-                           "file":  "music/Vultures Era/VULTURES 2 (All DeluxeÂ´s)/17 - Â¥$, Kanye West, Ty Dolla $ign - TAKE OFF YOUR DRESS(Explicit).mp3"
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/17 - Â¥$, Kanye West, Ty Dolla $ign - TAKE OFF YOUR DRESS(Explicit).mp3"
                        },
                        {
                            "title":  "Â¥$, Kanye West, Ty Dolla $ign - BELIEVER(Explicit)",
-                           "file":  "music/Vultures Era/VULTURES 2 (All DeluxeÂ´s)/18 - Â¥$, Kanye West, Ty Dolla $ign - BELIEVER(Explicit).mp3"
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/18 - Â¥$, Kanye West, Ty Dolla $ign - BELIEVER(Explicit).mp3"
                        },
                        {
                            "title":  "Â¥$, Kanye West, Ty Dolla $ign - DRUNK(Explicit)",
-                           "file":  "music/Vultures Era/VULTURES 2 (All DeluxeÂ´s)/19 - Â¥$, Kanye West, Ty Dolla $ign - DRUNK(Explicit).mp3"
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/19 - Â¥$, Kanye West, Ty Dolla $ign - DRUNK(Explicit).mp3"
                        },
                        {
                            "title":  "Â¥$, Kanye West, Ty Dolla $ign - GUN TO MY HEAD(Explicit)",
-                           "file":  "music/Vultures Era/VULTURES 2 (All DeluxeÂ´s)/20 - Â¥$, Kanye West, Ty Dolla $ign - GUN TO MY HEAD(Explicit).mp3"
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/20 - Â¥$, Kanye West, Ty Dolla $ign - GUN TO MY HEAD(Explicit).mp3"
                        },
                        {
                            "title":  "Â¥$, Kanye West, Ty Dolla $ign - CAN U BE(Explicit)",
-                           "file":  "music/Vultures Era/VULTURES 2 (All DeluxeÂ´s)/21 - Â¥$, Kanye West, Ty Dolla $ign - CAN U BE(Explicit).mp3"
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/21 - Â¥$, Kanye West, Ty Dolla $ign - CAN U BE(Explicit).mp3"
                        }
                    ]
     },

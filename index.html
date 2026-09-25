@@ -214,13 +214,6 @@
   main { max-width: 1440px; margin: 0 0 0 248px; padding: 42px 46px 120px; }
   
   .album-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 24px; }
-  .catalog-grid { grid-template-columns: 1fr; gap: 0; }
-  .catalog-grid .catalog-album-card {
-    display: grid; grid-template-columns: 72px minmax(0, 1fr) auto; align-items: center; gap: 16px;
-    padding: 14px 0; border-bottom: 1px solid var(--border);
-  }
-  .catalog-grid .catalog-album-card img { width: 72px; height: 72px; margin-bottom: 0; }
-  .catalog-grid .catalog-album-card .album-year { margin-top: 0; }
   .era-section-header { grid-column: 1 / -1; margin: 20px 0 0; padding: 14px 0 8px; border-bottom: 2px solid var(--text); font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; }
   .album-card { cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease; display: flex; flex-direction: column; }
   .album-card:hover { transform: translateY(-3px); }
@@ -410,7 +403,7 @@
     .nav-link { padding: 9px 8px; border-left: 0; border-bottom: 2px solid transparent; }
     .nav-link.active { border-left-color: transparent; border-bottom-color: var(--text); }
     
-    .album-grid:not(.catalog-grid) { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 16px; }
+    .album-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 16px; }
     .album-name { font-size: 13px; }
     .album-year { font-size: 11px; }
     
@@ -441,7 +434,7 @@
     .volume-container { display: none; } /* Hide volume on mobile to save space */
   }
   @media(max-width: 400px) {
-    .album-grid:not(.catalog-grid) { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .album-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
     .nav-btn span { display: none; } 
     .nav-btn { padding: 8px; justify-content: center; }
     .nav-header { gap: 8px; font-size: 12px; }
@@ -490,7 +483,7 @@
 
 <main>
   <div id="defaultUI">
-    <div class="album-grid catalog-grid" id="albumGrid"></div>
+    <div class="album-grid" id="albumGrid"></div>
   </div>
 
   <div id="playlistsUI" style="display: none;">
@@ -813,7 +806,7 @@ database.forEach((alb, i) => {
     albumGrid.appendChild(heading);
   }
   const div = document.createElement('div');
-  div.className = 'album-card catalog-album-card';
+  div.className = 'album-card';
   div.innerHTML = `<img loading="lazy" alt="${alb.title} cover"><div class="album-name">${alb.title}</div><div class="album-year">${alb.tracks.length} TRACKS</div>`;
   setCoverImage(div.querySelector('img'), alb);
   div.onclick = () => openAlbum(i);
