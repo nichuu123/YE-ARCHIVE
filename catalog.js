@@ -10807,88 +10807,88 @@ window.YE_ARCHIVE_DATABASE = [
         "notes":  "ARCHIVE / Vultures Era",
         "tracks":  [
                        {
-                           "title":  "Â¥$, Kanye West, Ty Dolla $ign - SLIDE(Explicit)",
-                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/01 - Â¥$, Kanye West, Ty Dolla $ign - SLIDE(Explicit).mp3"
+                           "title":  "SLIDE(Explicit)",
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/01 - SLIDE(Explicit).mp3"
                        },
                        {
-                           "title":  "Â¥$, Kanye West, Ty Dolla $ign - TIME MOVING SLOW(Explicit)",
-                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/02 - Â¥$, Kanye West, Ty Dolla $ign - TIME MOVING SLOW(Explicit).mp3"
+                           "title":  "TIME MOVING SLOW(Explicit)",
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/02 - TIME MOVING SLOW(Explicit).mp3"
                        },
                        {
-                           "title":  "Â¥$, Kanye West, Ty Dolla $ign - FIELD TRIP(Explicit)",
-                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/03 - Â¥$, Kanye West, Ty Dolla $ign - FIELD TRIP(Explicit).mp3"
+                           "title":  "FIELD TRIP(Explicit)",
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/03 - FIELD TRIP(Explicit).mp3"
                        },
                        {
-                           "title":  "Â¥$, Kanye West, Ty Dolla $ign - FRIED(Explicit)",
-                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/04 - Â¥$, Kanye West, Ty Dolla $ign - FRIED(Explicit).mp3"
+                           "title":  "FRIED(Explicit)",
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/04 - FRIED(Explicit).mp3"
                        },
                        {
-                           "title":  "Â¥$, Kanye West, Ty Dolla $ign - ISABELLA(Explicit)",
-                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/05 - Â¥$, Kanye West, Ty Dolla $ign - ISABELLA(Explicit).mp3"
+                           "title":  "ISABELLA(Explicit)",
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/05 - ISABELLA(Explicit).mp3"
                        },
                        {
-                           "title":  "Â¥$, Kanye West, Ty Dolla $ign - PROMOTION(Explicit)",
-                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/06 - Â¥$, Kanye West, Ty Dolla $ign - PROMOTION(Explicit).mp3"
+                           "title":  "PROMOTION(Explicit)",
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/06 - PROMOTION(Explicit).mp3"
                        },
                        {
-                           "title":  "Â¥$, Kanye West, Ty Dolla $ign - HUSBAND(Explicit)",
-                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/07 - Â¥$, Kanye West, Ty Dolla $ign - HUSBAND(Explicit).mp3"
+                           "title":  "HUSBAND(Explicit)",
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/07 - HUSBAND(Explicit).mp3"
                        },
                        {
-                           "title":  "Â¥$, Kanye West, Ty Dolla $ign - LIFESTYLE",
-                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/08 - Â¥$, Kanye West, Ty Dolla $ign - LIFESTYLE.mp3"
+                           "title":  "LIFESTYLE",
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/08 - LIFESTYLE.mp3"
                        },
                        {
-                           "title":  "Â¥$, Kanye West, Ty Dolla $ign - FOREVER(Explicit)",
-                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/09 - Â¥$, Kanye West, Ty Dolla $ign - FOREVER(Explicit).mp3"
+                           "title":  "FOREVER(Explicit)",
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/09 - FOREVER(Explicit).mp3"
                        },
                        {
-                           "title":  "Â¥$, Kanye West, Ty Dolla $ign - BOMB(Explicit)",
-                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/10 - Â¥$, Kanye West, Ty Dolla $ign - BOMB(Explicit).mp3"
+                           "title":  "BOMB(Explicit)",
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/10 - BOMB(Explicit).mp3"
                        },
                        {
-                           "title":  "Â¥$, Kanye West, Ty Dolla $ign - RIVER(Explicit)",
-                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/11 - Â¥$, Kanye West, Ty Dolla $ign - RIVER(Explicit).mp3"
+                           "title":  "RIVER(Explicit)",
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/11 - RIVER(Explicit).mp3"
                        },
                        {
-                           "title":  "Â¥$, Kanye West, Ty Dolla $ign - 530(Explicit)",
-                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/12 - Â¥$, Kanye West, Ty Dolla $ign - 530(Explicit).mp3"
+                           "title":  "530(Explicit)",
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/12 - 530(Explicit).mp3"
                        },
                        {
-                           "title":  "Â¥$, Kanye West, Ty Dolla $ign - DEAD(Explicit)",
-                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/13 - Â¥$, Kanye West, Ty Dolla $ign - DEAD(Explicit).mp3"
+                           "title":  "DEAD(Explicit)",
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/13 - DEAD(Explicit).mp3"
                        },
                        {
-                           "title":  "Â¥$, Kanye West, Ty Dolla $ign - FOREVER ROLLING(Explicit)",
-                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/14 - Â¥$, Kanye West, Ty Dolla $ign - FOREVER ROLLING(Explicit).mp3"
+                           "title":  "FOREVER ROLLING(Explicit)",
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/14 - FOREVER ROLLING(Explicit).mp3"
                        },
                        {
-                           "title":  "Â¥$, Kanye West, Ty Dolla $ign - SKY CITY(Explicit)",
-                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/15 - Â¥$, Kanye West, Ty Dolla $ign - SKY CITY(Explicit).mp3"
+                           "title":  "SKY CITY(Explicit)",
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/15 - SKY CITY(Explicit).mp3"
                        },
                        {
-                           "title":  "Â¥$, Kanye West, Ty Dolla $ign - MY SOUL(Explicit)",
-                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/16 - Â¥$, Kanye West, Ty Dolla $ign - MY SOUL(Explicit).mp3"
+                           "title":  "MY SOUL(Explicit)",
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/16 - MY SOUL(Explicit).mp3"
                        },
                        {
-                           "title":  "Â¥$, Kanye West, Ty Dolla $ign - TAKE OFF YOUR DRESS(Explicit)",
-                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/17 - Â¥$, Kanye West, Ty Dolla $ign - TAKE OFF YOUR DRESS(Explicit).mp3"
+                           "title":  "TAKE OFF YOUR DRESS(Explicit)",
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/17 - TAKE OFF YOUR DRESS(Explicit).mp3"
                        },
                        {
-                           "title":  "Â¥$, Kanye West, Ty Dolla $ign - BELIEVER(Explicit)",
-                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/18 - Â¥$, Kanye West, Ty Dolla $ign - BELIEVER(Explicit).mp3"
+                           "title":  "BELIEVER(Explicit)",
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/18 - BELIEVER(Explicit).mp3"
                        },
                        {
-                           "title":  "Â¥$, Kanye West, Ty Dolla $ign - DRUNK(Explicit)",
-                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/19 - Â¥$, Kanye West, Ty Dolla $ign - DRUNK(Explicit).mp3"
+                           "title":  "DRUNK(Explicit)",
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/19 - DRUNK(Explicit).mp3"
                        },
                        {
-                           "title":  "Â¥$, Kanye West, Ty Dolla $ign - GUN TO MY HEAD(Explicit)",
-                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/20 - Â¥$, Kanye West, Ty Dolla $ign - GUN TO MY HEAD(Explicit).mp3"
+                           "title":  "GUN TO MY HEAD(Explicit)",
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/20 - GUN TO MY HEAD(Explicit).mp3"
                        },
                        {
-                           "title":  "Â¥$, Kanye West, Ty Dolla $ign - CAN U BE(Explicit)",
-                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/21 - Â¥$, Kanye West, Ty Dolla $ign - CAN U BE(Explicit).mp3"
+                           "title":  "CAN U BE(Explicit)",
+                           "file":  "music/Vultures Era/VULTURES 2 (All Deluxes)/21 - CAN U BE(Explicit).mp3"
                        }
                    ]
     },
@@ -10901,68 +10901,68 @@ window.YE_ARCHIVE_DATABASE = [
         "notes":  "ARCHIVE / Vultures Era",
         "tracks":  [
                        {
-                           "title":  "Â¥$ - SLIDE",
-                           "file":  "music/Vultures Era/VULTURES 2 (First Version)/1. Â¥$ - SLIDE.mp3"
+                           "title":  "SLIDE",
+                           "file":  "music/Vultures Era/VULTURES 2 (First Version)/1. SLIDE.mp3"
                        },
                        {
-                           "title":  "Â¥$ - BOMB",
-                           "file":  "music/Vultures Era/VULTURES 2 (First Version)/10. Â¥$ - BOMB.mp3"
+                           "title":  "BOMB",
+                           "file":  "music/Vultures Era/VULTURES 2 (First Version)/10. BOMB.mp3"
                        },
                        {
-                           "title":  "Â¥$ - RIVER",
-                           "file":  "music/Vultures Era/VULTURES 2 (First Version)/11. Â¥$ - RIVER.mp3"
+                           "title":  "RIVER",
+                           "file":  "music/Vultures Era/VULTURES 2 (First Version)/11. RIVER.mp3"
                        },
                        {
-                           "title":  "Â¥$ - 530",
-                           "file":  "music/Vultures Era/VULTURES 2 (First Version)/12. Â¥$ - 530.mp3"
+                           "title":  "530",
+                           "file":  "music/Vultures Era/VULTURES 2 (First Version)/12. 530.mp3"
                        },
                        {
-                           "title":  "Â¥$ - DEAD",
-                           "file":  "music/Vultures Era/VULTURES 2 (First Version)/13. Â¥$ - DEAD.mp3"
+                           "title":  "DEAD",
+                           "file":  "music/Vultures Era/VULTURES 2 (First Version)/13. DEAD.mp3"
                        },
                        {
-                           "title":  "Â¥$ - FOREVER ROLLING",
-                           "file":  "music/Vultures Era/VULTURES 2 (First Version)/14. Â¥$ - FOREVER ROLLING.mp3"
+                           "title":  "FOREVER ROLLING",
+                           "file":  "music/Vultures Era/VULTURES 2 (First Version)/14. FOREVER ROLLING.mp3"
                        },
                        {
-                           "title":  "Â¥$ - SKY CITY",
-                           "file":  "music/Vultures Era/VULTURES 2 (First Version)/15. Â¥$ - SKY CITY.mp3"
+                           "title":  "SKY CITY",
+                           "file":  "music/Vultures Era/VULTURES 2 (First Version)/15. SKY CITY.mp3"
                        },
                        {
-                           "title":  "Â¥$ - MY SOUL",
-                           "file":  "music/Vultures Era/VULTURES 2 (First Version)/16. Â¥$ - MY SOUL.mp3"
+                           "title":  "MY SOUL",
+                           "file":  "music/Vultures Era/VULTURES 2 (First Version)/16. MY SOUL.mp3"
                        },
                        {
-                           "title":  "Â¥$ - TIME MOVING SLOW",
-                           "file":  "music/Vultures Era/VULTURES 2 (First Version)/2. Â¥$ - TIME MOVING SLOW.mp3"
+                           "title":  "TIME MOVING SLOW",
+                           "file":  "music/Vultures Era/VULTURES 2 (First Version)/2. TIME MOVING SLOW.mp3"
                        },
                        {
-                           "title":  "Â¥$ - FIELD TRIP",
-                           "file":  "music/Vultures Era/VULTURES 2 (First Version)/3. Â¥$ - FIELD TRIP.mp3"
+                           "title":  "FIELD TRIP",
+                           "file":  "music/Vultures Era/VULTURES 2 (First Version)/3. FIELD TRIP.mp3"
                        },
                        {
-                           "title":  "Â¥$ - FRIED",
-                           "file":  "music/Vultures Era/VULTURES 2 (First Version)/4. Â¥$ - FRIED.mp3"
+                           "title":  "FRIED",
+                           "file":  "music/Vultures Era/VULTURES 2 (First Version)/4. FRIED.mp3"
                        },
                        {
-                           "title":  "Â¥$ - ISABELLA",
-                           "file":  "music/Vultures Era/VULTURES 2 (First Version)/5. Â¥$ - ISABELLA.mp3"
+                           "title":  "ISABELLA",
+                           "file":  "music/Vultures Era/VULTURES 2 (First Version)/5. ISABELLA.mp3"
                        },
                        {
-                           "title":  "Â¥$ - PROMOTION",
-                           "file":  "music/Vultures Era/VULTURES 2 (First Version)/6. Â¥$ - PROMOTION.mp3"
+                           "title":  "PROMOTION",
+                           "file":  "music/Vultures Era/VULTURES 2 (First Version)/6. PROMOTION.mp3"
                        },
                        {
-                           "title":  "Â¥$ - HUSBAND",
-                           "file":  "music/Vultures Era/VULTURES 2 (First Version)/7. Â¥$ - HUSBAND.mp3"
+                           "title":  "HUSBAND",
+                           "file":  "music/Vultures Era/VULTURES 2 (First Version)/7. HUSBAND.mp3"
                        },
                        {
-                           "title":  "Â¥$ - LIFESTYLE",
-                           "file":  "music/Vultures Era/VULTURES 2 (First Version)/8. Â¥$ - LIFESTYLE.mp3"
+                           "title":  "LIFESTYLE",
+                           "file":  "music/Vultures Era/VULTURES 2 (First Version)/8. LIFESTYLE.mp3"
                        },
                        {
-                           "title":  "Â¥$ - MAYBE",
-                           "file":  "music/Vultures Era/VULTURES 2 (First Version)/9. Â¥$ - MAYBE.mp3"
+                           "title":  "MAYBE",
+                           "file":  "music/Vultures Era/VULTURES 2 (First Version)/9. MAYBE.mp3"
                        }
                    ]
     },
@@ -11483,8 +11483,8 @@ window.YE_ARCHIVE_DATABASE = [
         "notes":  "ARCHIVE / Watch The Throne Era",
         "tracks":  [
                        {
-                           "title":  "Hâ€¢Aâ€¢M-",
-                           "file":  "music/Watch The Throne Era/Watch the Throne Tour/01. Hâ€¢Aâ€¢M-.mp3"
+                           "title":  "H•A•M",
+                           "file":  "music/Watch The Throne Era/Watch the Throne Tour/01. H•A•M-.mp3"
                        },
                        {
                            "title":  "Who Gon Stop Me",
