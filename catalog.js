@@ -13093,7 +13093,7 @@ window.YE_ARCHIVE_DATABASE = [
                            "file":  "music/Yeezus 2 Era/New Yeezus/08 KW - Gut Feeling Ref (11.11.13).mp3"
                        },
                        {
-                           "title":  "Hit-Boy Idea",
+                           "title":  "HitBoy Idea",
                            "file":  "music/Yeezus 2 Era/New Yeezus/09 KW - Hit-Boy Idea Ref (11.11.13).mp3"
                        },
                        {
