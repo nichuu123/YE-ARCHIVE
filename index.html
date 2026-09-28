@@ -75,7 +75,7 @@
   body.dark-mode .nav-link { color: var(--muted-dark); }
   body.dark-mode .nav-link.active { color: var(--text-dark); background: #222; border-color: #fff; }
   body.dark-mode .nav-link:hover { color: var(--text-dark); background: #1a1a1a; }
-  body.dark-mode .album-card img { background: #222; box-shadow: var(--shadow-dark); }
+  body.dark-mode .album-cover-img { background: #222; box-shadow: var(--shadow-dark); }
   body.dark-mode .album-year,
   body.dark-mode .track-index,
   body.dark-mode .mp-album-label,
@@ -199,10 +199,8 @@
   .nav-link { color: var(--muted); cursor: pointer; transition: color 0.2s, background 0.2s; padding: 12px 10px; border-left: 2px solid transparent; }
   .nav-link.active { color: var(--text); background: #f0f0f0; border-left-color: var(--text); }
   .nav-link:hover { color: var(--text); background: #f5f5f5; }
-  .nav-spacer { display: none; }
 
   /* Mobile Specific Elements */
-  .mobile-nav-item { display: inline; }
   .mobile-search-screen { display: none; padding: 20px 0; }
   .mobile-search-box {
     width: 100%; padding: 16px; font-size: 15px; border-radius: 8px; border: 1px solid #ccc;
@@ -215,9 +213,54 @@
   
   .album-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 24px; }
   .era-section-header { grid-column: 1 / -1; margin: 20px 0 0; padding: 14px 0 8px; border-bottom: 2px solid var(--text); font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; }
-  .album-card { cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease; display: flex; flex-direction: column; }
-  .album-card:hover { transform: translateY(-3px); }
-  .album-card img { width: 100%; aspect-ratio: 1/1; border-radius: var(--radius); box-shadow: var(--shadow); object-fit: cover; margin-bottom: 12px; background: #eee; }
+  .album-card { cursor: pointer; transition: transform 0.3s ease; display: flex; flex-direction: column; }
+  .album-card:hover { transform: translateY(-4px); }
+  
+  /* --- YOUTUBE-STYLE AMBIENT GLOW EFFECT FOR CARDS --- */
+  .album-cover-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    margin-bottom: 12px;
+    border-radius: var(--radius);
+  }
+  .album-glow-backdrop {
+    position: absolute;
+    inset: -6px;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+    filter: blur(22px) saturate(220%) brightness(1.15);
+    opacity: 0;
+    transform: scale(0.92);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .album-cover-img {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    object-fit: cover;
+    background: #eee;
+    display: block;
+    transition: transform 0.35s ease;
+  }
+
+  /* Ambient Glow Hover Effect for Desktop (Mouse Cursor) */
+  @media (hover: hover) and (pointer: fine) {
+    .album-card:hover .album-glow-backdrop {
+      opacity: 0.88;
+      transform: scale(1.1);
+    }
+    .album-card:hover .album-cover-img {
+      transform: scale(1.02);
+    }
+  }
+
   .album-name { font-size: 13px; font-weight: 700; text-transform: uppercase; line-height: 1.3; word-break: break-word; }
   .album-year { font-size: 11px; color: var(--muted); margin-top: 4px; text-transform: uppercase; font-weight: 500; }
 
@@ -236,7 +279,7 @@
   .search-header-row { display: flex; justify-content: space-between; align-items: center; margin: 30px 0 20px; flex-wrap: wrap; gap: 12px; }
   .search-header-row h2 { margin: 0; font-size: 16px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
 
-  /* --- ALBUM VIEW OVERLAY --- */
+  /* --- ALBUM VIEW OVERLAY WITH AMBIENT GLOW --- */
   .album-view {
     position: fixed; inset: 0; color: var(--text); z-index: 80;
     transform: translateY(100%); transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
@@ -249,8 +292,41 @@
     border-bottom: 1px solid rgba(0,0,0,0.05); display: flex; align-items: center; backdrop-filter: blur(12px); z-index: 10;
   }
   .album-content { max-width: 1100px; margin: 0 auto; padding: 40px 20px; display: flex; gap: 50px; align-items: flex-start; }
+  
   .view-left { flex: 0 0 300px; position: sticky; top: 90px; }
-  .view-cover { width: 100%; aspect-ratio: 1/1; border-radius: 8px; box-shadow: 0 16px 40px rgba(0,0,0,0.15); object-fit: cover; }
+  .view-cover-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 12px;
+  }
+  .view-cover-glow {
+    position: absolute;
+    inset: -14px;
+    border-radius: 18px;
+    background-size: cover;
+    background-position: center;
+    filter: blur(34px) saturate(230%) brightness(1.15);
+    opacity: 0.85;
+    pointer-events: none;
+    z-index: 1;
+    transition: background-image 0.4s ease, opacity 0.4s ease;
+    animation: ambientPulse 4s ease-in-out infinite alternate;
+  }
+  @keyframes ambientPulse {
+    0% { opacity: 0.75; transform: scale(0.97); }
+    100% { opacity: 0.95; transform: scale(1.04); }
+  }
+  .view-cover {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.25);
+    object-fit: cover;
+  }
+
   .view-title { font-size: 28px; margin: 24px 0 8px; text-transform: uppercase; font-weight: 800; line-height: 1.1; }
   .view-meta { color: #555; font-size: 13px; font-weight: 600; text-transform: uppercase; }
   .view-notes { margin-top: 16px; font-size: 13px; line-height: 1.6; color: #444; }
@@ -409,7 +485,7 @@
     
     .album-content { flex-direction: column; gap: 24px; padding: 24px 16px; }
     .view-left { position: relative; top: 0; width: 100%; flex: auto; text-align: center; display: flex; flex-direction: column; align-items: center; }
-    .view-cover { max-width: 240px; }
+    .view-cover-wrapper { max-width: 260px; }
     .view-title { font-size: 24px; margin: 20px 0 6px; }
     .view-right { padding: 4px; background: transparent; box-shadow: none; width: 100%; }
     .track-item { padding: 12px 8px; font-size: 13px; }
@@ -431,7 +507,7 @@
     .full-info p { font-size: 14px; }
     .full-controls { gap: 20px; flex-wrap: wrap; }
     .full-btn-main { width: 64px; height: 64px; }
-    .volume-container { display: none; } /* Hide volume on mobile to save space */
+    .volume-container { display: none; }
   }
   @media(max-width: 400px) {
     .album-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
@@ -449,6 +525,10 @@
     <h1>YE-ARCHIVE</h1>
   </div>
   
+  <div class="search-container">
+    <input type="text" id="searchInputDesktop" class="search-capsule" placeholder="SEARCH ARCHIVE..." oninput="handleDesktopSearch(this.value)">
+  </div>
+
   <nav class="nav-header" aria-label="Primary navigation">
     <span id="tab-collection" class="nav-link active" onclick="switchTab('collection')">THE COLLECTION</span>
     <span id="tab-playlists" class="nav-link" onclick="switchTab('playlists')">PLAYLISTS</span>
@@ -463,7 +543,7 @@
       </button>
       <div class="user-dropdown" id="userDropdown">
         <div class="dropdown-item" onclick="openBlog('THE VISION', 'Making the vault accessible. Less time searching, more time listening.')">THE VISION</div>
-        <div class="dropdown-item" onclick="openBlog('WHAT\'S NEW', '<div class=\'blog-bullet\'>&bull; W Upgrades: Autoplay & Visualizer</div><div class=\'blog-bullet\'>&bull; Volume Sliders</div><div class=\'blog-bullet\'>&bull; Keyboard Controls Included</div>')">WHAT'S NEW</div>
+        <div class="dropdown-item" onclick="openBlog('WHAT\'S NEW', '<div class=\'blog-bullet\'>&bull; W Upgrades: Ambient Mode Glow</div><div class=\'blog-bullet\'>&bull; Autoplay & Visualizer</div><div class=\'blog-bullet\'>&bull; Keyboard Controls Included</div>')">WHAT'S NEW</div>
         <div class="dropdown-item dark-mode-item" onclick="toggleSetting('theme', event)">
           <span>DARK MODE</span>
           <div class="dark-mode-toggle" id="darkModeToggle"></div>
@@ -525,7 +605,10 @@
   </div>
   <div class="album-content">
     <div class="view-left">
-      <img id="viewCover" class="view-cover" src="">
+      <div class="view-cover-wrapper">
+        <div id="viewCoverGlow" class="view-cover-glow"></div>
+        <img id="viewCover" class="view-cover" src="">
+      </div>
       <h2 id="viewTitle" class="view-title"></h2>
       <p id="viewMeta" class="view-meta"></p>
       <p id="viewNotes" class="view-notes"></p>
@@ -640,18 +723,15 @@ function toggleUserMenu(e) {
 
 document.addEventListener('click', (e) => {
   const menu = document.getElementById('userDropdown');
-  if (menu.classList.contains('show') && !e.target.closest('.user-dropdown-container')) {
+  if (menu && menu.classList.contains('show') && !e.target.closest('.user-dropdown-container')) {
     menu.classList.remove('show');
   }
 });
 
 function applySettings() {
-  // Theme
   document.body.classList.toggle('dark-mode', settings.theme === 'dark');
   document.getElementById('darkModeToggle').classList.toggle('active', settings.theme === 'dark');
-  // Autoplay
   document.getElementById('autoplayToggle').classList.toggle('active', settings.autoplay);
-  // Visualizer
   document.getElementById('visualizerToggle').classList.toggle('active', settings.visualizer);
   if(settings.visualizer) initVisualizer();
 }
@@ -671,7 +751,7 @@ applySettings();
 
 // --- KEYBOARD CONTROLS ---
 document.addEventListener('keydown', (e) => {
-  if(e.target.tagName === 'INPUT') return; // Don't trigger when typing in search
+  if(e.target.tagName === 'INPUT') return;
   if(e.code === 'Space') { e.preventDefault(); togglePlay(); }
   if(e.code === 'ArrowRight') { playNextCmd(false); }
   if(e.code === 'ArrowLeft') { playNextCmd(true); }
@@ -684,34 +764,45 @@ function openBlog(t, htmlContent) {
   document.getElementById('userDropdown').classList.remove('show'); 
 }
 
-// --- DATABASE ---
-const database = window.YE_ARCHIVE_DATABASE;
+// --- DATABASE & AMBIENT GLOW HELPER ---
+const database = window.YE_ARCHIVE_DATABASE || [];
 const fallbackCoverFor = album => coverFor(album.title, album.era);
-const setCoverImage = async (image, album) => {
+
+const setCoverImage = async (image, album, glowElement = null) => {
   const fallback = fallbackCoverFor(album);
+  const applySrc = (src) => {
+    image.src = src;
+    if (glowElement) {
+      glowElement.style.backgroundImage = `url("${src}")`;
+    }
+  };
+
   if (!album.cover) {
     image.onerror = null;
-    image.src = fallback;
+    applySrc(fallback);
     return;
   }
   image.onerror = () => {
     image.onerror = null;
-    image.src = fallback;
+    applySrc(fallback);
   };
   if (window.location.protocol === 'file:' && album.cover.startsWith('music/')) {
     try {
       const response = await fetch(album.cover);
       if (!response.ok) throw new Error(`Could not load cover: ${response.status}`);
-      image.src = URL.createObjectURL(await response.blob());
+      const blob = await response.blob();
+      const objectUrl = URL.createObjectURL(blob);
+      applySrc(objectUrl);
       return;
     } catch (error) {
       image.onerror = null;
-      image.src = fallback;
+      applySrc(fallback);
       return;
     }
   }
-  image.src = album.cover;
+  applySrc(album.cover);
 };
+
 // --- STATE ---
 let activePlaylistContext = null; 
 let activePlaylistIndex = -1, activeTrackIndex = -1, viewingPlaylistIndex = -1;
@@ -803,8 +894,15 @@ database.forEach((alb, i) => {
   }
   const div = document.createElement('div');
   div.className = 'album-card';
-  div.innerHTML = `<img loading="lazy" alt="${alb.title} cover"><div class="album-name">${alb.title}</div><div class="album-year">${alb.tracks.length} TRACKS</div>`;
-  setCoverImage(div.querySelector('img'), alb);
+  div.innerHTML = `
+    <div class="album-cover-wrapper">
+      <div class="album-glow-backdrop"></div>
+      <img loading="lazy" alt="${alb.title} cover" class="album-cover-img">
+    </div>
+    <div class="album-name">${alb.title}</div>
+    <div class="album-year">${alb.tracks.length} TRACKS</div>
+  `;
+  setCoverImage(div.querySelector('.album-cover-img'), alb, div.querySelector('.album-glow-backdrop'));
   div.onclick = () => openAlbum(i);
   albumGrid.appendChild(div);
 });
@@ -963,7 +1061,9 @@ function openShuffle() {
   generatedShufflePlaylist = allTracks.slice(0, 20); 
 
   document.documentElement.style.setProperty('--album-accent', '#aaaaaa');
-  document.getElementById('viewCover').src = 'https://images.unsplash.com/photo-1619983081563-430f63602796?auto=format&fit=crop&w=500&q=80';
+  const shuffleCover = 'https://images.unsplash.com/photo-1619983081563-430f63602796?auto=format&fit=crop&w=500&q=80';
+  document.getElementById('viewCover').src = shuffleCover;
+  document.getElementById('viewCoverGlow').style.backgroundImage = `url("${shuffleCover}")`;
   document.getElementById('viewTitle').textContent = 'SHUFFLE';
   document.getElementById('viewMeta').textContent = `AUTO-GENERATED \u2022 20 TRACKS`;
   document.getElementById('viewNotes').textContent = 'A fresh mix every time.';
@@ -982,8 +1082,14 @@ function openLikedSongs() {
   
   const firstLikedAlbum = database[likedSongs[0].p];
   const likedCover = document.getElementById('viewCover');
-  if (firstLikedAlbum) setCoverImage(likedCover, firstLikedAlbum);
-  else likedCover.src = 'https://images.unsplash.com/photo-1557682250-33bd709cbe85?auto=format&fit=crop&w=500&q=80';
+  const likedGlow = document.getElementById('viewCoverGlow');
+  if (firstLikedAlbum) {
+    setCoverImage(likedCover, firstLikedAlbum, likedGlow);
+  } else {
+    const fallbackLikedImg = 'https://images.unsplash.com/photo-1557682250-33bd709cbe85?auto=format&fit=crop&w=500&q=80';
+    likedCover.src = fallbackLikedImg;
+    likedGlow.style.backgroundImage = `url("${fallbackLikedImg}")`;
+  }
   
   document.getElementById('viewTitle').textContent = 'LIKED SONGS';
   document.getElementById('viewMeta').textContent = `CUSTOM PLAYLIST \u2022 ${likedSongs.length} TRACKS`;
@@ -1020,7 +1126,7 @@ function openAlbum(i) {
   const alb = database[i];
 
   document.documentElement.style.setProperty('--album-accent', alb.accent || '#ffffff');
-  setCoverImage(document.getElementById('viewCover'), alb);
+  setCoverImage(document.getElementById('viewCover'), alb, document.getElementById('viewCoverGlow'));
   document.getElementById('viewTitle').textContent = alb.title;
   document.getElementById('viewMeta').textContent = `${alb.year} \u2022 ${alb.tracks.length} TRACKS`;
   document.getElementById('viewNotes').textContent = alb.notes;
@@ -1118,6 +1224,7 @@ function initVisualizer() {
       analyser.fftSize = 256;
       const bufferLength = analyser.frequencyBinCount;
       visDataArray = new Uint8Array(bufferLength);
+      resizeVisualizer();
       drawVisualizer();
     }
     if(audioCtx.state === 'suspended') audioCtx.resume();
@@ -1127,6 +1234,7 @@ function initVisualizer() {
 }
 
 function resizeVisualizer() {
+  if (!canvas) return;
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight * 0.6;
 }
@@ -1148,8 +1256,6 @@ function drawVisualizer() {
   
   for(let i = 0; i < visDataArray.length; i++) {
     barHeight = visDataArray[i] * 1.5;
-    
-    // Draw waves in accent color or white based on theme
     ctx.fillStyle = document.body.classList.contains('dark-mode') ? `rgba(255, 255, 255, ${barHeight/400})` : `rgba(17, 17, 17, ${barHeight/400})`;
     ctx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
     x += barWidth + 2;
@@ -1171,8 +1277,15 @@ function handleSearch(query, gridElementId) {
       foundResults = true;
       const div = document.createElement('div');
       div.className = 'album-card';
-      div.innerHTML = `<img alt="${alb.title} cover"><div class="album-name">${alb.title}</div><div class="album-year">ALBUM \u2022 ${alb.year}</div>`;
-      setCoverImage(div.querySelector('img'), alb);
+      div.innerHTML = `
+        <div class="album-cover-wrapper">
+          <div class="album-glow-backdrop"></div>
+          <img alt="${alb.title} cover" class="album-cover-img">
+        </div>
+        <div class="album-name">${alb.title}</div>
+        <div class="album-year">ALBUM \u2022 ${alb.year}</div>
+      `;
+      setCoverImage(div.querySelector('.album-cover-img'), alb, div.querySelector('.album-glow-backdrop'));
       div.onclick = () => { closeSearch(); openAlbum(index); };
       grid.appendChild(div);
     }
@@ -1185,8 +1298,15 @@ function handleSearch(query, gridElementId) {
         const div = document.createElement('div');
         div.className = 'album-card';
         div.onclick = () => { closeSearch(); playSong(plIdx, sIdx); };
-        div.innerHTML = `<img alt="${alb.title} cover"><div class="album-name">${song.title}</div><div class="album-year">TRACK \u2022 ${alb.title}</div>`;
-        setCoverImage(div.querySelector('img'), alb);
+        div.innerHTML = `
+          <div class="album-cover-wrapper">
+            <div class="album-glow-backdrop"></div>
+            <img alt="${alb.title} cover" class="album-cover-img">
+          </div>
+          <div class="album-name">${song.title}</div>
+          <div class="album-year">TRACK \u2022 ${alb.title}</div>
+        `;
+        setCoverImage(div.querySelector('.album-cover-img'), alb, div.querySelector('.album-glow-backdrop'));
         grid.appendChild(div);
       }
     });
@@ -1194,6 +1314,17 @@ function handleSearch(query, gridElementId) {
 
   if (!foundResults) {
     grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px 20px; color: #888; font-weight: 600; font-size: 14px;">NO RESULTS FOUND</div>`;
+  }
+}
+
+function handleDesktopSearch(val) {
+  if (val.trim().length > 0) {
+    document.getElementById('defaultUI').style.display = 'none';
+    document.getElementById('playlistsUI').style.display = 'none';
+    document.getElementById('searchUI').style.display = 'block';
+    handleSearch(val, 'searchGrid');
+  } else {
+    closeSearch();
   }
 }
 
@@ -1232,9 +1363,7 @@ audio.addEventListener('timeupdate', () => {
 });
 
 document.getElementById('progressBar').oninput = e => { audio.currentTime = (e.target.value/100) * audio.duration; };
-document.getElementById('progressBar').ontouchstart = e => { e.preventDefault(); };
 document.getElementById('fullProgressBar').oninput = e => { audio.currentTime = (e.target.value/100) * audio.duration; };
-document.getElementById('fullProgressBar').ontouchstart = e => { e.preventDefault(); };
 
 // --- GESTURES ---
 let touchStartY = 0, isVerticalScroll = false;
@@ -1269,4 +1398,3 @@ fp.addEventListener('touchend', (e) => {
 </script>
 </body>
 </html>
-
