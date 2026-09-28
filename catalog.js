@@ -5787,7 +5787,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Jesus Is King",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Jesus Is King Era",
-        "cover":  "",
+        "cover":  "music/Jesus Is King Era/JESUS IS KING (Early)/coverart.jpg",
         "tracks":  [
 
                    ]
@@ -5929,7 +5929,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Jesus Is King",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Jesus Is King Era",
-        "cover":  "music/Jesus Is King Era/The Jesus Is King Experience/coverart.png",
+        "cover":  "music/Jesus Is King Era/The Jesus Is King Experience/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Every Hour",
@@ -6479,7 +6479,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "My Beautiful Dark Twisted Fantasy",
         "accent":  "#111111",
         "notes":  "ARCHIVE / My Beautiful Dark Twisted Fantasy Era",
-        "cover":  "",
+        "cover":  "music/My Beautiful Dark Twisted Fantasy Era/Check The Resume/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Monster (Feat. Rick Ross)",
@@ -6566,7 +6566,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "My Beautiful Dark Twisted Fantasy",
         "accent":  "#111111",
         "notes":  "ARCHIVE / My Beautiful Dark Twisted Fantasy Era",
-        "cover":  "",
+        "cover":  "music/My Beautiful Dark Twisted Fantasy Era/Donda_s Boy/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Don\u0027t Look Down (feat. Mos Def, Lupe Fiasco \u0026 Big Sean)",
@@ -6625,7 +6625,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "My Beautiful Dark Twisted Fantasy",
         "accent":  "#111111",
         "notes":  "ARCHIVE / My Beautiful Dark Twisted Fantasy Era",
-        "cover":  "",
+        "cover":  "music/My Beautiful Dark Twisted Fantasy Era/G.O.O.D. ASS/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Bullshittin\u0027 Intro  (feat. Consequense)",
@@ -6756,7 +6756,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "My Beautiful Dark Twisted Fantasy",
         "accent":  "#111111",
         "notes":  "ARCHIVE / My Beautiful Dark Twisted Fantasy Era",
-        "cover":  "",
+        "cover":  "music/My Beautiful Dark Twisted Fantasy Era/G.O.O.D. Morning, G.O.O.D. Night Dawn/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "G.E.M (G.O.O.D. Enuff Me) (feat. Tony Williams \u0026 Phenom)",
@@ -6827,7 +6827,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "My Beautiful Dark Twisted Fantasy",
         "accent":  "#111111",
         "notes":  "ARCHIVE / My Beautiful Dark Twisted Fantasy Era",
-        "cover":  "",
+        "cover":  "music/My Beautiful Dark Twisted Fantasy Era/G.O.O.D. Morning, G.O.O.D. Night Dusk/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Too Knight (The Underworld) (feat. Jennifer Hudson \u0026 ZZAJÉ)",
@@ -6898,7 +6898,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "My Beautiful Dark Twisted Fantasy",
         "accent":  "#111111",
         "notes":  "ARCHIVE / My Beautiful Dark Twisted Fantasy Era",
-        "cover":  "",
+        "cover":  "music/My Beautiful Dark Twisted Fantasy Era/Live From VH1 Storytellers/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "See You In My Nightmares (Live From VH1 Storytellers)",
@@ -6949,7 +6949,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "My Beautiful Dark Twisted Fantasy",
         "accent":  "#111111",
         "notes":  "ARCHIVE / My Beautiful Dark Twisted Fantasy Era",
-        "cover":  "",
+        "cover":  "music/My Beautiful Dark Twisted Fantasy Era/My Beautiful Dark Twisted Fantasy (Early iTunes)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Dark Fantasy",
@@ -7032,7 +7032,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "My Beautiful Dark Twisted Fantasy",
         "accent":  "#111111",
         "notes":  "ARCHIVE / My Beautiful Dark Twisted Fantasy Era",
-        "cover":  "",
+        "cover":  "music/My Beautiful Dark Twisted Fantasy Era/My Dark Twisted Fantasy/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Blame Game",
@@ -7091,7 +7091,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "My Beautiful Dark Twisted Fantasy",
         "accent":  "#111111",
         "notes":  "ARCHIVE / My Beautiful Dark Twisted Fantasy Era",
-        "cover":  "",
+        "cover":  "music/My Beautiful Dark Twisted Fantasy Era/Runaway/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Dark Fantasy",
@@ -7150,7 +7150,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "So Help Me God",
         "accent":  "#111111",
         "notes":  "ARCHIVE / So Help Me God Era",
-        "cover":  "",
+        "cover":  "music/So Help Me God Era/808s & Heartbreak (Live at the Hollywood Bowl)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Amazing",
@@ -7209,7 +7209,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "So Help Me God",
         "accent":  "#111111",
         "notes":  "ARCHIVE / So Help Me God Era",
-        "cover":  "",
+        "cover":  "music/So Help Me God Era/808_s & Heartbreak (Hollywood Bowl)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "AMAZING",
@@ -7264,7 +7264,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "So Help Me God",
         "accent":  "#111111",
         "notes":  "ARCHIVE / So Help Me God Era",
-        "cover":  "",
+        "cover":  "music/So Help Me God Era/So Help Me God/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "How You Feeling",
@@ -7351,7 +7351,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "So Help Me God",
         "accent":  "#111111",
         "notes":  "ARCHIVE / So Help Me God Era",
-        "cover":  "",
+        "cover":  "music/So Help Me God Era/So Help Me God (Early)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "All Day (feat. Kendrick Lamar, Theophilus London, Allan Kingdom \u0026 Paul McCartney)",
@@ -7398,7 +7398,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "So Help Me God",
         "accent":  "#111111",
         "notes":  "ARCHIVE / So Help Me God Era",
-        "cover":  "",
+        "cover":  "music/So Help Me God Era/So Help Me God (Private Listening Party)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "All Day (feat. Allan Kingdom, Theophilus London \u0026 Paul McCartney)",
@@ -7437,7 +7437,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The College Dropout",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The College Dropout Era",
-        "cover":  "",
+        "cover":  "music/The College Dropout Era/Akademiks Vol. 1/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Intro",
@@ -7548,7 +7548,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The College Dropout",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The College Dropout Era",
-        "cover":  "",
+        "cover":  "music/The College Dropout Era/Akademiks Vol. 2/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Intro ",
@@ -7627,7 +7627,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The College Dropout",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The College Dropout Era",
-        "cover":  "",
+        "cover":  "music/The College Dropout Era/College Dropout (Pre The College Dropout)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Can´t Nobody (Instrumental)",
@@ -7698,7 +7698,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The College Dropout",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The College Dropout Era",
-        "cover":  "",
+        "cover":  "music/The College Dropout Era/Ferris Bueller & Plain Pat Present Behind The Beats with Kanye West/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Intro",
@@ -7873,7 +7873,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The College Dropout",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The College Dropout Era",
-        "cover":  "",
+        "cover":  "music/The College Dropout Era/Freshmen Adjustment/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Intro",
@@ -7960,7 +7960,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The College Dropout",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The College Dropout Era",
-        "cover":  "",
+        "cover":  "music/The College Dropout Era/Get Well Soon/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Intro (feat. Free of 106 \u0026 Park)",
@@ -8115,7 +8115,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The College Dropout",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The College Dropout Era",
-        "cover":  "",
+        "cover":  "music/The College Dropout Era/I_m Good/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Intro",
@@ -8250,7 +8250,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The College Dropout",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The College Dropout Era",
-        "cover":  "",
+        "cover":  "music/The College Dropout Era/Kon The Louis Vuitton Don/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Intro",
@@ -8349,7 +8349,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The College Dropout",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The College Dropout Era",
-        "cover":  "",
+        "cover":  "music/The College Dropout Era/The College Dropout/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Intro",
@@ -8432,7 +8432,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The College Dropout",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The College Dropout Era",
-        "cover":  "",
+        "cover":  "music/The College Dropout Era/The College Dropout (Album Sampler)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Intro",
@@ -8467,7 +8467,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The College Dropout",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The College Dropout Era",
-        "cover":  "",
+        "cover":  "music/The College Dropout Era/The College Dropout (Demo)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Intro",
@@ -8566,7 +8566,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The College Dropout",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The College Dropout Era",
-        "cover":  "",
+        "cover":  "music/The College Dropout Era/The College Dropout (Early)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Intro",
@@ -8637,7 +8637,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Life of Pablo",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Life of Pablo Era",
-        "cover":  "",
+        "cover":  "music/The Life of Pablo Era/Saint Pablo Tour/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Father Stretch My Hands",
@@ -8784,7 +8784,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Life of Pablo",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Life of Pablo Era",
-        "cover":  "",
+        "cover":  "music/The Life of Pablo Era/Saint Pablo Tour (Chicago)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Father Stretch My Hands Pt. 1",
@@ -8927,7 +8927,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Life of Pablo",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Life of Pablo Era",
-        "cover":  "",
+        "cover":  "music/The Life of Pablo Era/SWISH/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Freestyle 4",
@@ -9082,7 +9082,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Life of Pablo",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Life of Pablo Era",
-        "cover":  "",
+        "cover":  "music/The Life of Pablo Era/SWISH (Early)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "30 Hours ",
@@ -9145,7 +9145,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Life of Pablo",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Life of Pablo Era",
-        "cover":  "",
+        "cover":  "music/The Life of Pablo Era/SWISH (Pre WAVES)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "30 Hours ",
@@ -9200,7 +9200,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Life of Pablo",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Life of Pablo Era",
-        "cover":  "",
+        "cover":  "music/The Life of Pablo Era/The Death Of Pablo/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Ultralight Wall",
@@ -9227,7 +9227,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Life of Pablo",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Life of Pablo Era",
-        "cover":  "",
+        "cover":  "music/The Life of Pablo Era/The Life Of Pablo/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Fade (feat. Ty Dolla $ign \u0026 Post Malone)",
@@ -9286,7 +9286,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Life of Pablo",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Life of Pablo Era",
-        "cover":  "",
+        "cover":  "music/The Life of Pablo Era/The Life Of Pablo (DJDS Version)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "30 hours",
@@ -9353,7 +9353,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Life of Pablo",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Life of Pablo Era",
-        "cover":  "",
+        "cover":  "music/The Life of Pablo Era/The Life Of Pablo (First Version)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Ultralight Beam",
@@ -9436,7 +9436,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Life of Pablo",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Life of Pablo Era",
-        "cover":  "",
+        "cover":  "music/The Life of Pablo Era/The Life of Pablo (Madison Square Garden)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Ultralight Beam",
@@ -9523,7 +9523,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Life of Pablo",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Life of Pablo Era",
-        "cover":  "",
+        "cover":  "music/The Life of Pablo Era/The Life Of Pablo (Second Version)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Ultralight Beam",
@@ -9614,7 +9614,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Life of Pablo",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Life of Pablo Era",
-        "cover":  "",
+        "cover":  "music/The Life of Pablo Era/TurboGrafx16/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "All Eyes On Ye",
@@ -9681,7 +9681,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Life of Pablo",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Life of Pablo Era",
-        "cover":  "",
+        "cover":  "music/The Life of Pablo Era/TurboGrafx16 (Early)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Euros (feat. A$AP Rocky)",
@@ -9720,7 +9720,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Life of Pablo",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Life of Pablo Era",
-        "cover":  "",
+        "cover":  "music/The Life of Pablo Era/WAVES (Final Stage) (Pre The Life Of Pablo)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "30 Hours ",
@@ -9783,7 +9783,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Life of Pablo",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Life of Pablo Era",
-        "cover":  "",
+        "cover":  "music/The Life of Pablo Era/WAVES (First Stage)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "30 Hours",
@@ -9842,7 +9842,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Life of Pablo",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Life of Pablo Era",
-        "cover":  "",
+        "cover":  "music/The Life of Pablo Era/Wolves/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Summer 6ixteen",
@@ -9893,7 +9893,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Life of Pablo",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Life of Pablo Era",
-        "cover":  "",
+        "cover":  "music/The Life of Pablo Era/Wolves (Early)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Glow",
@@ -9940,7 +9940,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Prerequisite",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Prerequisite Era",
-        "cover":  "",
+        "cover":  "music/The Prerequisite Era/Demo Beat Tape Sept. 97/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Unreleased Kanye Beat Tape (C. Sept 97_) Beat 1",
@@ -9983,7 +9983,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Prerequisite",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Prerequisite Era",
-        "cover":  "",
+        "cover":  "music/The Prerequisite Era/Disc 1/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Beat 1",
@@ -10082,7 +10082,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Prerequisite",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Prerequisite Era",
-        "cover":  "",
+        "cover":  "music/The Prerequisite Era/Disc 2/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Beat 1",
@@ -10169,7 +10169,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Prerequisite",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Prerequisite Era",
-        "cover":  "",
+        "cover":  "music/The Prerequisite Era/The Prerequisite/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Home (Windy)",
@@ -10240,7 +10240,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Prerequisite",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Prerequisite Era",
-        "cover":  "",
+        "cover":  "music/The Prerequisite Era/World Record Holders/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "10 in a Benz (feat. Rhymefest \u0026 Kanye West)",
@@ -10303,7 +10303,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Prerequisite",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Prerequisite Era",
-        "cover":  "",
+        "cover":  "music/The Prerequisite Era/World Record Holders (CD Version)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Intro",
@@ -10410,7 +10410,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Vultures",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Vultures Era",
-        "cover":  "",
+        "cover":  "music/Vultures Era/Bad Bitch Playbook/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "New Body",
@@ -10565,7 +10565,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Vultures",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Vultures Era",
-        "cover":  "",
+        "cover":  "music/Vultures Era/Bad Bitch Playbook (Pre VULTURES 1)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Back To Me (feat. Freddie Gibbs \u0026 Quavo)",
@@ -10632,7 +10632,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Vultures",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Vultures Era",
-        "cover":  "",
+        "cover":  "music/Vultures Era/Bad Bitch Playbook Vol. 2/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "King",
@@ -10687,7 +10687,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Vultures",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Vultures Era",
-        "cover":  "",
+        "cover":  "music/Vultures Era/Vultures (Las Vegas Listening Party 15.12.23)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Dead",
@@ -10722,7 +10722,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Vultures",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Vultures Era",
-        "cover":  "",
+        "cover":  "music/Vultures Era/Vultures (Rave Miami 12.12.12)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Everybody",
@@ -10785,7 +10785,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Vultures",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Vultures Era",
-        "cover":  "",
+        "cover":  "music/Vultures Era/VULTURES 1/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "BACK TO ME",
@@ -10860,7 +10860,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Vultures",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Vultures Era",
-        "cover":  "",
+        "cover":  "music/Vultures Era/VULTURES 1 (Early)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Back To Me ",
@@ -10943,7 +10943,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Vultures",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Vultures Era",
-        "cover":  "",
+        "cover":  "music/Vultures Era/VULTURES 2 (All Deluxes)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "SLIDE(Explicit)",
@@ -11038,7 +11038,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Vultures",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Vultures Era",
-        "cover":  "",
+        "cover":  "music/Vultures Era/VULTURES 2 (First Version)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "SLIDE",
@@ -11113,7 +11113,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Vultures",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Vultures Era",
-        "cover":  "",
+        "cover":  "music/Vultures Era/Vultures Vol. 1/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Back To Me (feat. Freddie Gibbs \u0026 Quavo)",
@@ -11196,7 +11196,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Vultures",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Vultures Era",
-        "cover":  "",
+        "cover":  "music/Vultures Era/Vultures Vol. 2/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "5:30 ",
@@ -11267,7 +11267,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Vultures",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Vultures Era",
-        "cover":  "",
+        "cover":  "music/Vultures Era/Vultures Vol. 3/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "After Life",
@@ -11358,7 +11358,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Watch The Throne",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Watch The Throne Era",
-        "cover":  "",
+        "cover":  "music/Watch The Throne Era/Live At Coachella/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "H.A.M. Intro",
@@ -11497,7 +11497,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Watch The Throne",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Watch The Throne Era",
-        "cover":  "",
+        "cover":  "music/Watch The Throne Era/The Throne/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Lift Off (Feat. BeyoncÃ©)",
@@ -11544,7 +11544,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Watch The Throne",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Watch The Throne Era",
-        "cover":  "",
+        "cover":  "music/Watch The Throne Era/Watch The Throne/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Hâ€¢Aâ€¢M",
@@ -11627,7 +11627,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Watch The Throne",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Watch The Throne Era",
-        "cover":  "",
+        "cover":  "music/Watch The Throne Era/Watch the Throne Tour/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "H•A•M",
@@ -11766,7 +11766,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Wyoming",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Wyoming Era",
-        "cover":  "",
+        "cover":  "music/Wyoming Era/Blowbama/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Bad Mon",
@@ -11821,7 +11821,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Wyoming",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Wyoming Era",
-        "cover":  "",
+        "cover":  "music/Wyoming Era/DAYTONA/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "If You Know You Know",
@@ -11860,7 +11860,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Wyoming",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Wyoming Era",
-        "cover":  "",
+        "cover":  "music/Wyoming Era/Everybody Wins/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "4th Dimension (feat. Louis Prima)",
@@ -11903,7 +11903,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Wyoming",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Wyoming Era",
-        "cover":  "",
+        "cover":  "music/Wyoming Era/Hitler/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Pussy Mine(feat. Ant Clemons)",
@@ -11958,7 +11958,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Wyoming",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Wyoming Era",
-        "cover":  "",
+        "cover":  "music/Wyoming Era/K.T.S.E/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "NO MANNERS",
@@ -12005,7 +12005,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Wyoming",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Wyoming Era",
-        "cover":  "",
+        "cover":  "music/Wyoming Era/KID SEE GHOSTS (Camp Flog Gnaw)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Father Stretch My Hands",
@@ -12064,7 +12064,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Wyoming",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Wyoming Era",
-        "cover":  "",
+        "cover":  "music/Wyoming Era/KIDS SEE GHOSTS/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "4th Dimension (feat. Louis Prima)",
@@ -12103,7 +12103,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Wyoming",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Wyoming Era",
-        "cover":  "",
+        "cover":  "music/Wyoming Era/KIDS SEE GHOSTS II/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Alien (feat. Ant Clemons, 2 Chainz, Quavo, Pusha T \u0026 Jaden)",
@@ -12142,7 +12142,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Wyoming",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Wyoming Era",
-        "cover":  "",
+        "cover":  "music/Wyoming Era/LOVE EVERYONE/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Brothers (feat. 7 Aurelius)",
@@ -12181,7 +12181,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Wyoming",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Wyoming Era",
-        "cover":  "",
+        "cover":  "music/Wyoming Era/LOVE EVERYONE (Pre Ye)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "XTCY (feat. Malik Yusef)",
@@ -12220,7 +12220,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Wyoming",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Wyoming Era",
-        "cover":  "",
+        "cover":  "music/Wyoming Era/NASIR/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Not For Radio (feat. Puff Daddy \u0026 070 Shake)",
@@ -12259,7 +12259,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Wyoming",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Wyoming Era",
-        "cover":  "",
+        "cover":  "music/Wyoming Era/NASIR (Early)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Not For Radio (feat. Puff Daddy \u0026 070 Shake)",
@@ -12298,7 +12298,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Wyoming",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Wyoming Era",
-        "cover":  "",
+        "cover":  "music/Wyoming Era/Wyoming Orchestral_/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Cudi Montage",
@@ -12329,7 +12329,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Wyoming",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Wyoming Era",
-        "cover":  "",
+        "cover":  "music/Wyoming Era/ye/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "I Thought About Killing You",
@@ -12388,7 +12388,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Wyoming",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Wyoming Era",
-        "cover":  "",
+        "cover":  "music/Wyoming Era/ye (Early)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Pussy Mine (feat. Ty Dolla $ign \u0026 Ant Clemons)",
@@ -12427,7 +12427,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Wyoming",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Wyoming Era",
-        "cover":  "",
+        "cover":  "music/Wyoming Era/ye (Pre KIDS SEE GHOSTS)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "All Mine (feat. Ant Clemons)",
@@ -12470,7 +12470,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yandhi",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yandhi Era",
-        "cover":  "",
+        "cover":  "music/Yandhi Era/Good Ass Job 2018/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Black Men Don\u0027t Cheat ",
@@ -12513,7 +12513,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yandhi",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yandhi Era",
-        "cover":  "",
+        "cover":  "music/Yandhi Era/Job Well Done/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Black Men Don\u0027t Cheat",
@@ -12552,7 +12552,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yandhi",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yandhi Era",
-        "cover":  "",
+        "cover":  "music/Yandhi Era/Yandhi/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Chakras",
@@ -12655,7 +12655,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yandhi",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yandhi Era",
-        "cover":  "",
+        "cover":  "music/Yandhi Era/Yandhi (Coachella)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Selah",
@@ -12706,7 +12706,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yandhi",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yandhi Era",
-        "cover":  "",
+        "cover":  "music/Yandhi Era/Yandhi (Early)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Bye Bye Baby ",
@@ -12753,7 +12753,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yandhi",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yandhi Era",
-        "cover":  "",
+        "cover":  "music/Yandhi Era/Yandhi (First Version)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Bye Bye Baby ",
@@ -12808,7 +12808,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yandhi",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yandhi Era",
-        "cover":  "",
+        "cover":  "music/Yandhi Era/Yandhi (Pre Jesus Is King)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Alien (feat. Pusha T \u0026 Ant Clemons)",
@@ -12867,7 +12867,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yandhi",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yandhi Era",
-        "cover":  "",
+        "cover":  "music/Yandhi Era/Yandhi (Second Version)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "New Body",
@@ -12914,7 +12914,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "YEBU",
         "accent":  "#111111",
         "notes":  "ARCHIVE / YEBU Era",
-        "cover":  "",
+        "cover":  "music/YEBU Era/Man Across The Sea/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Can U Be",
@@ -12985,7 +12985,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "YEBU",
         "accent":  "#111111",
         "notes":  "ARCHIVE / YEBU Era",
-        "cover":  "",
+        "cover":  "music/YEBU Era/WAR/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "FOR ONCE IN MY LIFE",
@@ -13044,7 +13044,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "YEBU",
         "accent":  "#111111",
         "notes":  "ARCHIVE / YEBU Era",
-        "cover":  "",
+        "cover":  "music/YEBU Era/YEBU/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "BOBBY DIGITAL",
@@ -13107,7 +13107,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "YEBU",
         "accent":  "#111111",
         "notes":  "ARCHIVE / YEBU Era",
-        "cover":  "",
+        "cover":  "music/YEBU Era/Yesuke/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Amy\u0027s Heartbreak",
@@ -13158,7 +13158,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yeezus 2",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yeezus 2 Era",
-        "cover":  "",
+        "cover":  "music/Yeezus 2 Era/CHIRAQ/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "After You (feat. John Legend, Pusha T \u0026 Sia)",
@@ -13209,7 +13209,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yeezus 2",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yeezus 2 Era",
-        "cover":  "",
+        "cover":  "music/Yeezus 2 Era/Lost Yeezus/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Awesome",
@@ -13236,7 +13236,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yeezus 2",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yeezus 2 Era",
-        "cover":  "",
+        "cover":  "music/Yeezus 2 Era/New Yeezus/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "About Time",
@@ -13299,7 +13299,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yeezus 2",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yeezus 2 Era",
-        "cover":  "",
+        "cover":  "music/Yeezus 2 Era/Yeezus 2/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "3 (feat. Paul McCartney)",
@@ -13454,7 +13454,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yeezus 2",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yeezus 2 Era",
-        "cover":  "",
+        "cover":  "music/Yeezus 2 Era/Yeezus 2 (Early)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "3",
@@ -13525,7 +13525,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yeezus 2",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yeezus 2 Era",
-        "cover":  "",
+        "cover":  "music/Yeezus 2 Era/Yeezus 2 (Mexico Sessions)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "After You ",
@@ -13576,7 +13576,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yeezus 2",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yeezus 2 Era",
-        "cover":  "",
+        "cover":  "music/Yeezus 2 Era/Yeezus II/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Wolves",
@@ -13679,7 +13679,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yeezus 2",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yeezus 2 Era",
-        "cover":  "",
+        "cover":  "music/Yeezus 2 Era/Your Prayers Mattered/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "333",
@@ -13714,7 +13714,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yeezus",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yeezus Era",
-        "cover":  "",
+        "cover":  "music/Yeezus Era/Nigger Cock/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Good Things Don\u0027t Last",
@@ -13785,7 +13785,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yeezus",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yeezus Era",
-        "cover":  "",
+        "cover":  "music/Yeezus Era/Thank God 4 Drugs!/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "I Am Not Home",
@@ -13840,7 +13840,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yeezus",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yeezus Era",
-        "cover":  "",
+        "cover":  "music/Yeezus Era/Thank God For Drugs/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Blood On The Leaves",
@@ -13911,7 +13911,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yeezus",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yeezus Era",
-        "cover":  "",
+        "cover":  "music/Yeezus Era/Yeezus/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Black Skinhead",
@@ -13962,7 +13962,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yeezus",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yeezus Era",
-        "cover":  "",
+        "cover":  "music/Yeezus Era/Yeezus (Early)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Blood On The Leaves",
@@ -14001,7 +14001,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yeezus",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yeezus Era",
-        "cover":  "",
+        "cover":  "music/Yeezus Era/Yeezus Tour/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "All Of The Lights",
