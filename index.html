@@ -687,13 +687,13 @@ function openBlog(t, htmlContent) {
 // --- DATABASE ---
 const database = window.YE_ARCHIVE_DATABASE;
 const fallbackCoverFor = album => coverFor(album.title, album.era);
-const coverPathFor = album => {
-  const firstTrack = album.tracks.find(track => track.file);
-  if (!firstTrack) return fallbackCoverFor(album);
-  return `${firstTrack.file.slice(0, firstTrack.file.lastIndexOf('/'))}/coverart.jpg`;
-};
 const setCoverImage = async (image, album) => {
   const fallback = fallbackCoverFor(album);
+  if (!album.cover) {
+    image.onerror = null;
+    image.src = fallback;
+    return;
+  }
   image.onerror = () => {
     image.onerror = null;
     image.src = fallback;
@@ -712,10 +712,6 @@ const setCoverImage = async (image, album) => {
   }
   image.src = album.cover;
 };
-database.forEach((album) => {
-  album.fallbackCover = fallbackCoverFor(album);
-  album.cover = album.cover || coverPathFor(album);
-});
 // --- STATE ---
 let activePlaylistContext = null; 
 let activePlaylistIndex = -1, activeTrackIndex = -1, viewingPlaylistIndex = -1;
@@ -985,7 +981,9 @@ function openLikedSongs() {
   document.documentElement.style.setProperty('--album-accent', '#8e2de2');
   
   const firstLikedAlbum = database[likedSongs[0].p];
-  document.getElementById('viewCover').src = firstLikedAlbum ? firstLikedAlbum.cover : 'https://images.unsplash.com/photo-1557682250-33bd709cbe85?auto=format&fit=crop&w=500&q=80';
+  const likedCover = document.getElementById('viewCover');
+  if (firstLikedAlbum) setCoverImage(likedCover, firstLikedAlbum);
+  else likedCover.src = 'https://images.unsplash.com/photo-1557682250-33bd709cbe85?auto=format&fit=crop&w=500&q=80';
   
   document.getElementById('viewTitle').textContent = 'LIKED SONGS';
   document.getElementById('viewMeta').textContent = `CUSTOM PLAYLIST \u2022 ${likedSongs.length} TRACKS`;

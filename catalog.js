@@ -8,6 +8,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "808s \u0026 Heartbreak",
         "accent":  "#111111",
         "notes":  "ARCHIVE / 808s \u0026 Heartbreak Era",
+        "cover":  "music/808s & Heartbreak Era/808s & Heartbreak/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Amazing",
@@ -78,6 +79,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "808s \u0026 Heartbreak",
         "accent":  "#111111",
         "notes":  "ARCHIVE / 808s \u0026 Heartbreak Era",
+        "cover":  "music/808s & Heartbreak Era/Alter Ego/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Intro",
@@ -200,6 +202,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "808s \u0026 Heartbreak",
         "accent":  "#111111",
         "notes":  "ARCHIVE / 808s \u0026 Heartbreak Era",
+        "cover":  "music/808s & Heartbreak Era/Rebel Music (Hosted By N.E.R.D.)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "INTRO",
@@ -330,6 +333,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "808s \u0026 Heartbreak",
         "accent":  "#111111",
         "notes":  "ARCHIVE / 808s \u0026 Heartbreak Era",
+        "cover":  "music/808s & Heartbreak Era/Sky High_ A We Got The Remix Special Edition/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Sky High (intro) (feat. Kid Cudi)",
@@ -424,6 +428,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "808s \u0026 Heartbreak",
         "accent":  "#111111",
         "notes":  "ARCHIVE / 808s \u0026 Heartbreak Era",
+        "cover":  "music/808s & Heartbreak Era/The Graduate/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Intro",
@@ -546,6 +551,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "808s \u0026 Heartbreak",
         "accent":  "#111111",
         "notes":  "ARCHIVE / 808s \u0026 Heartbreak Era",
+        "cover":  "music/808s & Heartbreak Era/waterfalls/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Welcome To Heartbreak",
@@ -600,6 +606,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Bully",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Bully Era",
+        "cover":  "music/Bully Era/BULLY (Digital First Version)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "KING",
@@ -682,6 +689,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Bully",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Bully Era",
+        "cover":  "music/Bully Era/BULLY (Early)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "PREACHER MAN",
@@ -728,6 +736,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Bully",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Bully Era",
+        "cover":  "music/Bully Era/BULLY (First Version)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Preacher Man",
@@ -774,6 +783,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Bully",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Bully Era",
+        "cover":  "music/Bully Era/BULLY (IRKO_s version)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Preacher Man",
@@ -820,6 +830,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Bully",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Bully Era",
+        "cover":  "music/Bully Era/BULLY (Listening Party)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "ALL THE LOVE (feat. Andre Troutman)",
@@ -886,6 +897,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Bully",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Bully Era",
+        "cover":  "music/Bully Era/BULLY (Physical Version)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "ALL THE LOVE",
@@ -948,6 +960,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Bully",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Bully Era",
+        "cover":  "music/Bully Era/BULLY (Second Version)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Preacher Man",
@@ -1002,6 +1015,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Bully",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Bully Era",
+        "cover":  "music/Bully Era/BULLY (Third version)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "PREACHER MAN",
@@ -1068,6 +1082,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "CUCK",
         "accent":  "#111111",
         "notes":  "ARCHIVE / CUCK Era",
+        "cover":  "music/CUCK Era/CUCK/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "BIANCA",
@@ -1138,6 +1153,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "CUCK",
         "accent":  "#111111",
         "notes":  "ARCHIVE / CUCK Era",
+        "cover":  "music/CUCK Era/In A Perfect World/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "ALL THE LOVE",
@@ -1240,6 +1256,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "CUCK",
         "accent":  "#111111",
         "notes":  "ARCHIVE / CUCK Era",
+        "cover":  "music/CUCK Era/In A Perfect World (Early)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "RED EYE",
@@ -1350,6 +1367,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "CUCK",
         "accent":  "#111111",
         "notes":  "ARCHIVE / CUCK Era",
+        "cover":  "music/CUCK Era/NEVER STOP/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "DIDDY FREE",
@@ -1388,6 +1406,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "CUCK",
         "accent":  "#111111",
         "notes":  "ARCHIVE / CUCK Era",
+        "cover":  "music/CUCK Era/WW3/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "VIRGIL LET ME DOWN",
@@ -1458,6 +1477,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "DONDA 2",
         "accent":  "#111111",
         "notes":  "ARCHIVE / DONDA 2 Era",
+        "cover":  "music/DONDA 2 Era/DONDA 2 (2.22.22)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "True Love",
@@ -1532,6 +1552,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "DONDA 2",
         "accent":  "#111111",
         "notes":  "ARCHIVE / DONDA 2 Era",
+        "cover":  "music/DONDA 2 Era/DONDA 2 (2025)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "530",
@@ -1614,6 +1635,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "DONDA 2",
         "accent":  "#111111",
         "notes":  "ARCHIVE / DONDA 2 Era",
+        "cover":  "music/DONDA 2 Era/DONDA 2 (2025) (Second Version)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "SECURITY",
@@ -1708,6 +1730,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "DONDA 2",
         "accent":  "#111111",
         "notes":  "ARCHIVE / DONDA 2 Era",
+        "cover":  "music/DONDA 2 Era/Donda 2 (Early)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Security",
@@ -1794,6 +1817,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "DONDA 2",
         "accent":  "#111111",
         "notes":  "ARCHIVE / DONDA 2 Era",
+        "cover":  "music/DONDA 2 Era/DONDA 2 (Listening Party 2.22.22)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "True Love (feat. XXXTENTACION)",
@@ -1864,6 +1888,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "DONDA 2",
         "accent":  "#111111",
         "notes":  "ARCHIVE / DONDA 2 Era",
+        "cover":  "music/DONDA 2 Era/Donda 2 (Stem Player)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "True Love ",
@@ -1938,6 +1963,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "DONDA 2",
         "accent":  "#111111",
         "notes":  "ARCHIVE / DONDA 2 Era",
+        "cover":  "music/DONDA 2 Era/Donda 2 4 The Kidz/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Tru Love",
@@ -2032,6 +2058,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "DONDA 2",
         "accent":  "#111111",
         "notes":  "ARCHIVE / DONDA 2 Era",
+        "cover":  "music/DONDA 2 Era/For The Children/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "530",
@@ -2122,6 +2149,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "DONDA 2",
         "accent":  "#111111",
         "notes":  "ARCHIVE / DONDA 2 Era",
+        "cover":  "music/DONDA 2 Era/Free Larry Hoover Benefit Concert/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Jesus Is King",
@@ -2292,6 +2320,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Donda",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Donda Era",
+        "cover":  "music/Donda Era/Dear Donda/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Roses",
@@ -2322,6 +2351,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Donda",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Donda Era",
+        "cover":  "music/Donda Era/DND/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "24 (feat. Summer Walker, KayCyy \u0026 Sunday Service Choir)",
@@ -2424,6 +2454,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Donda",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Donda Era",
+        "cover":  "music/Donda Era/DND WTH CHLD/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "DND",
@@ -2502,6 +2533,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Donda",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Donda Era",
+        "cover":  "music/Donda Era/Donda/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Donda Chant",
@@ -2616,6 +2648,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Donda",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Donda Era",
+        "cover":  "music/Donda Era/Donda (Deluxe)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "24 (feat. KayCyy, Albe Back, Kaity \u0026 Sunday Service Choir)",
@@ -2754,6 +2787,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Donda",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Donda Era",
+        "cover":  "music/Donda Era/Donda (Final Version) (Early)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Aye Ye Ye Ye",
@@ -2840,6 +2874,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Donda",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Donda Era",
+        "cover":  "music/Donda Era/Donda (Listening Party 1)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "24 (feat. Sunday Service Choir)",
@@ -2910,6 +2945,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Donda",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Donda Era",
+        "cover":  "music/Donda Era/Donda (Listening Party 2)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Donda (feat. Tony Williams \u0026 Pusha T)",
@@ -3008,6 +3044,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Donda",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Donda Era",
+        "cover":  "music/Donda Era/Donda (Listening Party 3)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "24 (feat. Sunday Service Choir)",
@@ -3106,6 +3143,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Donda",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Donda Era",
+        "cover":  "music/Donda Era/Donda (Second Version)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Come to Life (feat. Justin Austin)",
@@ -3168,6 +3206,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Donda",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Donda Era",
+        "cover":  "music/Donda Era/DONDA WITH CHILD/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "24 (feat. Dem Jointz, KayCyy \u0026 Sunday Service Choir)",
@@ -3266,6 +3305,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Donda",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Donda Era",
+        "cover":  "music/Donda Era/Donda With Child (Movie)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "12,000 Acres â€ Hecho con Clipchamp",
@@ -3344,6 +3384,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Donda",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Donda Era",
+        "cover":  "music/Donda Era/Spirits Over The Horizon/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Don\u0027t Go Away (feat. Dem Jointz)",
@@ -3410,6 +3451,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Donda",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Donda Era",
+        "cover":  "music/Donda Era/The First Born Donda/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Alien (feat. Ant Clemons, Kid Cudi, 2 Chainz, Quavo, Pusha T \u0026 Jaden)",
@@ -3492,6 +3534,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "G.O.O.D Fridays",
         "accent":  "#111111",
         "notes":  "ARCHIVE / G.O.O.D Fridays",
+        "cover":  "music/G.O.O.D Fridays/G.O.O.D Fridays 2010/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Power (Remix) (feat. Jay-Z \u0026 Swizz Beatz)",
@@ -3562,6 +3605,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "G.O.O.D Fridays",
         "accent":  "#111111",
         "notes":  "ARCHIVE / G.O.O.D Fridays",
+        "cover":  "music/G.O.O.D Fridays/G.O.O.D Fridays 2011/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Clique (feat. Big Sean, Jay Z)",
@@ -3588,6 +3632,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "G.O.O.D Fridays",
         "accent":  "#111111",
         "notes":  "ARCHIVE / G.O.O.D Fridays",
+        "cover":  "music/G.O.O.D Fridays/G.O.O.D Fridays 2016/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Facts",
@@ -3618,6 +3663,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "G.O.O.D Fridays",
         "accent":  "#111111",
         "notes":  "ARCHIVE / G.O.O.D Fridays",
+        "cover":  "music/G.O.O.D Fridays/G.O.O.D Fridays 2022/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "True Love",
@@ -3644,6 +3690,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Good Ass Job",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Good Ass Job Era",
+        "cover":  "music/Good Ass Job Era/Child Rebel Soldier/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Don\u0027t Stop!",
@@ -3690,6 +3737,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Good Ass Job",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Good Ass Job Era",
+        "cover":  "music/Good Ass Job Era/Good Ass Job/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Crazy Life",
@@ -3812,6 +3860,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Good Ass Job",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Good Ass Job Era",
+        "cover":  "music/Good Ass Job Era/Good Ass Job (Early)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Give It All Away ",
@@ -3862,6 +3911,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Good Ass Job",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Good Ass Job Era",
+        "cover":  "music/Good Ass Job Era/Good Ass Job (Pre My Dark Twisted Fantasy)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Hell of a Life",
@@ -3936,6 +3986,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Good Ass Job",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Good Ass Job Era",
+        "cover":  "music/Good Ass Job Era/Good Ass Job (Pre VMA´s)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Armed and Dangerous TRACK INST",
@@ -4014,6 +4065,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Good Ass Job",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Good Ass Job Era",
+        "cover":  "music/Good Ass Job Era/Winter Spring Summer Fall/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Blame Game",
@@ -4072,6 +4124,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "God's Country",
         "accent":  "#111111",
         "notes":  "ARCHIVE / God's Country Era",
+        "cover":  "music/God’s Country Era/God's Country/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "12,000 Acres",
@@ -4138,94 +4191,95 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "God's Country",
         "accent":  "#111111",
         "notes":  "ARCHIVE / God's Country Era",
+        "cover":  "music/God’s Country Era/God's Country (JESUS IS KING THE DRE VERSION)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "V6",
-                           "file":  "music/God's Country Era/God's Country (JESUS IS KING THE DRE VERSION)/24_V6.mp3"
+                           "file":  "music/God’s Country Era/God's Country (JESUS IS KING THE DRE VERSION)/24_V6.mp3"
                        },
                        {
                            "title":  "Donda_V10",
-                           "file":  "music/God's Country Era/God's Country (JESUS IS KING THE DRE VERSION)/Donda_V10.mp3"
+                           "file":  "music/God’s Country Era/God's Country (JESUS IS KING THE DRE VERSION)/Donda_V10.mp3"
                        },
                        {
                            "title":  "Eternal_Life_V12",
-                           "file":  "music/God's Country Era/God's Country (JESUS IS KING THE DRE VERSION)/Eternal_Life_V12.mp3"
+                           "file":  "music/God’s Country Era/God's Country (JESUS IS KING THE DRE VERSION)/Eternal_Life_V12.mp3"
                        },
                        {
                            "title":  "Fighting_Fires_V10",
-                           "file":  "music/God's Country Era/God's Country (JESUS IS KING THE DRE VERSION)/Fighting_Fires_V10.mp3"
+                           "file":  "music/God’s Country Era/God's Country (JESUS IS KING THE DRE VERSION)/Fighting_Fires_V10.mp3"
                        },
                        {
                            "title":  "Future_Sounds_V14",
-                           "file":  "music/God's Country Era/God's Country (JESUS IS KING THE DRE VERSION)/Future_Sounds_V14.mp3"
+                           "file":  "music/God’s Country Era/God's Country (JESUS IS KING THE DRE VERSION)/Future_Sounds_V14.mp3"
                        },
                        {
                            "title":  "God's_Country_V5",
-                           "file":  "music/God's Country Era/God's Country (JESUS IS KING THE DRE VERSION)/God's_Country_V5.mp3"
+                           "file":  "music/God’s Country Era/God's Country (JESUS IS KING THE DRE VERSION)/God's_Country_V5.mp3"
                        },
                        {
                            "title":  "Home_V8",
-                           "file":  "music/God's Country Era/God's Country (JESUS IS KING THE DRE VERSION)/Home_V8.mp3"
+                           "file":  "music/God’s Country Era/God's Country (JESUS IS KING THE DRE VERSION)/Home_V8.mp3"
                        },
                        {
                            "title":  "Hurricane_V36",
-                           "file":  "music/God's Country Era/God's Country (JESUS IS KING THE DRE VERSION)/Hurricane_V36.mp3"
+                           "file":  "music/God’s Country Era/God's Country (JESUS IS KING THE DRE VERSION)/Hurricane_V36.mp3"
                        },
                        {
                            "title":  "I_Feel_Terrific_V12",
-                           "file":  "music/God's Country Era/God's Country (JESUS IS KING THE DRE VERSION)/I_Feel_Terrific_V12.mp3"
+                           "file":  "music/God’s Country Era/God's Country (JESUS IS KING THE DRE VERSION)/I_Feel_Terrific_V12.mp3"
                        },
                        {
                            "title":  "In_God's_Country_V5",
-                           "file":  "music/God's Country Era/God's Country (JESUS IS KING THE DRE VERSION)/In_God's_Country_V5.mp3"
+                           "file":  "music/God’s Country Era/God's Country (JESUS IS KING THE DRE VERSION)/In_God's_Country_V5.mp3"
                        },
                        {
                            "title":  "Keep_My_Spirit_Alive_V18",
-                           "file":  "music/God's Country Era/God's Country (JESUS IS KING THE DRE VERSION)/Keep_My_Spirit_Alive_V18.mp3"
+                           "file":  "music/God’s Country Era/God's Country (JESUS IS KING THE DRE VERSION)/Keep_My_Spirit_Alive_V18.mp3"
                        },
                        {
                            "title":  "Let_The_Spirit_Go_Wild_V6",
-                           "file":  "music/God's Country Era/God's Country (JESUS IS KING THE DRE VERSION)/Let_The_Spirit_Go_Wild_V6.mp3"
+                           "file":  "music/God’s Country Era/God's Country (JESUS IS KING THE DRE VERSION)/Let_The_Spirit_Go_Wild_V6.mp3"
                        },
                        {
                            "title":  "Lord_I_Need_You_To_Wrap_Your_Arms_Around_Me_V9",
-                           "file":  "music/God's Country Era/God's Country (JESUS IS KING THE DRE VERSION)/Lord_I_Need_You_To_Wrap_Your_Arms_Around_Me_V9.mp3"
+                           "file":  "music/God’s Country Era/God's Country (JESUS IS KING THE DRE VERSION)/Lord_I_Need_You_To_Wrap_Your_Arms_Around_Me_V9.mp3"
                        },
                        {
                            "title":  "Off_The_Grid_V4",
-                           "file":  "music/God's Country Era/God's Country (JESUS IS KING THE DRE VERSION)/Off_The_Grid_V4.mp3"
+                           "file":  "music/God’s Country Era/God's Country (JESUS IS KING THE DRE VERSION)/Off_The_Grid_V4.mp3"
                        },
                        {
                            "title":  "Praise_God_V10",
-                           "file":  "music/God's Country Era/God's Country (JESUS IS KING THE DRE VERSION)/Praise_God_V10.mp3"
+                           "file":  "music/God’s Country Era/God's Country (JESUS IS KING THE DRE VERSION)/Praise_God_V10.mp3"
                        },
                        {
                            "title":  "Pull_Up_Like_Skuuurrr_V3",
-                           "file":  "music/God's Country Era/God's Country (JESUS IS KING THE DRE VERSION)/Pull_Up_Like_Skuuurrr_V3.mp3"
+                           "file":  "music/God’s Country Era/God's Country (JESUS IS KING THE DRE VERSION)/Pull_Up_Like_Skuuurrr_V3.mp3"
                        },
                        {
                            "title":  "Sean_Leon_The_Glade_V21",
-                           "file":  "music/God's Country Era/God's Country (JESUS IS KING THE DRE VERSION)/Sean_Leon_The_Glade_V21.mp3"
+                           "file":  "music/God’s Country Era/God's Country (JESUS IS KING THE DRE VERSION)/Sean_Leon_The_Glade_V21.mp3"
                        },
                        {
                            "title":  "Spread_Your_Wings_Get_Back_V6",
-                           "file":  "music/God's Country Era/God's Country (JESUS IS KING THE DRE VERSION)/Spread_Your_Wings_Get_Back_V6.mp3"
+                           "file":  "music/God’s Country Era/God's Country (JESUS IS KING THE DRE VERSION)/Spread_Your_Wings_Get_Back_V6.mp3"
                        },
                        {
                            "title":  "Tell_The_Vision_V3",
-                           "file":  "music/God's Country Era/God's Country (JESUS IS KING THE DRE VERSION)/Tell_The_Vision_V3.mp3"
+                           "file":  "music/God’s Country Era/God's Country (JESUS IS KING THE DRE VERSION)/Tell_The_Vision_V3.mp3"
                        },
                        {
                            "title":  "This_Is_The_Glory_V6",
-                           "file":  "music/God's Country Era/God's Country (JESUS IS KING THE DRE VERSION)/This_Is_The_Glory_V6.mp3"
+                           "file":  "music/God’s Country Era/God's Country (JESUS IS KING THE DRE VERSION)/This_Is_The_Glory_V6.mp3"
                        },
                        {
                            "title":  "Want_You_V1",
-                           "file":  "music/God's Country Era/God's Country (JESUS IS KING THE DRE VERSION)/Want_You_V1.mp3"
+                           "file":  "music/God’s Country Era/God's Country (JESUS IS KING THE DRE VERSION)/Want_You_V1.mp3"
                        },
                        {
                            "title":  "Wash_Us_In_The_Blood_V15",
-                           "file":  "music/God's Country Era/God's Country (JESUS IS KING THE DRE VERSION)/Wash_Us_In_The_Blood_V15.mp3"
+                           "file":  "music/God’s Country Era/God's Country (JESUS IS KING THE DRE VERSION)/Wash_Us_In_The_Blood_V15.mp3"
                        }
                    ]
     },
@@ -4236,82 +4290,83 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "God's Country",
         "accent":  "#111111",
         "notes":  "ARCHIVE / God's Country Era",
+        "cover":  "music/God’s Country Era/Jesus Is Born/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Count Your Blessings",
-                           "file":  "music/God's Country Era/Jesus Is Born/01-Count Your Blessings.mp3"
+                           "file":  "music/God’s Country Era/Jesus Is Born/01-Count Your Blessings.mp3"
                        },
                        {
                            "title":  "Excellent",
-                           "file":  "music/God's Country Era/Jesus Is Born/02-Excellent.mp3"
+                           "file":  "music/God’s Country Era/Jesus Is Born/02-Excellent.mp3"
                        },
                        {
                            "title":  "Revelations 19.1",
-                           "file":  "music/God's Country Era/Jesus Is Born/03-Revelations 19.1.mp3"
+                           "file":  "music/God’s Country Era/Jesus Is Born/03-Revelations 19.1.mp3"
                        },
                        {
                            "title":  "Rain",
-                           "file":  "music/God's Country Era/Jesus Is Born/04-Rain.mp3"
+                           "file":  "music/God’s Country Era/Jesus Is Born/04-Rain.mp3"
                        },
                        {
                            "title":  "Balm In Gilead",
-                           "file":  "music/God's Country Era/Jesus Is Born/05-Balm In Gilead.mp3"
+                           "file":  "music/God’s Country Era/Jesus Is Born/05-Balm In Gilead.mp3"
                        },
                        {
                            "title":  "Father Stretch",
-                           "file":  "music/God's Country Era/Jesus Is Born/06-Father Stretch.mp3"
+                           "file":  "music/God’s Country Era/Jesus Is Born/06-Father Stretch.mp3"
                        },
                        {
                            "title":  "Follow Me in Faith",
-                           "file":  "music/God's Country Era/Jesus Is Born/07-Follow Me ï¼ Faith.mp3"
+                           "file":  "music/God’s Country Era/Jesus Is Born/07-Follow Me ／ Faith.mp3"
                        },
                        {
                            "title":  "Ultralight Beam",
-                           "file":  "music/God's Country Era/Jesus Is Born/08-Ultralight Beam.mp3"
+                           "file":  "music/God’s Country Era/Jesus Is Born/08-Ultralight Beam.mp3"
                        },
                        {
                            "title":  "Lift Up Your Voices",
-                           "file":  "music/God's Country Era/Jesus Is Born/09-Lift Up Your Voices.mp3"
+                           "file":  "music/God’s Country Era/Jesus Is Born/09-Lift Up Your Voices.mp3"
                        },
                        {
                            "title":  "More Than Anything",
-                           "file":  "music/God's Country Era/Jesus Is Born/10-More Than Anything.mp3"
+                           "file":  "music/God’s Country Era/Jesus Is Born/10-More Than Anything.mp3"
                        },
                        {
                            "title":  "Weak",
-                           "file":  "music/God's Country Era/Jesus Is Born/11-Weak.mp3"
+                           "file":  "music/God’s Country Era/Jesus Is Born/11-Weak.mp3"
                        },
                        {
                            "title":  "That_s How The Good Lord Works",
-                           "file":  "music/God's Country Era/Jesus Is Born/12-That_s How The Good Lord Works.mp3"
+                           "file":  "music/God’s Country Era/Jesus Is Born/12-That_s How The Good Lord Works.mp3"
                        },
                        {
                            "title":  "Sunshine",
-                           "file":  "music/God's Country Era/Jesus Is Born/13-Sunshine.mp3"
+                           "file":  "music/God’s Country Era/Jesus Is Born/13-Sunshine.mp3"
                        },
                        {
                            "title":  "Back To Life",
-                           "file":  "music/God's Country Era/Jesus Is Born/14-Back To Life.mp3"
+                           "file":  "music/God’s Country Era/Jesus Is Born/14-Back To Life.mp3"
                        },
                        {
                            "title":  "Souls Anchored",
-                           "file":  "music/God's Country Era/Jesus Is Born/15-Souls Anchored.mp3"
+                           "file":  "music/God’s Country Era/Jesus Is Born/15-Souls Anchored.mp3"
                        },
                        {
                            "title":  "Sweet Grace",
-                           "file":  "music/God's Country Era/Jesus Is Born/16-Sweet Grace.mp3"
+                           "file":  "music/God’s Country Era/Jesus Is Born/16-Sweet Grace.mp3"
                        },
                        {
                            "title":  "Paradise",
-                           "file":  "music/God's Country Era/Jesus Is Born/17-Paradise.mp3"
+                           "file":  "music/God’s Country Era/Jesus Is Born/17-Paradise.mp3"
                        },
                        {
                            "title":  "Satan, We_re Gonna Tear Your Kingdom Down",
-                           "file":  "music/God's Country Era/Jesus Is Born/18-Satan, We_re Gonna Tear Your Kingdom Down.mp3"
+                           "file":  "music/God’s Country Era/Jesus Is Born/18-Satan, We_re Gonna Tear Your Kingdom Down.mp3"
                        },
                        {
                            "title":  "Total Praise",
-                           "file":  "music/God's Country Era/Jesus Is Born/19-Total Praise.mp3"
+                           "file":  "music/God’s Country Era/Jesus Is Born/19-Total Praise.mp3"
                        }
                    ]
     },
@@ -4322,50 +4377,51 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "God's Country",
         "accent":  "#111111",
         "notes":  "ARCHIVE / God's Country Era",
+        "cover":  "music/God’s Country Era/JESUS IS KING The Dr. Dre Version/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Intro",
-                           "file":  "music/God's Country Era/JESUS IS KING The Dr. Dre Version/01 Intro_Every Hour_Selah RE1 4.4 Final Main_4424_27FEB2020.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS KING The Dr. Dre Version/01 Intro_Every Hour_Selah RE1 4.4 Final Main_4424_27FEB2020.mp3"
                        },
                        {
                            "title":  "LA Monster",
-                           "file":  "music/God's Country Era/JESUS IS KING The Dr. Dre Version/02 LA Monster 01JUL2020.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS KING The Dr. Dre Version/02 LA Monster 01JUL2020.mp3"
                        },
                        {
                            "title":  "Water",
-                           "file":  "music/God's Country Era/JESUS IS KING The Dr. Dre Version/03 Water (Remix) RE4 3.8 Main_4424_04MAR2020.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS KING The Dr. Dre Version/03 Water (Remix) RE4 3.8 Main_4424_04MAR2020.mp3"
                        },
                        {
                            "title":  "Closed On Sunday",
-                           "file":  "music/God's Country Era/JESUS IS KING The Dr. Dre Version/04 Closed On Sunday (Remix) RE2 3.5 Main_4424_24FEB2020.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS KING The Dr. Dre Version/04 Closed On Sunday (Remix) RE2 3.5 Main_4424_24FEB2020.mp3"
                        },
                        {
                            "title":  "On God",
-                           "file":  "music/God's Country Era/JESUS IS KING The Dr. Dre Version/05 On God (Remix) 02DEC2019.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS KING The Dr. Dre Version/05 On God (Remix) 02DEC2019.mp3"
                        },
                        {
                            "title":  "Hands On",
-                           "file":  "music/God's Country Era/JESUS IS KING The Dr. Dre Version/06 Hands On (Remix) 3.2 Main_4424_02MAR2020.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS KING The Dr. Dre Version/06 Hands On (Remix) 3.2 Main_4424_02MAR2020.mp3"
                        },
                        {
                            "title":  "Everything We Need",
-                           "file":  "music/God's Country Era/JESUS IS KING The Dr. Dre Version/07 Everything We Need (Remix) RE2 2.1 Main_4424_02MAR2020.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS KING The Dr. Dre Version/07 Everything We Need (Remix) RE2 2.1 Main_4424_02MAR2020.mp3"
                        },
                        {
                            "title":  "Ashes",
-                           "file":  "music/God's Country Era/JESUS IS KING The Dr. Dre Version/08 Ashes (Remix) 3.8 Main_4424_05MAR2020.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS KING The Dr. Dre Version/08 Ashes (Remix) 3.8 Main_4424_05MAR2020.mp3"
                        },
                        {
                            "title":  "Use This Gospel",
-                           "file":  "music/God's Country Era/JESUS IS KING The Dr. Dre Version/10 Use This Gospel (Remix) RE2 3.8_MAIN.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS KING The Dr. Dre Version/10 Use This Gospel (Remix) RE2 3.8_MAIN.mp3"
                        },
                        {
                            "title":  "God Is",
-                           "file":  "music/God's Country Era/JESUS IS KING The Dr. Dre Version/9 God Is (Remix) 3.1 Main_4424_02MAR2020.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS KING The Dr. Dre Version/9 God Is (Remix) 3.1 Main_4424_02MAR2020.mp3"
                        },
                        {
                            "title":  "Follow God",
-                           "file":  "music/God's Country Era/JESUS IS KING The Dr. Dre Version/Dr_DreKanye_West_-_Follow_God.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS KING The Dr. Dre Version/Dr_DreKanye_West_-_Follow_God.mp3"
                        }
                    ]
     },
@@ -4376,58 +4432,59 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "God's Country",
         "accent":  "#111111",
         "notes":  "ARCHIVE / God's Country Era",
+        "cover":  "music/God’s Country Era/JESUS IS LORD/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Hours",
-                           "file":  "music/God's Country Era/JESUS IS LORD/24_Hours_V4.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS LORD/24_Hours_V4.mp3"
                        },
                        {
                            "title":  "Closed On Sunday",
-                           "file":  "music/God's Country Era/JESUS IS LORD/Closed_On_Sunday_V24.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS LORD/Closed_On_Sunday_V24.mp3"
                        },
                        {
                            "title":  "Glory",
-                           "file":  "music/God's Country Era/JESUS IS LORD/Glory_V2.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS LORD/Glory_V2.mp3"
                        },
                        {
                            "title":  "God's Country",
-                           "file":  "music/God's Country Era/JESUS IS LORD/God's_Country_V5.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS LORD/God's_Country_V5.mp3"
                        },
                        {
                            "title":  "Keep My Spirit Alive",
-                           "file":  "music/God's Country Era/JESUS IS LORD/Keep_My_Spirit_Alive_V18.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS LORD/Keep_My_Spirit_Alive_V18.mp3"
                        },
                        {
                            "title":  "Lord I Need You To Wrap Your Arms Around Me",
-                           "file":  "music/God's Country Era/JESUS IS LORD/Lord_I_Need_You_To_Wrap_Your_Arms_Around_Me_V5.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS LORD/Lord_I_Need_You_To_Wrap_Your_Arms_Around_Me_V5.mp3"
                        },
                        {
                            "title":  "Our King",
-                           "file":  "music/God's Country Era/JESUS IS LORD/Our_King_V1.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS LORD/Our_King_V1.mp3"
                        },
                        {
                            "title":  "The Glade",
-                           "file":  "music/God's Country Era/JESUS IS LORD/Sean_Leon_The_Glade_V18.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS LORD/Sean_Leon_The_Glade_V18.mp3"
                        },
                        {
                            "title":  "This Is The Glory",
-                           "file":  "music/God's Country Era/JESUS IS LORD/This_Is_The_Glory_V5.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS LORD/This_Is_The_Glory_V5.mp3"
                        },
                        {
                            "title":  "Use This Gospel",
-                           "file":  "music/God's Country Era/JESUS IS LORD/Use_This_Gospel_V25.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS LORD/Use_This_Gospel_V25.mp3"
                        },
                        {
                            "title":  "Wash Us In The Blood",
-                           "file":  "music/God's Country Era/JESUS IS LORD/Wash_Us_In_The_Blood_V14.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS LORD/Wash_Us_In_The_Blood_V14.mp3"
                        },
                        {
                            "title":  "Water",
-                           "file":  "music/God's Country Era/JESUS IS LORD/Water_V15.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS LORD/Water_V15.mp3"
                        },
                        {
                            "title":  "Welcome To My Life",
-                           "file":  "music/God's Country Era/JESUS IS LORD/Welcome_To_My_Life_V3.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS LORD/Welcome_To_My_Life_V3.mp3"
                        }
                    ]
     },
@@ -4438,70 +4495,71 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "God's Country",
         "accent":  "#111111",
         "notes":  "ARCHIVE / God's Country Era",
+        "cover":  "music/God’s Country Era/JESUS IS LORD (Early)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "12000 Acres",
-                           "file":  "music/God's Country Era/JESUS IS LORD (Early)/12_000_Acres_V11.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS LORD (Early)/12_000_Acres_V11.mp3"
                        },
                        {
                            "title":  "All Praises Due Him",
-                           "file":  "music/God's Country Era/JESUS IS LORD (Early)/All_Praises_Due_Him_V2.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS LORD (Early)/All_Praises_Due_Him_V2.mp3"
                        },
                        {
                            "title":  "Awakening",
-                           "file":  "music/God's Country Era/JESUS IS LORD (Early)/Awakening_V2.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS LORD (Early)/Awakening_V2.mp3"
                        },
                        {
                            "title":  "Eternal Life",
-                           "file":  "music/God's Country Era/JESUS IS LORD (Early)/Eternal_Life_V13.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS LORD (Early)/Eternal_Life_V13.mp3"
                        },
                        {
                            "title":  "Fighting Fires",
-                           "file":  "music/God's Country Era/JESUS IS LORD (Early)/Fighting_Fires_V7.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS LORD (Early)/Fighting_Fires_V7.mp3"
                        },
                        {
                            "title":  "Free Dem",
-                           "file":  "music/God's Country Era/JESUS IS LORD (Early)/FreeDem_V6.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS LORD (Early)/FreeDem_V6.mp3"
                        },
                        {
                            "title":  "Future Bounce",
-                           "file":  "music/God's Country Era/JESUS IS LORD (Early)/Future_Bounce_V12.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS LORD (Early)/Future_Bounce_V12.mp3"
                        },
                        {
                            "title":  "He Gave It All",
-                           "file":  "music/God's Country Era/JESUS IS LORD (Early)/He_Gave_It_All_V4.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS LORD (Early)/He_Gave_It_All_V4.mp3"
                        },
                        {
                            "title":  "Let The Spirit Go Wild",
-                           "file":  "music/God's Country Era/JESUS IS LORD (Early)/Let_The_Spirit_Go_Wild_V3.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS LORD (Early)/Let_The_Spirit_Go_Wild_V3.mp3"
                        },
                        {
                            "title":  "Lord I Need You",
-                           "file":  "music/God's Country Era/JESUS IS LORD (Early)/Lord_I_Need_You_V12.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS LORD (Early)/Lord_I_Need_You_V12.mp3"
                        },
                        {
                            "title":  "Palm Springs",
-                           "file":  "music/God's Country Era/JESUS IS LORD (Early)/Palm_Springs_V1.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS LORD (Early)/Palm_Springs_V1.mp3"
                        },
                        {
                            "title":  "Prayed Up",
-                           "file":  "music/God's Country Era/JESUS IS LORD (Early)/Prayed_Up_V1.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS LORD (Early)/Prayed_Up_V1.mp3"
                        },
                        {
                            "title":  "Sinner",
-                           "file":  "music/God's Country Era/JESUS IS LORD (Early)/Sinner_V2.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS LORD (Early)/Sinner_V2.mp3"
                        },
                        {
                            "title":  "Spotlight",
-                           "file":  "music/God's Country Era/JESUS IS LORD (Early)/Spotlight_V10.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS LORD (Early)/Spotlight_V10.mp3"
                        },
                        {
                            "title":  "Tulsa",
-                           "file":  "music/God's Country Era/JESUS IS LORD (Early)/Tulsa_V1.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS LORD (Early)/Tulsa_V1.mp3"
                        },
                        {
                            "title":  "Wash Us In The Blood",
-                           "file":  "music/God's Country Era/JESUS IS LORD (Early)/Wash_Us_In_The_Blood_V2.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS LORD (Early)/Wash_Us_In_The_Blood_V2.mp3"
                        }
                    ]
     },
@@ -4512,42 +4570,43 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "God's Country",
         "accent":  "#111111",
         "notes":  "ARCHIVE / God's Country Era",
+        "cover":  "music/God’s Country Era/JESUS IS LORD (Pre God's Country)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "24",
-                           "file":  "music/God's Country Era/JESUS IS LORD (Pre God's Country)/24_V6.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS LORD (Pre God's Country)/24_V6.mp3"
                        },
                        {
                            "title":  "God's Country",
-                           "file":  "music/God's Country Era/JESUS IS LORD (Pre God's Country)/God's_Country_V5.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS LORD (Pre God's Country)/God's_Country_V5.mp3"
                        },
                        {
                            "title":  "Keep My Spirit Alive",
-                           "file":  "music/God's Country Era/JESUS IS LORD (Pre God's Country)/Keep_My_Spirit_Alive_V18.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS LORD (Pre God's Country)/Keep_My_Spirit_Alive_V18.mp3"
                        },
                        {
                            "title":  "Lord I Need You To Wrap Your Arms Around Me",
-                           "file":  "music/God's Country Era/JESUS IS LORD (Pre God's Country)/Lord_I_Need_You_To_Wrap_Your_Arms_Around_Me_V9.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS LORD (Pre God's Country)/Lord_I_Need_You_To_Wrap_Your_Arms_Around_Me_V9.mp3"
                        },
                        {
                            "title":  "Off The Grid",
-                           "file":  "music/God's Country Era/JESUS IS LORD (Pre God's Country)/Off_The_Grid_V2.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS LORD (Pre God's Country)/Off_The_Grid_V2.mp3"
                        },
                        {
                            "title":  "Our King",
-                           "file":  "music/God's Country Era/JESUS IS LORD (Pre God's Country)/Our_King_V1.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS LORD (Pre God's Country)/Our_King_V1.mp3"
                        },
                        {
                            "title":  "Skuuurrruurrr",
-                           "file":  "music/God's Country Era/JESUS IS LORD (Pre God's Country)/Skuuurrruurrr_V1.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS LORD (Pre God's Country)/Skuuurrruurrr_V1.mp3"
                        },
                        {
                            "title":  "Tell The Vision",
-                           "file":  "music/God's Country Era/JESUS IS LORD (Pre God's Country)/Tell_The_Vision_V3.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS LORD (Pre God's Country)/Tell_The_Vision_V3.mp3"
                        },
                        {
                            "title":  "Welcome To My Life",
-                           "file":  "music/God's Country Era/JESUS IS LORD (Pre God's Country)/Welcome_To_My_Life_V4.mp3"
+                           "file":  "music/God’s Country Era/JESUS IS LORD (Pre God's Country)/Welcome_To_My_Life_V4.mp3"
                        }
                    ]
     },
@@ -4558,66 +4617,67 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "God's Country",
         "accent":  "#111111",
         "notes":  "ARCHIVE / God's Country Era",
+        "cover":  "music/God’s Country Era/Nebuchadnezzar A Kanye West Opera/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Our King I",
-                           "file":  "music/God's Country Era/Nebuchadnezzar A Kanye West Opera/01 Our King I.mp3"
+                           "file":  "music/God’s Country Era/Nebuchadnezzar A Kanye West Opera/01 Our King I.mp3"
                        },
                        {
                            "title":  "Say You Will",
-                           "file":  "music/God's Country Era/Nebuchadnezzar A Kanye West Opera/02 Say You Will.mp3"
+                           "file":  "music/God’s Country Era/Nebuchadnezzar A Kanye West Opera/02 Say You Will.mp3"
                        },
                        {
                            "title":  "Eternal Rest",
-                           "file":  "music/God's Country Era/Nebuchadnezzar A Kanye West Opera/03 Eternal Rest.mp3"
+                           "file":  "music/God’s Country Era/Nebuchadnezzar A Kanye West Opera/03 Eternal Rest.mp3"
                        },
                        {
                            "title":  "Mo Bamba",
-                           "file":  "music/God's Country Era/Nebuchadnezzar A Kanye West Opera/04 Mo Bamba.mp3"
+                           "file":  "music/God’s Country Era/Nebuchadnezzar A Kanye West Opera/04 Mo Bamba.mp3"
                        },
                        {
                            "title":  "Wash Us in the Blood",
-                           "file":  "music/God's Country Era/Nebuchadnezzar A Kanye West Opera/05 Wash Us in the Blood.mp3"
+                           "file":  "music/God’s Country Era/Nebuchadnezzar A Kanye West Opera/05 Wash Us in the Blood.mp3"
                        },
                        {
                            "title":  "12,000 Acres",
-                           "file":  "music/God's Country Era/Nebuchadnezzar A Kanye West Opera/06 12,000 Acres.mp3"
+                           "file":  "music/God’s Country Era/Nebuchadnezzar A Kanye West Opera/06 12,000 Acres.mp3"
                        },
                        {
                            "title":  "Infinity Song",
-                           "file":  "music/God's Country Era/Nebuchadnezzar A Kanye West Opera/07 Infinity Song.mp3"
+                           "file":  "music/God’s Country Era/Nebuchadnezzar A Kanye West Opera/07 Infinity Song.mp3"
                        },
                        {
                            "title":  "Sunshine I",
-                           "file":  "music/God's Country Era/Nebuchadnezzar A Kanye West Opera/08 Sunshine I.mp3"
+                           "file":  "music/God’s Country Era/Nebuchadnezzar A Kanye West Opera/08 Sunshine I.mp3"
                        },
                        {
                            "title":  "Sunshine II",
-                           "file":  "music/God's Country Era/Nebuchadnezzar A Kanye West Opera/09 Sunshine II.mp3"
+                           "file":  "music/God’s Country Era/Nebuchadnezzar A Kanye West Opera/09 Sunshine II.mp3"
                        },
                        {
                            "title":  "Wolves",
-                           "file":  "music/God's Country Era/Nebuchadnezzar A Kanye West Opera/10 Wolves.mp3"
+                           "file":  "music/God’s Country Era/Nebuchadnezzar A Kanye West Opera/10 Wolves.mp3"
                        },
                        {
                            "title":  "Fighting Fires",
-                           "file":  "music/God's Country Era/Nebuchadnezzar A Kanye West Opera/11 Fighting Fires.mp3"
+                           "file":  "music/God’s Country Era/Nebuchadnezzar A Kanye West Opera/11 Fighting Fires.mp3"
                        },
                        {
                            "title":  "Our King II",
-                           "file":  "music/God's Country Era/Nebuchadnezzar A Kanye West Opera/12 Our King II.mp3"
+                           "file":  "music/God’s Country Era/Nebuchadnezzar A Kanye West Opera/12 Our King II.mp3"
                        },
                        {
                            "title":  "Our King III",
-                           "file":  "music/God's Country Era/Nebuchadnezzar A Kanye West Opera/13 Our King III.mp3"
+                           "file":  "music/God’s Country Era/Nebuchadnezzar A Kanye West Opera/13 Our King III.mp3"
                        },
                        {
                            "title":  "Our King IV",
-                           "file":  "music/God's Country Era/Nebuchadnezzar A Kanye West Opera/14 Our King IV.mp3"
+                           "file":  "music/God’s Country Era/Nebuchadnezzar A Kanye West Opera/14 Our King IV.mp3"
                        },
                        {
                            "title":  "Total Praise",
-                           "file":  "music/God's Country Era/Nebuchadnezzar A Kanye West Opera/15 Total Praise.mp3"
+                           "file":  "music/God’s Country Era/Nebuchadnezzar A Kanye West Opera/15 Total Praise.mp3"
                        }
                    ]
     },
@@ -4628,74 +4688,75 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "God's Country",
         "accent":  "#111111",
         "notes":  "ARCHIVE / God's Country Era",
+        "cover":  "music/God’s Country Era/OUR BEAUTIFUL AMAZING REALITY/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Hours",
-                           "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/24_Hours_V4.mp3"
+                           "file":  "music/God’s Country Era/OUR BEAUTIFUL AMAZING REALITY/24_Hours_V4.mp3"
                        },
                        {
                            "title":  "Donda",
-                           "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/Donda_V10.mp3"
+                           "file":  "music/God’s Country Era/OUR BEAUTIFUL AMAZING REALITY/Donda_V10.mp3"
                        },
                        {
                            "title":  "Future Sounds",
-                           "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/Future_Sounds_V14.mp3"
+                           "file":  "music/God’s Country Era/OUR BEAUTIFUL AMAZING REALITY/Future_Sounds_V14.mp3"
                        },
                        {
                            "title":  "God's Country",
-                           "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/God's_Country_V5.mp3"
+                           "file":  "music/God’s Country Era/OUR BEAUTIFUL AMAZING REALITY/God's_Country_V5.mp3"
                        },
                        {
                            "title":  "He Gave It All",
-                           "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/He_Gave_It_All_V3.mp3"
+                           "file":  "music/God’s Country Era/OUR BEAUTIFUL AMAZING REALITY/He_Gave_It_All_V3.mp3"
                        },
                        {
                            "title":  "Home",
-                           "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/Home_V8.mp3"
+                           "file":  "music/God’s Country Era/OUR BEAUTIFUL AMAZING REALITY/Home_V8.mp3"
                        },
                        {
                            "title":  "I Feel Terrific",
-                           "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/I_Feel_Terrific_V4.mp3"
+                           "file":  "music/God’s Country Era/OUR BEAUTIFUL AMAZING REALITY/I_Feel_Terrific_V4.mp3"
                        },
                        {
                            "title":  "LA Monster",
-                           "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/LA_Monster_V8.mp3"
+                           "file":  "music/God’s Country Era/OUR BEAUTIFUL AMAZING REALITY/LA_Monster_V8.mp3"
                        },
                        {
                            "title":  "Let The Spirit Go Wild",
-                           "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/Let_The_Spirit_Go_Wild_V6.mp3"
+                           "file":  "music/God’s Country Era/OUR BEAUTIFUL AMAZING REALITY/Let_The_Spirit_Go_Wild_V6.mp3"
                        },
                        {
                            "title":  "Lord I Need You",
-                           "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/Lord_I_Need_You_V12.mp3"
+                           "file":  "music/God’s Country Era/OUR BEAUTIFUL AMAZING REALITY/Lord_I_Need_You_V12.mp3"
                        },
                        {
                            "title":  "New Body",
-                           "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/New_Body_V30.mp3"
+                           "file":  "music/God’s Country Era/OUR BEAUTIFUL AMAZING REALITY/New_Body_V30.mp3"
                        },
                        {
                            "title":  "Praise God",
-                           "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/Praise_God_V10.mp3"
+                           "file":  "music/God’s Country Era/OUR BEAUTIFUL AMAZING REALITY/Praise_God_V10.mp3"
                        },
                        {
                            "title":  "The Glory",
-                           "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/The_Glory_V7.mp3"
+                           "file":  "music/God’s Country Era/OUR BEAUTIFUL AMAZING REALITY/The_Glory_V7.mp3"
                        },
                        {
                            "title":  "Up From The Ashes",
-                           "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/Up_From_The_Ashes_V17.mp3"
+                           "file":  "music/God’s Country Era/OUR BEAUTIFUL AMAZING REALITY/Up_From_The_Ashes_V17.mp3"
                        },
                        {
                            "title":  "Use This Gospel",
-                           "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/Use_This_Gospel_V25.mp3"
+                           "file":  "music/God’s Country Era/OUR BEAUTIFUL AMAZING REALITY/Use_This_Gospel_V25.mp3"
                        },
                        {
                            "title":  "Wash Us In The Blood",
-                           "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/Wash_Us_In_The_Blood_V2.mp3"
+                           "file":  "music/God’s Country Era/OUR BEAUTIFUL AMAZING REALITY/Wash_Us_In_The_Blood_V2.mp3"
                        },
                        {
                            "title":  "Work It Out",
-                           "file":  "music/God's Country Era/OUR BEAUTIFUL AMAZING REALITY/Work_It_Out_V3.mp3"
+                           "file":  "music/God’s Country Era/OUR BEAUTIFUL AMAZING REALITY/Work_It_Out_V3.mp3"
                        }
                    ]
     },
@@ -4706,58 +4767,59 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "God's Country",
         "accent":  "#111111",
         "notes":  "ARCHIVE / God's Country Era",
+        "cover":  "music/God’s Country Era/Soul Children_/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "unhomme",
-                           "file":  "music/God's Country Era/Soul Children_/01_unhomme (evan version) (1).mp3"
+                           "file":  "music/God’s Country Era/Soul Children_/01_unhomme (evan version) (1).mp3"
                        },
                        {
                            "title":  "soul children",
-                           "file":  "music/God's Country Era/Soul Children_/02_soul children(evan version) (1).mp3"
+                           "file":  "music/God’s Country Era/Soul Children_/02_soul children(evan version) (1).mp3"
                        },
                        {
                            "title":  "nyce vieux",
-                           "file":  "music/God's Country Era/Soul Children_/03_nyce vieux(evan version) (1).mp3"
+                           "file":  "music/God’s Country Era/Soul Children_/03_nyce vieux(evan version) (1).mp3"
                        },
                        {
                            "title":  "elsa laurent",
-                           "file":  "music/God's Country Era/Soul Children_/04_elsa laurent (evan version) (1).mp3"
+                           "file":  "music/God’s Country Era/Soul Children_/04_elsa laurent (evan version) (1).mp3"
                        },
                        {
                            "title":  "wayback",
-                           "file":  "music/God's Country Era/Soul Children_/05_wayback (evan version) (1).mp3"
+                           "file":  "music/God’s Country Era/Soul Children_/05_wayback (evan version) (1).mp3"
                        },
                        {
                            "title":  "ny dreams",
-                           "file":  "music/God's Country Era/Soul Children_/06_ny dreams (evan version) (1).mp3"
+                           "file":  "music/God’s Country Era/Soul Children_/06_ny dreams (evan version) (1).mp3"
                        },
                        {
                            "title":  "joicing",
-                           "file":  "music/God's Country Era/Soul Children_/07_joicing(evan version) (1).mp3"
+                           "file":  "music/God’s Country Era/Soul Children_/07_joicing(evan version) (1).mp3"
                        },
                        {
                            "title":  "real mannish",
-                           "file":  "music/God's Country Era/Soul Children_/08_real mannish(evan version) (1).mp3"
+                           "file":  "music/God’s Country Era/Soul Children_/08_real mannish(evan version) (1).mp3"
                        },
                        {
                            "title":  "Lill Lindfors",
-                           "file":  "music/God's Country Era/Soul Children_/09_Lill Lindfors (evan version) (1).mp3"
+                           "file":  "music/God’s Country Era/Soul Children_/09_Lill Lindfors (evan version) (1).mp3"
                        },
                        {
                            "title":  "linda perhacs",
-                           "file":  "music/God's Country Era/Soul Children_/10_linda perhacs (evan version) (1).mp3"
+                           "file":  "music/God’s Country Era/Soul Children_/10_linda perhacs (evan version) (1).mp3"
                        },
                        {
                            "title":  "emerald web",
-                           "file":  "music/God's Country Era/Soul Children_/11_emerald web (evan version) (1).mp3"
+                           "file":  "music/God’s Country Era/Soul Children_/11_emerald web (evan version) (1).mp3"
                        },
                        {
                            "title":  "novi torpedo",
-                           "file":  "music/God's Country Era/Soul Children_/12_novi torpedo (evan version) (1).mp3"
+                           "file":  "music/God’s Country Era/Soul Children_/12_novi torpedo (evan version) (1).mp3"
                        },
                        {
                            "title":  "uke kaan",
-                           "file":  "music/God's Country Era/Soul Children_/13_uke kaan (evan version) (1).mp3"
+                           "file":  "music/God’s Country Era/Soul Children_/13_uke kaan (evan version) (1).mp3"
                        }
                    ]
     },
@@ -4768,74 +4830,75 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "God's Country",
         "accent":  "#111111",
         "notes":  "ARCHIVE / God's Country Era",
+        "cover":  "music/God’s Country Era/YeTopia/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Travis Freestyles 1",
-                           "file":  "music/God's Country Era/YeTopia/200514 Travis Freestyles 1.mp3"
+                           "file":  "music/God’s Country Era/YeTopia/200514 Travis Freestyles 1.mp3"
                        },
                        {
                            "title":  "Travis Freestyles 10",
-                           "file":  "music/God's Country Era/YeTopia/200514 Travis Freestyles 10.mp3"
+                           "file":  "music/God’s Country Era/YeTopia/200514 Travis Freestyles 10.mp3"
                        },
                        {
                            "title":  "Travis Freestyles 11",
-                           "file":  "music/God's Country Era/YeTopia/200514 Travis Freestyles 11.mp3"
+                           "file":  "music/God’s Country Era/YeTopia/200514 Travis Freestyles 11.mp3"
                        },
                        {
                            "title":  "Travis Freestyles 12",
-                           "file":  "music/God's Country Era/YeTopia/200514 Travis Freestyles 12.mp3"
+                           "file":  "music/God’s Country Era/YeTopia/200514 Travis Freestyles 12.mp3"
                        },
                        {
                            "title":  "Travis Freestyles 13",
-                           "file":  "music/God's Country Era/YeTopia/200514 Travis Freestyles 13.mp3"
+                           "file":  "music/God’s Country Era/YeTopia/200514 Travis Freestyles 13.mp3"
                        },
                        {
                            "title":  "Travis Freestyles 14",
-                           "file":  "music/God's Country Era/YeTopia/200514 Travis Freestyles 14.mp3"
+                           "file":  "music/God’s Country Era/YeTopia/200514 Travis Freestyles 14.mp3"
                        },
                        {
                            "title":  "Travis Freestyles 15",
-                           "file":  "music/God's Country Era/YeTopia/200514 Travis Freestyles 15.mp3"
+                           "file":  "music/God’s Country Era/YeTopia/200514 Travis Freestyles 15.mp3"
                        },
                        {
                            "title":  "Travis Freestyles 16",
-                           "file":  "music/God's Country Era/YeTopia/200514 Travis Freestyles 16.mp3"
+                           "file":  "music/God’s Country Era/YeTopia/200514 Travis Freestyles 16.mp3"
                        },
                        {
                            "title":  "Travis Freestyles 17",
-                           "file":  "music/God's Country Era/YeTopia/200514 Travis Freestyles 17.mp3"
+                           "file":  "music/God’s Country Era/YeTopia/200514 Travis Freestyles 17.mp3"
                        },
                        {
                            "title":  "Travis Freestyles 2",
-                           "file":  "music/God's Country Era/YeTopia/200514 Travis Freestyles 2.mp3"
+                           "file":  "music/God’s Country Era/YeTopia/200514 Travis Freestyles 2.mp3"
                        },
                        {
                            "title":  "Travis Freestyles 3",
-                           "file":  "music/God's Country Era/YeTopia/200514 Travis Freestyles 3.mp3"
+                           "file":  "music/God’s Country Era/YeTopia/200514 Travis Freestyles 3.mp3"
                        },
                        {
                            "title":  "Travis Freestyles 4",
-                           "file":  "music/God's Country Era/YeTopia/200514 Travis Freestyles 4.mp3"
+                           "file":  "music/God’s Country Era/YeTopia/200514 Travis Freestyles 4.mp3"
                        },
                        {
                            "title":  "Travis Freestyles 5",
-                           "file":  "music/God's Country Era/YeTopia/200514 Travis Freestyles 5.mp3"
+                           "file":  "music/God’s Country Era/YeTopia/200514 Travis Freestyles 5.mp3"
                        },
                        {
                            "title":  "Travis Freestyles 6",
-                           "file":  "music/God's Country Era/YeTopia/200514 Travis Freestyles 6.mp3"
+                           "file":  "music/God’s Country Era/YeTopia/200514 Travis Freestyles 6.mp3"
                        },
                        {
                            "title":  "Travis Freestyles 7",
-                           "file":  "music/God's Country Era/YeTopia/200514 Travis Freestyles 7.mp3"
+                           "file":  "music/God’s Country Era/YeTopia/200514 Travis Freestyles 7.mp3"
                        },
                        {
                            "title":  "Travis Freestyles 8",
-                           "file":  "music/God's Country Era/YeTopia/200514 Travis Freestyles 8.mp3"
+                           "file":  "music/God’s Country Era/YeTopia/200514 Travis Freestyles 8.mp3"
                        },
                        {
                            "title":  "Travis Freestyles 9",
-                           "file":  "music/God's Country Era/YeTopia/200514 Travis Freestyles 9.mp3"
+                           "file":  "music/God’s Country Era/YeTopia/200514 Travis Freestyles 9.mp3"
                        }
                    ]
     },
@@ -4846,6 +4909,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Graduation",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Graduation Era",
+        "cover":  "music/Graduation Era/Can_t Tell Me Nothing/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Friday Morning May 25th 2007 (Intro)",
@@ -4956,6 +5020,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Graduation",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Graduation Era",
+        "cover":  "music/Graduation Era/Freshmen Adjustment 3/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Jesus Walks (Remix) (feat. Mase \u0026 Common)",
@@ -5046,6 +5111,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Graduation",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Graduation Era",
+        "cover":  "music/Graduation Era/G.O.O.D. Music Class of _06/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "The Takeover",
@@ -5192,6 +5258,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Graduation",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Graduation Era",
+        "cover":  "music/Graduation Era/Glow In The Dark (Interview)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "I Wonder (Intro)",
@@ -5222,6 +5289,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Graduation",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Graduation Era",
+        "cover":  "music/Graduation Era/Glow in the Dark Tour/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Good Morning",
@@ -5304,6 +5372,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Graduation",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Graduation Era",
+        "cover":  "music/Graduation Era/Graduation/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Barry Bonds (feat. Lil Wayne)",
@@ -5390,6 +5459,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Graduation",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Graduation Era",
+        "cover":  "music/Graduation Era/Late Orchestration/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Diamonds From Sierra Leone",
@@ -5452,6 +5522,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Graduation",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Graduation Era",
+        "cover":  "music/Graduation Era/Welcome To Kanye_s Soul Mix Show/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Sinnerman (Intro)",
@@ -5554,6 +5625,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Jesus Is King",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Jesus Is King Era",
+        "cover":  "music/Jesus Is King Era/Christ Jesus/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "The Glade",
@@ -5616,6 +5688,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Jesus Is King",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Jesus Is King Era",
+        "cover":  "music/Jesus Is King Era/JESUS IS KING/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Alien ",
@@ -5714,6 +5787,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Jesus Is King",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Jesus Is King Era",
+        "cover":  "",
         "tracks":  [
 
                    ]
@@ -5725,6 +5799,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Jesus Is King",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Jesus Is King Era",
+        "cover":  "music/Jesus Is King Era/JESUS IS KING (Movie)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Say You Will ",
@@ -5779,6 +5854,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Jesus Is King",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Jesus Is King Era",
+        "cover":  "music/Jesus Is King Era/JESUS IS KING (Pre JESUS IS LORD)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Alien ",
@@ -5853,6 +5929,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Jesus Is King",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Jesus Is King Era",
+        "cover":  "music/Jesus Is King Era/The Jesus Is King Experience/coverart.png",
         "tracks":  [
                        {
                            "title":  "Every Hour",
@@ -5907,6 +5984,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Late Registration",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Late Registration Era",
+        "cover":  "music/Late Registration Era/Freshmen Adjustment 2/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Intro (feat. John Legend)",
@@ -5993,6 +6071,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Late Registration",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Late Registration Era",
+        "cover":  "music/Late Registration Era/Late Registration/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Wake Up Mr West",
@@ -6071,6 +6150,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Late Registration",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Late Registration Era",
+        "cover":  "music/Late Registration Era/Second Semester (Kanye Essentials 2)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Intro",
@@ -6217,6 +6297,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Late Registration",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Late Registration Era",
+        "cover":  "music/Late Registration Era/Tapemasters Inc. Presents_ The Last Shall Be First/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "Intro",
@@ -6359,6 +6440,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Late Registration",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Late Registration Era",
+        "cover":  "music/Late Registration Era/The College Dropout Video Anthology (Bonus CD)/coverart.jpg",
         "tracks":  [
                        {
                            "title":  "We Don\u0027t Care (Reprise) (Ft. Keyshia Cole)",
@@ -6397,6 +6479,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "My Beautiful Dark Twisted Fantasy",
         "accent":  "#111111",
         "notes":  "ARCHIVE / My Beautiful Dark Twisted Fantasy Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Monster (Feat. Rick Ross)",
@@ -6483,6 +6566,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "My Beautiful Dark Twisted Fantasy",
         "accent":  "#111111",
         "notes":  "ARCHIVE / My Beautiful Dark Twisted Fantasy Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Don\u0027t Look Down (feat. Mos Def, Lupe Fiasco \u0026 Big Sean)",
@@ -6541,6 +6625,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "My Beautiful Dark Twisted Fantasy",
         "accent":  "#111111",
         "notes":  "ARCHIVE / My Beautiful Dark Twisted Fantasy Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Bullshittin\u0027 Intro  (feat. Consequense)",
@@ -6671,6 +6756,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "My Beautiful Dark Twisted Fantasy",
         "accent":  "#111111",
         "notes":  "ARCHIVE / My Beautiful Dark Twisted Fantasy Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "G.E.M (G.O.O.D. Enuff Me) (feat. Tony Williams \u0026 Phenom)",
@@ -6741,6 +6827,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "My Beautiful Dark Twisted Fantasy",
         "accent":  "#111111",
         "notes":  "ARCHIVE / My Beautiful Dark Twisted Fantasy Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Too Knight (The Underworld) (feat. Jennifer Hudson \u0026 ZZAJÉ)",
@@ -6811,6 +6898,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "My Beautiful Dark Twisted Fantasy",
         "accent":  "#111111",
         "notes":  "ARCHIVE / My Beautiful Dark Twisted Fantasy Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "See You In My Nightmares (Live From VH1 Storytellers)",
@@ -6861,6 +6949,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "My Beautiful Dark Twisted Fantasy",
         "accent":  "#111111",
         "notes":  "ARCHIVE / My Beautiful Dark Twisted Fantasy Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Dark Fantasy",
@@ -6943,6 +7032,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "My Beautiful Dark Twisted Fantasy",
         "accent":  "#111111",
         "notes":  "ARCHIVE / My Beautiful Dark Twisted Fantasy Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Blame Game",
@@ -7001,6 +7091,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "My Beautiful Dark Twisted Fantasy",
         "accent":  "#111111",
         "notes":  "ARCHIVE / My Beautiful Dark Twisted Fantasy Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Dark Fantasy",
@@ -7059,6 +7150,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "So Help Me God",
         "accent":  "#111111",
         "notes":  "ARCHIVE / So Help Me God Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Amazing",
@@ -7117,6 +7209,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "So Help Me God",
         "accent":  "#111111",
         "notes":  "ARCHIVE / So Help Me God Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "AMAZING",
@@ -7171,6 +7264,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "So Help Me God",
         "accent":  "#111111",
         "notes":  "ARCHIVE / So Help Me God Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "How You Feeling",
@@ -7257,6 +7351,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "So Help Me God",
         "accent":  "#111111",
         "notes":  "ARCHIVE / So Help Me God Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "All Day (feat. Kendrick Lamar, Theophilus London, Allan Kingdom \u0026 Paul McCartney)",
@@ -7303,6 +7398,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "So Help Me God",
         "accent":  "#111111",
         "notes":  "ARCHIVE / So Help Me God Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "All Day (feat. Allan Kingdom, Theophilus London \u0026 Paul McCartney)",
@@ -7341,6 +7437,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The College Dropout",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The College Dropout Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Intro",
@@ -7451,6 +7548,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The College Dropout",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The College Dropout Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Intro ",
@@ -7529,6 +7627,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The College Dropout",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The College Dropout Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Can´t Nobody (Instrumental)",
@@ -7599,6 +7698,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The College Dropout",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The College Dropout Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Intro",
@@ -7773,6 +7873,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The College Dropout",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The College Dropout Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Intro",
@@ -7859,6 +7960,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The College Dropout",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The College Dropout Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Intro (feat. Free of 106 \u0026 Park)",
@@ -8013,6 +8115,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The College Dropout",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The College Dropout Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Intro",
@@ -8147,6 +8250,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The College Dropout",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The College Dropout Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Intro",
@@ -8245,6 +8349,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The College Dropout",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The College Dropout Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Intro",
@@ -8327,6 +8432,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The College Dropout",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The College Dropout Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Intro",
@@ -8361,6 +8467,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The College Dropout",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The College Dropout Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Intro",
@@ -8459,6 +8566,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The College Dropout",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The College Dropout Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Intro",
@@ -8529,6 +8637,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Life of Pablo",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Life of Pablo Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Father Stretch My Hands",
@@ -8675,6 +8784,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Life of Pablo",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Life of Pablo Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Father Stretch My Hands Pt. 1",
@@ -8817,6 +8927,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Life of Pablo",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Life of Pablo Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Freestyle 4",
@@ -8971,6 +9082,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Life of Pablo",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Life of Pablo Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "30 Hours ",
@@ -9033,6 +9145,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Life of Pablo",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Life of Pablo Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "30 Hours ",
@@ -9087,6 +9200,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Life of Pablo",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Life of Pablo Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Ultralight Wall",
@@ -9113,6 +9227,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Life of Pablo",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Life of Pablo Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Fade (feat. Ty Dolla $ign \u0026 Post Malone)",
@@ -9171,6 +9286,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Life of Pablo",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Life of Pablo Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "30 hours",
@@ -9237,6 +9353,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Life of Pablo",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Life of Pablo Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Ultralight Beam",
@@ -9319,6 +9436,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Life of Pablo",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Life of Pablo Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Ultralight Beam",
@@ -9405,6 +9523,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Life of Pablo",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Life of Pablo Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Ultralight Beam",
@@ -9495,6 +9614,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Life of Pablo",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Life of Pablo Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "All Eyes On Ye",
@@ -9561,6 +9681,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Life of Pablo",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Life of Pablo Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Euros (feat. A$AP Rocky)",
@@ -9599,6 +9720,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Life of Pablo",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Life of Pablo Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "30 Hours ",
@@ -9661,6 +9783,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Life of Pablo",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Life of Pablo Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "30 Hours",
@@ -9719,6 +9842,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Life of Pablo",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Life of Pablo Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Summer 6ixteen",
@@ -9769,6 +9893,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Life of Pablo",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Life of Pablo Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Glow",
@@ -9815,6 +9940,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Prerequisite",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Prerequisite Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Unreleased Kanye Beat Tape (C. Sept 97_) Beat 1",
@@ -9857,6 +9983,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Prerequisite",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Prerequisite Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Beat 1",
@@ -9955,6 +10082,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Prerequisite",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Prerequisite Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Beat 1",
@@ -10041,6 +10169,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Prerequisite",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Prerequisite Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Home (Windy)",
@@ -10111,6 +10240,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Prerequisite",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Prerequisite Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "10 in a Benz (feat. Rhymefest \u0026 Kanye West)",
@@ -10173,6 +10303,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "The Prerequisite",
         "accent":  "#111111",
         "notes":  "ARCHIVE / The Prerequisite Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Intro",
@@ -10279,6 +10410,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Vultures",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Vultures Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "New Body",
@@ -10433,6 +10565,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Vultures",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Vultures Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Back To Me (feat. Freddie Gibbs \u0026 Quavo)",
@@ -10499,6 +10632,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Vultures",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Vultures Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "King",
@@ -10553,6 +10687,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Vultures",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Vultures Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Dead",
@@ -10587,6 +10722,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Vultures",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Vultures Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Everybody",
@@ -10649,6 +10785,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Vultures",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Vultures Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "BACK TO ME",
@@ -10723,6 +10860,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Vultures",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Vultures Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Back To Me ",
@@ -10805,6 +10943,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Vultures",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Vultures Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "SLIDE(Explicit)",
@@ -10899,6 +11038,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Vultures",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Vultures Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "SLIDE",
@@ -10973,6 +11113,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Vultures",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Vultures Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Back To Me (feat. Freddie Gibbs \u0026 Quavo)",
@@ -11055,6 +11196,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Vultures",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Vultures Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "5:30 ",
@@ -11125,6 +11267,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Vultures",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Vultures Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "After Life",
@@ -11215,6 +11358,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Watch The Throne",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Watch The Throne Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "H.A.M. Intro",
@@ -11353,6 +11497,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Watch The Throne",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Watch The Throne Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Lift Off (Feat. BeyoncÃ©)",
@@ -11399,6 +11544,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Watch The Throne",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Watch The Throne Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Hâ€¢Aâ€¢M",
@@ -11481,6 +11627,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Watch The Throne",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Watch The Throne Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "H•A•M",
@@ -11619,6 +11766,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Wyoming",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Wyoming Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Bad Mon",
@@ -11673,6 +11821,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Wyoming",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Wyoming Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "If You Know You Know",
@@ -11711,6 +11860,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Wyoming",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Wyoming Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "4th Dimension (feat. Louis Prima)",
@@ -11753,6 +11903,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Wyoming",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Wyoming Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Pussy Mine(feat. Ant Clemons)",
@@ -11807,6 +11958,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Wyoming",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Wyoming Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "NO MANNERS",
@@ -11853,6 +12005,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Wyoming",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Wyoming Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Father Stretch My Hands",
@@ -11911,6 +12064,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Wyoming",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Wyoming Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "4th Dimension (feat. Louis Prima)",
@@ -11949,6 +12103,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Wyoming",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Wyoming Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Alien (feat. Ant Clemons, 2 Chainz, Quavo, Pusha T \u0026 Jaden)",
@@ -11987,6 +12142,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Wyoming",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Wyoming Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Brothers (feat. 7 Aurelius)",
@@ -12025,6 +12181,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Wyoming",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Wyoming Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "XTCY (feat. Malik Yusef)",
@@ -12063,6 +12220,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Wyoming",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Wyoming Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Not For Radio (feat. Puff Daddy \u0026 070 Shake)",
@@ -12101,6 +12259,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Wyoming",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Wyoming Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Not For Radio (feat. Puff Daddy \u0026 070 Shake)",
@@ -12139,6 +12298,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Wyoming",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Wyoming Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Cudi Montage",
@@ -12169,6 +12329,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Wyoming",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Wyoming Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "I Thought About Killing You",
@@ -12227,6 +12388,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Wyoming",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Wyoming Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Pussy Mine (feat. Ty Dolla $ign \u0026 Ant Clemons)",
@@ -12265,6 +12427,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Wyoming",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Wyoming Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "All Mine (feat. Ant Clemons)",
@@ -12307,6 +12470,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yandhi",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yandhi Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Black Men Don\u0027t Cheat ",
@@ -12349,6 +12513,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yandhi",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yandhi Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Black Men Don\u0027t Cheat",
@@ -12387,6 +12552,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yandhi",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yandhi Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Chakras",
@@ -12489,6 +12655,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yandhi",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yandhi Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Selah",
@@ -12539,6 +12706,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yandhi",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yandhi Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Bye Bye Baby ",
@@ -12585,6 +12753,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yandhi",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yandhi Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Bye Bye Baby ",
@@ -12639,6 +12808,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yandhi",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yandhi Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Alien (feat. Pusha T \u0026 Ant Clemons)",
@@ -12697,6 +12867,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yandhi",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yandhi Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "New Body",
@@ -12743,6 +12914,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "YEBU",
         "accent":  "#111111",
         "notes":  "ARCHIVE / YEBU Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Can U Be",
@@ -12813,6 +12985,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "YEBU",
         "accent":  "#111111",
         "notes":  "ARCHIVE / YEBU Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "FOR ONCE IN MY LIFE",
@@ -12871,6 +13044,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "YEBU",
         "accent":  "#111111",
         "notes":  "ARCHIVE / YEBU Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "BOBBY DIGITAL",
@@ -12933,6 +13107,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "YEBU",
         "accent":  "#111111",
         "notes":  "ARCHIVE / YEBU Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Amy\u0027s Heartbreak",
@@ -12983,6 +13158,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yeezus 2",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yeezus 2 Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "After You (feat. John Legend, Pusha T \u0026 Sia)",
@@ -13033,6 +13209,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yeezus 2",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yeezus 2 Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Awesome",
@@ -13059,6 +13236,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yeezus 2",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yeezus 2 Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "About Time",
@@ -13121,6 +13299,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yeezus 2",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yeezus 2 Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "3 (feat. Paul McCartney)",
@@ -13275,6 +13454,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yeezus 2",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yeezus 2 Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "3",
@@ -13345,6 +13525,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yeezus 2",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yeezus 2 Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "After You ",
@@ -13395,6 +13576,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yeezus 2",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yeezus 2 Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Wolves",
@@ -13497,6 +13679,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yeezus 2",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yeezus 2 Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "333",
@@ -13531,6 +13714,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yeezus",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yeezus Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Good Things Don\u0027t Last",
@@ -13601,6 +13785,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yeezus",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yeezus Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "I Am Not Home",
@@ -13655,6 +13840,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yeezus",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yeezus Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Blood On The Leaves",
@@ -13725,6 +13911,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yeezus",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yeezus Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Black Skinhead",
@@ -13775,6 +13962,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yeezus",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yeezus Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "Blood On The Leaves",
@@ -13813,6 +14001,7 @@ window.YE_ARCHIVE_DATABASE = [
         "year":  "Yeezus",
         "accent":  "#111111",
         "notes":  "ARCHIVE / Yeezus Era",
+        "cover":  "",
         "tracks":  [
                        {
                            "title":  "All Of The Lights",
