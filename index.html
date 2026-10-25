@@ -1,1489 +1,479 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>YE-ARCHIVE</title>
-<meta property="og:title" content="YE-ARCHIVE">
-<meta property="og:description" content="Making the vault accessible. Less time searching, more time listening.">
-<meta property="og:image" content="https://wallpapers.com/images/hd/white-square-background-56v690fpm25a3o6s.jpg"> 
-<meta property="og:type" content="website">
-<link rel="icon" href="https://wallpapers.com/images/hd/white-square-background-56v690fpm25a3o6s.jpg" type="image/png">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="theme-color" content="#ffffff">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-<style>
-  :root {
-    --bg-dark: #111111;
-    --page-bg-dark: #0a0a0a;
-    --text-dark: #ffffff;
-    --muted-dark: #999999;
-    --border-dark: #333333;
-    --shadow-dark: 0 4px 12px rgba(0,0,0,0.3);
-    
-    --bg: #ffffff;
-    --page-bg: #f4f4f5;
-    --text: #111111;
-    --muted: #666666;
-    --border: #e4e4e7;
-    --shadow: 0 4px 12px rgba(0,0,0,0.06);
-    
-    --radius: 6px; 
-    --album-accent: #ffffff;
-    --like-color: #ff3b3b;
-    --accent-color: #4a00e0;
-  }
-
-  * { box-sizing: border-box; transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1); }
-
-  body {
-    margin: 0;
-    font-family: 'IBM Plex Mono', monospace;
-    background: var(--page-bg);
-    color: var(--text);
-    padding-bottom: 110px;
-    -webkit-font-smoothing: antialiased;
-    -webkit-tap-highlight-color: transparent;
-    overflow-y: auto;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-    transition: background 0.3s, color 0.3s;
-  }
-
-  /* --- DARK MODE OVERRIDES --- */
-  body.dark-mode {
-    background: var(--page-bg-dark);
-    color: var(--text-dark);
-  }
-  body.dark-mode header { background: rgba(17,17,17,0.95); border-color: var(--border-dark); }
-  body.dark-mode .search-capsule { background: #1a1a1a; border-color: var(--border-dark); color: var(--text-dark); }
-  body.dark-mode .search-capsule::placeholder { color: var(--muted-dark); }
-  body.dark-mode .search-capsule:focus { background: #111; border-color: #fff; }
-  body.dark-mode .nav-btn { background: #111; border-color: var(--border-dark); color: var(--text-dark); }
-  body.dark-mode .nav-btn:hover { background: #1a1a1a; border-color: #fff; }
-  
-  body.dark-mode .user-btn { background: #111; border-color: var(--border-dark); color: var(--text-dark); }
-  body.dark-mode .user-btn:hover { background: #1a1a1a; border-color: #fff; }
-  body.dark-mode .settings-icon { stroke: var(--text-dark); }
-  body.dark-mode .user-dropdown { background: #111; border-color: var(--border-dark); }
-  body.dark-mode .dropdown-item { color: var(--text-dark); border-color: var(--border-dark); }
-  body.dark-mode .dropdown-item:hover { background: #1a1a1a; }
-  
-  body.dark-mode .nav-link { color: var(--muted-dark); }
-  body.dark-mode .nav-link.active { color: var(--text-dark); background: #222; border-color: #fff; }
-  body.dark-mode .nav-link:hover { color: var(--text-dark); background: #1a1a1a; }
-  body.dark-mode .album-cover-img { background: #222; box-shadow: var(--shadow-dark); }
-  body.dark-mode .album-year,
-  body.dark-mode .track-index,
-  body.dark-mode .mp-album-label,
-  body.dark-mode .mp-time,
-  body.dark-mode .mp-right,
-  body.dark-mode .full-progress-times { color: #aaa; }
-  body.dark-mode .mobile-search-box { background: #111; border-color: var(--border-dark); color: var(--text-dark); }
-  
-  body.dark-mode .album-view { background: rgba(10, 10, 10, 0.75); color: var(--text-dark); }
-  body.dark-mode .album-view-header { background: rgba(10,10,10,0.7); border-bottom-color: rgba(255,255,255,0.05); }
-  body.dark-mode .view-meta { color: #ccc; }
-  body.dark-mode .view-notes { color: #aaa; }
-  body.dark-mode .download-album-btn { background: #fff; color: #111; }
-  body.dark-mode .view-right { background: rgba(0,0,0,0.5); }
-  body.dark-mode .track-item { border-bottom-color: rgba(255,255,255,0.05); }
-  body.dark-mode .track-item:hover { background: rgba(0,0,0,0.8); }
-  body.dark-mode .track-title { color: #eee; }
-  body.dark-mode .track-item.is-playing .track-title { color: #fff; }
-  body.dark-mode .action-icon-btn { background: #111; border-color: var(--border-dark); color: var(--text-dark); }
-  body.dark-mode .action-icon-btn:hover { background: #222; border-color: #fff; color: #fff; }
-  
-  body.dark-mode .mini-player { background: rgba(17,17,17,0.98); border-top-color: #333; }
-  body.dark-mode .mp-info:hover { background: #1a1a1a; }
-  body.dark-mode .mp-title { color: #fff; }
-  body.dark-mode .mp-btn svg { fill: #fff; }
-  body.dark-mode .mp-btn-main { background: #fff; }
-  body.dark-mode .mp-btn-main svg { fill: #111; }
-  
-  body.dark-mode .full-player { background: var(--page-bg-dark); }
-  body.dark-mode .close-full { background: rgba(0,0,0,0.5); color: #fff; }
-  body.dark-mode .close-full:hover { background: rgba(0,0,0,0.8); }
-  body.dark-mode .full-info p { color: #ccc; }
-  body.dark-mode .full-btn svg { fill: #fff; }
-  body.dark-mode .full-btn-main { background: #fff; }
-  body.dark-mode .full-btn-main svg { fill: #111; }
-  body.dark-mode .full-like-btn svg { stroke: #fff; }
-  body.dark-mode .volume-icon svg { stroke: #fff; fill: none; }
-  
-  body.dark-mode .modal { background: #111; border-color: var(--border-dark); color: #fff; }
-  body.dark-mode #blogContent { color: #ccc !important; }
-  body.dark-mode .close-modal { background: #222; color: #fff; }
-  body.dark-mode .backdrop { background: rgba(0,0,0,0.78); }
-
-  /* --- HEADER --- */
-  header {
-    display: flex; flex-direction: column; align-items: stretch; justify-content: flex-start;
-    width: 248px; min-height: 100vh; padding: 28px 22px; background: rgba(255,255,255,0.96);
-    backdrop-filter: blur(10px); border-right: 1px solid var(--border);
-    position: fixed; inset: 0 auto 0 0; z-index: 50; gap: 26px;
-    transition: background 0.3s, border-color 0.3s;
-  }
-  .header-left { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
-  .logo {
-    width: 36px; height: 36px; border-radius: 4px; background: #111; color: #fff;
-    display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px; flex-shrink: 0;
-  }
-  header h1 { font-size: 15px; margin: 0; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
-
-  /* Desktop Search Capsule */
-  .search-container { width: 100%; display: flex; justify-content: flex-start; min-width: 0; }
-  .search-capsule {
-    width: 100%; max-width: none; background: #f0f0f0; border: 1px solid #e0e0e0;
-    border-radius: 4px; padding: 11px 12px; font-size: 11px; font-family: 'IBM Plex Mono', monospace;
-    outline: none; transition: all 0.2s; color: #111;
-  }
-  .search-capsule::placeholder { color: #888; text-transform: uppercase; }
-  .search-capsule:focus { background: #fff; border-color: #111; box-shadow: 0 0 0 3px rgba(0,0,0,0.08); }
-
-  .header-actions { display: flex; gap: 8px; flex-shrink: 0; align-items: center; width: 100%; margin-top: auto; }
-  .nav-btn {
-    background: #fff; border: 1px solid var(--border); padding: 8px 14px; border-radius: 4px;
-    font-size: 11px; font-weight: 700; cursor: pointer; font-family: 'IBM Plex Mono', monospace;
-    transition: all 0.2s; color: var(--text); text-transform: uppercase; display: flex; align-items: center; gap: 6px;
-    white-space: nowrap;
-  }
-  .nav-btn:hover { background: #f5f5f5; border-color: #000; }
-  
-  /* --- USER DROPDOWN --- */
-  .user-btn {
-    background: #fff; border: none; padding: 8px 12px; border-radius: 4px;
-    cursor: pointer; font-family: 'IBM Plex Mono', monospace;
-    transition: all 0.2s; color: var(--text); display: flex; align-items: center; justify-content: flex-start; gap: 8px;
-    width: 100%; height: 36px; position: relative; font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
-  }
-  .user-btn:hover { background: #f5f5f5; }
-  .settings-icon { width: 16px; height: 16px; fill: none; stroke: var(--text); stroke-width: 2; transition: stroke 0.3s; }
-  
-  .user-dropdown-container { position: relative; width: 100%; }
-  .user-dropdown {
-    position: static; width: 100%; background: #fff; border: none;
-    border-radius: 6px; box-shadow: none; min-width: 0; z-index: 100;
-    display: block; margin-top: 0; overflow: hidden; max-height: 0; opacity: 0; visibility: hidden;
-    transform: translateY(-6px); transition: max-height 0.3s ease, opacity 0.2s ease, transform 0.3s ease, visibility 0.3s;
-  }
-  .user-dropdown.show { max-height: 320px; opacity: 1; visibility: visible; transform: translateY(0); margin-top: 8px; }
-  .dropdown-item {
-    padding: 14px 16px; cursor: pointer; transition: background 0.2s; border-bottom: none;
-    font-size: 12px; font-weight: 600; text-transform: uppercase; font-family: 'IBM Plex Mono', monospace;
-    color: var(--text);
-  }
-  .dropdown-item:last-child { border-bottom: none; }
-  .dropdown-item:hover { background: #f5f5f5; }
-  
-  .dropdown-item.dark-mode-item { display: flex; align-items: center; justify-content: space-between; }
-  .dark-mode-toggle {
-    width: 36px; height: 18px; background: #e0e0e0; border-radius: 9px; position: relative; cursor: pointer;
-    transition: background 0.3s;
-  }
-  .dark-mode-toggle.active { background: var(--accent-color); }
-  .dark-mode-toggle::after {
-    content: ''; position: absolute; top: 2px; left: 2px; width: 14px; height: 14px;
-    background: #fff; border-radius: 50%; transition: transform 0.3s;
-  }
-  .dark-mode-toggle.active::after { transform: translateX(18px); }
-  
-  /* --- NAVIGATION HEADER --- */
-  .nav-header {
-    display: flex; flex-direction: column; align-items: stretch; gap: 4px; margin: 0;
-    font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
-  }
-  .nav-link { color: var(--muted); cursor: pointer; transition: color 0.2s, background 0.2s; padding: 12px 10px; border-left: 2px solid transparent; }
-  .nav-link.active { color: var(--text); background: #f0f0f0; border-left-color: var(--text); }
-  .nav-link:hover { color: var(--text); background: #f5f5f5; }
-
-  /* Mobile Specific Elements */
-  .mobile-search-screen { display: none; padding: 20px 0; }
-  .mobile-search-box {
-    width: 100%; padding: 16px; font-size: 15px; border-radius: 8px; border: 1px solid #ccc;
-    outline: none; font-family: 'IBM Plex Mono', monospace; text-transform: uppercase;
-    background: #fff; box-shadow: var(--shadow); margin-bottom: 24px;
-  }
-
-  /* --- MAIN CONTENT & GRIDS --- */
-  main { max-width: 1440px; margin: 0 0 0 248px; padding: 42px 46px 120px; }
-  
-  .album-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 24px; }
-  .era-section-header { grid-column: 1 / -1; margin: 20px 0 0; padding: 14px 0 8px; border-bottom: 2px solid var(--text); font-size: 14px; letter-spacing: 0.12em; text-transform: uppercase; }
-  .album-card { cursor: pointer; transition: transform 0.3s ease; display: flex; flex-direction: column; }
-  .album-card:hover { transform: translateY(-4px); }
-  
-  /* --- AMBIENT GLOW EFFECT FOR CARDS --- */
-  .album-cover-wrapper {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 1/1;
-    margin-bottom: 12px;
-    border-radius: var(--radius);
-  }
-  .album-glow-backdrop {
-    position: absolute;
-    inset: -6px;
-    border-radius: 12px;
-    background-size: cover;
-    background-position: center;
-    filter: blur(22px) saturate(220%) brightness(1.15);
-    opacity: 0;
-    transform: scale(0.92);
-    transition: opacity 0.4s ease, transform 0.4s ease;
-    pointer-events: none;
-    z-index: 1;
-  }
-  .album-cover-img {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    object-fit: cover;
-    background: #eee;
-    display: block;
-    transition: transform 0.35s ease;
-  }
-
-  /* Ambient Glow Hover Effect for desktop (mouse cursor) */
-  @media (hover: hover) and (pointer: fine) {
-    .album-card:hover .album-glow-backdrop {
-      opacity: 0.88;
-      transform: scale(1.1);
-    }
-    .album-card:hover .album-cover-img {
-      transform: scale(1.02);
-    }
-  }
-
-  .album-name { font-size: 13px; font-weight: 700; text-transform: uppercase; line-height: 1.3; word-break: break-word; }
-  .album-year { font-size: 11px; color: var(--muted); margin-top: 4px; text-transform: uppercase; font-weight: 500; }
-
-  /* --- SPECIAL PLAYLIST CARDS --- */
-  .playlist-card { 
-    background: #111; color: #fff; border-radius: var(--radius); aspect-ratio: 1/1;
-    display: flex; flex-direction: column; align-items: center; justify-content: center;
-    box-shadow: var(--shadow); margin-bottom: 12px; transition: background 0.2s;
-  }
-  .playlist-card svg { width: 48px; height: 48px; fill: #fff; margin-bottom: 12px; }
-  .playlist-card.liked { background: #4a00e0; }
-  .playlist-card.shuffle { background: #222; }
-
-  /* --- SEARCH UI (Desktop Overlay) --- */
-  #searchUI { width: 100%; }
-  .search-header-row { display: flex; justify-content: space-between; align-items: center; margin: 30px 0 20px; flex-wrap: wrap; gap: 12px; }
-  .search-header-row h2 { margin: 0; font-size: 16px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
-
-  /* --- ALBUM VIEW OVERLAY WITH AMBIENT GLOW --- */
-  .album-view {
-    position: fixed; inset: 0; color: var(--text); z-index: 80;
-    transform: translateY(100%); transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
-    overflow-y: auto; padding-bottom: 130px;
-    background: rgba(244, 244, 245, 0.75);
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
-  }
-  .album-view.show { transform: translateY(0); }
-  .album-view-header {
-    position: sticky; top: 0; background: rgba(255,255,255,0.7); padding: 16px 20px;
-    border-bottom: 1px solid rgba(0,0,0,0.05); display: flex; align-items: center; backdrop-filter: blur(12px); z-index: 10;
-  }
-  .album-content { max-width: 1100px; margin: 0 auto; padding: 40px 20px; display: flex; gap: 50px; align-items: flex-start; }
-  
-  .view-left { flex: 0 0 300px; position: sticky; top: 90px; }
-  .view-cover-wrapper {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 1/1;
-    border-radius: 12px;
-  }
-  .view-cover-glow {
-    position: absolute;
-    inset: -14px;
-    border-radius: 18px;
-    background-size: cover;
-    background-position: center;
-    filter: blur(34px) saturate(230%) brightness(1.15);
-    opacity: 0.85;
-    pointer-events: none;
-    z-index: 1;
-    transition: background-image 0.4s ease, opacity 0.4s ease;
-    animation: ambientPulse 4s ease-in-out infinite alternate;
-  }
-  @keyframes ambientPulse {
-    0% { opacity: 0.75; transform: scale(0.97); }
-    100% { opacity: 0.95; transform: scale(1.04); }
-  }
-  .view-cover {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    border-radius: 8px;
-    box-shadow: 0 16px 40px rgba(0,0,0,0.25);
-    object-fit: cover;
-  }
-
-  .view-title { font-size: 28px; margin: 24px 0 8px; text-transform: uppercase; font-weight: 800; line-height: 1.1; }
-  .view-meta { color: #555; font-size: 13px; font-weight: 600; text-transform: uppercase; }
-  .view-notes { margin-top: 16px; font-size: 13px; line-height: 1.6; color: #444; }
-  
-  .download-album-btn {
-    display: block; width: 100%; text-align: center; margin-top: 24px; background: #111; color: #fff;
-    text-decoration: none; padding: 12px; border-radius: 6px; font-weight: 700; font-size: 12px;
-    text-transform: uppercase; transition: opacity 0.2s; cursor: pointer; border: none;
-  }
-  .download-album-btn:hover { opacity: 0.8; }
-
-  .view-right { flex: 1; background: rgba(255,255,255,0.5); border-radius: 12px; padding: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); }
-  .track-list { list-style: none; padding: 0; margin: 0; }
-  .track-item {
-    display: flex; align-items: center; gap: 14px; padding: 12px 14px; border-bottom: 1px solid rgba(0,0,0,0.05);
-    font-size: 13px; transition: background 0.2s; border-radius: 6px;
-  }
-  .track-item:last-child { border-bottom: none; }
-  .track-item:hover { background: rgba(255,255,255,0.8); }
-  .track-index { color: #888; width: 24px; text-align: right; font-weight: 600; flex-shrink: 0; font-size: 12px; }
-  .track-title { flex: 1; font-weight: 600; color: #222; text-transform: uppercase; cursor: pointer; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; min-width: 0; }
-  .track-item.is-playing .track-title { color: #000; font-weight: 800; }
-  
-  .track-actions { display: flex; gap: 6px; flex-shrink: 0; }
-  .action-icon-btn {
-    background: transparent; border: 1px solid var(--border); border-radius: 4px; width: 32px; height: 32px;
-    display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--muted);
-    text-decoration: none; transition: all 0.2s; font-size: 14px; flex-shrink: 0; background: #fff;
-  }
-  .action-icon-btn:hover { border-color: #111; color: #111; }
-  .like-btn.liked svg { fill: var(--like-color); stroke: var(--like-color); }
-  .like-btn svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 2; transition: fill 0.2s; }
-
-  /* --- MINI PLAYER & FADE/SCROLLING TEXT --- */
-  .mini-player {
-    position: fixed; bottom: 0; left: 0; right: 0; height: 96px; background: rgba(255,255,255,0.98);
-    backdrop-filter: blur(10px); border-top: 1px solid #e5e5e5; box-shadow: 0 -4px 30px rgba(0,0,0,0.08);
-    display: grid; grid-template-columns: 320px 1fr 320px; align-items: center; padding: 0 30px; z-index: 200;
-    transform: translateY(100%); transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
-  }
-  .mini-player.active { transform: translateY(0); }
-  .mp-info { display: flex; align-items: center; gap: 16px; overflow: hidden; cursor: pointer; padding: 8px; border-radius: 8px; transition: background 0.2s; min-width: 0; }
-  .mp-info:hover { background: #f5f5f5; }
-  .mp-cover { width: 64px; height: 64px; min-width: 64px; aspect-ratio: 1/1; border-radius: 6px; background: #eee; object-fit: cover; flex-shrink: 0; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-  
-  .mp-text-container { overflow: hidden; white-space: nowrap; position: relative; width: 100%; min-width: 0; }
-  .mp-title { font-size: 14px; font-weight: 700; color: #111; text-transform: uppercase; display: inline-block; white-space: nowrap; max-width: 100%; overflow: hidden; text-overflow: ellipsis; vertical-align: bottom; }
-  .mp-album-label { font-size: 11px; color: var(--muted); font-weight: 600; text-transform: uppercase; margin-top: 4px; overflow: hidden; text-overflow: ellipsis; }
-
-  /* --- FADE & MARQUEE ANIMATIONS --- */
-  .mp-text-container.has-fade,
-  .full-info-text.has-fade {
-    mask-image: linear-gradient(to right, transparent 0, #000 12px, #000 calc(100% - 12px), transparent 100%);
-    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 12px, #000 calc(100% - 12px), transparent 100%);
-  }
-
-  .mp-title.marquee-scroll,
-  .full-info h2.marquee-scroll {
-    max-width: none !important;
-    overflow: visible !important;
-    text-overflow: clip !important;
-    will-change: transform;
-    animation: textMarqueeBounce var(--scroll-duration, 8s) ease-in-out infinite;
-  }
-
-  @keyframes textMarqueeBounce {
-    0%, 18% { transform: translateX(0); }
-    72%, 82% { transform: translateX(calc(-1 * var(--scroll-dist, 0px))); }
-    100% { transform: translateX(0); }
-  }
-
-  .mp-center { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; }
-  .mp-controls { display: flex; align-items: center; gap: 28px; }
-  .mp-btn { background: none; border: none; cursor: pointer; padding: 0; transition: transform 0.1s; opacity: 0.8; display: flex; align-items: center; justify-content: center; }
-  .mp-btn:hover { opacity: 1; transform: scale(1.05); }
-  .mp-btn:active { transform: scale(0.95); }
-  .mp-btn svg { width: 20px; height: 20px; fill: #111; }
-  .mp-btn-main { width: 44px; height: 44px; background: #111; border-radius: 50%; opacity: 1; box-shadow: 0 4px 12px rgba(0,0,0,0.2); }
-  .mp-btn-main svg { fill: #fff; width: 18px; height: 18px; margin-left: 2px; }
-
-  .mp-progress-container { width: 100%; max-width: 480px; display: flex; align-items: center; gap: 12px; }
-  .mp-time { font-size: 11px; color: #888; font-weight: 600; min-width: 40px; text-align: center; font-variant-numeric: tabular-nums; }
-  
-  input[type=range] { -webkit-appearance: none; appearance: none; width: 100%; background: transparent; cursor: pointer; }
-  input[type=range]::-webkit-slider-runnable-track { width: 100%; height: 5px; background: #4a4a4a; border-radius: 3px; transition: background 0.2s; }
-  input[type=range]:hover::-webkit-slider-runnable-track { background: #3a3a3a; }
-  input[type=range]::-webkit-slider-thumb { height: 14px; width: 14px; border-radius: 50%; background: #292929; -webkit-appearance: none; margin-top: -4.5px; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
-  input[type=range]::-moz-range-track { width: 100%; height: 5px; background: #4a4a4a; border-radius: 3px; }
-  input[type=range]::-moz-range-thumb { height: 14px; width: 14px; border: 0; border-radius: 50%; background: #292929; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
-
-  .mp-right { display: flex; justify-content: flex-end; align-items: center; font-size: 12px; color: #888; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; gap: 16px; }
-
-  /* --- FULL SCREEN PLAYER --- */
-  .full-player {
-    position: fixed; inset: 0; z-index: 300; display: flex; flex-direction: column;
-    padding: 20px; transform: translateY(100%); touch-action: none;
-    background: var(--page-bg);
-    transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1);
-    align-items: center; justify-content: center;
-    overflow: hidden;
-  }
-  .full-player.active { transform: translateY(0); }
-  .swipe-handle { width: 48px; height: 5px; background: rgba(0,0,0,0.15); border-radius: 3px; position: absolute; top: 12px; left: 50%; transform: translateX(-50%); z-index: 10; }
-  .close-full { position: absolute; top: 24px; left: 24px; background: rgba(255,255,255,0.5); border: none; width: 40px; height: 40px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: bold; transition: background 0.2s; backdrop-filter: blur(4px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); z-index: 10; }
-  .close-full:hover { background: rgba(255,255,255,0.8); }
-
-  #visualizerCanvas { position: absolute; bottom: 0; left: 0; width: 100%; height: 60%; z-index: 0; opacity: 0.25; pointer-events: none; }
-
-  .full-content { display: flex; flex-direction: column; align-items: center; width: 100%; max-width: 500px; margin: auto; position: relative; z-index: 5; }
-  
-  .full-cover-wrapper {
-    position: relative;
-    width: min(400px, 85vw);
-    aspect-ratio: 1/1;
-    margin-bottom: 40px;
-    border-radius: 12px;
-  }
-  .full-cover-glow {
-    position: absolute;
-    inset: -18px;
-    border-radius: 20px;
-    background-size: cover;
-    background-position: center;
-    filter: blur(34px) saturate(230%) brightness(1.15);
-    opacity: 0.85;
-    pointer-events: none;
-    z-index: 1;
-    transition: background-image 0.4s ease, opacity 0.4s ease;
-    animation: ambientPulse 4s ease-in-out infinite alternate;
-  }
-  .full-cover { position: relative; z-index: 2; width: 100%; height: 100%; border-radius: 12px; box-shadow: 0 20px 50px rgba(0,0,0,0.2); object-fit: cover; }
-  
-  .full-info { width: 100%; text-align: left; margin-bottom: 30px; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
-  .full-info-text { flex: 1; overflow: hidden; white-space: nowrap; position: relative; min-width: 0; }
-  .full-info h2 { font-size: 28px; margin: 0 0 6px; font-weight: 800; text-transform: uppercase; line-height: 1.2; white-space: nowrap; display: inline-block; overflow: hidden; text-overflow: ellipsis; max-width: 100%; vertical-align: bottom; }
-  .full-info p { font-size: 15px; color: #555; margin: 0; font-weight: 600; text-transform: uppercase; overflow: hidden; text-overflow: ellipsis; }
-  
-  .full-like-btn { background: none; border: none; padding: 10px; cursor: pointer; flex-shrink: 0; }
-  .full-like-btn svg { width: 28px; height: 28px; fill: none; stroke: #111; stroke-width: 2; transition: all 0.2s; }
-  .full-like-btn.liked svg { fill: var(--like-color); stroke: var(--like-color); transform: scale(1.1); }
-
-  .full-progress { width: 100%; margin-bottom: 40px; }
-  .full-progress-times { display: flex; justify-content: space-between; font-size: 13px; color: #666; margin-top: 12px; font-weight: 600; font-variant-numeric: tabular-nums; }
-  
-  .full-controls { display: flex; align-items: center; justify-content: center; gap: 30px; width: 100%; }
-  .full-btn-main { background: #111; width: 72px; height: 72px; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: none; cursor: pointer; transition: transform 0.1s, box-shadow 0.2s; box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
-  .full-btn-main:active { transform: scale(0.92); box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
-  .full-btn-main svg { fill: #fff; width: 30px; margin-left: 3px; }
-  .full-btn { background: none; border: none; cursor: pointer; transition: transform 0.1s; display: flex; align-items: center; justify-content: center; }
-  .full-btn:active { transform: scale(0.9); }
-  .full-btn svg { width: 24px; height: 24px; fill: #111; }
-
-  .volume-container { display: flex; align-items: center; gap: 10px; margin-left: 20px; }
-  .volume-icon svg { width: 20px; height: 20px; stroke: #111; fill: none; stroke-width: 2; }
-  .volume-container input[type=range] { width: 80px; }
-
-  /* Modals */
-  .backdrop { position: fixed; inset: 0; background: rgba(255,255,255,0.8); backdrop-filter: blur(8px); display: none; align-items: center; justify-content: center; z-index: 300; }
-  .backdrop.show { display: flex; }
-  .modal { width: min(500px, 90%); background: #fff; border-radius: 12px; padding: 30px; position: relative; border: 1px solid var(--border); box-shadow: 0 20px 50px rgba(0,0,0,0.1); }
-  .close-modal { position: absolute; top: 20px; right: 20px; background: #f0f0f0; border: none; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; font-weight: bold; }
-  .blog-bullet { margin-bottom: 8px; }
-
-  /* ===== RESPONSIVE OPTIMIZATIONS ===== */
-  @media(min-width: 1024px) {
-    .full-player { flex-direction: row; padding: 40px; }
-    .full-content { flex-direction: row; max-width: 1000px; gap: 80px; align-items: center; }
-    .full-cover-wrapper { width: 450px; margin-bottom: 0; flex-shrink: 0; }
-    .full-info-container { flex: 1; display: flex; flex-direction: column; justify-content: center; min-width: 0; }
-    .full-info { margin-bottom: 40px; }
-    .full-info h2 { font-size: 42px; }
-    .full-info p { font-size: 18px; }
-    .full-controls { justify-content: flex-start; gap: 30px; }
-  }
-
-  @media(max-width: 1024px) {
-    .album-content { padding: 30px 16px; gap: 30px; }
-    .view-left { flex: 0 0 260px; }
-    .mini-player { grid-template-columns: 260px 1fr 120px; padding: 0 20px; }
-  }
-
-  @media(max-width: 768px) {
-    body { padding-bottom: calc(110px + env(safe-area-inset-bottom)); }
-    header { width: 100%; min-height: 0; padding: 14px 16px; position: sticky; inset: 0 0 auto; border-right: 0; border-bottom: 1px solid var(--border); gap: 14px; }
-    main { margin: 0; padding: 24px 16px 120px; }
-    .search-container { display: none; } 
-    .header-actions { position: absolute; top: 12px; right: 16px; width: auto; margin-top: 0; }
-    .user-btn { width: 36px; padding: 8px; justify-content: center; }
-    .settings-label { display: none; }
-    .user-dropdown { position: absolute; top: 100%; bottom: auto; right: 0; width: 220px; min-width: 220px; max-height: none; margin-top: 8px; box-shadow: 0 4px 18px rgba(0,0,0,0.14); transform-origin: top right; transform: translateY(-8px); }
-    .user-dropdown.show { transform: translateY(0); }
-    
-    .nav-btn { font-size: 11px; padding: 8px 12px; }
-    .nav-header { flex-direction: row; align-items: center; gap: 4px; font-size: 11px; }
-    .nav-link { padding: 9px 8px; border-left: 0; border-bottom: 2px solid transparent; }
-    .nav-link.active { border-left-color: transparent; border-bottom-color: var(--text); }
-    
-    .album-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 16px; }
-    .album-name { font-size: 13px; }
-    .album-year { font-size: 11px; }
-    
-    .album-content { flex-direction: column; gap: 24px; padding: 24px 16px; }
-    .view-left { position: relative; top: 0; width: 100%; flex: auto; text-align: center; display: flex; flex-direction: column; align-items: center; }
-    .view-cover-wrapper { max-width: 260px; }
-    .view-title { font-size: 24px; margin: 20px 0 6px; }
-    .view-right { padding: 4px; background: transparent; box-shadow: none; width: 100%; }
-    .track-item { padding: 12px 8px; font-size: 13px; }
-    
-    .mini-player { grid-template-columns: 1fr auto; height: auto; padding: 12px 16px calc(12px + env(safe-area-inset-bottom)); gap: 12px; }
-    .mp-info { max-width: calc(100vw - 140px); padding: 4px; }
-    .mp-cover { width: 48px; height: 48px; min-width: 48px; }
-    .mp-title { font-size: 13px; }
-    .mp-album-label { font-size: 10px; }
-    .mp-right { display: none; }
-    .mp-center { grid-column: 1 / -1; width: 100%; order: 3; padding-top: 4px; }
-    .mp-controls { position: absolute; right: 16px; top: 16px; gap: 16px; }
-    .mp-controls .mp-btn:first-child, .mp-controls .mp-btn:last-child { display: none; }
-    .mp-btn-main { width: 40px; height: 40px; }
-    
-    .full-player { padding: 20px 20px 40px; justify-content: flex-start; padding-top: 60px; }
-    .full-cover-wrapper { width: min(320px, 100%); margin-bottom: 30px; }
-    .full-info h2 { font-size: 24px; }
-    .full-info p { font-size: 14px; }
-    .full-controls { gap: 20px; flex-wrap: wrap; }
-    .full-btn-main { width: 64px; height: 64px; }
-    .volume-container { display: none; }
-  }
-  @media(max-width: 400px) {
-    .album-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-    .nav-btn span { display: none; } 
-    .nav-btn { padding: 8px; justify-content: center; }
-    .nav-header { gap: 8px; font-size: 12px; }
-  }
-
-</style>
+<meta name="description" content="An independent archive of Ye recordings: demos, alternate mixes, live sets and lost sessions across the years.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#e9e4d8" id="themeColor">
+<link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/app.css">
+<script>
+  try {
+    var saved = JSON.parse(localStorage.getItem('ye.settings.v2') || '{}');
+    var mode = saved.theme || 'system';
+    var dark = mode === 'dark' || (mode === 'system' && matchMedia('(prefers-color-scheme: dark)').matches);
+    document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+  } catch (error) {}
+</script>
 </head>
 <body>
+<a class="skip" href="#main">Skip to the archive</a>
 
-<header>
-  <div class="header-left">
-    <h1>YE-ARCHIVE</h1>
-  </div>
-  
-  <nav class="nav-header" aria-label="Primary navigation">
-    <span id="tab-collection" class="nav-link active" onclick="switchTab('collection')">THE COLLECTION</span>
-    <span id="tab-playlists" class="nav-link" onclick="switchTab('playlists')">PLAYLISTS</span>
-    <span id="tab-search" class="nav-link" onclick="switchTab('search')">SEARCH</span>
+<svg xmlns="http://www.w3.org/2000/svg" class="sprite" aria-hidden="true" focusable="false">
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M8 5.2v13.6L19 12z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><path d="M8 5h3v14H8zM13 5h3v14h-3z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-prev" viewBox="0 0 24 24"><path d="M7 5v14"/><path d="M19 5l-9 7 9 7z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-next" viewBox="0 0 24 24"><path d="M17 5v14"/><path d="M5 5l9 7-9 7z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.3"/><path d="M15.6 15.6L20 20"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20.2S4.6 15.5 4.6 10.4A4.1 4.1 0 0 1 12 7.7a4.1 4.1 0 0 1 7.4 2.7c0 5.1-7.4 9.8-7.4 9.8z"/></symbol>
+  <symbol id="i-heart-fill" viewBox="0 0 24 24"><path d="M12 20.2S4.6 15.5 4.6 10.4A4.1 4.1 0 0 1 12 7.7a4.1 4.1 0 0 1 7.4 2.7c0 5.1-7.4 9.8-7.4 9.8z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-queue" viewBox="0 0 24 24"><path d="M4 7h11M4 12h11M4 17h7"/><path d="M17 14v6l5-3z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-expand" viewBox="0 0 24 24"><path d="M9 4H4v5M15 20h5v-5M20 9V4h-5M4 15v5h5"/></symbol>
+  <symbol id="i-collapse" viewBox="0 0 24 24"><path d="M9 4v5H4M15 20v-5h5M20 9h-5V4M4 15h5v5"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-chevron-left" viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></symbol>
+  <symbol id="i-chevron-right" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></symbol>
+  <symbol id="i-chevron-down" viewBox="0 0 24 24"><path d="M5 9l7 7 7-7"/></symbol>
+  <symbol id="i-shuffle" viewBox="0 0 24 24"><path d="M3 7h3.3c4.1 0 4.4 10 8.5 10H21"/><path d="M17 4l4 3-4 3"/><path d="M3 17h3.3c1.7 0 2.8-1.7 3.8-3.6"/><path d="M17 14l4 3-4 3"/></symbol>
+  <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></symbol>
+  <symbol id="i-settings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1-2.8 2.8-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.6V21h-4v-.1a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1L4.2 17l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.6-1H3v-4h.1a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9L4.2 7 7 4.2l.1.1a1.7 1.7 0 0 0 1.9.3 1.7 1.7 0 0 0 1-1.6V3h4v.1a1.7 1.7 0 0 0 1 1.6 1.7 1.7 0 0 0 1.9-.3l.1-.1L19.8 7l-.1.1a1.7 1.7 0 0 0-.3 1.9 1.7 1.7 0 0 0 1.6 1h.1v4H21a1.7 1.7 0 0 0-1.6 1z"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 24 24"><rect x="4" y="4" width="6.4" height="6.4"/><rect x="13.6" y="4" width="6.4" height="6.4"/><rect x="4" y="13.6" width="6.4" height="6.4"/><rect x="13.6" y="13.6" width="6.4" height="6.4"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 12l9 5 9-5M3 16l9 5 9-5"/></symbol>
+  <symbol id="i-stack" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="12" rx="1"/><path d="M8 20h8"/><path d="M9.5 8l5 2.5-5 2.5z" fill="currentColor" stroke="none"/></symbol>
+  <symbol id="i-rows" viewBox="0 0 24 24"><rect x="4" y="4.5" width="5" height="5"/><rect x="11.5" y="4.5" width="8.5" height="5"/><rect x="4" y="14.5" width="5" height="5"/><rect x="11.5" y="14.5" width="8.5" height="5"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><path d="M8 6h12M8 12h12M8 18h12"/><path d="M4 6h.01M4 12h.01M4 18h.01" stroke-width="2.4"/></symbol>
+  <symbol id="i-viz" viewBox="0 0 24 24"><path d="M4 14v-4M8 17V7M12 20V4M16 17V7M20 14v-4"/></symbol>
+  <symbol id="i-volume" viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M16 9a4 4 0 0 1 0 6M18.5 6.5a7.5 7.5 0 0 1 0 11"/></symbol>
+  <symbol id="i-volume-off" viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9z"/><path d="M17 9l4 6M21 9l-4 6"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 6.5"/></symbol>
+</svg>
+
+<header class="chrome" id="chrome">
+  <a class="brand" href="#main" data-tab="collection" aria-label="YE-ARCHIVE, go to collection">
+    <span class="brand-mark">¥</span>
+    <span class="brand-dot" aria-hidden="true"></span>
+  </a>
+
+  <nav class="nav" aria-label="Archive sections">
+    <button class="nav-item is-on" data-tab="collection" aria-current="page">
+      <svg class="i" aria-hidden="true"><use href="#i-grid"></use></svg>
+      <span>Collection</span>
+    </button>
+    <button class="nav-item" data-tab="eras">
+      <svg class="i" aria-hidden="true"><use href="#i-layers"></use></svg>
+      <span>Eras</span>
+    </button>
+    <button class="nav-item" data-tab="playlists">
+      <svg class="i" aria-hidden="true"><use href="#i-stack"></use></svg>
+      <span>Playlists</span>
+    </button>
   </nav>
 
-  <div class="header-actions">
-    <div class="user-dropdown-container">
-      <button class="user-btn" onclick="toggleUserMenu(event)">
-        <svg class="settings-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm9 3.5-2.1-.7a7.1 7.1 0 0 0-.6-1.5l1-2-2.1-2.1-2 1a7.1 7.1 0 0 0-1.5-.6L13 4h-2l-.7 2.1a7.1 7.1 0 0 0-1.5.6l-2-1L4.7 7.8l1 2a7.1 7.1 0 0 0-.6 1.5L3 12v2l2.1.7a7.1 7.1 0 0 0 .6 1.5l-1 2 2.1 2.1 2-1a7.1 7.1 0 0 0 1.5.6L11 22h2l.7-2.1a7.1 7.1 0 0 0 1.5-.6l2 1 2.1-2.1-1-2a7.1 7.1 0 0 0 .6-1.5L21 14v-2Z"/></svg>
-        <span class="settings-label">SETTINGS</span>
-      </button>
-      <div class="user-dropdown" id="userDropdown">
-        <div class="dropdown-item" onclick="openBlog('THE VISION', 'Making the vault accessible. Less time searching, more time listening.')">THE VISION</div>
-        <div class="dropdown-item" onclick="openBlog('WHAT\'S NEW', '<div class=\'blog-bullet\'>&bull; W Upgrades: Ambient Mode Glow</div><div class=\'blog-bullet\'>&bull; Dynamic Scrolling Titles & Fade Mask</div><div class=\'blog-bullet\'>&bull; Autoplay & Visualizer</div><div class=\'blog-bullet\'>&bull; Keyboard Controls Included</div>')">WHAT'S NEW</div>
-        <div class="dropdown-item dark-mode-item" onclick="toggleSetting('theme', event)">
-          <span>DARK MODE</span>
-          <div class="dark-mode-toggle" id="darkModeToggle"></div>
-        </div>
-        <div class="dropdown-item dark-mode-item" onclick="toggleSetting('autoplay', event)">
-          <span>AUTOPLAY</span>
-          <div class="dark-mode-toggle" id="autoplayToggle"></div>
-        </div>
-        <div class="dropdown-item dark-mode-item" onclick="toggleSetting('visualizer', event)">
-          <span>VISUALIZER</span>
-          <div class="dark-mode-toggle" id="visualizerToggle"></div>
-        </div>
-      </div>
-    </div>
+  <div class="chrome-tools">
+    <button class="tool" id="openSearch" aria-label="Search the archive (Command K)" title="Search (⌘K)">
+      <svg class="i" aria-hidden="true"><use href="#i-search"></use></svg>
+    </button>
+    <button class="tool" id="themeToggle" aria-label="Switch between light and dark" title="Switch theme">
+      <svg class="i" aria-hidden="true"><use href="#i-moon"></use></svg>
+    </button>
+    <button class="tool" id="openSettings" aria-label="Open settings" title="Settings">
+      <svg class="i" aria-hidden="true"><use href="#i-settings"></use></svg>
+    </button>
   </div>
 </header>
 
-<main>
-  <div id="defaultUI">
-    <div class="album-grid" id="albumGrid"></div>
-  </div>
-
-  <div id="playlistsUI" style="display: none;">
-    <div class="album-grid">
-      <div class="album-card" onclick="openShuffle()">
-        <div class="playlist-card shuffle">
-          <svg viewBox="0 0 24 24"><path d="M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z"/></svg>
-        </div>
-        <div class="album-name">SHUFFLE PLAYLIST</div>
-        <div class="album-year">AUTO-GENERATED</div>
-      </div>
-      <div class="album-card" onclick="openLikedSongs()">
-        <div class="playlist-card liked">
-          <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-        </div>
-        <div class="album-name">LIKED SONGS</div>
-        <div class="album-year" id="likedCountLabel">0 TRACKS</div>
-      </div>
+<div class="shell">
+  <header class="topbar" id="top">
+    <div class="topbar-context">
+<!--       <span class="context-kicker">YE-ARCHIVE/span> -->
+      <span class="context-title" id="contextTitle">Collection</span>
     </div>
-  </div>
-
-  <div id="searchScreenUI" class="mobile-search-screen">
-    <input type="text" id="searchInputMobile" class="mobile-search-box" placeholder="SEARCH..." autocomplete="off">
-    <div class="album-grid" id="mobileSearchGrid"></div>
-  </div>
-
-  <div id="searchUI" style="display: none;">
-    <div class="search-header-row">
-      <h2>SEARCH RESULTS</h2>
-      <button class="nav-btn" onclick="closeSearch()">CLOSE &times;</button>
-    </div>
-    <div class="album-grid" id="searchGrid"></div>
-  </div>
-</main>
-
-<div id="albumView" class="album-view">
-  <div class="album-view-header">
-    <button class="nav-btn" onclick="closeAlbum()">&larr; BACK</button>
-  </div>
-  <div class="album-content">
-    <div class="view-left">
-      <div class="view-cover-wrapper">
-        <div id="viewCoverGlow" class="view-cover-glow"></div>
-        <img id="viewCover" class="view-cover" src="">
-      </div>
-      <h2 id="viewTitle" class="view-title"></h2>
-      <p id="viewMeta" class="view-meta"></p>
-      <p id="viewNotes" class="view-notes"></p>
-      <a id="albumDownload" class="download-album-btn" href="#" download>DOWNLOAD (.ZIP)</a>
-    </div>
-    <div class="view-right">
-      <ul id="trackList" class="track-list"></ul>
-    </div>
-  </div>
-</div>
-
-<div id="miniPlayer" class="mini-player">
-  <div class="mp-info" onclick="toggleFullPlayer()">
-    <img id="mpCover" class="mp-cover" src="">
-    <div class="mp-text-container" id="mpTextContainer">
-      <div class="mp-title" id="mpTitle">Select a song</div>
-      <div id="mpAlbum" class="mp-album-label"></div>
-    </div>
-  </div>
-  <div class="mp-center">
-    <div class="mp-controls">
-      <button class="mp-btn" onclick="playNextCmd(true)"><svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg></button>
-      <button class="mp-btn mp-btn-main" onclick="togglePlay()">
-        <svg id="iconPlay" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-        <svg id="iconPause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+    <div class="topbar-tools">
+      <span class="topbar-stat" id="topbarStat">189 projects, 2,319 recordings</span>
+      <button class="search-trigger" id="openSearch2">
+        <svg class="i" aria-hidden="true"><use href="#i-search"></use></svg>
+        <span>Search the archive</span>
+        <kbd>⌘K</kbd>
       </button>
-      <button class="mp-btn" onclick="playNextCmd(false)"><svg viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg></button>
     </div>
-    <div class="mp-progress-container">
-      <span class="mp-time" id="currentTime">0:00</span>
-      <input type="range" id="progressBar" value="0" min="0" max="100">
-      <span class="mp-time" id="duration">0:00</span>
-    </div>
-  </div>
-  <div class="mp-right">
-    <button class="action-icon-btn like-btn" id="miniLikeBtn" onclick="toggleLikeCurrent()" style="border:none; background:transparent;">
-      <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="view" id="view-collection" data-view="collection">
+      <section class="hero" aria-labelledby="heroTitle">
+        <div class="hero-copy">
+          <p class="hero-lede">An independent, non-commercial archive</p>
+          <div class="hero-title-wrap">
+            <h1 class="hero-title" id="heroTitle">Every era. Every leak. Every grail.</h1>
+            <p class="hero-count" id="heroCount">189 projects. 23 eras. 2,319 recordings.</p>
+          </div>
+          <div class="hero-actions">
+            <button class="btn btn-primary" id="heroSearch">
+              <svg class="i" aria-hidden="true"><use href="#i-search"></use></svg>
+              Search the archive
+            </button>
+            <button class="btn btn-ghost" id="heroShuffle">
+              <svg class="i" aria-hidden="true"><use href="#i-shuffle"></use></svg>
+              Surprise Me
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-sheet-wrap">
+          <div class="sheet-head">
+            <span class="sheet-label" id="sheetLabel">Contact sheet 01</span>
+            <button class="sheet-refresh" id="sheetRefresh">
+              <svg class="i" aria-hidden="true"><use href="#i-shuffle"></use></svg>
+              New sheet
+            </button>
+          </div>
+          <div class="contact-sheet" id="contactSheet" aria-label="A selection of album covers">
+            <div class="skeleton-tile skeleton-big"></div>
+            <div class="skeleton-tile"></div><div class="skeleton-tile"></div><div class="skeleton-tile"></div>
+            <div class="skeleton-tile"></div><div class="skeleton-tile"></div><div class="skeleton-tile"></div>
+            <div class="skeleton-tile"></div><div class="skeleton-tile"></div><div class="skeleton-tile"></div>
+            <div class="skeleton-tile"></div><div class="skeleton-tile"></div><div class="skeleton-tile"></div>
+          </div>
+          <p class="sheet-foot">A rotating selection from all 23 eras. Open any sleeve.</p>
+        </div>
+      </section>
+
+      <div class="toolbar" id="toolbar">
+        <div class="toolbar-left">
+          <div class="field">
+            <label for="eraFilter" class="field-label">Era</label>
+            <div class="select-wrap">
+              <select id="eraFilter"><option value="all">All eras</option></select>
+              <svg class="i" aria-hidden="true"><use href="#i-chevron-down"></use></svg>
+            </div>
+          </div>
+          <div class="field">
+            <label for="sortFilter" class="field-label">Sort</label>
+            <div class="select-wrap">
+              <select id="sortFilter">
+                <option value="era">Era</option>
+                <option value="az">A–Z</option>
+                <option value="tracks">Most recordings</option>
+              </select>
+              <svg class="i" aria-hidden="true"><use href="#i-chevron-down"></use></svg>
+            </div>
+          </div>
+          <div class="field field-view">
+            <span class="field-label">View</span>
+            <div class="segmented" role="group" aria-label="Collection view">
+              <button type="button" data-viewmode="shelves" class="is-on" aria-pressed="true" aria-label="Shelf view">
+                <svg class="i" aria-hidden="true"><use href="#i-rows"></use></svg><span>Shelves</span>
+              </button>
+              <button type="button" data-viewmode="wall" aria-pressed="false" aria-label="Wall view">
+                <svg class="i" aria-hidden="true"><use href="#i-grid"></use></svg><span>Wall</span>
+              </button>
+              <button type="button" data-viewmode="index" aria-pressed="false" aria-label="Index view">
+                <svg class="i" aria-hidden="true"><use href="#i-list"></use></svg><span>Index</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="toolbar-right">
+          <span class="result-count" id="resultCount">189 projects</span>
+          <button class="icon-btn" id="shuffleAll" aria-label="Play a random recording" title="Play a random recording">
+            <svg class="i" aria-hidden="true"><use href="#i-shuffle"></use></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="collection-body" id="collectionBody">
+        <div class="loading-shelves" aria-hidden="true">
+          <div class="loading-head"></div>
+          <div class="loading-row"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="loading-head"></div>
+          <div class="loading-row"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+      </div>
+
+      <footer class="site-foot">
+        <p>An independent, non-commercial fan archive for research and listening. No recordings are sold here.</p>
+        <p><a href="https://github.com/nichuu123/YE-ARCHIVE" target="_blank" rel="noopener">Source and corrections</a><span class="foot-sep">/</span><a href="mailto:bruhifyinglife@gmail.com">bruhifyinglife@gmail.com</a></p>
+      </footer>
+    </section>
+
+    <section class="view" id="view-eras" data-view="eras" hidden>
+      <header class="view-head">
+        <h1 class="view-title">23 eras,<br>one archive.</h1>
+        <p class="view-lede">From basement tapes to the Vultures sessions. Each era gathers the projects, versions and live recordings that belong together. Pick a shelf to see everything inside it.</p>
+      </header>
+      <div class="eras-grid" id="erasGrid"></div>
+      <footer class="site-foot">
+        <p>An independent, non-commercial fan archive for research and listening. No recordings are sold here.</p>
+        <p><a href="https://github.com/nichuu123/YE-ARCHIVE" target="_blank" rel="noopener">Source and corrections</a><span class="foot-sep">/</span><a href="mailto:bruhifyinglife@gmail.com">bruhifyinglife@gmail.com</a></p>
+      </footer>
+    </section>
+
+    <section class="view" id="view-playlists" data-view="playlists" hidden>
+      <header class="view-head">
+        <h1 class="view-title">Sides and<br>detours.</h1>
+        <p class="view-lede">Three ways back into the archive: a fresh shuffle, everything you have liked, and the recordings you played last. They stay on this device only.</p>
+      </header>
+      <div class="playlist-grid" id="playlistGrid"></div>
+      <section class="recent-section" id="recentSection" aria-labelledby="recentTitle">
+        <div class="section-head">
+          <h2 id="recentTitle">Recently played</h2>
+          <span id="recentCount"></span>
+        </div>
+        <div class="recent-list" id="recentList"></div>
+      </section>
+      <footer class="site-foot">
+        <p>An independent, non-commercial fan archive for research and listening. No recordings are sold here.</p>
+        <p><a href="https://github.com/nichuu123/YE-ARCHIVE" target="_blank" rel="noopener">Source and corrections</a><span class="foot-sep">/</span><a href="mailto:bruhifyinglife@gmail.com">bruhifyinglife@gmail.com</a></p>
+      </footer>
+    </section>
+  </main>
+</div>
+
+<div class="project" id="projectView" role="dialog" aria-modal="true" aria-labelledby="projectTitle" aria-hidden="true" inert>
+  <div class="project-top">
+    <button class="btn btn-ghost btn-small" id="projectBack">
+      <svg class="i" aria-hidden="true"><use href="#i-chevron-left"></use></svg>
+      <span id="projectBackLabel">Collection</span>
     </button>
-  </div> 
+    <span class="project-index" id="projectIndex"></span>
+    <button class="icon-btn" id="projectClose" aria-label="Close project">
+      <svg class="i" aria-hidden="true"><use href="#i-close"></use></svg>
+    </button>
+  </div>
+  <div class="project-scroll" id="projectScroll">
+    <div class="project-inner" id="projectInner"></div>
+  </div>
 </div>
 
-<div id="fullPlayer" class="full-player">
-  <canvas id="visualizerCanvas"></canvas>
-  <div class="swipe-handle"></div>
-  <button class="close-full" onclick="toggleFullPlayer()">&times;</button>
-  
-  <div class="full-content">
-    <div class="full-cover-wrapper">
-      <div id="fullCoverGlow" class="full-cover-glow"></div>
-      <img id="fullCover" class="full-cover" src="">
+<div class="dock" id="dock" aria-label="Player">
+  <div class="dock-progress" aria-hidden="true"><span id="dockProgress"></span></div>
+  <button class="dock-now" id="dockNow" aria-label="Open full player">
+    <span class="dock-art" id="dockArt"></span>
+    <span class="dock-text">
+      <strong id="dockTitle">Nothing playing</strong>
+      <span id="dockMeta">Choose a recording to begin</span>
+    </span>
+  </button>
+  <div class="dock-center">
+    <div class="dock-transport">
+      <button class="icon-btn" id="dockPrev" aria-label="Previous recording">
+        <svg class="i" aria-hidden="true"><use href="#i-prev"></use></svg>
+      </button>
+      <button class="dock-play" id="dockPlay" aria-label="Play">
+        <svg class="i" aria-hidden="true"><use href="#i-play"></use></svg>
+      </button>
+      <button class="icon-btn" id="dockNext" aria-label="Next recording">
+        <svg class="i" aria-hidden="true"><use href="#i-next"></use></svg>
+      </button>
     </div>
-    
-    <div class="full-info-container" style="width: 100%;">
-      <div class="full-info">
-        <div class="full-info-text">
-          <h2 id="fullTitle">...</h2>
-          <p id="fullAlbum">ALBUM</p>
-        </div>
-        <button class="full-like-btn" id="fullLikeBtn" onclick="toggleLikeCurrent()">
-           <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-        </button>
+    <div class="dock-seek">
+      <span class="time" id="dockCur">0:00</span>
+      <input class="range" id="dockRange" type="range" min="0" max="1000" value="0" aria-label="Seek">
+      <span class="time" id="dockDur">0:00</span>
+    </div>
+  </div>
+  <div class="dock-actions">
+    <button class="icon-btn dock-like" id="dockLike" aria-label="Like this recording">
+      <svg class="i" aria-hidden="true"><use href="#i-heart"></use></svg>
+    </button>
+    <button class="icon-btn dock-queue" id="dockQueue" aria-label="Open queue">
+      <svg class="i" aria-hidden="true"><use href="#i-queue"></use></svg>
+      <span class="badge" id="queueBadge" hidden>0</span>
+    </button>
+    <div class="dock-volume">
+      <button class="icon-btn" id="dockMute" aria-label="Mute">
+        <svg class="i" aria-hidden="true"><use href="#i-volume"></use></svg>
+      </button>
+      <input class="range range-vol" id="volumeRange" type="range" min="0" max="100" value="80" aria-label="Volume">
+    </div>
+    <button class="icon-btn" id="dockExpand" aria-label="Open full player">
+      <svg class="i" aria-hidden="true"><use href="#i-expand"></use></svg>
+    </button>
+  </div>
+  <div class="dock-idle">
+    <span class="dock-idle-mark" aria-hidden="true"></span>
+    <span class="dock-idle-text">The archive is ready.</span>
+    <button class="btn btn-primary btn-small" id="idleSearch">
+      <svg class="i" aria-hidden="true"><use href="#i-search"></use></svg>
+      Find something to play
+    </button>
+    <button class="icon-btn" id="idleQueue" aria-label="Open queue">
+      <svg class="i" aria-hidden="true"><use href="#i-queue"></use></svg>
+    </button>
+  </div>
+</div>
+
+<div class="full" id="fullPlayer" role="dialog" aria-modal="true" aria-label="Now playing" aria-hidden="true" inert>
+  <div class="full-bg" id="fullBg" aria-hidden="true"></div>
+  <canvas class="viz" id="viz" aria-hidden="true"></canvas>
+  <div class="full-top">
+    <span class="full-mark">YE-ARCHIVE</span>
+    <button class="icon-btn full-close" id="fullClose" aria-label="Close full player">
+      <svg class="i" aria-hidden="true"><use href="#i-collapse"></use></svg>
+    </button>
+  </div>
+  <div class="full-grid">
+    <div class="full-sleeve-wrap">
+      <div class="full-vinyl" id="fullVinyl" aria-hidden="true"><span class="full-vinyl-label"></span></div>
+      <div class="full-sleeve" id="fullSleeve"></div>
+    </div>
+    <div class="full-info">
+      <p class="full-era" id="fullEra"></p>
+      <h2 class="full-title" id="fullTitle">Nothing playing</h2>
+      <p class="full-album" id="fullAlbum"></p>
+      <div class="full-seek">
+        <input class="range range-lg" id="fullRange" type="range" min="0" max="1000" value="0" aria-label="Seek">
+        <div class="full-times"><span id="fullCur">0:00</span><span id="fullDur">0:00</span></div>
       </div>
-      
-      <div class="full-progress">
-        <input type="range" id="fullProgressBar" value="0" style="width: 100%;">
-        <div class="full-progress-times">
-          <span id="fullCurrentTime">0:00</span>
-          <span id="fullDuration">0:00</span>
-        </div>
-      </div>
-      
       <div class="full-controls">
-        <button class="full-btn" onclick="playNextCmd(true)"><svg viewBox="0 0 24 24"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg></button>
-        <button class="full-btn full-btn-main" onclick="togglePlay()">
-          <svg id="fullIconPlay" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-          <svg id="fullIconPause" viewBox="0 0 24 24" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+        <button class="icon-btn" id="fullPrev" aria-label="Previous recording">
+          <svg class="i" aria-hidden="true"><use href="#i-prev"></use></svg>
         </button>
-        <button class="full-btn" onclick="playNextCmd(false)"><svg viewBox="0 0 24 24"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg></button>
-        
-        <div class="volume-container">
-          <div class="volume-icon">
-             <svg viewBox="0 0 24 24"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>
-          </div>
-          <input type="range" id="volumeSlider" min="0" max="1" step="0.05" value="1">
+        <button class="full-play" id="fullPlay" aria-label="Play">
+          <svg class="i" aria-hidden="true"><use href="#i-play"></use></svg>
+        </button>
+        <button class="icon-btn" id="fullNext" aria-label="Next recording">
+          <svg class="i" aria-hidden="true"><use href="#i-next"></use></svg>
+        </button>
+      </div>
+      <div class="full-tools">
+        <button class="icon-btn" id="fullLike" aria-label="Like this recording">
+          <svg class="i" aria-hidden="true"><use href="#i-heart"></use></svg>
+        </button>
+        <button class="icon-btn" id="fullQueue" aria-label="Open queue">
+          <svg class="i" aria-hidden="true"><use href="#i-queue"></use></svg>
+        </button>
+        <div class="full-volume">
+          <svg class="i" aria-hidden="true"><use href="#i-volume"></use></svg>
+          <input class="range" id="fullVolume" type="range" min="0" max="100" value="80" aria-label="Volume">
         </div>
+        <button class="icon-btn" id="fullViz" aria-label="Toggle visualizer" aria-pressed="false">
+          <svg class="i" aria-hidden="true"><use href="#i-viz"></use></svg>
+        </button>
+        <button class="btn btn-ghost btn-small" id="fullProject">Open project</button>
       </div>
     </div>
   </div>
 </div>
 
-<audio id="globalAudio" preload="metadata"></audio>
-
-<div class="backdrop" id="blogBackdrop">
-  <div class="modal">
-    <button class="close-modal" onclick="document.getElementById('blogBackdrop').classList.remove('show')">&times;</button>
-    <h2 id="blogTitle" style="margin-top:0; text-transform:uppercase;"></h2>
-    <div id="blogContent" style="line-height:1.6; color:#444; font-size: 14px;"></div>
+<div class="sheet scrim" id="searchSheet" role="dialog" aria-modal="true" aria-labelledby="searchLabel" aria-hidden="true" inert>
+  <div class="search-panel">
+    <div class="search-bar">
+      <svg class="i" aria-hidden="true"><use href="#i-search"></use></svg>
+      <label class="sr-only" id="searchLabel" for="searchInput">Search projects and recordings</label>
+      <input id="searchInput" type="search" placeholder="Search projects and recordings" autocomplete="off" spellcheck="false">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="search-results" id="searchResults" role="listbox" aria-label="Search results"></div>
+    <div class="search-foot">
+      <span><kbd>↑</kbd><kbd>↓</kbd> navigate</span>
+      <span><kbd>Enter</kbd> open</span>
+      <span><kbd>Esc</kbd> close</span>
+    </div>
   </div>
 </div>
 
-<script src="catalog.js?v=20260926"></script>
-<script>
-// --- SETTINGS & DROPDOWN ---
-let settings = {
-  theme: localStorage.getItem('ye_archive_theme') || 'light',
-  autoplay: localStorage.getItem('ye_archive_autoplay') !== 'false',
-  visualizer: localStorage.getItem('ye_archive_visualizer') === 'true'
-};
-
-function toggleUserMenu(e) {
-  e.stopPropagation();
-  const menu = document.getElementById('userDropdown');
-  menu.classList.toggle('show');
-}
-
-document.addEventListener('click', (e) => {
-  const menu = document.getElementById('userDropdown');
-  if (menu && menu.classList.contains('show') && !e.target.closest('.user-dropdown-container')) {
-    menu.classList.remove('show');
-  }
-});
-
-function applySettings() {
-  document.body.classList.toggle('dark-mode', settings.theme === 'dark');
-  document.getElementById('darkModeToggle').classList.toggle('active', settings.theme === 'dark');
-  document.getElementById('autoplayToggle').classList.toggle('active', settings.autoplay);
-  document.getElementById('visualizerToggle').classList.toggle('active', settings.visualizer);
-  if(settings.visualizer) initVisualizer();
-}
-
-function toggleSetting(key, e) {
-  if (e) e.stopPropagation();
-  if (key === 'theme') {
-    settings.theme = settings.theme === 'dark' ? 'light' : 'dark';
-    localStorage.setItem('ye_archive_theme', settings.theme);
-  } else {
-    settings[key] = !settings[key];
-    localStorage.setItem('ye_archive_' + key, settings[key]);
-  }
-  applySettings();
-}
-applySettings();
-
-// --- DYNAMIC FADE & MARQUEE SCROLLING LOGIC ---
-function setupMarquee(textEl, containerEl) {
-  if (!textEl || !containerEl) return;
-
-  // Reset current state
-  textEl.classList.remove('marquee-scroll');
-  containerEl.classList.remove('has-fade');
-  textEl.style.removeProperty('--scroll-dist');
-  textEl.style.removeProperty('--scroll-duration');
-
-  requestAnimationFrame(() => {
-    // Check if text width exceeds container width
-    const textWidth = textEl.scrollWidth;
-    const containerWidth = containerEl.clientWidth;
-    const overflow = textWidth - containerWidth;
-
-    if (overflow > 4) {
-      const scrollDist = overflow + 18; // Extra padding so trailing letters don't get cut off
-      const duration = Math.max(6, scrollDist / 25); // ~25px per second scrolling speed, minimum 6s
-
-      textEl.style.setProperty('--scroll-dist', `${scrollDist}px`);
-      textEl.style.setProperty('--scroll-duration', `${duration}s`);
-      containerEl.classList.add('has-fade');
-      textEl.classList.add('marquee-scroll');
-    }
-  });
-}
-
-function updateAllMarquees() {
-  setupMarquee(document.getElementById('mpTitle'), document.getElementById('mpTextContainer'));
-  if (document.getElementById('fullPlayer').classList.contains('active')) {
-    setupMarquee(document.getElementById('fullTitle'), document.querySelector('.full-info-text'));
-  }
-}
-
-// --- KEYBOARD CONTROLS ---
-document.addEventListener('keydown', (e) => {
-  if(e.target.tagName === 'INPUT') return;
-  if(e.code === 'Space') { e.preventDefault(); togglePlay(); }
-  if(e.code === 'ArrowRight') { playNextCmd(false); }
-  if(e.code === 'ArrowLeft') { playNextCmd(true); }
-});
-
-function openBlog(t, htmlContent) {
-  document.getElementById('blogTitle').textContent = t;
-  document.getElementById('blogContent').innerHTML = htmlContent;
-  document.getElementById('blogBackdrop').classList.add('show');
-  document.getElementById('userDropdown').classList.remove('show'); 
-}
-
-// --- DATABASE & AMBIENT GLOW HELPER ---
-const database = window.YE_ARCHIVE_DATABASE || [];
-const fallbackCoverFor = album => coverFor(album.title, album.era);
-
-const setCoverImage = async (image, album, glowElement = null) => {
-  const fallback = fallbackCoverFor(album);
-  const applySrc = (src) => {
-    image.src = src;
-    if (glowElement) {
-      glowElement.style.backgroundImage = `url("${src}")`;
-    }
-  };
-
-  if (!album.cover) {
-    image.onerror = null;
-    applySrc(fallback);
-    return;
-  }
-  image.onerror = () => {
-    image.onerror = null;
-    applySrc(fallback);
-  };
-  if (window.location.protocol === 'file:' && album.cover.startsWith('music/')) {
-    try {
-      const response = await fetch(album.cover);
-      if (!response.ok) throw new Error(`Could not load cover: ${response.status}`);
-      const blob = await response.blob();
-      const objectUrl = URL.createObjectURL(blob);
-      applySrc(objectUrl);
-      return;
-    } catch (error) {
-      image.onerror = null;
-      applySrc(fallback);
-      return;
-    }
-  }
-  applySrc(album.cover);
-};
-
-// --- STATE ---
-let activePlaylistContext = null; 
-let activePlaylistIndex = -1, activeTrackIndex = -1, viewingPlaylistIndex = -1;
-let queue = [];
-let playbackList = []; 
-let generatedShufflePlaylist = [];
-
-const audio = document.getElementById('globalAudio');
-const albumGrid = document.getElementById('albumGrid');
-let audioObjectUrl = null;
-
-function setAudioSource(file) {
-  if (window.location.protocol !== 'file:') {
-    audio.src = file;
-    audio.load();
-    return null;
-  }
-
-  return (async () => {
-    const response = await fetch(file);
-    if (!response.ok) throw new Error(`Could not load audio: ${response.status}`);
-    const blob = await response.blob();
-    if (audioObjectUrl) URL.revokeObjectURL(audioObjectUrl);
-    audioObjectUrl = URL.createObjectURL(blob);
-    audio.src = audioObjectUrl;
-    audio.load();
-  })();
-}
-
-// --- LOCAL STORAGE (LIKES) ---
-let likedSongs = JSON.parse(localStorage.getItem('ye_archive_likes')) || [];
-
-function updateLikedCountUI() {
-  const el = document.getElementById('likedCountLabel');
-  if (el) el.textContent = `${likedSongs.length} TRACKS`;
-}
-updateLikedCountUI();
-
-function isLiked(pIdx, tIdx) {
-  return likedSongs.some(lk => lk.p === pIdx && lk.t === tIdx);
-}
-
-function toggleLikeData(pIdx, tIdx, btnElement = null) {
-  const existingIdx = likedSongs.findIndex(lk => lk.p === pIdx && lk.t === tIdx);
-  if (existingIdx !== -1) {
-    likedSongs.splice(existingIdx, 1);
-    if (btnElement) btnElement.classList.remove('liked');
-  } else {
-    likedSongs.push({ p: pIdx, t: tIdx });
-    if (btnElement) btnElement.classList.add('liked');
-  }
-  localStorage.setItem('ye_archive_likes', JSON.stringify(likedSongs));
-  updateLikedCountUI();
-  
-  if (viewingPlaylistIndex === 'liked' && document.getElementById('albumView').classList.contains('show')) {
-    renderTrackList();
-  }
-  updateLikeButtonsForCurrent();
-}
-
-function toggleLikeCurrent() {
-  if (activePlaylistIndex === -1) return;
-  toggleLikeData(activePlaylistIndex, activeTrackIndex);
-}
-
-function updateLikeButtonsForCurrent() {
-  if (activePlaylistIndex === -1) return;
-  const liked = isLiked(activePlaylistIndex, activeTrackIndex);
-  const miniBtn = document.getElementById('miniLikeBtn');
-  const fullBtn = document.getElementById('fullLikeBtn');
-  if (liked) {
-    miniBtn.classList.add('liked');
-    fullBtn.classList.add('liked');
-  } else {
-    miniBtn.classList.remove('liked');
-    fullBtn.classList.remove('liked');
-  }
-}
-
-// Init Grid
-let currentEra = '';
-database.forEach((alb, i) => {
-  if (alb.era !== currentEra) {
-    currentEra = alb.era;
-    const heading = document.createElement('h2');
-    heading.className = 'era-section-header';
-    heading.textContent = alb.era;
-    albumGrid.appendChild(heading);
-  }
-  const div = document.createElement('div');
-  div.className = 'album-card';
-  div.innerHTML = `
-    <div class="album-cover-wrapper">
-      <div class="album-glow-backdrop"></div>
-      <img loading="lazy" alt="${alb.title} cover" class="album-cover-img">
+<div class="drawer-scrim" id="queueScrim" hidden></div>
+<aside class="drawer queue" id="queueSheet" role="dialog" aria-modal="true" aria-labelledby="queueTitle" aria-hidden="true" inert>
+  <header class="drawer-head">
+    <div>
+      <h2 id="queueTitle">Queue</h2>
+      <p id="queueMeta">0 recordings</p>
     </div>
-    <div class="album-name">${alb.title}</div>
-    <div class="album-year">${alb.tracks.length} TRACKS</div>
-  `;
-  setCoverImage(div.querySelector('.album-cover-img'), alb, div.querySelector('.album-glow-backdrop'));
-  div.onclick = () => openAlbum(i);
-  albumGrid.appendChild(div);
-});
+    <button class="icon-btn" id="queueClose" aria-label="Close queue">
+      <svg class="i" aria-hidden="true"><use href="#i-close"></use></svg>
+    </button>
+  </header>
+  <div class="drawer-body" id="queueBody"></div>
+  <footer class="drawer-foot">
+    <button class="btn btn-ghost btn-small" id="queueClear">Clear queue</button>
+    <button class="btn btn-primary btn-small" id="queuePlay">Play next</button>
+  </footer>
+</aside>
 
-// --- TABS UI ---
-function switchTab(tab) {
-  document.getElementById('tab-collection').classList.toggle('active', tab === 'collection');
-  document.getElementById('tab-playlists').classList.toggle('active', tab === 'playlists');
-  document.getElementById('tab-search').classList.toggle('active', tab === 'search');
-  
-  document.getElementById('defaultUI').style.display = tab === 'collection' ? 'block' : 'none';
-  document.getElementById('playlistsUI').style.display = tab === 'playlists' ? 'block' : 'none';
-  document.getElementById('searchScreenUI').style.display = tab === 'search' ? 'block' : 'none';
-  
-  closeSearch();
-
-  if (tab === 'search') {
-    document.getElementById('searchInputMobile').focus();
-  }
-}
-
-// --- QUEUE & PLAYBACK LOGIC ---
-function addToQueue(pIdx, tIdx, btnElement) {
-  queue.push({ p: pIdx, t: tIdx });
-  btnElement.textContent = '\u2713';
-  btnElement.style.borderColor = '#111';
-  btnElement.style.color = '#111';
-  setTimeout(() => {
-    btnElement.innerHTML = '+';
-    btnElement.style.borderColor = '';
-    btnElement.style.color = '';
-  }, 1000);
-}
-
-function playNextCmd(isPrev) {
-  if (playbackList.length === 0) return;
-  
-  if (!isPrev && queue.length > 0) {
-    const nextItem = queue.shift();
-    playSongDirect(nextItem.p, nextItem.t);
-    return;
-  }
-
-  let currentIndex = playbackList.findIndex(item => item.p === activePlaylistIndex && item.t === activeTrackIndex);
-  if (currentIndex === -1) currentIndex = 0;
-
-  let nextIdx = isPrev ? currentIndex - 1 : currentIndex + 1;
-  if (nextIdx >= playbackList.length) nextIdx = 0;
-  if (nextIdx < 0) nextIdx = playbackList.length - 1;
-
-  const nextSong = playbackList[nextIdx];
-  playSongDirect(nextSong.p, nextSong.t);
-}
-
-audio.onended = () => {
-  if (settings.autoplay || queue.length > 0) playNextCmd(false);
-};
-
-// --- VOLUME CONTROL ---
-document.getElementById('volumeSlider').addEventListener('input', (e) => {
-  audio.volume = e.target.value;
-});
-
-async function playSongDirect(pIdx, tIdx) {
-  activePlaylistIndex = pIdx; 
-  activeTrackIndex = tIdx;
-  const alb = database[pIdx];
-  const song = alb.tracks[tIdx];
-  
-  document.documentElement.style.setProperty('--album-accent', alb.accent || '#e2e2e2');
-  try {
-    const sourceReady = setAudioSource(song.file);
-    if (sourceReady) await sourceReady;
-  } catch (error) {
-    console.error('Audio load failed:', error);
-    updatePlayPauseUI(false);
-    document.getElementById('mpAlbum').textContent = 'AUDIO FILE COULD NOT LOAD';
-    return;
-  }
-  
-  if ('mediaSession' in navigator) {
-    navigator.mediaSession.metadata = new MediaMetadata({
-      title: song.title,
-      artist: `${alb.title}: Kanye West`,
-      album: alb.title,
-      artwork: [{ src: alb.cover, sizes: '512x512', type: 'image/jpeg' }]
-    });
-    navigator.mediaSession.setActionHandler('play', togglePlay);
-    navigator.mediaSession.setActionHandler('pause', togglePlay);
-    navigator.mediaSession.setActionHandler('previoustrack', () => playNextCmd(true));
-    navigator.mediaSession.setActionHandler('nexttrack', () => playNextCmd(false));
-  }
-  
-  const playPromise = audio.play();
-  if (playPromise !== undefined) {
-    playPromise.then(() => {
-      updatePlayPauseUI(true);
-      if(settings.visualizer) initVisualizer();
-    }).catch(e => { console.log("Playback blocked:", e); updatePlayPauseUI(false); });
-  } else {
-    updatePlayPauseUI(true);
-  }
-  
-  updateLikeButtonsForCurrent();
-  
-  document.getElementById('miniPlayer').classList.add('active');
-  setCoverImage(document.getElementById('mpCover'), alb);
-  document.getElementById('mpTitle').textContent = song.title;
-  document.getElementById('mpAlbum').textContent = alb.title;
-  
-  if (document.getElementById('fullPlayer').classList.contains('active')) {
-    setCoverImage(document.getElementById('fullCover'), alb, document.getElementById('fullCoverGlow'));
-    document.getElementById('fullTitle').textContent = song.title;
-    document.getElementById('fullAlbum').textContent = alb.title;
-  }
-  
-  if (document.getElementById('albumView').classList.contains('show')) {
-     renderTrackList(); 
-  }
-
-  // Recalculate title text marquee scrolling and fade mask
-  updateAllMarquees();
-}
-
-function playSongFromContext(pIdx, tIdx, contextList, type) {
-  playbackList = contextList;
-  activePlaylistContext = type;
-  playSongDirect(pIdx, tIdx);
-}
-
-function playTrackClick(pIdx, tIdx) {
-  let ctxList, type;
-  if (viewingPlaylistIndex === 'liked') {
-    ctxList = likedSongs;
-    type = 'liked';
-  } else if (viewingPlaylistIndex === 'shuffle') {
-    ctxList = generatedShufflePlaylist;
-    type = 'shuffle';
-  } else {
-    ctxList = database[viewingPlaylistIndex].tracks.map((_, i) => ({ p: viewingPlaylistIndex, t: i }));
-    type = 'album';
-  }
-  playSongFromContext(pIdx, tIdx, ctxList, type);
-}
-
-function playSong(pIdx, tIdx) {
-  const contextList = database[pIdx].tracks.map((_, i) => ({ p: pIdx, t: i }));
-  playSongFromContext(pIdx, tIdx, contextList, 'album');
-}
-
-// --- SPECIAL PLAYLIST EXECUTIONS ---
-function openShuffle() {
-  let allTracks = [];
-  database.forEach((alb, pIdx) => {
-    alb.tracks.forEach((_, tIdx) => allTracks.push({ p: pIdx, t: tIdx }));
-  });
-  
-  allTracks.sort(() => Math.random() - 0.5);
-  generatedShufflePlaylist = allTracks.slice(0, 20); 
-
-  document.documentElement.style.setProperty('--album-accent', '#aaaaaa');
-  const shuffleCover = 'https://images.unsplash.com/photo-1619983081563-430f63602796?auto=format&fit=crop&w=500&q=80';
-  document.getElementById('viewCover').src = shuffleCover;
-  document.getElementById('viewCoverGlow').style.backgroundImage = `url("${shuffleCover}")`;
-  document.getElementById('viewTitle').textContent = 'SHUFFLE';
-  document.getElementById('viewMeta').textContent = `AUTO-GENERATED \u2022 20 TRACKS`;
-  document.getElementById('viewNotes').textContent = 'A fresh mix every time.';
-  document.getElementById('albumDownload').style.display = 'none';
-
-  viewingPlaylistIndex = 'shuffle';
-  document.getElementById('albumView').classList.add('show');
-  document.body.style.overflow = 'hidden';
-  renderTrackList();
-}
-
-function openLikedSongs() {
-  if (likedSongs.length === 0) return alert("No liked songs yet!");
-  
-  document.documentElement.style.setProperty('--album-accent', '#8e2de2');
-  
-  const firstLikedAlbum = database[likedSongs[0].p];
-  const likedCover = document.getElementById('viewCover');
-  const likedGlow = document.getElementById('viewCoverGlow');
-  if (firstLikedAlbum) {
-    setCoverImage(likedCover, firstLikedAlbum, likedGlow);
-  } else {
-    const fallbackLikedImg = 'https://images.unsplash.com/photo-1557682250-33bd709cbe85?auto=format&fit=crop&w=500&q=80';
-    likedCover.src = fallbackLikedImg;
-    likedGlow.style.backgroundImage = `url("${fallbackLikedImg}")`;
-  }
-  
-  document.getElementById('viewTitle').textContent = 'LIKED SONGS';
-  document.getElementById('viewMeta').textContent = `CUSTOM PLAYLIST \u2022 ${likedSongs.length} TRACKS`;
-  document.getElementById('viewNotes').textContent = 'Your personal vault.';
-  document.getElementById('albumDownload').style.display = 'none';
-
-  viewingPlaylistIndex = 'liked'; 
-  document.getElementById('albumView').classList.add('show');
-  document.body.style.overflow = 'hidden';
-  renderTrackList();
-}
-
-function togglePlay() { 
-  if(audio.paused) { 
-    audio.play().then(() => {
-      updatePlayPauseUI(true);
-      if(settings.visualizer) initVisualizer();
-    }).catch(e => updatePlayPauseUI(false));
-  } else { 
-    audio.pause(); 
-    updatePlayPauseUI(false); 
-  }
-}
-
-function updatePlayPauseUI(playing) {
-  document.getElementById('iconPlay').style.display = playing ? 'none' : 'block';
-  document.getElementById('iconPause').style.display = playing ? 'block' : 'none';
-  document.getElementById('fullIconPlay').style.display = playing ? 'none' : 'block';
-  document.getElementById('fullIconPause').style.display = playing ? 'block' : 'none';
-}
-
-// --- UI VIEWS ---
-function openAlbum(i) {
-  const alb = database[i];
-
-  document.documentElement.style.setProperty('--album-accent', alb.accent || '#ffffff');
-  setCoverImage(document.getElementById('viewCover'), alb, document.getElementById('viewCoverGlow'));
-  document.getElementById('viewTitle').textContent = alb.title;
-  document.getElementById('viewMeta').textContent = `${alb.year} \u2022 ${alb.tracks.length} TRACKS`;
-  document.getElementById('viewNotes').textContent = alb.notes;
-  
-  const download = document.getElementById('albumDownload');
-  download.style.display = alb.downloadUrl ? 'block' : 'none';
-  download.href = alb.downloadUrl || '#';
-
-  viewingPlaylistIndex = i;
-  document.getElementById('albumView').classList.add('show');
-  document.body.style.overflow = 'hidden';
-  renderTrackList();
-}
-
-function closeAlbum() { 
-  document.getElementById('albumView').classList.remove('show');
-  document.body.style.overflow = '';
-}
-
-function renderTrackList() {
-  const list = document.getElementById('trackList');
-  list.innerHTML = '';
-  
-  let targetList = [];
-  if (viewingPlaylistIndex === 'liked') {
-    targetList = likedSongs;
-  } else if (viewingPlaylistIndex === 'shuffle') {
-    targetList = generatedShufflePlaylist;
-  } else {
-    targetList = database[viewingPlaylistIndex].tracks.map((_, i) => ({ p: viewingPlaylistIndex, t: i }));
-  }
-
-  const fragment = document.createDocumentFragment();
-
-  targetList.forEach((item, index) => {
-    const alb = database[item.p];
-    if(!alb || !alb.tracks[item.t]) return;
-    const s = alb.tracks[item.t];
-    const li = document.createElement('li');
-    const isPlaying = (activePlaylistIndex === item.p && activeTrackIndex === item.t);
-    const hasLike = isLiked(item.p, item.t);
-
-    li.className = 'track-item' + (isPlaying ? ' is-playing' : '');
-    li.innerHTML = `
-      <span class="track-index">${index + 1}</span>
-      <span class="track-title" onclick="playTrackClick(${item.p}, ${item.t})">${s.title}</span>
-      <div class="track-actions">
-        <button class="action-icon-btn like-btn ${hasLike ? 'liked' : ''}" onclick="toggleLikeData(${item.p}, ${item.t}, this); event.stopPropagation();">
-          <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-        </button>
-        <a class="action-icon-btn" href="${s.file}" download="${s.title}.mp3" title="Download Track" onclick="event.stopPropagation();">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-            <polyline points="7 10 12 15 17 10"></polyline>
-            <line x1="12" y1="15" x2="12" y2="3"></line>
-          </svg>
-        </a>
-        <button class="action-icon-btn" title="Add to Queue" onclick="addToQueue(${item.p}, ${item.t}, this); event.stopPropagation();">+</button>
-      </div>
-    `;
-    fragment.appendChild(li);
-  });
-  
-  list.appendChild(fragment);
-}
-
-function toggleFullPlayer() {
-  const fp = document.getElementById('fullPlayer');
-  if (fp.classList.toggle('active') && activePlaylistIndex !== -1) {
-    const alb = database[activePlaylistIndex];
-    const song = alb.tracks[activeTrackIndex];
-    setCoverImage(document.getElementById('fullCover'), alb, document.getElementById('fullCoverGlow'));
-    document.getElementById('fullTitle').textContent = song.title;
-    document.getElementById('fullAlbum').textContent = alb.title;
-    updateLikeButtonsForCurrent();
-    
-    if(settings.visualizer) resizeVisualizer();
-    setupMarquee(document.getElementById('fullTitle'), document.querySelector('.full-info-text'));
-  }
-}
-
-// --- AUDIO VISUALIZER (WEB AUDIO API) ---
-let audioCtx, analyser, source, visDataArray;
-const canvas = document.getElementById('visualizerCanvas');
-const ctx = canvas.getContext('2d');
-
-function initVisualizer() {
-  if (!settings.visualizer) return;
-  try {
-    if (!audioCtx) {
-      audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-      analyser = audioCtx.createAnalyser();
-      source = audioCtx.createMediaElementSource(audio);
-      source.connect(analyser);
-      analyser.connect(audioCtx.destination);
-      analyser.fftSize = 256;
-      const bufferLength = analyser.frequencyBinCount;
-      visDataArray = new Uint8Array(bufferLength);
-      resizeVisualizer();
-      drawVisualizer();
-    }
-    if(audioCtx.state === 'suspended') audioCtx.resume();
-  } catch(e) {
-    console.log("Visualizer init failed (possibly CORS issues with external files):", e);
-  }
-}
-
-function resizeVisualizer() {
-  if (!canvas) return;
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight * 0.6;
-}
-
-window.addEventListener('resize', () => {
-  if (settings.visualizer) resizeVisualizer();
-  updateAllMarquees();
-});
-
-function drawVisualizer() {
-  requestAnimationFrame(drawVisualizer);
-  if (!settings.visualizer || !audioCtx) {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    return;
-  }
-  
-  analyser.getByteFrequencyData(visDataArray);
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  
-  const barWidth = (canvas.width / visDataArray.length) * 2.5;
-  let barHeight;
-  let x = 0;
-  
-  for(let i = 0; i < visDataArray.length; i++) {
-    barHeight = visDataArray[i] * 1.5;
-    ctx.fillStyle = document.body.classList.contains('dark-mode') ? `rgba(255, 255, 255, ${barHeight/400})` : `rgba(17, 17, 17, ${barHeight/400})`;
-    ctx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
-    x += barWidth + 2;
-  }
-}
-
-// --- SEARCH HANDLING ---
-function handleSearch(query, gridElementId) {
-  const q = query.toUpperCase().trim(); 
-  const grid = document.getElementById(gridElementId);
-  grid.innerHTML = "";
-  
-  if(!q) return;
-
-  let foundResults = false;
-
-  database.forEach((alb, index) => {
-    if (alb.title.toUpperCase().includes(q)) {
-      foundResults = true;
-      const div = document.createElement('div');
-      div.className = 'album-card';
-      div.innerHTML = `
-        <div class="album-cover-wrapper">
-          <div class="album-glow-backdrop"></div>
-          <img alt="${alb.title} cover" class="album-cover-img">
+<div class="sheet scrim" id="settingsSheet" role="dialog" aria-modal="true" aria-labelledby="settingsTitle" aria-hidden="true" inert>
+  <div class="settings-panel">
+    <header class="settings-head">
+      <h2 id="settingsTitle">Settings</h2>
+      <button class="icon-btn" id="settingsClose" aria-label="Close settings">
+        <svg class="i" aria-hidden="true"><use href="#i-close"></use></svg>
+      </button>
+    </header>
+    <div class="settings-body">
+      <section class="settings-section">
+        <h3>Appearance</h3>
+        <div class="segmented theme-picker" id="themePicker" role="group" aria-label="Theme">
+          <button type="button" data-theme-mode="system">System</button>
+          <button type="button" data-theme-mode="light">Light</button>
+          <button type="button" data-theme-mode="dark">Dark</button>
         </div>
-        <div class="album-name">${alb.title}</div>
-        <div class="album-year">ALBUM \u2022 ${alb.year}</div>
-      `;
-      setCoverImage(div.querySelector('.album-cover-img'), alb, div.querySelector('.album-glow-backdrop'));
-      div.onclick = () => { closeSearch(); openAlbum(index); };
-      grid.appendChild(div);
-    }
-  });
+      </section>
+      <section class="settings-section">
+        <h3>Playback</h3>
+        <label class="switch-row">
+          <span><strong>Autoplay</strong><small>Start the next recording when one ends.</small></span>
+          <input type="checkbox" id="autoplayToggle">
+          <span class="switch" aria-hidden="true"></span>
+        </label>
+        <label class="switch-row">
+          <span><strong>Visualizer</strong><small>Draw the live frequency ring in the full player.</small></span>
+          <input type="checkbox" id="vizToggle">
+          <span class="switch" aria-hidden="true"></span>
+        </label>
+      </section>
+      <section class="settings-section">
+        <h3>Data on this device</h3>
+        <div class="settings-actions">
+          <button class="btn btn-ghost btn-small" id="clearLikes">Clear liked recordings</button>
+          <button class="btn btn-ghost btn-small" id="clearRecent">Clear listening history</button>
+        </div>
+        <p class="settings-note">Likes, history, volume and the queue are stored only in this browser.</p>
+      </section>
+      <section class="settings-section">
+        <h3>Keyboard</h3>
+        <dl class="keys">
+          <div><dt><kbd>Space</kbd></dt><dd>Play or pause</dd></div>
+          <div><dt><kbd>N</kbd></dt><dd>Next recording</dd></div>
+          <div><dt><kbd>P</kbd></dt><dd>Previous recording</dd></div>
+          <div><dt><kbd>L</kbd></dt><dd>Like the current recording</dd></div>
+          <div><dt><kbd>⌘K</kbd></dt><dd>Search the archive</dd></div>
+          <div><dt><kbd>Esc</kbd></dt><dd>Close the top layer</dd></div>
+        </dl>
+      </section>
+      <section class="settings-section">
+        <h3>About</h3>
+        <p class="settings-note">YE-ARCHIVE is a static, non-commercial archive. It has no accounts, no tracking and no server. For the fans, by the fans.</p>
+      </section>
+    </div>
+  </div>
+</div>
 
-  database.forEach((alb, plIdx) => {
-    alb.tracks.forEach((song, sIdx) => {
-      if (song.title.toUpperCase().includes(q)) {
-        foundResults = true;
-        const div = document.createElement('div');
-        div.className = 'album-card';
-        div.onclick = () => { closeSearch(); playSong(plIdx, sIdx); };
-        div.innerHTML = `
-          <div class="album-cover-wrapper">
-            <div class="album-glow-backdrop"></div>
-            <img alt="${alb.title} cover" class="album-cover-img">
-          </div>
-          <div class="album-name">${song.title}</div>
-          <div class="album-year">TRACK \u2022 ${alb.title}</div>
-        `;
-        setCoverImage(div.querySelector('.album-cover-img'), alb, div.querySelector('.album-glow-backdrop'));
-        grid.appendChild(div);
-      }
-    });
-  });
+<div class="sheet scrim" id="confirmSheet" role="alertdialog" aria-modal="true" aria-labelledby="confirmTitle" aria-describedby="confirmText" aria-hidden="true" inert>
+  <div class="confirm-panel">
+    <h2 id="confirmTitle">Clear this data?</h2>
+    <p id="confirmText"></p>
+    <div class="confirm-actions">
+      <button class="btn btn-ghost btn-small" id="confirmCancel">Cancel</button>
+      <button class="btn btn-primary btn-small" id="confirmOk">Clear</button>
+    </div>
+  </div>
+</div>
 
-  if (!foundResults) {
-    grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px 20px; color: #888; font-weight: 600; font-size: 14px;">NO RESULTS FOUND</div>`;
-  }
-}
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-function handleDesktopSearch(val) {
-  if (val.trim().length > 0) {
-    document.getElementById('defaultUI').style.display = 'none';
-    document.getElementById('playlistsUI').style.display = 'none';
-    document.getElementById('searchUI').style.display = 'block';
-    handleSearch(val, 'searchGrid');
-  } else {
-    closeSearch();
-  }
-}
+<audio id="audio" preload="metadata"></audio>
 
-document.getElementById('searchInputMobile').addEventListener('input', (e) => {
-  handleSearch(e.target.value, 'mobileSearchGrid');
-}, { passive: true });
+<noscript>
+  <div class="noscript">This archive needs JavaScript to browse and play recordings.</div>
+</noscript>
 
-function closeSearch() {
-  const desktopSearch = document.getElementById('searchInputDesktop');
-  if (desktopSearch) desktopSearch.value = "";
-  document.getElementById('searchUI').style.display = 'none';
-  
-  if(document.getElementById('tab-collection').classList.contains('active')){
-     document.getElementById('defaultUI').style.display = 'block';
-  } else if (document.getElementById('tab-playlists').classList.contains('active')) {
-     document.getElementById('playlistsUI').style.display = 'block';
-  }
-}
-
-// --- TIME UPDATES ---
-let isUpdatingTime = false;
-audio.addEventListener('timeupdate', () => {
-  if(isNaN(audio.duration) || isUpdatingTime) return;
-  isUpdatingTime = true;
-  requestAnimationFrame(() => {
-    const prog = (audio.currentTime / audio.duration) * 100;
-    document.getElementById('progressBar').value = prog;
-    document.getElementById('fullProgressBar').value = prog;
-    const fmt = s => `${Math.floor(s/60)}:${Math.floor(s%60).toString().padStart(2,'0')}`;
-    document.getElementById('currentTime').textContent = fmt(audio.currentTime);
-    document.getElementById('duration').textContent = fmt(audio.duration);
-    document.getElementById('fullCurrentTime').textContent = fmt(audio.currentTime);
-    document.getElementById('fullDuration').textContent = fmt(audio.duration);
-    isUpdatingTime = false;
-  });
-});
-
-document.getElementById('progressBar').oninput = e => { audio.currentTime = (e.target.value/100) * audio.duration; };
-document.getElementById('fullProgressBar').oninput = e => { audio.currentTime = (e.target.value/100) * audio.duration; };
-
-// --- GESTURES ---
-let touchStartY = 0, isVerticalScroll = false;
-const fp = document.getElementById('fullPlayer');
-
-fp.addEventListener('touchstart', (e) => { 
-  touchStartY = e.changedTouches[0].screenY;
-  isVerticalScroll = false;
-}, { passive: true });
-
-fp.addEventListener('touchmove', (e) => {
-  let deltaY = e.changedTouches[0].screenY - touchStartY;
-  if (Math.abs(deltaY) > 20) isVerticalScroll = true;
-  if (isVerticalScroll && deltaY > 0) { 
-    fp.style.transform = `translateY(${deltaY}px)`; 
-    fp.style.transition = 'none'; 
-  }
-}, { passive: true });
-
-fp.addEventListener('touchend', (e) => {
-  let deltaY = e.changedTouches[0].screenY - touchStartY;
-  fp.style.transition = 'transform 0.4s cubic-bezier(0.32, 1, 0.23, 1)';
-  if (deltaY > 100 || (isVerticalScroll && deltaY > 50)) { 
-    toggleFullPlayer(); 
-    fp.style.transform = ''; 
-  } else { 
-    fp.style.transform = 'translateY(0)'; 
-  }
-  isVerticalScroll = false;
-}, { passive: true });
-
-</script>
+<script src="catalog.js" defer></script>
+<script src="assets/app.js" defer></script>
 </body>
 </html>
